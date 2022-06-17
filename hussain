@@ -252,8 +252,6 @@ workspace.Extinguisher.Extinguisher.ClickDetector.Detector:FireServer()
 end)
 
 c:Button("FpsBooster",function()
-    
-b:Button("FpsBooster",function()
 
     local decalsyeeted = true
     local g = game
@@ -292,9 +290,6 @@ b:Button("FpsBooster",function()
             e.Enabled = false
         end
     end
-              
-end)
-
 end)
 
 a:Button("C1",function()
