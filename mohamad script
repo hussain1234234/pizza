@@ -1,0 +1,127 @@
+game.StarterGui:SetCore("SendNotification", {
+    Title = 'WELCOME';
+    Text = 'Script Made By Mohamad Sami#4623';
+    Duration = 20;
+}) --Notification
+
+local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wall%20v3')))()
+
+local w = library:CreateWindow("Commands") -- Creates the window
+
+local a = w:CreateFolder("bodyctrl") 
+
+local b = w:CreateFolder("Extra Things")
+
+b:DestroyGui()
+
+a:Button("No(L)Arm(R15)",function()
+
+game.Players.LocalPlayer.Character.LeftHand:Destroy()
+    
+game.Players.LocalPlayer.Character.LeftLowerArm:Destroy()
+    
+game.Players.LocalPlayer.Character.LeftUpperArm:Destroy()
+    
+end)
+
+a:Button("No(R)Arm(R15)",function()
+
+game.Players.LocalPlayer.Character.RightHand:Destroy()
+        
+game.Players.LocalPlayer.Character.RightLowerArm:Destroy()
+        
+game.Players.LocalPlayer.Character.RightUpperArm:Destroy()
+    
+end)
+
+a:Button("No(L)Leg(R15)",function()
+
+game.Players.LocalPlayer.Character.LeftFoot:Destroy()
+
+game.Players.LocalPlayer.Character.LeftLowerLeg:Destroy()
+
+game.Players.LocalPlayer.Character.LeftUpperLeg:Destroy()
+  
+end)
+
+a:Button("No(R)Leg(R15)",function()
+
+game.Players.LocalPlayer.Character.RightFoot:Destroy()
+    
+game.Players.LocalPlayer.Character.RightLowerLeg:Destroy()
+    
+game.Players.LocalPlayer.Character.RightUpperLeg:Destroy()
+      
+end)
+
+a:Button("No(L)Arm(R6)",function()
+
+game:GetService'Players'.LocalPlayer.Character['Left Arm']:Destroy()
+          
+end)
+
+a:Button("No(R)Arm(R6)",function()
+
+game:GetService'Players'.LocalPlayer.Character['Right Arm']:Destroy()
+          
+end)
+
+a:Button("No(L)Leg(R6)",function()
+
+game:GetService'Players'.LocalPlayer.Character['Left Leg']:Destroy()
+          
+end)
+
+a:Button("No(R)Leg(R6)",function()
+
+game:GetService'Players'.LocalPlayer.Character['Right Leg']:Destroy()
+          
+end)
+
+b:Button("FpsBooster",function()
+
+    local decalsyeeted = true
+    local g = game
+    local w = g.Workspace
+    local l = g.Lighting
+    local t = w.Terrain
+    t.WaterWaveSize = 0
+    t.WaterWaveSpeed = 0
+    t.WaterReflectance = 0
+    t.WaterTransparency = 0
+    l.GlobalShadows = false
+    l.FogEnd = 9e9
+    l.Brightness = 0
+    settings().Rendering.QualityLevel = "Level01"
+    for i, v in pairs(g:GetDescendants()) do
+        if v:IsA("Part") or v:IsA("Union") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
+            v.Material = "Plastic"
+            v.Reflectance = 0
+        elseif v:IsA("Decal") or v:IsA("Texture") and decalsyeeted then
+            v.Transparency = 1
+        elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+            v.Lifetime = NumberRange.new(0)
+        elseif v:IsA("Explosion") then
+            v.BlastPressure = 1
+            v.BlastRadius = 1
+        elseif v:IsA("Fire") or v:IsA("SpotLight") or v:IsA("Smoke") or v:IsA("Sparkles") then
+            v.Enabled = false
+        elseif v:IsA("MeshPart") then
+            v.Material = "Plastic"
+            v.Reflectance = 0
+            v.TextureID = 10385902758728957
+        end
+    end
+    for i, e in pairs(l:GetChildren()) do
+        if e:IsA("BlurEffect") or e:IsA("SunRaysEffect") or e:IsA("ColorCorrectionEffect") or e:IsA("BloomEffect") or e:IsA("DepthOfFieldEffect") then
+            e.Enabled = false
+        end
+    end
+              
+end)
+
+b:Button("Infinite Yiled",function()
+    
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+
+end)
