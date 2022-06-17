@@ -1,4 +1,5 @@
 getgenv().spam = false
+local p1 = game.Players.LocalPlayer.Character.HumanoidRootPart
 local lp = game.Players.LocalPlayer
 local char = lp.Character
 
@@ -145,6 +146,12 @@ x:Button("Krustykrab",function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-499.422302, -25.8770885, -543.381775, -1, 0, 0, 0, 1, 0, 0, 0, -1)
 end)
 
+x:Button("PizzaParty",function()
+    
+p1.CFrame = CFrame.new(80.78022, 0.159264803, -284.691895, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+
+end)
+
 x:Button("Manager",function()
     
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(23.7000046, 3.99943972, 6.49999714, 0, 0, -1, 0, 1, 0, 1, 0, 0)
@@ -226,7 +233,6 @@ c:Button("AmeciaScript",function()
 loadstring(game:HttpGet("https://gist.githubusercontent.com/TurkOyuncu99/bb2f1182a224999682a2d1a87aa8517a/raw/66c7791224be0434b23938ca26244238649d0143/ameicaa", true))()
 
 end)
-
 
 c:Button("NoKrustykrab",function()
     
