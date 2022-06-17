@@ -205,15 +205,19 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1068.78
 
 end) --
 
-c:Button("NO(R)ARM",function()
+c:Button("NO(R)ARM(R6)",function()
+    
+game:GetService'Players'.LocalPlayer.Character['Right Arm']:Destroy()
 
+end) --no right arm
+
+c:Button("NO(R)ARM(R15)",function()
+    
 game:GetService("Workspace")["515_FM"].RightHand:Destroy()
 
 game:GetService("Workspace")["515_FM"].RightLowerArm:Destroy()
 
 game:GetService("Workspace")["515_FM"].RightUpperArm:Destroy()
-    
-game:GetService'Players'.LocalPlayer.Character['Right Arm']:Destroy()
 
 end) --no right arm
 
