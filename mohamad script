@@ -20,7 +20,7 @@ local x = x:CreateFolder("Places")
 
     x:Button("PizzaSecret",function()
         
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(68.8359985, 3.80013275, 60.6997986, 0.0199639201, -2.17293716e-09, 0.999800682, -6.92784852e-08, 1, 3.55671625e-09, -0.999800682, -6.93356839e-08, 0.0199639201)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(76.3223648, 9.80000305, 66.0100098, 0.0117774252, -3.49193674e-10, 0.99993062, 2.2618158e-08, 1, 8.28157612e-11, -0.99993062, 2.26156143e-08, 0.0117774252)
 
     end) --Goto PizzaSecret
 
