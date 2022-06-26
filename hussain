@@ -35,14 +35,6 @@ b:Toggle("Auto Job",function(bool)
     end
 end)
 
-b:Toggle("Auto Spam",function(bool)
-    getgenv().spamchatt = bool
-    print('Auto Spam is: ', bool)
-    if bool then
-    spamchat("Text here")
-    end
-end)
-
 c:Button("Auto Farm",function()
 
 loadstring(game:HttpGet("https://pastebin.com/raw/sVctm6bC", true))()
