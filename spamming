@@ -1,0 +1,13 @@
+getgenv().spamchatt = false
+function spamchat(UrTextHere)
+	spawn(function ()
+	    while spamchatt do
+			local args = {
+			[1] = UrTextHere,
+			[2] = false
+			}
+			workspace.Main.Chatted:FireServer(unpack(args))
+			wait()
+		end
+	end)
+end
