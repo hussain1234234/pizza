@@ -1,3 +1,4 @@
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/spamming'),true))()
 getgenv().spam = false
 getgenv().Cashier = false
 local p1 = game.Players.LocalPlayer.Character.HumanoidRootPart
@@ -35,10 +36,10 @@ b:Toggle("Auto Job",function(bool)
 end)
 
 b:Toggle("Auto Spam",function(bool)
-    getgenv().spam = bool
+    getgenv().spamchatt = bool
     print('Auto Spam is: ', bool)
     if bool then
-    spamming()
+    spamchat("Text here")
     end
 end)
 
@@ -411,27 +412,3 @@ function nonbreak() -- spamming cashier
 		end
 	end)
 end
-
-function spamming() --spamming!
- spawn(function()
-    while getgenv().spam == true do
-
-        local args = {
-            [1] = "\217\130\216\181 \216\167\217\133\217\131 \216\167\216\168\217\134 \217\133\216\170\217\134\216\167\217" ..
-        "\130\217\135 \216\167\217\134\217\138\217\130 \216\167\217\133\217\131 \216\185\217" ..
-        "\132 \216\183\216\178\216\161\216\161 \217\130\216\167\217\135\216\177\217\135 \216\167" ..
-        "\216\182\216\177\216\168\217\131 \217\136\216\167\216\173\216\175 \217\129\216\177\217" ..
-        "\134\216\179\217\138 \217\129\217\138 \217\133\216\172\216\177\217\137 \216\167\217\132" ..
-        "\216\185\216\167\216\181\217\133\217\135 \216\172\216\175\217\138\216\175\217\135\216" ..
-        "\161\216\161 \217\138\216\167\216\174\217\136\216\167\216\170 \216\179\217\130\216\179" ..
-        "\217\138\217\135 \217\133\216\170\217\134\216\167\217\130\217\135\216\161 \216\167\217" ..
-        "\134\217\138\217\130\217\131\217\133 ",
-            [2] = false
-        }
-    
-        workspace.Main.Chatted:FireServer(unpack(args))
-        wait()
-    
-     end 
-  end)
-end --The Fucking Spam Script Made by 515_FM and exclusive only for 515_FM!!
