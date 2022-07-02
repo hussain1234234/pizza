@@ -1,5 +1,6 @@
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/spamming'),true))()
 getgenv().spam = false
+getgenv().kill = false
 local p1 = game.Players.LocalPlayer.Character.HumanoidRootPart
 local lp = game.Players.LocalPlayer
 local char = lp.Character
@@ -20,7 +21,8 @@ local c = library:Window("Extra Things")
 
 a:Toggle("turn loops", true, function(bool)
     getgenv().spam = (bool)
-    getgenv().spamchatt = (bool) -- bool is true or false depending on the state of the toggle
+    getgenv().spamchatt = (bool)
+    getgenv().kill = (bool)-- bool is true or false depending on the state of the toggle
 end)
 
 a:Box("Sit", function(text, focuslost)
@@ -34,6 +36,12 @@ a:Box("Spam", function(UrTextHere, focuslost)
       spamchat(UrTextHere)
    end
 end)
+
+a:Box("kill", function(textt, focuslost)
+    if focuslost then
+        kill(textt)
+    end
+ end)
 
 function sitplr(text)
 
@@ -52,6 +60,25 @@ function sitplr(text)
          wait()
          end 
     end
+
+    function kill(textt)
+
+        local targetPartial = textt
+        
+        local man
+        for _,p in ipairs(game.Players:GetPlayers()) do
+            if p.Name:lower():sub(1,#targetPartial) == targetPartial:lower() or p.DisplayName:lower():sub(1,#targetPartial) == targetPartial:lower() then
+                man = p
+                break
+            end
+        end
+             while getgenv().kill do
+             local killl = workspace:FindFirstChild("Shark Tank",true)
+             killl.TouchEvent:FireServer(man.Character.Head, killl.Shark)
+             wait()
+             end 
+        end
+
     c:Button("Auto Farm",function()
 
         loadstring(game:HttpGet("https://pastebin.com/raw/sVctm6bC", true))()
