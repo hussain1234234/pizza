@@ -19,7 +19,7 @@ local q = library:Window("Teleports")
 
 local c = library:Window("Extra Things")
 
-a:Toggle("turn loops", true, function(bool)
+a:Toggle("turn loops", false, function(bool)
     getgenv().spam = (bool)
     getgenv().spamchatt = (bool)
     getgenv().kill = (bool)-- bool is true or false depending on the state of the toggle
