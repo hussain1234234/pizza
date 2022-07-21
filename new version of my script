@@ -1,4 +1,6 @@
+getgenv().loopcolor = false
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/spamming'),true))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/color%20spam%20v2'),true))()
 getgenv().spam = false
 getgenv().kill = false
 _G.loopkill = false
@@ -6,12 +8,6 @@ local Trap = workspace:FindFirstChild("Shark Tank",true)
 local p1 = game.Players.LocalPlayer.Character.HumanoidRootPart
 local lp = game.Players.LocalPlayer
 local char = lp.Character
-
-    game.StarterGui:SetCore("SendNotification", {
-    Title = 'Welcome To Pizza Fucker Script';
-    Text = 'Script Made By 515_FM/TheNemesis#1732';
-    Duration = 20;
-  }) --Notification 
 
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/turtle"))()
 
@@ -21,16 +17,23 @@ local q = library:Window("Teleports")
 
 local c = library:Window("Extra Things")
 
-a:Toggle("turn loops", false, function(bool)
+a:Toggle("Turn Loops", false, function(bool)
     getgenv().spam = (bool)
     getgenv().spamchatt = (bool)
     getgenv().kill = (bool)-- bool is true or false depending on the state of the toggle
 end)
 
-a:Toggle("Loop Kill all", false, function(bool)
+a:Toggle("Loop Kill All", false, function(bool)
     _G.loopkill = (bool)-- bool is true or false depending on the state of the toggle
     if _G.loopkill then
         loopkillll()
+    end
+end)
+
+a:Toggle("Rainbow Cars", false, function(bool)
+    getgenv().loopcolor = (bool)-- bool is true or false depending on the state of the toggle
+    if getgenv().loopcolor then
+        spamcolor()
     end
 end)
 
