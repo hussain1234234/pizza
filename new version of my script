@@ -29,7 +29,7 @@ end)
 
 a:Toggle("Loop Kill all", false, function(bool)
     _G.loopkill = (bool)-- bool is true or false depending on the state of the toggle
-    if _G.loopkill = true then
+    if _G.loopkill then
         loopkillll()
     end
 end)
