@@ -1,6 +1,8 @@
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/spamming'),true))()
 getgenv().spam = false
 getgenv().kill = false
+_G.loopkill = false
+local Trap = workspace:FindFirstChild("Shark Tank",true)
 local p1 = game.Players.LocalPlayer.Character.HumanoidRootPart
 local lp = game.Players.LocalPlayer
 local char = lp.Character
@@ -23,6 +25,13 @@ a:Toggle("turn loops", false, function(bool)
     getgenv().spam = (bool)
     getgenv().spamchatt = (bool)
     getgenv().kill = (bool)-- bool is true or false depending on the state of the toggle
+end)
+
+a:Toggle("Loop Kill all", false, function(bool)
+    _G.loopkill = (bool)-- bool is true or false depending on the state of the toggle
+    if _G.loopkill = true then
+        loopkillll()
+    end
 end)
 
 a:Box("Sit", function(text, focuslost)
@@ -421,3 +430,14 @@ q:Button("A3",function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(181.193527, 3.40001249, -823.678894, 0.00911114737, 3.62689754e-08, -0.999958515, 1.97072065e-08, 1, 3.6450043e-08, 0.999958515, -2.003849e-08, 0.00911114737)
 
 end) --a3
+function loopkillll()
+while _G.loopkill do
+    for _,p in ipairs(game.Players:GetPlayers()) do
+        wait()
+        if p.Character and p.Character.PrimaryPart and p ~= game.Players.LocalPlayer then
+            Trap.TouchEvent:FireServer(p.Character.PrimaryPart, Trap.Shark)
+            wait(1)
+        end
+    end
+end
+end
