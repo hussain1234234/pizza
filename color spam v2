@@ -1,0 +1,244 @@
+local cars = game:GetService("Workspace").Cars:GetChildren()
+function spamcolor()
+while getgenv().loopcolor do
+spawn(function()
+
+for _,p in ipairs(cars) do
+
+    local args = {
+        [1] = "Paint",
+        [2] = p.Paint,
+        [3] = "None",
+        [4] = 24
+    }
+wait()
+    
+    game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
+    
+
+end
+
+end)
+
+wait(0.1)
+
+for _,p in ipairs(cars) do
+
+    local args = {
+        [1] = "Paint",
+        [2] = p.Paint,
+        [3] = "None",
+        [4] = 21
+    }
+wait()
+    
+    game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
+    
+
+end
+
+wait(0.1)
+
+for _,p in ipairs(cars) do
+
+    local args = {
+        [1] = "Paint",
+        [2] = p.Paint,
+        [3] = "None",
+        [4] = 104
+    }
+wait()
+    
+    game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
+    
+
+end
+
+wait(0.1)
+
+for _,p in ipairs(cars) do
+
+    local args = {
+        [1] = "Paint",
+        [2] = p.Paint,
+        [3] = "None",
+        [4] = 1003
+    }
+wait()
+    
+    game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
+    
+
+end
+
+wait(0.1)
+
+for _,p in ipairs(cars) do
+
+    local args = {
+        [1] = "Paint",
+        [2] = p.Paint,
+        [3] = "None",
+        [4] = 1020
+    }
+wait()
+    
+    game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
+    
+
+end
+
+wait(0.1)
+
+for _,p in ipairs(cars) do
+
+    local args = {
+        [1] = "Paint",
+        [2] = p.Paint,
+        [3] = "None",
+        [4] = 1010
+    }
+wait()
+    
+    game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
+    
+
+end
+
+wait(0.1)
+
+for _,p in ipairs(cars) do
+
+    local args = {
+        [1] = "Paint",
+        [2] = p.Paint,
+        [3] = "None",
+        [4] = 104
+    }
+wait()
+    
+    game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
+    
+
+end
+
+wait(0.1)
+
+for _,p in ipairs(cars) do
+
+    local args = {
+        [1] = "Paint",
+        [2] = p.Paint,
+        [3] = "None",
+        [4] = 1032
+    }
+wait()
+    
+    game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
+    
+
+end
+
+wait(0.1)
+
+for _,p in ipairs(cars) do
+
+    local args = {
+        [1] = "Paint",
+        [2] = p.Paint,
+        [3] = "None",
+        [4] = 106
+    }
+wait()
+    
+    game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
+    
+
+end
+
+wait(0.1)
+
+for _,p in ipairs(cars) do
+
+    local args = {
+        [1] = "Paint",
+        [2] = p.Paint,
+        [3] = "None",
+        [4] = 1001
+    }
+wait()
+    
+    game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
+    
+
+end
+
+wait(0.1)
+
+for _,p in ipairs(cars) do
+
+    local args = {
+        [1] = "Paint",
+        [2] = p.Paint,
+        [3] = "None",
+        [4] = 192
+    }
+wait()
+    
+    game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
+    
+
+end
+
+wait(0.1)
+
+for _,p in ipairs(cars) do
+
+    local args = {
+        [1] = "Paint",
+        [2] = p.Paint,
+        [3] = "None",
+        [4] = 1001
+    }
+wait()
+    
+    game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
+    
+
+end
+
+wait(0.1)
+
+for _,p in ipairs(cars) do
+
+    local args = {
+        [1] = "Paint",
+        [2] = p.Paint,
+        [3] = "None",
+        [4] = 1020
+    }
+wait()
+    
+    game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
+    
+
+end
+
+wait(0.1)
+
+for _,p in ipairs(cars) do
+
+    local args = {
+        [1] = "Paint",
+        [2] = p.Paint,
+        [3] = "None",
+        [4] = 104
+    }
+wait()
+    
+    game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
+    
+
+        end
+    end 
+end
