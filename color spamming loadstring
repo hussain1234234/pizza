@@ -1,3 +1,4 @@
+local cars = game:GetService("Workspace").Cars:GetChildren()
 function spamcolor()
 while getgenv().loopcolor do
 spawn(function()
