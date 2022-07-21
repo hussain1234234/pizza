@@ -441,3 +441,5 @@ while _G.loopkill do
     end
 end
 end
+
+workspace.MessageService.Dialog.Dialog:Fire("Important","Script Made by Hussain","ok","",true,true)
