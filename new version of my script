@@ -446,3 +446,9 @@ end
 end
 
 workspace.MessageService.Dialog.Dialog:Fire("Important","Script Made by Hussain","ok","",true,true)
+game.StarterGui:SetCore("SendNotification", {
+    Title = 'Enjoy';
+    Text = 'Script Loaded';
+    Duration = 5;
+  })
+
