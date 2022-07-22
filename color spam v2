@@ -1,5 +1,3 @@
-game:GetService("Workspace").Cars:GetChildren()
-
 while true do
 
 if not game:GetService("Workspace").Cars:GetChildren() or game:GetService("Workspace").Cars:GetChildren() then
