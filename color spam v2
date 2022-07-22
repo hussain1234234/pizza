@@ -1,9 +1,8 @@
-local cars = game:GetService("Workspace").Cars:GetChildren()
 function spamcolor()
 while getgenv().loopcolor do
 spawn(function()
 
-for _,p in ipairs(cars) do
+for _,p in ipairs(game:GetService("Workspace").Cars:GetChildren()) do
 
     local args = {
         [1] = "Paint",
@@ -22,7 +21,7 @@ end)
 
 wait(0.1)
 
-for _,p in ipairs(cars) do
+for _,p in ipairs(game:GetService("Workspace").Cars:GetChildren()) do
 
     local args = {
         [1] = "Paint",
@@ -39,7 +38,7 @@ end
 
 wait(0.1)
 
-for _,p in ipairs(cars) do
+for _,p in ipairs(game:GetService("Workspace").Cars:GetChildren()) do
 
     local args = {
         [1] = "Paint",
@@ -56,7 +55,7 @@ end
 
 wait(0.1)
 
-for _,p in ipairs(cars) do
+for _,p in ipairs(game:GetService("Workspace").Cars:GetChildren()) do
 
     local args = {
         [1] = "Paint",
@@ -73,7 +72,7 @@ end
 
 wait(0.1)
 
-for _,p in ipairs(cars) do
+for _,p in ipairs(game:GetService("Workspace").Cars:GetChildren()) do
 
     local args = {
         [1] = "Paint",
@@ -90,7 +89,7 @@ end
 
 wait(0.1)
 
-for _,p in ipairs(cars) do
+for _,p in ipairs(game:GetService("Workspace").Cars:GetChildren()) do
 
     local args = {
         [1] = "Paint",
@@ -107,7 +106,7 @@ end
 
 wait(0.1)
 
-for _,p in ipairs(cars) do
+for _,p in ipairs(game:GetService("Workspace").Cars:GetChildren()) do
 
     local args = {
         [1] = "Paint",
@@ -124,7 +123,7 @@ end
 
 wait(0.1)
 
-for _,p in ipairs(cars) do
+for _,p in ipairs(game:GetService("Workspace").Cars:GetChildren()) do
 
     local args = {
         [1] = "Paint",
@@ -141,7 +140,7 @@ end
 
 wait(0.1)
 
-for _,p in ipairs(cars) do
+for _,p in ipairs(game:GetService("Workspace").Cars:GetChildren()) do
 
     local args = {
         [1] = "Paint",
@@ -158,7 +157,7 @@ end
 
 wait(0.1)
 
-for _,p in ipairs(cars) do
+for _,p in ipairs(game:GetService("Workspace").Cars:GetChildren()) do
 
     local args = {
         [1] = "Paint",
@@ -175,7 +174,7 @@ end
 
 wait(0.1)
 
-for _,p in ipairs(cars) do
+for _,p in ipairs(game:GetService("Workspace").Cars:GetChildren()) do
 
     local args = {
         [1] = "Paint",
@@ -192,7 +191,7 @@ end
 
 wait(0.1)
 
-for _,p in ipairs(cars) do
+for _,p in ipairs(game:GetService("Workspace").Cars:GetChildren()) do
 
     local args = {
         [1] = "Paint",
@@ -209,7 +208,7 @@ end
 
 wait(0.1)
 
-for _,p in ipairs(cars) do
+for _,p in ipairs(game:GetService("Workspace").Cars:GetChildren()) do
 
     local args = {
         [1] = "Paint",
@@ -226,7 +225,7 @@ end
 
 wait(0.1)
 
-for _,p in ipairs(cars) do
+for _,p in ipairs(game:GetService("Workspace").Cars:GetChildren()) do
 
     local args = {
         [1] = "Paint",
