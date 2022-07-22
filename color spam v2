@@ -1,14 +1,6 @@
-while true do
-
-if not game:GetService("Workspace").Cars:GetChildren() or game:GetService("Workspace").Cars:GetChildren() then
 local cars = game:GetService("Workspace").Cars:GetChildren()
-wait(0.1)
-    end
-end
-
 function spamcolor()
 while getgenv().loopcolor do
-wait()
 spawn(function()
 
 for _,p in ipairs(cars) do
@@ -17,7 +9,7 @@ for _,p in ipairs(cars) do
         [1] = "Paint",
         [2] = p.Paint,
         [3] = "None",
-        [4] = 24 
+        [4] = 24
     }
 wait()
     
