@@ -37,12 +37,6 @@ a:Toggle("Rainbow Cars", false, function(bool)
     end
 end)
 
-a:Box("Sit", function(text, focuslost)
-   if focuslost then
-   sitplr(text)
-   end
-end)
-
 a:Box("Spam", function(UrTextHere, focuslost)
    if focuslost then
       spamchat(UrTextHere)
@@ -54,24 +48,6 @@ a:Box("kill", function(textt, focuslost)
         kill(textt)
     end
  end)
-
-function sitplr(text)
-
-    local targetPartial = text
-    
-    local man
-    for _,p in ipairs(game.Players:GetPlayers()) do
-        if p.Name:lower():sub(1,#targetPartial) == targetPartial:lower() or p.DisplayName:lower():sub(1,#targetPartial) == targetPartial:lower() then
-            man = p
-            break
-        end
-    end
-         while getgenv().spam do
-         local Sitt = workspace:FindFirstChild("Tot Slide",true)
-         Sitt.TouchEvent:FireServer(man.Character.Head, Sitt.Trip)
-         wait()
-         end 
-    end
 
     function kill(textt)
 
@@ -451,4 +427,3 @@ game.StarterGui:SetCore("SendNotification", {
     Text = 'Script Loaded';
     Duration = 5;
   })
-
