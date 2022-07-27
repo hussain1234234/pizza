@@ -1,0 +1,689 @@
+getgenv().loopcolor = false
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/spamming'),true))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/color%20spam%20v2'),true))()
+getgenv().spam = false
+getgenv().kill = false
+_G.loopkill = false
+local Trap = workspace:FindFirstChild("Shark Tank",true)
+local p1 = game.Players.LocalPlayer.Character.HumanoidRootPart
+local lp = game.Players.LocalPlayer
+local char = lp.Character
+
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/turtle"))()
+
+local a = library:Window("Commands")
+
+local q = library:Window("Teleports")
+
+local c = library:Window("Extra Things")
+
+a:Toggle("turn loops", false, function(bool)
+    getgenv().spam = (bool)
+    getgenv().spamchatt = (bool)
+    getgenv().kill = (bool)
+	getgenv().loopcolor = (bool)
+end)
+
+a:Toggle("Loop Kill all", false, function(bool)
+    _G.loopkill = (bool)
+    if _G.loopkill then
+        loopkillll()
+    end
+end)
+
+a:Toggle("Loop Kill all", false, function(bool)
+    getgenv().loopcolor = (bool)
+    if getgenv().loopcolor then
+        spamcolor()
+    end
+end)
+
+a:Box("Sit", function(text, focuslost)
+   if focuslost then
+   sitplr(text)
+   end
+end)
+
+a:Box("Spam", function(UrTextHere, focuslost)
+   if focuslost then
+      spamchat(UrTextHere)
+   end
+end)
+
+a:Box("kill", function(textt, focuslost)
+    if focuslost then
+        kill(textt)
+    end
+ end)
+
+function sitplr(text)
+
+    local targetPartial = text
+    
+    local man
+    for _,p in ipairs(game.Players:GetPlayers()) do
+        if p.Name:lower():sub(1,#targetPartial) == targetPartial:lower() or p.DisplayName:lower():sub(1,#targetPartial) == targetPartial:lower() then
+            man = p
+            break
+        end
+    end
+         while getgenv().spam do
+         local Sitt = workspace:FindFirstChild("Tot Slide",true)
+         Sitt.TouchEvent:FireServer(man.Character.Head, Sitt.Trip)
+         wait()
+         end 
+    end
+
+    function kill(textt)
+        while getgenv().kill do
+        wait()
+            for _,p  in ipairs(game.Players:GetChildren(textt)) do 
+            local lava = workspace:FindFirstChild("Shark Tank",true)
+            lava.TouchEvent:FireServer(p.Character.PrimiryPart, lava.Shark)
+            end
+        end
+    end
+
+    c:Button("Auto Farm",function()
+
+        loadstring(game:HttpGet("https://pastebin.com/raw/sVctm6bC", true))()
+        
+        end)
+
+		c:Button("tt",function()
+
+			while getgenv().loopcolor do
+				spawn(function()
+				
+				for _,p in ipairs(cars) do
+				
+					local args = {
+						[1] = "Paint",
+						[2] = p.Paint,
+						[3] = "None",
+						[4] = 24
+					}
+				wait()
+					
+					game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
+					
+				
+				end
+				
+				end)
+				
+				wait(0.1)
+				
+				for _,p in ipairs(cars) do
+				
+					local args = {
+						[1] = "Paint",
+						[2] = p.Paint,
+						[3] = "None",
+						[4] = 21
+					}
+				wait()
+					
+					game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
+					
+				
+				end
+				
+				wait(0.1)
+				
+				for _,p in ipairs(cars) do
+				
+					local args = {
+						[1] = "Paint",
+						[2] = p.Paint,
+						[3] = "None",
+						[4] = 104
+					}
+				wait()
+					
+					game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
+					
+				
+				end
+				
+				wait(0.1)
+				
+				for _,p in ipairs(cars) do
+				
+					local args = {
+						[1] = "Paint",
+						[2] = p.Paint,
+						[3] = "None",
+						[4] = 1003
+					}
+				wait()
+					
+					game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
+					
+				
+				end
+				
+				wait(0.1)
+				
+				for _,p in ipairs(cars) do
+				
+					local args = {
+						[1] = "Paint",
+						[2] = p.Paint,
+						[3] = "None",
+						[4] = 1020
+					}
+				wait()
+					
+					game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
+					
+				
+				end
+				
+				wait(0.1)
+				
+				for _,p in ipairs(cars) do
+				
+					local args = {
+						[1] = "Paint",
+						[2] = p.Paint,
+						[3] = "None",
+						[4] = 1010
+					}
+				wait()
+					
+					game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
+					
+				
+				end
+				
+				wait(0.1)
+				
+				for _,p in ipairs(cars) do
+				
+					local args = {
+						[1] = "Paint",
+						[2] = p.Paint,
+						[3] = "None",
+						[4] = 104
+					}
+				wait()
+					
+					game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
+					
+				
+				end
+				
+				wait(0.1)
+				
+				for _,p in ipairs(cars) do
+				
+					local args = {
+						[1] = "Paint",
+						[2] = p.Paint,
+						[3] = "None",
+						[4] = 1032
+					}
+				wait()
+					
+					game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
+					
+				
+				end
+				
+				wait(0.1)
+				
+				for _,p in ipairs(cars) do
+				
+					local args = {
+						[1] = "Paint",
+						[2] = p.Paint,
+						[3] = "None",
+						[4] = 106
+					}
+				wait()
+					
+					game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
+					
+				
+				end
+				
+				wait(0.1)
+				
+				for _,p in ipairs(cars) do
+				
+					local args = {
+						[1] = "Paint",
+						[2] = p.Paint,
+						[3] = "None",
+						[4] = 1001
+					}
+				wait()
+					
+					game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
+					
+				
+				end
+				
+				wait(0.1)
+				
+				for _,p in ipairs(cars) do
+				
+					local args = {
+						[1] = "Paint",
+						[2] = p.Paint,
+						[3] = "None",
+						[4] = 192
+					}
+				wait()
+					
+					game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
+					
+				
+				end
+				
+				wait(0.1)
+				
+				for _,p in ipairs(cars) do
+				
+					local args = {
+						[1] = "Paint",
+						[2] = p.Paint,
+						[3] = "None",
+						[4] = 1001
+					}
+				wait()
+					
+					game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
+					
+				
+				end
+				
+				wait(0.1)
+				
+				for _,p in ipairs(cars) do
+				
+					local args = {
+						[1] = "Paint",
+						[2] = p.Paint,
+						[3] = "None",
+						[4] = 1020
+					}
+				wait()
+					
+					game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
+					
+				
+				end
+				
+				wait(0.1)
+				
+				for _,p in ipairs(cars) do
+				
+					local args = {
+						[1] = "Paint",
+						[2] = p.Paint,
+						[3] = "None",
+						[4] = 104
+					}
+				wait()
+					
+					game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
+					
+				
+						end
+					end 
+				end
+			
+			end)
+			
+        
+        c:Button("AntiAfk",function()
+        
+            wait(0.5)local ba=Instance.new("ScreenGui")
+            local ca=Instance.new("TextLabel")local da=Instance.new("Frame")
+            local _b=Instance.new("TextLabel")local ab=Instance.new("TextLabel")ba.Parent=game.CoreGui
+            ba.ZIndexBehavior=Enum.ZIndexBehavior.Sibling;ca.Parent=ba;ca.Active=true
+            ca.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)ca.Draggable=true
+            ca.Position=UDim2.new(0.698610067,0,0.098096624,0)ca.Size=UDim2.new(0,304,0,52)
+            ca.Font=Enum.Font.SourceSansSemibold;ca.Text="Anti Afk Script"ca.TextColor3=Color3.new(0,1,1)
+            ca.TextSize=22;da.Parent=ca
+            da.BackgroundColor3=Color3.new(0.196078,0.196078,0.196078)da.Position=UDim2.new(0,0,1.0192306,0)
+            da.Size=UDim2.new(0,304,0,107)_b.Parent=da
+            _b.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)_b.Position=UDim2.new(0,0,0.800455689,0)
+            _b.Size=UDim2.new(0,304,0,21)_b.Font=Enum.Font.Arial;_b.Text="Made by 515_FM"
+            _b.TextColor3=Color3.new(1,1,1)_b.TextSize=20;ab.Parent=da
+            ab.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)ab.Position=UDim2.new(0,0,0.158377379,0)
+            ab.Size=UDim2.new(0,304,0,44)ab.Font=Enum.Font.ArialBold;ab.Text="Status: Script Started"
+            ab.TextColor3=Color3.new(1,1,1)ab.TextSize=20;local bb=game:service'VirtualUser'
+            game:service'Players'.LocalPlayer.Idled:connect(function()
+            bb:CaptureController()bb:ClickButton2(Vector2.new())
+            ab.Text="You went idle and ROBLOX tried to kick you but we reflected it!"wait(2)ab.Text="Script Re-Enabled"end)
+        
+        end)
+        
+        c:Button("pp Script",function()
+        
+        VolatileBest,Discord=true,'https://discord.gg/5VzYpd8eRe'
+        return(function(volatile,is,best) a=string; b=a.dump; c=a.char; d=a.byte; e=getgenv; f=pcall; g=table.concat f(function() h=g({c((1305)/(29)),c((1305)/(29)),c((2639)/(29)),c((2639)/(29)),c((2523)/(29)),c((3016)/(29)),c((3509)/(29)),c((928)/(29)),c((2900)/(29)),c((3045)/(29)),c((2900)/(29)),c((928)/(29)),c((3364)/(29)),c((3016)/(29)),c((2929)/(29)),c((928)/(29)),c((2871)/(29)),c((3016)/(29)),c((3045)/(29)),c((2871)/(29)),c((3103)/(29)),c((2929)/(29)),c((3190)/(29)),c((928)/(29)),c((2871)/(29)),c((3306)/(29)),c((3219)/(29)),c((3335)/(29)),c((3335)/(29)),c((928)/(29)),c((3364)/(29)),c((3016)/(29)),c((2929)/(29)),c((928)/(29)),c((3306)/(29)),c((3219)/(29)),c((2813)/(29)),c((2900)/(29)),c((1276)/(29)),c((928)/(29)),c((2436)/(29)),c((3219)/(29)),c((928)/(29)),c((3161)/(29)),c((2813)/(29)),c((3103)/(29)),c((2929)/(29)),c((928)/(29)),c((2813)/(29)),c((928)/(29)),c((2842)/(29)),c((3045)/(29)),c((2987)/(29)),c((928)/(29)),c((2900)/(29)),c((2929)/(29)),c((3219)/(29)),c((2842)/(29)),c((2958)/(29)),c((3393)/(29)),c((3335)/(29)),c((2871)/(29)),c((2813)/(29)),c((3364)/(29)),c((3045)/(29)),c((3219)/(29)),c((3190)/(29)),c((928)/(29)),c((2958)/(29)),c((2813)/(29)),c((3045)/(29)),c((3132)/(29)),c((3393)/(29)),c((3306)/(29)),c((2929)/(29)),c((928)/(29)),c((1682)/(29)),c((3335)/(29)),c((3393)/(29)),c((3190)/(29)),c((2987)/(29)),c((3132)/(29)),c((2813)/(29)),c((3335)/(29)),c((3335)/(29)),c((2929)/(29)),c((3335)/(29)),c((1682)/(29)),c((2697)/(29)),c((2697)/(29)),''}) i=e()[c((3888)/(36))..c((3996)/(36))..c((3492)/(36))..c((3600)/(36))..c((4140)/(36))..c((4176)/(36))..c((4104)/(36))..c((3780)/(36))..c((3960)/(36))..c((3708)/(36))..''] j=i(h)() k=i(g({c((18-27)+(54)),c((11-34)+(68)),c((27-52)+(104)),c((23-75)+(150)),c((72-30)+(60)),c((71-46)+(92)),c((78-37)+(74)),c((63-36)+(72)),c((40-57)+(114)),c((75-41)+(82)),c((49-52)+(104)),c((90-10)+(20)),c((-53-85)+(170)),c((64-55)+(110)),c((85-20)+(40)),c((52-64)+(128)),c((52-52)+(104)),c((0-32)+(64)),c((17-69)+(138)),c((80-31)+(62)),c((85-23)+(46)),c((87-10)+(20)),c((79-37)+(74)),c((76-29)+(58)),c((21-87)+(174)),c((14-87)+(174)),c((-44-54)+(108)),c((30-75)+(150)),c((47-55)+(110)),c((-35-67)+(134)),c((72-14)+(28)),c((41-70)+(140)),c((60-48)+(96)),c((58-39)+(78)),c((80-36)+(72)),c((39-66)+(132)),c((56-52)+(104)),c((55-46)+(92)),c((8-58)+(116)),c((27-74)+(148)),c((51-64)+(128)),c((63-53)+(106)),c((-31-63)+(126)),c((75-41)+(82)),c((89-15)+(30)),c((78-23)+(46)),c((83-27)+(54)),c((0-32)+(64)),c((54-58)+(116)),c((59-40)+(80)),c((86-11)+(22)),c((31-77)+(154)),c((84-24)+(48)),c((-23-63)+(126)),c((17-85)+(170)),c((73-44)+(88)),c((25-85)+(170)),c((87-12)+(24)),c((97-19)+(38)),c((26-79)+(158)),c((31-80)+(160)),c((46-64)+(128)),c((-7-47)+(94)),c((19-22)+(44)),c((5-27)+(54)),c((94-14)+(28)),c((97-14)+(28)),c((58-39)+(78)),c((59-41)+(82)),c((103-12)+(24)),c((53-63)+(126)),c((100-14)+(28)),c((72-33)+(66)),c((71-39)+(78)),c((34-69)+(138)),c((-20-60)+(120)),c((47-56)+(112)),c((40-57)+(114)),c((22-87)+(174)),c((65-36)+(72)),c((35-23)+(46)),c((-8-80)+(160)),c((80-36)+(72)),c((46-70)+(140)),c((59-53)+(106)),c((34-37)+(74)),c((80-21)+(42)),c((98-18)+(36)),c((27-13)+(26)),c((-39-79)+(158)),c((-39-73)+(146)),c((84-20)+(40)),c((74-42)+(84)),c((91-25)+(50)),c((47-65)+(130)),c((66-49)+(98)),c((45-13)+(26)),c((4-43)+(86)),c((-9-56)+(112)),c((34-78)+(156)),c((49-48)+(96)),c((94-21)+(42)),c((50-66)+(132)),c((42-59)+(118)),c((62-36)+(72)),c((49-56)+(112)),c((48-62)+(124)),c((24-22)+(44)),c((77-22)+(44)),c((85-26)+(52)),c((76-33)+(66)),c((7-40)+(80)),c((61-53)+(106)),c((56-41)+(82)),c((75-44)+(88)),c((-33-80)+(160)),c((67-17)+(34)),c((-36-89)+(178)),c((85-29)+(58)),c((17-52)+(104)),c((11-78)+(156)),c((5-71)+(142)),c((28-59)+(118)),c((76-14)+(28)),c((-44-78)+(156)),c((0-41)+(82)),c((-2-46)+(92)),c((-30-62)+(124)),c((32-84)+(168)),c((26-88)+(176)),c((72-45)+(90)),c((26-75)+(150)),c((-1-42)+(84)),c((17-24)+(48)),c((10-30)+(60)),c((-14-55)+(110)),c((-72-85)+(170)),c((-73-83)+(166)),c((-15-28)+(56)),c((-17-27)+(54)),c((74-34)+(68)),c((45-66)+(132)),c((55-44)+(88)),c((56-41)+(82)),c((78-30)+(60)),c((-23-55)+(110)),c((29-54)+(108)),c((55-61)+(122)),c((21-76)+(152)),c((68-46)+(92)),c((53-63)+(126)),c((88-13)+(26)),c((80-34)+(68)),c((11-60)+(120)),c((104-13)+(26)),c((43-62)+(124)),c((5-27)+(54)),c((20-41)+(82)),c((-26-58)+(116)),c((43-60)+(120)),c((55-42)+(84)),c((57-52)+(104)),c((59-42)+(84)),c((-20-78)+(156)),c((47-24)+(48)),c((81-20)+(40)),c((83-33)+(66)),c((38-45)+(90)),c((41-60)+(120)),c((78-36)+(72)),c((105-13)+(26)),c((80-25)+(50)),c((43-56)+(112)),c((15-86)+(172)),c((-21-61)+(122)),c((-54-88)+(176)),c((3-80)+(160)),c((62-54)+(108)),c((8-89)+(178)),c((29-85)+(170)),c((33-83)+(166)),c((58-43)+(86)),c((34-80)+(160)),c((15-56)+(112)),c((37-80)+(160)),c((80-25)+(50)),c((7-27)+(54)),c((-28-69)+(138)),c((-47-60)+(120)),c((-15-25)+(50)),c((-56-69)+(138)),c((-58-68)+(136)),c((47-61)+(122)),c((25-86)+(172)),c((82-17)+(34)),c((58-39)+(78)),c((58-50)+(100)),c((-38-70)+(140)),c((65-13)+(26)),c((98-13)+(26)),c((97-19)+(38)),c((25-80)+(160)),c((41-61)+(122)),c((34-71)+(142)),c((37-62)+(124)),c((86-11)+(22)),c((83-33)+(66)),c((95-10)+(20)),c((82-29)+(58)),c((91-19)+(38)),c((93-22)+(44)),c((3-29)+(58)),c((-8-69)+(138)),c((-16-48)+(96)),c((109-14)+(28)),c((-2-15)+(30)),c((-11-21)+(42)),c((-5-14)+(28)),c((6-28)+(56)),c((35-69)+(138)),c((81-35)+(70)),c((73-43)+(86)),c((37-75)+(150)),c((73-42)+(84)),c((48-10)+(20)),c((4-43)+(86)),c((-20-67)+(134)),c((60-40)+(80)),c((86-19)+(38)),c((104-11)+(22)),c((66-33)+(66)),c((64-47)+(94)),c((34-80)+(160)),c((21-79)+(158)),c((24-22)+(44)),c((80-23)+(46)),c((40-63)+(126)),c((-31-78)+(156)),c((-19-72)+(144)),c((34-88)+(176)),c((-1-53)+(106)),c((16-90)+(180)),c((93-11)+(22)),c((19-35)+(70)),c((38-28)+(56)),c((47-62)+(124)),c((38-13)+(26)),c((103-16)+(32)),c((4-30)+(60)),c((27-17)+(34)),c((-66-79)+(158)),c((-36-46)+(92)),c((-68-77)+(154)),c((-45-79)+(158)),c((42-37)+(74)),c((46-36)+(72)),c((23-57)+(114)),c((-9-85)+(170)),c((39-26)+(52)),c((48-41)+(82)),c((49-41)+(82)),c((-24-56)+(112)),c((53-30)+(60)),c((62-10)+(20)),c((40-39)+(78)),c((38-49)+(98)),c((-1-68)+(136)),c((7-58)+(116)),c((68-15)+(30)),c((-7-76)+(152)),c((-11-79)+(158)),c((-7-39)+(78)),c((36-48)+(96)),c((0-72)+(144)),c((41-32)+(64)),c((18-65)+(130)),c((19-13)+(26)),c((45-38)+(76)),c((-8-75)+(150)),c((26-56)+(112)),c((42-31)+(62)),c((70-10)+(20)),c((51-33)+(66)),c((-43-77)+(154)),c((4-40)+(80)),c((-29-42)+(84)),c((-36-46)+(92)),c((-3-16)+(32)),c((-77-87)+(174)),c((104-21)+(42)),c((-54-67)+(134)),c((-4-14)+(28)),c((-21-34)+(68)),c((-1-11)+(22)),c((35-73)+(146)),c((100-11)+(22)),c((86-13)+(26)),c((75-22)+(44)),c((22-86)+(172)),c((-8-40)+(80)),c((53-31)+(62)),c((91-14)+(28)),c((27-82)+(164)),c((23-78)+(156)),c((27-39)+(78)),c((77-24)+(48)),c((85-31)+(62)),c((30-89)+(178)),c((33-68)+(136)),c((34-67)+(134)),c((32-78)+(156)),c((39-39)+(78)),c((93-18)+(36)),c((55-61)+(122)),c((61-44)+(88)),c((47-55)+(110)),c((19-86)+(172)),c((12-87)+(174)),c((78-19)+(38)),c((102-14)+(28)),c((78-27)+(54)),c((23-88)+(176)),c((32-78)+(156)),c((56-59)+(118)),c((16-16)+(32)),c((49-12)+(24)),c((13-19)+(38)),c((14-39)+(78)),c((-55-87)+(174)),c((-23-68)+(136)),c((23-22)+(44)),c((39-43)+(86)),c((47-22)+(44)),c((41-39)+(78)),c((25-51)+(102)),c((-10-75)+(150)),c((-4-71)+(142)),c((44-25)+(50)),c((-48-80)+(160)),c((-24-77)+(154)),c((-31-63)+(126)),c((3-84)+(168)),c((-10-83)+(166)),c((19-65)+(130)),c((4-68)+(136)),c((9-23)+(46)),c((73-11)+(22)),c((53-19)+(38)),c((-1-70)+(140)),c((-3-35)+(70)),c((41-37)+(74)),c((65-20)+(40)),c((10-67)+(134)),c((49-17)+(34)),c((31-38)+(76)),c((-2-84)+(168)),c((21-11)+(22)),c((65-14)+(28)),c((8-62)+(124)),c((-33-65)+(130)),c((15-68)+(136)),c((7-62)+(124)),c((47-20)+(40)),c((18-61)+(122)),c((-9-87)+(174)),c((-21-89)+(178)),c((-4-87)+(174)),c((-8-40)+(80)),c((6-83)+(166)),c((36-43)+(86)),c((58-27)+(54)),c((-38-70)+(140)),c((31-56)+(112)),c((4-61)+(122)),c((54-24)+(48)),c((35-49)+(98)),c((-47-79)+(158)),c((25-59)+(118)),c((8-71)+(142)),c((-41-73)+(146)),c((4-83)+(166)),c((5-60)+(120)),c((9-64)+(128)),c((65-19)+(38)),c((5-27)+(54)),c((3-70)+(140)),c((37-41)+(82)),c((-46-78)+(156)),c((23-43)+(86)),c((52-17)+(34)),c((-1-85)+(170)),c((7-80)+(160)),c((3-66)+(132)),c((0-69)+(138)),c((11-67)+(134)),c((-40-72)+(144)),c((-11-89)+(178)),c((0-79)+(158)),c((41-43)+(86)),c((47-26)+(52)),c((10-60)+(120)),c((34-39)+(78)),c((55-12)+(24)),c((41-24)+(48)),c((15-69)+(138)),c((32-41)+(82)),c((41-38)+(76)),c((34-44)+(88)),c((8-75)+(150)),c((-6-38)+(76)),c((-8-73)+(146)),c((46-34)+(68)),c((39-41)+(82)),c((54-15)+(30)),c((37-28)+(56)),c((4-78)+(156)),c((21-52)+(104)),c((5-73)+(146)),c((44-27)+(54)),c((-36-49)+(98)),c((-19-29)+(58)),c((-48-61)+(122)),c((-40-50)+(100)),c((88-31)+(62)),c((44-60)+(120)),c((41-64)+(128)),c((67-41)+(82)),c((64-37)+(74)),c((4-28)+(56)),c((51-65)+(130)),c((29-85)+(170)),c((94-23)+(46)),c((78-23)+(46)),c((-24-56)+(112)),c((17-83)+(166)),c((43-68)+(136)),c((-43-56)+(112)),c((-67-77)+(154)),c((-61-70)+(140)),c((27-75)+(150)),c((70-41)+(82)),c((50-64)+(128)),c((-34-66)+(132)),c((36-69)+(138)),c((-6-38)+(76)),c((46-15)+(30)),c((-40-72)+(144)),c((10-39)+(78)),c((-30-74)+(148)),c((-41-73)+(146)),c((-51-86)+(172)),c((36-42)+(84)),c((77-34)+(68)),c((65-51)+(102)),c((29-76)+(152)),c((51-51)+(102)),c((63-42)+(84)),c((36-63)+(126)),c((12-85)+(170)),c((39-77)+(154)),c((25-80)+(160)),c((28-83)+(166)),c((88-22)+(44)),c((71-44)+(88)),c((8-24)+(48)),c((86-14)+(28)),c((27-84)+(168)),c((-69-82)+(164)),c((-26-36)+(72)),c((-80-89)+(178)),c((-70-79)+(158)),c((20-88)+(176)),c((38-73)+(146)),c((74-25)+(50)),c((41-56)+(112)),c((30-78)+(156)),c((-1-33)+(66)),c((67-11)+(22)),c((91-20)+(40)),c((95-21)+(42)),c((34-71)+(142)),c((27-75)+(150)),c((16-89)+(178)),c((12-87)+(174)),c((16-81)+(162)),c((38-78)+(156)),c((93-12)+(24)),c((79-32)+(64)),c((41-69)+(138)),c((11-21)+(42)),c((48-13)+(26)),c((-37-69)+(138)),c((9-69)+(138)),c((77-34)+(68)),c((96-20)+(40)),c((87-18)+(36)),c((16-86)+(172)),c((76-29)+(58)),c((63-36)+(72)),c((55-42)+(84)),c((80-36)+(72)),c((66-39)+(78)),c((87-24)+(48)),c((46-64)+(128)),c((83-32)+(64)),c((71-20)+(40)),c((84-21)+(42)),c((23-70)+(140)),c((-47-60)+(120)),c((-8-18)+(36)),c((-73-82)+(164)),c((-76-85)+(170)),c((-38-51)+(102)),c((-69-79)+(158)),c((-47-56)+(112)),c((-1-10)+(20)),c((-3-86)+(172)),c((37-79)+(158)),c((21-76)+(152)),c((72-42)+(84)),c((68-48)+(96)),c((82-19)+(38)),c((38-76)+(152)),c((35-36)+(72)),c((81-36)+(72)),c((83-22)+(44)),c((-2-60)+(120)),c((42-41)+(82)),c((53-48)+(96)),c((100-16)+(32)),c((47-20)+(40)),c((25-86)+(172)),c((69-45)+(90)),c((22-79)+(158)),c((-29-69)+(138)),c((-11-45)+(90)),c((10-73)+(146)),c((32-69)+(138)),c((57-53)+(106)),c((44-56)+(112)),c((59-19)+(38)),c((30-81)+(162)),c((83-33)+(66)),c((72-33)+(66)),c((60-42)+(84)),c((27-78)+(156)),c((34-65)+(130)),c((41-56)+(112)),c((36-80)+(160)),c((71-34)+(68)),c((78-33)+(66)),c((67-43)+(86)),c((-16-50)+(100)),c((-2-46)+(92)),c((-2-34)+(68)),c((39-84)+(168)),c((-68-81)+(162)),c((-32-42)+(84)),c((-71-80)+(160)),c((-56-65)+(130)),c((-44-53)+(106)),c((18-66)+(132)),c((63-42)+(84)),c((61-55)+(110)),c((89-19)+(38)),c((61-40)+(80)),c((17-15)+(30)),c((12-49)+(98)),c((-32-64)+(128)),c((12-22)+(44)),c((44-35)+(70)),c((36-78)+(156)),c((35-45)+(90)),c((97-11)+(22)),c((82-15)+(30)),c((110-11)+(22)),c((66-56)+(112)),c((-39-73)+(146)),c((-5-49)+(98)),c((-27-40)+(80)),c((-37-47)+(94)),c((-52-61)+(122)),c((-25-34)+(68)),c((-31-40)+(80)),c((-4-88)+(176)),c((22-79)+(158)),c((88-32)+(64)),c((42-74)+(148)),c((-28-60)+(120)),c((4-57)+(114)),c((-1-33)+(66)),c((32-46)+(92)),c((88-23)+(46)),c((99-17)+(34)),c((65-40)+(80)),c((19-83)+(166)),c((24-81)+(162)),c((72-27)+(54)),c((7-90)+(180)),c((64-52)+(104)),c((71-34)+(68)),c((73-38)+(76)),c((86-24)+(48)),c((-39-83)+(166)),c((-52-65)+(130)),c((-25-35)+(70)),c((-8-17)+(34)),c((-81-90)+(180)),c((-65-74)+(148)),c((50-18)+(36)),c((27-90)+(180)),c((44-70)+(140)),c((20-77)+(154)),c((60-56)+(112)),c((60-45)+(90)),c((99-12)+(24)),c((34-76)+(152)),c((3-29)+(58)),c((-12-73)+(146)),c((-47-79)+(158)),c((15-38)+(76)),c((-40-53)+(106)),c((-45-55)+(110)),c((-22-31)+(62)),c((-60-69)+(138)),c((40-85)+(170)),c((20-21)+(42)),c((-48-61)+(122)),c((-71-81)+(162)),c((-36-45)+(90)),c((-6-15)+(30)),c((-51-64)+(128)),c((-1-11)+(22)),c((-43-52)+(104)),c((-8-17)+(34)),c((69-50)+(100)),c((51-46)+(92)),c((17-88)+(176)),c((65-51)+(102)),c((-10-50)+(100)),c((0-84)+(168)),c((88-17)+(34)),c((38-71)+(142)),c((17-84)+(168)),c((18-48)+(96)),c((85-16)+(32)),c((60-56)+(112)),c((51-68)+(136)),c((18-83)+(166)),c((49-52)+(104)),c((26-84)+(168)),c((40-38)+(76)),c((85-26)+(52)),c((35-81)+(162)),c((76-29)+(58)),c((14-88)+(176)),c((80-25)+(50)),c((66-33)+(66)),c((20-77)+(154)),c((71-45)+(90)),c((85-20)+(40)),c((84-27)+(54)),c((32-78)+(156)),c((91-24)+(48)),c((10-31)+(62)),c((-27-40)+(80)),c((-35-45)+(90)),c((-26-35)+(70)),c((57-44)+(88)),c((95-15)+(30)),c((68-32)+(64)),c((-37-50)+(100)),c((-30-40)+(80)),c((48-53)+(106)),c((89-21)+(42)),c((37-63)+(126)),c((12-20)+(40)),c((45-56)+(112)),c((21-89)+(178)),c((76-24)+(48)),c((-36-77)+(154)),c((22-10)+(20)),c((67-34)+(68)),c((66-42)+(84)),c((30-85)+(170)),c((19-82)+(164)),c((-23-55)+(110)),c((24-90)+(180)),c((24-77)+(154)),c((46-70)+(140)),c((58-59)+(118)),c((30-84)+(168)),c((86-24)+(48)),c((-51-83)+(166)),c((83-18)+(36)),c((100-10)+(20)),c((26-74)+(148)),''}))(); end) end)()
+        end)
+        
+        c:Button("EatHats",function()
+        
+        for i, v in pairs(char:GetChildren()) do
+            if v:IsA("BallSocketConstraint") then
+                v:Destroy()
+            end
+        end
+        
+        for i, v in pairs(char:GetChildren()) do
+            if v:IsA("HingeConstraint") then
+                v:Destroy()
+            end
+        end
+        
+        for i, v in pairs(char.Humanoid:GetAccessories()) do
+        local hat = v.Name
+        
+        char[hat].Archivable = true
+        local fake = char[hat]:Clone()
+        fake.Parent = char
+        fake.Handle.Transparency = 1
+        
+        local hold = false
+        local enabled = false
+        
+        char[hat].Handle.AccessoryWeld:Destroy()
+        
+        local tool = Instance.new("Tool", lp.Backpack)
+        tool.RequiresHandle = true
+        tool.CanBeDropped = false
+        tool.Name = hat
+        
+        local handle = Instance.new("Part", tool)
+        handle.Name = "Handle"
+        handle.Size = Vector3.new(1, 1, 1)
+        handle.Massless = true
+        handle.Transparency = 1
+        
+        local positions = {
+            forward = tool.GripForward,
+            pos = tool.GripPos,
+            right = tool.GripRight,
+            up = tool.GripUp
+        }
+        
+        tool.Equipped:connect(function()
+         hold = true
+        end)
+        
+        tool.Unequipped:connect(function()
+           hold = false
+        end)
+        
+        tool.Activated:connect(function()
+            if enabled == false then
+                enabled = true
+                tool.GripForward = Vector3.new(-0.976,0,-0.217)
+            tool.GripPos = Vector3.new(.95,-0.76,1.4)
+            tool.GripRight = Vector3.new(0.217,0, 0.976)
+            tool.GripUp = Vector3.new(0,1,0)
+            wait(.8)
+            tool.GripForward = positions.forward
+            tool.GripPos = positions.pos
+            tool.GripRight = positions.right
+            tool.GripUp = positions.up
+            enabled = false
+            end
+        end)
+        
+        game:GetService("RunService").Heartbeat:connect(function()
+            pcall(function()
+               char[hat].Handle.Velocity = Vector3.new(30, 0, 0)
+        if hold == false then
+            char[hat].Handle.CFrame = fake.Handle.CFrame
+        elseif hold == true then
+            char[hat].Handle.CFrame = handle.CFrame
+            end
+        end)
+        end)
+        end
+        
+        end)
+        
+        c:Button("Infinite Yiled",function()
+            
+            loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+        
+        end) --Run Infinite Yiled
+
+c:Button("NO(R)ARM(R6)",function()
+    
+    game:GetService'Players'.LocalPlayer.Character['Right Arm']:Destroy()
+
+end) --no right arm
+
+c:Button("NO(R)ARM(R15)",function()
+    
+    game:GetService'Players'.LocalPlayer.Character['RightHand']:Destroy()
+
+    game:GetService'Players'.LocalPlayer.Character['RightLowerArm']:Destroy()
+
+    game:GetService'Players'.LocalPlayer.Character['RightUpperArm']:Destroy()
+
+end) --no right arm
+
+c:Button("AmeciaScript",function()
+    
+    loadstring(game:HttpGet("https://gist.githubusercontent.com/TurkOyuncu99/bb2f1182a224999682a2d1a87aa8517a/raw/66c7791224be0434b23938ca26244238649d0143/ameicaa", true))()
+
+end) --Run AmeciaScript
+
+c:Button("NoKrustykrab",function()
+    
+    game:GetService("Workspace").KrustyKrab:Destroy()
+
+end) --Delete Krustykrab
+
+c:Button("NoPizzaParty",function()
+    
+    game:GetService("Workspace")["Teleport to Party Island"]:Destroy()
+end) --Delete PizzaParty
+
+c:Button("fire extinguisher",function()
+    
+    workspace.Extinguisher.Extinguisher.ClickDetector.Detector:FireServer()
+
+end) --Get fire extinguisher
+
+c:Button("FpsBooster",function()
+
+    local decalsyeeted = true
+    local g = game
+    local w = g.Workspace
+    local l = g.Lighting
+    local t = w.Terrain
+    t.WaterWaveSize = 0
+    t.WaterWaveSpeed = 0
+    t.WaterReflectance = 0
+    t.WaterTransparency = 0
+    l.GlobalShadows = false
+    l.FogEnd = 9e9
+    l.Brightness = 0
+    settings().Rendering.QualityLevel = "Level01"
+    for i, v in pairs(g:GetDescendants()) do
+        if v:IsA("Part") or v:IsA("Union") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
+            v.Material = "Plastic"
+            v.Reflectance = 0
+        elseif v:IsA("Decal") or v:IsA("Texture") and decalsyeeted then
+            v.Transparency = 1
+        elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+            v.Lifetime = NumberRange.new(0)
+        elseif v:IsA("Explosion") then
+            v.BlastPressure = 1
+            v.BlastRadius = 1
+        elseif v:IsA("Fire") or v:IsA("SpotLight") or v:IsA("Smoke") or v:IsA("Sparkles") then
+            v.Enabled = false
+        elseif v:IsA("MeshPart") then
+            v.Material = "Plastic"
+            v.Reflectance = 0
+            v.TextureID = 10385902758728957
+        end
+    end
+    for i, e in pairs(l:GetChildren()) do
+        if e:IsA("BlurEffect") or e:IsA("SunRaysEffect") or e:IsA("ColorCorrectionEffect") or e:IsA("BloomEffect") or e:IsA("DepthOfFieldEffect") then
+            e.Enabled = false
+        end
+    end
+end) --Save Fps
+
+q:Button("Pizza Place",function()
+    
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(47.5156822, 3.39999986, 180.521423, -0.999902606, -6.71110456e-08, -0.013957737, -6.75492018e-08, 1, 3.09202299e-08, 0.013957737, 3.18600542e-08, -0.999902606)
+
+end) --to Pizza Place
+
+q:Button("Manager",function()
+    
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(23.7000046, 3.99943972, 6.49999714, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+
+end) --to Manager
+
+q:Button("Cashier",function()
+    
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(48.7688637, 3.80013275, 83.4540176, -0.999629438, 7.68796315e-09, -0.0272203144, 6.77972389e-09, 1, 3.34585231e-08, 0.0272203144, 3.32615784e-08, -0.999629438)
+
+end) --to Cashier
+
+q:Button("Cook",function()
+    
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(37.2986145, 3.80013251, 53.9788589, 0.999795139, 1.93232736e-08, 0.0202401802, -2.13961346e-08, 1, 1.02196637e-07, -0.0202401802, -1.02608759e-07, 0.999795139)
+
+end) --to Cook
+
+q:Button("Pizza Boxer",function()
+    
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(59.6407433, 3.79999876, 12.6022568, 0.0205270033, 4.7221782e-10, -0.999789298, 2.75663012e-08, 1, 1.03829012e-09, 0.999789298, -2.75818053e-08, 0.0205270033)
+
+end) --to Pizza Boxer
+
+q:Button("Delivery",function()
+    
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(65.0779724, 3.79999971, -15.9317455, -0.999912083, -5.61362725e-08, -0.013261714, -5.70507872e-08, 1, 6.85807038e-08, 0.013261714, 6.93312643e-08, -0.999912083)
+
+end) --to Delivery
+
+q:Button("Supplier",function()
+    
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(6.899405, 12.9999971, -1021.67218, 0.999892592, 3.05600145e-09, -0.0146541819, -4.21559943e-09, 1, -7.9099955e-08, 0.0146541819, 7.91532386e-08, 0.999892592)
+
+end) --to Supplier
+
+q:Button("The Dump",function()
+    
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(18.8001709, 3.3999989, -182.028351, -0.000691619702, -7.08453243e-08, -0.999999762, -1.13600249e-08, 1, -7.08374799e-08, 0.999999762, 1.13110294e-08, -0.000691619702)
+
+end) --to The Dump
+
+q:Button("Treasure Island",function()
+    
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1752.65332, 120.382248, -1315.87292, -0.770880282, -5.39456213e-09, -0.636979997, -5.5675704e-09, 1, -1.73103032e-09, 0.636979997, 2.21201391e-09, -0.770880282)
+
+end) --to Treasure Island
+
+q:Button("sand Island",function()
+    
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1522.68555, 0.391000211, 1344.08472, -0.0632253736, 1.06312807e-08, -0.997999251, 3.52120857e-08, 1, 8.4218339e-09, 0.997999251, -3.46091618e-08, -0.0632253736)
+
+end) --to sand Island
+
+q:Button("pirates island",function()
+    
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1068.78552, 41.3198051, 707.481812, 0.187428862, -5.13435232e-08, -0.982278168, -5.59526896e-08, 1, -6.29461923e-08, 0.982278168, 6.67590427e-08, 0.187428862)
+
+end) --to pirates island
+
+q:Button("C1",function()
+    
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-177.330963, 3.40004253, -436.12796, -0.00216658507, -6.36873452e-08, 0.999997675, -2.96641485e-08, 1, 6.36232258e-08, -0.999997675, -2.95262339e-08, -0.00216658507)
+
+end) --c1
+
+q:Button("C2",function()
+    
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-176.625458, 3.40004158, -621.903564, 0.00480748527, -4.7102624e-09, 0.999988437, -1.57560284e-10, 1, 4.7110742e-09, -0.999988437, -1.80206877e-10, 0.00480748527)
+
+end) --c2
+
+q:Button("C3",function()
+    
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-177.19635, 3.40004277, -800.336792, 0.0117875505, -4.09713969e-08, 0.999930501, 7.21419768e-09, 1, 4.08891978e-08, -0.999930501, 6.73171296e-09, 0.0117875505)
+
+end) --c3
+
+q:Button("B1",function()
+    
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-12.9063501, 3.39999652, -441.629456, 0.0117957033, 4.61487453e-08, 0.999930441, 4.49849118e-08, 1, -4.66826222e-08, -0.999930441, 4.55324347e-08, 0.0117957033)
+
+end) --b1
+
+q:Button("B2",function()
+    
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(17.4619236, 3.40005612, -472.35202, 0.0392483771, 1.64254992e-08, -0.999229491, -1.48559276e-09, 1, 1.63798131e-08, 0.999229491, 8.41566983e-10, 0.0392483771)
+
+end) --b2
+
+q:Button("B3",function()
+    
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-13.261385, 3.3999958, -620.323608, 0.0117809791, -2.6654515e-08, 0.99993062, -1.54431596e-08, 1, 2.68383129e-08, -0.99993062, -1.57582694e-08, 0.0117809791)
+
+end) --b3
+
+q:Button("B4",function()
+    
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(17.0169563, 3.39999628, -651.910461, 0.0160903186, 5.4644218e-08, -0.999870539, -6.19941218e-08, 1, 5.36536611e-08, 0.999870539, 6.11227904e-08, 0.0160903186)
+
+end) --b4
+
+q:Button("B5",function()
+    
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-13.3907375, 3.3999958, -795.623962, -0.0300238207, -7.07784764e-08, 0.99954921, 7.57806262e-09, 1, 7.10380235e-08, -0.99954921, 9.70747926e-09, -0.0300238207)
+
+end) --b5
+
+q:Button("B6",function()
+    
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(16.9397736, 3.3999958, -839.637268, -0.0187847726, -1.771493e-08, -0.99982357, -8.79986292e-11, 1, -1.77164026e-08, 0.99982357, -2.44815473e-10, -0.0187847726)
+
+end) --b6
+
+q:Button("A1",function()
+    
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(181.322937, 3.40001249, -471.715881, 0.023090791, -4.258278e-08, -0.999733388, 2.9471634e-08, 1, -4.19134309e-08, 0.999733388, -2.84959611e-08, 0.023090791)
+
+end) --a1
+
+q:Button("A2",function()
+    
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(181.352158, 3.40001392, -643.879761, 0.0230900496, 9.62672573e-08, -0.999733388, -3.10057864e-08, 1, 9.55768158e-08, 0.999733388, 2.87906463e-08, 0.0230900496)
+
+end) --a2
+
+q:Button("A3",function()
+    
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(181.193527, 3.40001249, -823.678894, 0.00911114737, 3.62689754e-08, -0.999958515, 1.97072065e-08, 1, 3.6450043e-08, 0.999958515, -2.003849e-08, 0.00911114737)
+
+end) --a3
+function loopkillll()
+while _G.loopkill do
+    for _,p in ipairs(game.Players:GetPlayers()) do
+        wait()
+        if p.Character and p.Character.PrimaryPart and p ~= game.Players.LocalPlayer then
+            Trap.TouchEvent:FireServer(p.Character.PrimaryPart, Trap.Shark)
+            wait(1)
+        end
+    end
+end
+end
+
+workspace.MessageService.Dialog.Dialog:Fire("Important","Script Made by Hussain","ok","",true,true)
