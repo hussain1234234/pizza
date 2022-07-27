@@ -17,31 +17,24 @@ local q = library:Window("Teleports")
 
 local c = library:Window("Extra Things")
 
-a:Toggle("turn loops", false, function(bool)
+a:Toggle("Turn Loops", false, function(bool)
     getgenv().spam = (bool)
     getgenv().spamchatt = (bool)
-    getgenv().kill = (bool)
-	getgenv().loopcolor = (bool)
+    getgenv().kill = (bool)-- bool is true or false depending on the state of the toggle
 end)
 
-a:Toggle("Loop Kill all", false, function(bool)
-    _G.loopkill = (bool)
+a:Toggle("Loop Kill All", false, function(bool)
+    _G.loopkill = (bool)-- bool is true or false depending on the state of the toggle
     if _G.loopkill then
         loopkillll()
     end
 end)
 
-a:Toggle("Loop Kill all", false, function(bool)
-    getgenv().loopcolor = (bool)
+a:Toggle("Rainbow Cars", false, function(bool)
+    getgenv().loopcolor = (bool)-- bool is true or false depending on the state of the toggle
     if getgenv().loopcolor then
         spamcolor()
     end
-end)
-
-a:Box("Sit", function(text, focuslost)
-   if focuslost then
-   sitplr(text)
-   end
 end)
 
 a:Box("Spam", function(UrTextHere, focuslost)
@@ -56,287 +49,29 @@ a:Box("kill", function(textt, focuslost)
     end
  end)
 
-function sitplr(text)
-
-    local targetPartial = text
-    
-    local man
-    for _,p in ipairs(game.Players:GetPlayers()) do
-        if p.Name:lower():sub(1,#targetPartial) == targetPartial:lower() or p.DisplayName:lower():sub(1,#targetPartial) == targetPartial:lower() then
-            man = p
-            break
-        end
-    end
-         while getgenv().spam do
-         local Sitt = workspace:FindFirstChild("Tot Slide",true)
-         Sitt.TouchEvent:FireServer(man.Character.Head, Sitt.Trip)
-         wait()
-         end 
-    end
-
     function kill(textt)
-        while getgenv().kill do
-        wait()
-            for _,p  in ipairs(game.Players:GetChildren(textt)) do 
-            local lava = workspace:FindFirstChild("Shark Tank",true)
-            lava.TouchEvent:FireServer(p.Character.PrimiryPart, lava.Shark)
+
+        local targetPartial = textt
+        
+        local man
+        for _,p in ipairs(game.Players:GetPlayers()) do
+            if p.Name:lower():sub(1,#targetPartial) == targetPartial:lower() or p.DisplayName:lower():sub(1,#targetPartial) == targetPartial:lower() then
+                man = p
+                break
             end
         end
-    end
+             while getgenv().kill do
+             local killl = workspace:FindFirstChild("Shark Tank",true)
+             killl.TouchEvent:FireServer(man.Character.Head, killl.Shark)
+             wait()
+             end 
+        end
 
     c:Button("Auto Farm",function()
 
         loadstring(game:HttpGet("https://pastebin.com/raw/sVctm6bC", true))()
         
         end)
-
-		c:Button("tt",function()
-
-			while getgenv().loopcolor do
-				spawn(function()
-				
-				for _,p in ipairs(cars) do
-				
-					local args = {
-						[1] = "Paint",
-						[2] = p.Paint,
-						[3] = "None",
-						[4] = 24
-					}
-				wait()
-					
-					game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
-					
-				
-				end
-				
-				end)
-				
-				wait(0.1)
-				
-				for _,p in ipairs(cars) do
-				
-					local args = {
-						[1] = "Paint",
-						[2] = p.Paint,
-						[3] = "None",
-						[4] = 21
-					}
-				wait()
-					
-					game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
-					
-				
-				end
-				
-				wait(0.1)
-				
-				for _,p in ipairs(cars) do
-				
-					local args = {
-						[1] = "Paint",
-						[2] = p.Paint,
-						[3] = "None",
-						[4] = 104
-					}
-				wait()
-					
-					game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
-					
-				
-				end
-				
-				wait(0.1)
-				
-				for _,p in ipairs(cars) do
-				
-					local args = {
-						[1] = "Paint",
-						[2] = p.Paint,
-						[3] = "None",
-						[4] = 1003
-					}
-				wait()
-					
-					game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
-					
-				
-				end
-				
-				wait(0.1)
-				
-				for _,p in ipairs(cars) do
-				
-					local args = {
-						[1] = "Paint",
-						[2] = p.Paint,
-						[3] = "None",
-						[4] = 1020
-					}
-				wait()
-					
-					game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
-					
-				
-				end
-				
-				wait(0.1)
-				
-				for _,p in ipairs(cars) do
-				
-					local args = {
-						[1] = "Paint",
-						[2] = p.Paint,
-						[3] = "None",
-						[4] = 1010
-					}
-				wait()
-					
-					game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
-					
-				
-				end
-				
-				wait(0.1)
-				
-				for _,p in ipairs(cars) do
-				
-					local args = {
-						[1] = "Paint",
-						[2] = p.Paint,
-						[3] = "None",
-						[4] = 104
-					}
-				wait()
-					
-					game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
-					
-				
-				end
-				
-				wait(0.1)
-				
-				for _,p in ipairs(cars) do
-				
-					local args = {
-						[1] = "Paint",
-						[2] = p.Paint,
-						[3] = "None",
-						[4] = 1032
-					}
-				wait()
-					
-					game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
-					
-				
-				end
-				
-				wait(0.1)
-				
-				for _,p in ipairs(cars) do
-				
-					local args = {
-						[1] = "Paint",
-						[2] = p.Paint,
-						[3] = "None",
-						[4] = 106
-					}
-				wait()
-					
-					game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
-					
-				
-				end
-				
-				wait(0.1)
-				
-				for _,p in ipairs(cars) do
-				
-					local args = {
-						[1] = "Paint",
-						[2] = p.Paint,
-						[3] = "None",
-						[4] = 1001
-					}
-				wait()
-					
-					game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
-					
-				
-				end
-				
-				wait(0.1)
-				
-				for _,p in ipairs(cars) do
-				
-					local args = {
-						[1] = "Paint",
-						[2] = p.Paint,
-						[3] = "None",
-						[4] = 192
-					}
-				wait()
-					
-					game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
-					
-				
-				end
-				
-				wait(0.1)
-				
-				for _,p in ipairs(cars) do
-				
-					local args = {
-						[1] = "Paint",
-						[2] = p.Paint,
-						[3] = "None",
-						[4] = 1001
-					}
-				wait()
-					
-					game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
-					
-				
-				end
-				
-				wait(0.1)
-				
-				for _,p in ipairs(cars) do
-				
-					local args = {
-						[1] = "Paint",
-						[2] = p.Paint,
-						[3] = "None",
-						[4] = 1020
-					}
-				wait()
-					
-					game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
-					
-				
-				end
-				
-				wait(0.1)
-				
-				for _,p in ipairs(cars) do
-				
-					local args = {
-						[1] = "Paint",
-						[2] = p.Paint,
-						[3] = "None",
-						[4] = 104
-					}
-				wait()
-					
-					game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
-					
-				
-						end
-					end 
-				end
-			
-			end)
-			
         
         c:Button("AntiAfk",function()
         
@@ -687,3 +422,8 @@ end
 end
 
 workspace.MessageService.Dialog.Dialog:Fire("Important","Script Made by Hussain","ok","",true,true)
+game.StarterGui:SetCore("SendNotification", {
+    Title = 'Enjoy';
+    Text = 'Script Loaded';
+    Duration = 5;
+  })
