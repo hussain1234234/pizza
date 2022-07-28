@@ -1,243 +1,243 @@
 function spamcolor()
-while getgenv().loopcolor do
-spawn(function()
-
-for _,p in ipairs(game:GetService("Workspace").Cars:GetChildren()) do
-
-    local args = {
-        [1] = "Paint",
-        [2] = p.Paint,
-        [3] = "None",
-        [4] = 24
-    }
-wait()
+    while getgenv().loopcolor do
+    spawn(function()
     
-    game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
+    for _,p in ipairs(game.workspace.Cars:GetDescendants()) do
     
-
-end
-
-end)
-
-wait(0.1)
-
-for _,p in ipairs(game:GetService("Workspace").Cars:GetChildren()) do
-
-    local args = {
-        [1] = "Paint",
-        [2] = p.Paint,
-        [3] = "None",
-        [4] = 21
-    }
-wait()
+        local args = {
+            [1] = "Paint",
+            [2] = p,
+            [3] = "None",
+            [4] = 24
+        }
+    wait()
+        
+        game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
+        
     
-    game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
+    end
     
-
-end
-
-wait(0.1)
-
-for _,p in ipairs(game:GetService("Workspace").Cars:GetChildren()) do
-
-    local args = {
-        [1] = "Paint",
-        [2] = p.Paint,
-        [3] = "None",
-        [4] = 104
-    }
-wait()
+    end)
     
-    game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
+    wait(0.1)
     
-
-end
-
-wait(0.1)
-
-for _,p in ipairs(game:GetService("Workspace").Cars:GetChildren()) do
-
-    local args = {
-        [1] = "Paint",
-        [2] = p.Paint,
-        [3] = "None",
-        [4] = 1003
-    }
-wait()
+    for _,p in ipairs(game.workspace.Cars:GetDescendants()) do
     
-    game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
+        local args = {
+            [1] = "Paint",
+            [2] = p,
+            [3] = "None",
+            [4] = 21
+        }
+    wait()
+        
+        game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
+        
     
-
-end
-
-wait(0.1)
-
-for _,p in ipairs(game:GetService("Workspace").Cars:GetChildren()) do
-
-    local args = {
-        [1] = "Paint",
-        [2] = p.Paint,
-        [3] = "None",
-        [4] = 1020
-    }
-wait()
+    end
     
-    game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
+    wait(0.1)
     
-
-end
-
-wait(0.1)
-
-for _,p in ipairs(game:GetService("Workspace").Cars:GetChildren()) do
-
-    local args = {
-        [1] = "Paint",
-        [2] = p.Paint,
-        [3] = "None",
-        [4] = 1010
-    }
-wait()
+    for _,p in ipairs(game.workspace.Cars:GetDescendants()) do
     
-    game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
+        local args = {
+            [1] = "Paint",
+            [2] = p,
+            [3] = "None",
+            [4] = 104
+        }
+    wait()
+        
+        game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
+        
     
-
-end
-
-wait(0.1)
-
-for _,p in ipairs(game:GetService("Workspace").Cars:GetChildren()) do
-
-    local args = {
-        [1] = "Paint",
-        [2] = p.Paint,
-        [3] = "None",
-        [4] = 104
-    }
-wait()
+    end
     
-    game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
+    wait(0.1)
     
-
-end
-
-wait(0.1)
-
-for _,p in ipairs(game:GetService("Workspace").Cars:GetChildren()) do
-
-    local args = {
-        [1] = "Paint",
-        [2] = p.Paint,
-        [3] = "None",
-        [4] = 1032
-    }
-wait()
+    for _,p in ipairs(game.workspace.Cars:GetDescendants()) do
     
-    game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
+        local args = {
+            [1] = "Paint",
+            [2] = p,
+            [3] = "None",
+            [4] = 1003
+        }
+    wait()
+        
+        game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
+        
     
-
-end
-
-wait(0.1)
-
-for _,p in ipairs(game:GetService("Workspace").Cars:GetChildren()) do
-
-    local args = {
-        [1] = "Paint",
-        [2] = p.Paint,
-        [3] = "None",
-        [4] = 106
-    }
-wait()
+    end
     
-    game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
+    wait(0.1)
     
-
-end
-
-wait(0.1)
-
-for _,p in ipairs(game:GetService("Workspace").Cars:GetChildren()) do
-
-    local args = {
-        [1] = "Paint",
-        [2] = p.Paint,
-        [3] = "None",
-        [4] = 1001
-    }
-wait()
+    for _,p in ipairs(game.workspace.Cars:GetDescendants()) do
     
-    game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
+        local args = {
+            [1] = "Paint",
+            [2] = p,
+            [3] = "None",
+            [4] = 1020
+        }
+    wait()
+        
+        game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
+        
     
-
-end
-
-wait(0.1)
-
-for _,p in ipairs(game:GetService("Workspace").Cars:GetChildren()) do
-
-    local args = {
-        [1] = "Paint",
-        [2] = p.Paint,
-        [3] = "None",
-        [4] = 192
-    }
-wait()
+    end
     
-    game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
+    wait(0.1)
     
-
-end
-
-wait(0.1)
-
-for _,p in ipairs(game:GetService("Workspace").Cars:GetChildren()) do
-
-    local args = {
-        [1] = "Paint",
-        [2] = p.Paint,
-        [3] = "None",
-        [4] = 1001
-    }
-wait()
+    for _,p in ipairs(game.workspace.Cars:GetDescendants()) do
     
-    game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
+        local args = {
+            [1] = "Paint",
+            [2] = p,
+            [3] = "None",
+            [4] = 1010
+        }
+    wait()
+        
+        game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
+        
     
-
-end
-
-wait(0.1)
-
-for _,p in ipairs(game:GetService("Workspace").Cars:GetChildren()) do
-
-    local args = {
-        [1] = "Paint",
-        [2] = p.Paint,
-        [3] = "None",
-        [4] = 1020
-    }
-wait()
+    end
     
-    game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
+    wait(0.1)
     
-
-end
-
-wait(0.1)
-
-for _,p in ipairs(game:GetService("Workspace").Cars:GetChildren()) do
-
-    local args = {
-        [1] = "Paint",
-        [2] = p.Paint,
-        [3] = "None",
-        [4] = 104
-    }
-wait()
+    for _,p in ipairs(game.workspace.Cars:GetDescendants()) do
     
-    game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
+        local args = {
+            [1] = "Paint",
+            [2] = p,
+            [3] = "None",
+            [4] = 104
+        }
+    wait()
+        
+        game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
+        
     
-
-        end
-    end 
-end
+    end
+    
+    wait(0.1)
+    
+    for _,p in ipairs(game.workspace.Cars:GetDescendants()) do
+    
+        local args = {
+            [1] = "Paint",
+            [2] = p,
+            [3] = "None",
+            [4] = 1032
+        }
+    wait()
+        
+        game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
+        
+    
+    end
+    
+    wait(0.1)
+    
+    for _,p in ipairs(game.workspace.Cars:GetDescendants()) do
+    
+        local args = {
+            [1] = "Paint",
+            [2] = p,
+            [3] = "None",
+            [4] = 106
+        }
+    wait()
+        
+        game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
+        
+    
+    end
+    
+    wait(0.1)
+    
+    for _,p in ipairs(game.workspace.Cars:GetDescendants()) do
+    
+        local args = {
+            [1] = "Paint",
+            [2] = p,
+            [3] = "None",
+            [4] = 1001
+        }
+    wait()
+        
+        game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
+        
+    
+    end
+    
+    wait(0.1)
+    
+    for _,p in ipairs(game.workspace.Cars:GetDescendants()) do
+    
+        local args = {
+            [1] = "Paint",
+            [2] = p,
+            [3] = "None",
+            [4] = 192
+        }
+    wait()
+        
+        game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
+        
+    
+    end
+    
+    wait(0.1)
+    
+    for _,p in ipairs(game.workspace.Cars:GetDescendants()) do
+    
+        local args = {
+            [1] = "Paint",
+            [2] = p,
+            [3] = "None",
+            [4] = 1001
+        }
+    wait()
+        
+        game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
+        
+    
+    end
+    
+    wait(0.1)
+    
+    for _,p in ipairs(game.workspace.Cars:GetDescendants()) do
+    
+        local args = {
+            [1] = "Paint",
+            [2] = p,
+            [3] = "None",
+            [4] = 1020
+        }
+    wait()
+        
+        game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
+        
+    
+    end
+    
+    wait(0.1)
+    
+    for _,p in ipairs(game.workspace.Cars:GetDescendants()) do
+    
+        local args = {
+            [1] = "Paint",
+            [2] = p,
+            [3] = "None",
+            [4] = 104
+        }
+    wait()
+        
+        game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
+        
+    
+            end
+        end 
+    end
