@@ -63,7 +63,7 @@ a:Box("kill", function(textt, focuslost)
              while getgenv().kill do
              local killl = workspace:FindFirstChild("Shark Tank",true)
              killl.TouchEvent:FireServer(man.Character.Head, killl.Shark)
-             wait()
+             wait(6)
              end 
         end
 
