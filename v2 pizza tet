@@ -69,9 +69,14 @@ a:Box("kill", function(textt, focuslost)
 
     c:Button("Auto Farm",function()
 
-        loadstring(game:HttpGet(('https://pastebin.com/raw/UdyRSzZV'),true))()
+        loadstring(game:HttpGet("https://pastebin.com/raw/tLqnPLN3",true))()
         
         end)
+        c:Button("Ride Car",function()
+
+            workspace.Cars.Car.LeftDoor.ClickDetector.Detector:FireServer()
+            
+            end)
         
         c:Button("AntiAfk",function()
         
