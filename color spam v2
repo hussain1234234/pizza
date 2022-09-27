@@ -1,5 +1,6 @@
 function spamcolor()
     while getgenv().loopcolor do
+        local success,errormessage = pcall(function()
     spawn(function()
     
     for _,p in ipairs(game:GetService("Workspace").Cars:GetChildren()) do
@@ -241,3 +242,4 @@ function spamcolor()
             end
         end 
     end
+end)
