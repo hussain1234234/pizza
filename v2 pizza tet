@@ -1,7 +1,9 @@
 getgenv().loopcolor = false
+getgenv().togglefire = false
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/spamming'),true))()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/kick'),true))()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/car%20spam%20color'),true))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/nofire'),true))()
 getgenv().spam = false
 getgenv().kill = false
 _G.loopkill = false
@@ -35,6 +37,13 @@ a:Toggle("Rainbow Cars", false, function(bool)
     getgenv().loopcolor = (bool)-- bool is true or false depending on the state of the toggle
     if getgenv().loopcolor then
         spamcolor()
+    end
+end)
+
+a:Toggle("AntiOven Fire", false, function(bool)
+    getgenv().togglefire = (bool)-- bool is true or false depending on the state of the toggle
+    if getgenv().togglefire then
+        nofire()
     end
 end)
 
