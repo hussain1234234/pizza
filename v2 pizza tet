@@ -221,21 +221,31 @@ a:Box("Loop Kill", function(textt, focuslost)
         
         end) --Run Infinite Yiled
 
-c:Button("NO(R)ARM(R6)",function()
+c:Button("No Right Arm",function()
     
-    game:GetService'Players'.LocalPlayer.Character['Right Arm']:Destroy()
+local success, errormessage = pcall(function()
 
-end) --no right arm
-
-c:Button("NO(R)ARM(R15)",function()
+    game.Players.LocalPlayer.Character["Right Arm"]:Destroy()
     
-    game:GetService'Players'.LocalPlayer.Character['RightHand']:Destroy()
-
-    game:GetService'Players'.LocalPlayer.Character['RightLowerArm']:Destroy()
-
-    game:GetService'Players'.LocalPlayer.Character['RightUpperArm']:Destroy()
-
-end) --no right arm
+    end)
+    
+    local done, nice = pcall(function()
+    
+    game.Players.LocalPlayer.Character.RightUpperArm:Destroy()
+    
+    end)
+    
+    if done or success then
+    
+    print('done')
+    
+    elseif nice or errormessage then
+    
+    workspace.MessageService.Dialog.Dialog:Fire("Warning","You Have Already Deleted Your Arm","Sorry","",true,true)
+    
+    
+    end
+end) --No Right Arm
 
 c:Button("AmeciaScript",function()
     
@@ -244,17 +254,24 @@ c:Button("AmeciaScript",function()
 end) --Run AmeciaScript
 
 c:Button("NoKrustykrab",function()
-    
+    local success, errormessage = pcall(function()
     game:GetService("Workspace").KrustyKrab:Destroy()
-
+    end)
+    if errormessage then 
+        workspace.MessageService.Dialog.Dialog:Fire("Warning","You Have Already Delete It","Sorry","",true,true)
+    end    
 end) --Delete Krustykrab
 
 c:Button("NoPizzaParty",function()
-    
+    local success, errormessage = pcall(function()
     game:GetService("Workspace")["Teleport to Party Island"]:Destroy()
+    end)
+    if errormessage then 
+        workspace.MessageService.Dialog.Dialog:Fire("Warning","You Have Already Delete It","Sorry","",true,true)
+    end 
 end) --Delete PizzaParty
 
-c:Button("fire extinguisher",function()
+c:Button("Fire Extinguisher",function()
     
     workspace.Extinguisher.Extinguisher.ClickDetector.Detector:FireServer()
 
