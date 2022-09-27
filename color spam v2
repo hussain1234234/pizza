@@ -240,6 +240,6 @@ function spamcolor()
         
     
             end
-        end 
+        end) 
     end
-end)
+end
