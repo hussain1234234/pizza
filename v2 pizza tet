@@ -1,5 +1,6 @@
 getgenv().loopcolor = false
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/spamming'),true))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/kick'),true))()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/car%20spam%20color'),true))()
 getgenv().spam = false
 getgenv().kill = false
@@ -52,6 +53,12 @@ a:Box("Loop Kill", function(textt, focuslost)
  a:Box("Kill", function(plrnameee, focuslost)
     if focuslost then
         die(plrnameee)
+    end
+ end)
+
+ a:Box("Kick", function(kicked, focuslost)
+    if focuslost then
+        kick(kicked)
     end
  end)
 
