@@ -1,0 +1,13 @@
+function nofire()
+while getgenv().togglefire do
+    task.wait(0.3)
+    local done, fall = pcall(function()
+    game.Players.LocalPlayer.Character.Torso.Fire:Destroy()
+    end)
+    if fall then
+    local success, errormessage = pcall(function()
+    game.Players.LocalPlayer.Character.UpperTorso.Fire:Destroy()
+            end)
+        end
+    end
+end
