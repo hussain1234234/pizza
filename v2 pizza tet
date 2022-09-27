@@ -475,3 +475,16 @@ game.StarterGui:SetCore("SendNotification", {
     Text = 'Script Loaded';
     Duration = 5;
   })
+  
+  local Plr = game.Players.LocalPlayer
+ for _,P in ipairs(game:GetService("CoreGui").TurtleUiLib:GetChildren()) do
+Plr:GetMouse().KeyDown:Connect(function(K)
+    if K == "`" then
+if P.Visible == true then
+        P.Visible = false
+else
+        P.Visible = true
+           end
+       end
+   end)
+end
