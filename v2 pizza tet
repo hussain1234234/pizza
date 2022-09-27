@@ -1,6 +1,6 @@
 getgenv().loopcolor = false
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/spamming'),true))()
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/color%20spam%20v2'),true))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/car%20spam%20color'),true))()
 getgenv().spam = false
 getgenv().kill = false
 _G.loopkill = false
@@ -43,11 +43,32 @@ a:Box("Spam", function(UrTextHere, focuslost)
    end
 end)
 
-a:Box("kill", function(textt, focuslost)
+a:Box("Loop Kill", function(textt, focuslost)
     if focuslost then
         kill(textt)
     end
  end)
+
+ a:Box("Kill", function(plrnameee, focuslost)
+    if focuslost then
+        die(plrnameee)
+    end
+ end)
+
+    function die(plrnameee)
+
+        local targetPartial = plrnameee
+        
+        local man
+        for _,p in ipairs(game.Players:GetPlayers()) do
+            if p.Name:lower():sub(1,#targetPartial) == targetPartial:lower() or p.DisplayName:lower():sub(1,#targetPartial) == targetPartial:lower() then
+                man = p
+                break
+            end
+        end
+        local killl = workspace:FindFirstChild("Shark Tank",true)
+        killl.TouchEvent:FireServer(man.Character.Head, killl.Shark)
+    end
 
     function kill(textt)
 
@@ -61,9 +82,12 @@ a:Box("kill", function(textt, focuslost)
             end
         end
              while getgenv().kill do
+             wait(0.1)
+             local success, errormessage = pcall(function()
              local killl = workspace:FindFirstChild("Shark Tank",true)
              killl.TouchEvent:FireServer(man.Character.Head, killl.Shark)
-             wait(8.5)
+             wait(0.1)
+                 end)
              end 
         end
 
@@ -416,13 +440,15 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(181.1935
 end) --a3
 function loopkillll()
 while _G.loopkill do
-    for _,p in ipairs(game.Players:GetPlayers()) do
-        wait()
-        if p.Character and p.Character.PrimaryPart and p ~= game.Players.LocalPlayer then
-            Trap.TouchEvent:FireServer(p.Character.PrimaryPart, Trap.Shark)
-            wait(1)
+    wait()
+    local success, errormessage = pcall(function()
+         for _,p in ipairs(game.Players:GetPlayers()) do
+            if p.Character and p.Character.PrimaryPart and p ~= game.Players.LocalPlayer then
+                Trap.TouchEvent:FireServer(p.Character.PrimaryPart, Trap.Shark)
+                wait(1)
+           end
         end
-    end
+    end)
 end
 end
 
