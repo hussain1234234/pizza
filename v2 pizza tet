@@ -7,6 +7,7 @@ loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza
 getgenv().spam = false
 getgenv().kill = false
 _G.loopkill = false
+local check = game:GetService("Workspace").Houses:FindFirstChild(lp.Name, true)
 local Trap = workspace:FindFirstChild("Shark Tank",true)
 local p1 = game.Players.LocalPlayer.Character.HumanoidRootPart
 local lp = game.Players.LocalPlayer
@@ -112,6 +113,12 @@ a:Box("Loop Kill", function(textt, focuslost)
         loadstring(game:HttpGet("https://pastebin.com/raw/tLqnPLN3",true))()
         
         end)
+        c:Button("Goto Your House",function()
+            if check then
+                local myhome = check.Parent:FindFirstChild("Doors", true)
+                p1.CFrame = myhome.FrontDoorMain.DoorTouch.CFrame
+                end            
+            end)
         c:Button("Ride Car",function()
 
             workspace.Cars.Car.LeftDoor.ClickDetector.Detector:FireServer()
