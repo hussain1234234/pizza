@@ -11,12 +11,3 @@ while getgenv().togglefire do
         end
     end
 end
-
-if done or success then
-
-game.StarterGui:SetCore("SendNotification", {
-    Title = 'Warning';
-    Text = 'God Hussain Saved You From The Fire';
-    Duration = 5;
-  })
-end
