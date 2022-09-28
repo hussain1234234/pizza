@@ -7,10 +7,10 @@ loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza
 getgenv().spam = false
 getgenv().kill = false
 _G.loopkill = false
+local lp = game.Players.LocalPlayer
 local check = game:GetService("Workspace").Houses:FindFirstChild(lp.Name, true)
 local Trap = workspace:FindFirstChild("Shark Tank",true)
 local p1 = game.Players.LocalPlayer.Character.HumanoidRootPart
-local lp = game.Players.LocalPlayer
 local char = lp.Character
 
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/turtle"))()
