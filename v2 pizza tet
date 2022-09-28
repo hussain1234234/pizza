@@ -8,10 +8,10 @@ getgenv().spam = false
 getgenv().kill = false
 _G.loopkill = false
 local lp = game.Players.LocalPlayer
+local check = game:GetService("Workspace").Houses:FindFirstChild(game.Players.LocalPlayer.Name, true)
 local Trap = workspace:FindFirstChild("Shark Tank",true)
 local p1 = game.Players.LocalPlayer.Character.HumanoidRootPart
 local char = lp.Character
-local check = game:GetService("Workspace").Houses:FindFirstChild(lp.Name, true)
 
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/turtle"))()
 
