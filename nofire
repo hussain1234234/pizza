@@ -15,7 +15,7 @@ end
 if done or success then
 
 game.StarterGui:SetCore("SendNotification", {
-    Title = 'Wrning';
+    Title = 'Warning';
     Text = 'God Hussain Saved You From The Fire';
     Duration = 5;
   })
