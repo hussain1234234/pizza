@@ -475,10 +475,10 @@ function loopkillll()
 while _G.loopkill do
     wait()
     local success, errormessage = pcall(function()
-         for _,p in ipairs(game.Players:GetPlayers()) do
+         for _,p in next, game.Players:GetPlayers() do
             if p.Character and p.Character.PrimaryPart and p ~= game.Players.LocalPlayer then
                 Trap.TouchEvent:FireServer(p.Character.PrimaryPart, Trap.Shark)
-                task.wait(1)
+                task.wait(0.3)
            end
         end
     end)
