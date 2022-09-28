@@ -19,3 +19,4 @@ game.StarterGui:SetCore("SendNotification", {
     Text = 'God Hussain Saved You From The Fire';
     Duration = 5;
   })
+end
