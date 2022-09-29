@@ -11,6 +11,8 @@ function kick(kicked)
   })
     else
     local success, errormessage = pcall(function()
+    game.Players.LocalPlayer.Character["Right Leg"]:Destroy()
+    game.Players.LocalPlayer.Character["Left Leg"]:Destroy()
     game:GetService("Workspace")["Teleport to Party Island"]:Destroy()
     end)
     local plr = game.Players.LocalPlayer.Character.HumanoidRootPart
