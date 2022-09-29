@@ -1,5 +1,6 @@
 getgenv().loopcolor = false
 getgenv().togglefire = false
+getgenv().loopupoort = false
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/spamming'),true))()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/kick'),true))()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/car%20spam%20color'),true))()
@@ -41,11 +42,18 @@ a:Toggle("Rainbow Cars", false, function(bool)
     end
 end)
 
-a:Toggle("AntiOven Fire", false, function(bool)
+a:Toggle("Anti-Oven Fire", false, function(bool)
     getgenv().togglefire = (bool)-- bool is true or false depending on the state of the toggle
     if getgenv().togglefire then
         nofire()
     end
+end)
+
+a:Toggle("Unanchored Trees", false, function(bool)
+	getgenv().loopupoort = (bool)
+	if getgenv().loopupoort then
+		killtree()
+	end
 end)
 
 a:Box("Spam", function(UrTextHere, focuslost)
@@ -478,6 +486,18 @@ while _G.loopkill do
         end
     end)
 end
+end
+
+function killtree()
+    while getgenv().loopupoort do
+    wait()
+    local success, fail = pcall(function()
+            for _,P in next, game:GetService("Workspace").Trees:GetChildren() do
+            game:GetService("Workspace").Main.UprootTree:FireServer(P)
+            task.wait()
+            end
+        end)
+    end
 end
 
 workspace.MessageService.Dialog.Dialog:Fire("Important","Script Made by Hussain","ok","",true,true)
