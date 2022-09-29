@@ -1,5 +1,10 @@
 function kickk(kicked)
 
+    --check if player have sword
+    local yaa, loo = pcall(function()
+        local BackPack = game:GetService("Players").LocalPlayer.Backpack["Linked Sword"]
+    end)
+    if yaa then
     Target = kicked
     local done, fall = pcall(function()
     if game.Players[Target] then
@@ -53,10 +58,14 @@ function kickk(kicked)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = NOW
     task.wait(2)
     game.Players.LocalPlayer.Character["Right Arm"]:Destroy()
-        end
+    game.Players.LocalPlayer.Character.Torso:Destroy()
+       end
     end
 end)
     if fall then
     workspace.MessageService.Dialog.Dialog:Fire("Warning","Player Not Exist","Ok","",true,true)
-        end
     end
+    elseif loo then
+        workspace.MessageService.Dialog.Dialog:Fire("Warning","You Need Linked Sword To Continue","Ok","",true,true)
+    end
+end
