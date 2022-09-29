@@ -11,13 +11,12 @@ function kickk(kicked)
   })
     else
     local success, errormessage = pcall(function()
+    game.Players.LocalPlayer.Character["Right Leg"]:Destroy()
+    game.Players.LocalPlayer.Character["Left Leg"]:Destroy()
     game:GetService("Workspace")["Teleport to Party Island"]:Destroy()
     end)
     local plr = game.Players.LocalPlayer.Character.HumanoidRootPart
     plr.CFrame = CFrame.new(81.2056274, 0.0295202285, -284.716187, 0.0418648012, -0.0103800977, 0.999069393, -2.03190538e-07, 0.999946058, 0.0103892144, -0.999123275, -0.000435145368, 0.0418625399)
-    task.wait(0.1)
-    game.Players.LocalPlayer.Character["Right Leg"]:Destroy()
-    game.Players.LocalPlayer.Character["Left Leg"]:Destroy()
     NOW = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
     game.Players.LocalPlayer.Character.Humanoid.Name = 1
     local l = game.Players.LocalPlayer.Character["1"]:Clone()
