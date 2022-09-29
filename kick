@@ -1,4 +1,4 @@
-function kick(kicked)
+function kickk(kicked)
 
     Target = kicked
     local done, fall = pcall(function()
