@@ -7,7 +7,7 @@ function kick()
     local BackPack = game:GetService("Players").LocalPlayer.Backpack["Linked Sword"]
     end)
     if sword then
-    local done, fall = pcall(function()
+    local done, sorry = pcall(function()
     Target = m.Name
     if game.Players[Target] then
     if game.Players[Target].Character.Humanoid.Sit  then
@@ -67,7 +67,7 @@ function kick()
             end
         end
     end)
-    if fall then
+    if sorry then
      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(23.7000046, 3.99943972, 6.49999714, 0, 0, -1, 0, 1, 0, 1, 0, 0)
     end
     elseif unsword then
