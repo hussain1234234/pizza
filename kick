@@ -49,6 +49,8 @@ function kick(kicked)
     getout(game.Players.LocalPlayer, game.Players[Target])
     wait()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = NOW
+    task.wait(2)
+    game.Players.LocalPlayer.Character["Right Arm"]:Destroy()
         end
     end
 end)
