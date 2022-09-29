@@ -124,7 +124,7 @@ a:Box("Loop Kill", function(textt, focuslost)
         c:Button("Goto Your House",function()
             if check then
                 local myhome = check.Parent:FindFirstChild("Doors", true)
-                p1.CFrame = myhome.FrontDoorMain.DoorTouch.CFrame
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = myhome.FrontDoorMain.DoorTouch.CFrame
                 end            
             end)
         c:Button("Ride Car",function()
@@ -351,128 +351,128 @@ end) --Save Fps
 
 q:Button("Pizza Place",function()
     
-    p1.CFrame = CFrame.new(47.5156822, 3.39999986, 180.521423, -0.999902606, -6.71110456e-08, -0.013957737, -6.75492018e-08, 1, 3.09202299e-08, 0.013957737, 3.18600542e-08, -0.999902606)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(47.5156822, 3.39999986, 180.521423, -0.999902606, -6.71110456e-08, -0.013957737, -6.75492018e-08, 1, 3.09202299e-08, 0.013957737, 3.18600542e-08, -0.999902606)
 
 end) --to Pizza Place
 
 q:Button("Manager",function()
     
-    p1.CFrame = CFrame.new(23.7000046, 3.99943972, 6.49999714, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(23.7000046, 3.99943972, 6.49999714, 0, 0, -1, 0, 1, 0, 1, 0, 0)
 
 end) --to Manager
 
 q:Button("Cashier",function()
     
-    p1.CFrame = CFrame.new(48.7688637, 3.80013275, 83.4540176, -0.999629438, 7.68796315e-09, -0.0272203144, 6.77972389e-09, 1, 3.34585231e-08, 0.0272203144, 3.32615784e-08, -0.999629438)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(48.7688637, 3.80013275, 83.4540176, -0.999629438, 7.68796315e-09, -0.0272203144, 6.77972389e-09, 1, 3.34585231e-08, 0.0272203144, 3.32615784e-08, -0.999629438)
 
 end) --to Cashier
 
 q:Button("Cook",function()
     
-    p1.CFrame = CFrame.new(37.2986145, 3.80013251, 53.9788589, 0.999795139, 1.93232736e-08, 0.0202401802, -2.13961346e-08, 1, 1.02196637e-07, -0.0202401802, -1.02608759e-07, 0.999795139)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(37.2986145, 3.80013251, 53.9788589, 0.999795139, 1.93232736e-08, 0.0202401802, -2.13961346e-08, 1, 1.02196637e-07, -0.0202401802, -1.02608759e-07, 0.999795139)
 
 end) --to Cook
 
 q:Button("Pizza Boxer",function()
     
-    p1.CFrame = CFrame.new(59.6407433, 3.79999876, 12.6022568, 0.0205270033, 4.7221782e-10, -0.999789298, 2.75663012e-08, 1, 1.03829012e-09, 0.999789298, -2.75818053e-08, 0.0205270033)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(59.6407433, 3.79999876, 12.6022568, 0.0205270033, 4.7221782e-10, -0.999789298, 2.75663012e-08, 1, 1.03829012e-09, 0.999789298, -2.75818053e-08, 0.0205270033)
 
 end) --to Pizza Boxer
 
 q:Button("Delivery",function()
     
-    p1.CFrame = CFrame.new(65.0779724, 3.79999971, -15.9317455, -0.999912083, -5.61362725e-08, -0.013261714, -5.70507872e-08, 1, 6.85807038e-08, 0.013261714, 6.93312643e-08, -0.999912083)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(65.0779724, 3.79999971, -15.9317455, -0.999912083, -5.61362725e-08, -0.013261714, -5.70507872e-08, 1, 6.85807038e-08, 0.013261714, 6.93312643e-08, -0.999912083)
 
 end) --to Delivery
 
 q:Button("Supplier",function()
     
-    p1.CFrame = CFrame.new(6.899405, 12.9999971, -1021.67218, 0.999892592, 3.05600145e-09, -0.0146541819, -4.21559943e-09, 1, -7.9099955e-08, 0.0146541819, 7.91532386e-08, 0.999892592)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(6.899405, 12.9999971, -1021.67218, 0.999892592, 3.05600145e-09, -0.0146541819, -4.21559943e-09, 1, -7.9099955e-08, 0.0146541819, 7.91532386e-08, 0.999892592)
 
 end) --to Supplier
 
 q:Button("The Dump",function()
     
-    p1.CFrame = CFrame.new(18.8001709, 3.3999989, -182.028351, -0.000691619702, -7.08453243e-08, -0.999999762, -1.13600249e-08, 1, -7.08374799e-08, 0.999999762, 1.13110294e-08, -0.000691619702)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(18.8001709, 3.3999989, -182.028351, -0.000691619702, -7.08453243e-08, -0.999999762, -1.13600249e-08, 1, -7.08374799e-08, 0.999999762, 1.13110294e-08, -0.000691619702)
 
 end) --to The Dump
 
 q:Button("Treasure Island",function()
     
-    p1.CFrame = CFrame.new(-1752.65332, 120.382248, -1315.87292, -0.770880282, -5.39456213e-09, -0.636979997, -5.5675704e-09, 1, -1.73103032e-09, 0.636979997, 2.21201391e-09, -0.770880282)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1752.65332, 120.382248, -1315.87292, -0.770880282, -5.39456213e-09, -0.636979997, -5.5675704e-09, 1, -1.73103032e-09, 0.636979997, 2.21201391e-09, -0.770880282)
 
 end) --to Treasure Island
 
 q:Button("sand Island",function()
     
-    p1.CFrame = CFrame.new(1522.68555, 0.391000211, 1344.08472, -0.0632253736, 1.06312807e-08, -0.997999251, 3.52120857e-08, 1, 8.4218339e-09, 0.997999251, -3.46091618e-08, -0.0632253736)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1522.68555, 0.391000211, 1344.08472, -0.0632253736, 1.06312807e-08, -0.997999251, 3.52120857e-08, 1, 8.4218339e-09, 0.997999251, -3.46091618e-08, -0.0632253736)
 
 end) --to sand Island
 
 q:Button("pirates island",function()
     
-    p1.CFrame = CFrame.new(-1068.78552, 41.3198051, 707.481812, 0.187428862, -5.13435232e-08, -0.982278168, -5.59526896e-08, 1, -6.29461923e-08, 0.982278168, 6.67590427e-08, 0.187428862)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1068.78552, 41.3198051, 707.481812, 0.187428862, -5.13435232e-08, -0.982278168, -5.59526896e-08, 1, -6.29461923e-08, 0.982278168, 6.67590427e-08, 0.187428862)
 
 end) --to pirates island
 
 q:Button("C1",function()
     local house = game:GetService("Workspace").Houses.House1:FindFirstChild("Doors", true)
-    p1.CFrame = house.FrontDoorMain.DoorTouch.CFrame
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = house.FrontDoorMain.DoorTouch.CFrame
 end) --c1
 
 q:Button("C2",function()
     local house = game:GetService("Workspace").Houses.House5:FindFirstChild("Doors", true)
-    p1.CFrame = house.FrontDoorMain.DoorTouch.CFrame
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = house.FrontDoorMain.DoorTouch.CFrame
 end) --c2
 
 q:Button("C3",function()
     local house = game:GetService("Workspace").Houses.House9:FindFirstChild("Doors", true)
-    p1.CFrame = house.FrontDoorMain.DoorTouch.CFrame
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = house.FrontDoorMain.DoorTouch.CFrame
 end) --c3
 
 q:Button("B1",function()
     local house = game:GetService("Workspace").Houses.House2:FindFirstChild("Doors", true)
-    p1.CFrame = house.FrontDoorMain.DoorTouch.CFrame
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = house.FrontDoorMain.DoorTouch.CFrame
 end) --b1
 
 q:Button("B2",function()
     local house = game:GetService("Workspace").Houses.House3:FindFirstChild("Doors", true)
-    p1.CFrame = house.FrontDoorMain.DoorTouch.CFrame
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = house.FrontDoorMain.DoorTouch.CFrame
 end) --b2
 
 q:Button("B3",function()
     local house = game:GetService("Workspace").Houses.House6:FindFirstChild("Doors", true)
-    p1.CFrame = house.FrontDoorMain.DoorTouch.CFrame
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = house.FrontDoorMain.DoorTouch.CFrame
 end) --b3
 
 q:Button("B4",function()
     local house = game:GetService("Workspace").Houses.House7:FindFirstChild("Doors", true)
-    p1.CFrame = house.FrontDoorMain.DoorTouch.CFrame
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = house.FrontDoorMain.DoorTouch.CFrame
 end) --b4
 
 q:Button("B5",function()
     local house = game:GetService("Workspace").Houses.House10:FindFirstChild("Doors", true)
-    p1.CFrame = house.FrontDoorMain.DoorTouch.CFrame
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = house.FrontDoorMain.DoorTouch.CFrame
 end) --b5
 
 q:Button("B6",function()
     local house = game:GetService("Workspace").Houses.House11:FindFirstChild("Doors", true)
-    p1.CFrame = house.FrontDoorMain.DoorTouch.CFrame
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = house.FrontDoorMain.DoorTouch.CFrame
 end) --b6
 
 q:Button("A1",function()
     local house = game:GetService("Workspace").Houses.House4:FindFirstChild("Doors", true)
-    p1.CFrame = house.FrontDoorMain.DoorTouch.CFrame
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = house.FrontDoorMain.DoorTouch.CFrame
 end) --a1
 
 q:Button("A2",function()
     local house = game:GetService("Workspace").Houses.House8:FindFirstChild("Doors", true)
-    p1.CFrame = house.FrontDoorMain.DoorTouch.CFrame
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = house.FrontDoorMain.DoorTouch.CFrame
 end) --a2
 
 q:Button("A3",function()
     local house = game:GetService("Workspace").Houses.House12:FindFirstChild("Doors", true)
-    p1.CFrame = house.FrontDoorMain.DoorTouch.CFrame
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = house.FrontDoorMain.DoorTouch.CFrame
 end) --a3
 function loopkillll()
 while _G.loopkill do
