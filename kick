@@ -1,51 +1,58 @@
 function kick(kicked)
 
-Target = kicked
-local done, fall = pcall(function()
-if game.Players[Target] then
-local success, errormessage = pcall(function()
-game:GetService("Workspace")["Teleport to Party Island"]:Destroy()
+    Target = kicked
+    local done, fall = pcall(function()
+    if game.Players[Target] then
+    if game.Players[Target].Character.Humanoid.Sit  then
+    game.StarterGui:SetCore("SendNotification", {
+    Title = 'Error';
+    Text = 'Player Is Sitting';
+    Duration = 5;
+  })
+    else
+    local success, errormessage = pcall(function()
+    game:GetService("Workspace")["Teleport to Party Island"]:Destroy()
+    end)
+    local plr = game.Players.LocalPlayer.Character.HumanoidRootPart
+    plr.CFrame = CFrame.new(81.2056274, 0.0295202285, -284.716187, 0.0418648012, -0.0103800977, 0.999069393, -2.03190538e-07, 0.999946058, 0.0103892144, -0.999123275, -0.000435145368, 0.0418625399)
+    NOW = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+    game.Players.LocalPlayer.Character.Humanoid.Name = 1
+    local l = game.Players.LocalPlayer.Character["1"]:Clone()
+    l.Parent = game.Players.LocalPlayer.Character
+    l.Name = "Humanoid"
+    wait()
+    game.Players.LocalPlayer.Character["1"]:Destroy()
+    game.Workspace.CurrentCamera.CameraSubject = game.Players.LocalPlayer.Character
+    game.Players.LocalPlayer.Character.Animate.Disabled = true
+    wait()
+    game.Players.LocalPlayer.Character.Animate.Disabled = false
+    game.Players.LocalPlayer.Character.Humanoid.DisplayDistanceType = "None"
+    for i,v in pairs(game:GetService'Players'.LocalPlayer.Backpack:GetChildren())do
+    game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
+    end
+    local function tp(player,player2)
+    local char1,char2=player.Character,player2.Character
+    if char1 and char2 then
+    char1.HumanoidRootPart.CFrame = char2.HumanoidRootPart.CFrame
+    end
+    end
+    local function getout(player,player2)
+    local char1,char2=player.Character,player2.Character
+    if char1 and char2 then
+    char1:MoveTo(char2.Head.Position)
+    end
+    end
+    tp(game.Players[Target], game.Players.LocalPlayer)
+    wait()
+    tp(game.Players[Target], game.Players.LocalPlayer)
+    wait()
+    getout(game.Players.LocalPlayer, game.Players[Target])
+    wait()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = NOW
+        end
+    end
 end)
-local plr = game.Players.LocalPlayer.Character.HumanoidRootPart
-plr.CFrame = CFrame.new(81.2056274, 0.0295202285, -284.716187, 0.0418648012, -0.0103800977, 0.999069393, -2.03190538e-07, 0.999946058, 0.0103892144, -0.999123275, -0.000435145368, 0.0418625399)
-NOW = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-game.Players.LocalPlayer.Character.Humanoid.Name = 1
-local l = game.Players.LocalPlayer.Character["1"]:Clone()
-l.Parent = game.Players.LocalPlayer.Character
-l.Name = "Humanoid"
-wait()
-game.Players.LocalPlayer.Character["1"]:Destroy()
-game.Workspace.CurrentCamera.CameraSubject = game.Players.LocalPlayer.Character
-game.Players.LocalPlayer.Character.Animate.Disabled = true
-wait()
-game.Players.LocalPlayer.Character.Animate.Disabled = false
-game.Players.LocalPlayer.Character.Humanoid.DisplayDistanceType = "None"
-for i,v in pairs(game:GetService'Players'.LocalPlayer.Backpack:GetChildren())do
-game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
-end
-local function tp(player,player2)
-local char1,char2=player.Character,player2.Character
-if char1 and char2 then
-char1.HumanoidRootPart.CFrame = char2.HumanoidRootPart.CFrame
-end
-end
-local function getout(player,player2)
-local char1,char2=player.Character,player2.Character
-if char1 and char2 then
-char1:MoveTo(char2.Head.Position)
-end
-end
-tp(game.Players[Target], game.Players.LocalPlayer)
-wait()
-tp(game.Players[Target], game.Players.LocalPlayer)
-wait()
-getout(game.Players.LocalPlayer, game.Players[Target])
-wait()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = NOW
-end
-end)
-if fall then
-workspace.MessageService.Dialog.Dialog:Fire("Warning","Player Not Exist","Ok","",true,true)
-end
-
-end
+    if fall then
+    workspace.MessageService.Dialog.Dialog:Fire("Warning","Player Not Exist","Ok","",true,true)
+        end
+    end
