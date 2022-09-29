@@ -76,7 +76,7 @@ a:Box("Loop Kill", function(textt, focuslost)
 
  a:Box("Kick", function(kicked, focuslost)
     if focuslost then
-        kick(kicked)
+        kickk(kicked)
     end
  end)
 
@@ -121,6 +121,11 @@ a:Box("Loop Kill", function(textt, focuslost)
         loadstring(game:HttpGet("https://pastebin.com/raw/tLqnPLN3",true))()
         
         end)
+        c:Button("Be Manager",function()
+
+            kick()
+            
+            end)
         c:Button("Goto Your House",function()
             if check then
                 local myhome = check.Parent:FindFirstChild("Doors", true)
@@ -476,18 +481,18 @@ q:Button("A3",function()
 end) --a3
 function loopkillll()
 while _G.loopkill do
-    wait()
-    local success, errormessage = pcall(function()
-         for _,p in next, game.Players:GetPlayers() do
-            if p.Character and p.Character.PrimaryPart and p ~= game.Players.LocalPlayer then
-                Trap.TouchEvent:FireServer(p.Character.PrimaryPart, Trap.Shark)
-                task.wait(0.3)
-           end
-        end
-    end)
+        wait()
+        local success, errormessage = pcall(function()
+                for _,p in next, game.Players:GetPlayers() do
+                    if p.Character and p.Character.PrimaryPart and p ~= game.Players.LocalPlayer then
+                        Trap.TouchEvent:FireServer(p.Character.PrimaryPart, Trap.Shark)
+                        task.wait(0.3)
+                end
+            end
+        end)
+    end
 end
-end
-
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/kick%20manager'),true))()
 function killtree()
     while getgenv().loopupoort do
     wait()
