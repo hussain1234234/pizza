@@ -16,11 +16,11 @@ function kick()
         Duration = 5;
       })
         else
-        local success, errormessage = pcall(function()
-        game.Players.LocalPlayer.Character["Right Leg"]:Destroy()
-        game.Players.LocalPlayer.Character["Left Leg"]:Destroy()
-        game:GetService("Workspace")["Teleport to Party Island"]:Destroy()
-        end)
+         local success, errormessage = pcall(function()
+         game:GetService("Workspace")["Teleport to Party Island"]:Destroy()
+         end)
+         game.Players.LocalPlayer.Character["RightUpperLeg"]:Destroy()
+         game.Players.LocalPlayer.Character["LeftUpperLeg"]:Destroy()
         local plr = game.Players.LocalPlayer.Character.HumanoidRootPart
         plr.CFrame = CFrame.new(81.2056274, 0.0295202285, -284.716187, 0.0418648012, -0.0103800977, 0.999069393, -2.03190538e-07, 0.999946058, 0.0103892144, -0.999123275, -0.000435145368, 0.0418625399)
         NOW = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
@@ -58,9 +58,10 @@ function kick()
         wait()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = NOW
         task.wait(2)
-        game.Players.LocalPlayer.Character["Right Arm"]:Destroy()
+        game.Players.LocalPlayer.Character["RightLowerArm"]:Destroy()
+        game.Players.LocalPlayer.Character["RightUpperArm"]:Destroy()
         wait(0.1)
-        game.Players.LocalPlayer.Character.Torso:Destroy()
+        game.Players.LocalPlayer.Character["UpperTorso"]:Destroy()
         wait(5)
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(23.7000046, 3.99943972, 6.49999714, 0, 0, -1, 0, 1, 0, 1, 0, 0)
                 end
