@@ -22,8 +22,6 @@ function kickk(kicked)
     end
 	game:GetService("TeleportService"):Teleport(10072127013,plr)
     end)
-    game.Players.LocalPlayer.Character["RightUpperLeg"]:Destroy()
-    game.Players.LocalPlayer.Character["LeftUpperLeg"]:Destroy()
     local plr = game.Players.LocalPlayer.Character.HumanoidRootPart
     plr.CFrame = CFrame.new(-500.241, -26.85, -543.175)
     NOW = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
