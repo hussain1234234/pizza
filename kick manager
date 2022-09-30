@@ -1,6 +1,5 @@
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/fly'),true))()
 function kick()
-    sFLY()
     local mteamp = game:GetService("Teams").Manager
     local m = mteamp:GetPlayers()[1]
     --check if player have sword
@@ -18,6 +17,7 @@ function kick()
         Duration = 5;
       })
         else
+        sFLY()
          local success, errormessage = pcall(function()
          game:GetService("Workspace")["Teleport to Party Island"]:Destroy()
          end)
