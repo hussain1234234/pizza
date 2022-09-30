@@ -59,6 +59,7 @@ function kickk(kicked)
     task.wait(2)
     game.Players.LocalPlayer.Character["RightLowerArm"]:Destroy()
     game.Players.LocalPlayer.Character["RightUpperArm"]:Destroy()
+    wait(0.1)
     game.Players.LocalPlayer.Character["UpperTorso"]:Destroy()
        end
     end
