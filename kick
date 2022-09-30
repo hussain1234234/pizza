@@ -1,6 +1,5 @@
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/fly'),true))()
 function kickk(kicked)
-sFLY()
     --check if player have sword
     local yaa, loo = pcall(function()
         local BackPack = game:GetService("Players").LocalPlayer.Backpack["Linked Sword"]
@@ -16,6 +15,7 @@ sFLY()
     Duration = 5;
   })
     else
+    sFLY()
     local success, errormessage = pcall(function()
     game:GetService("Workspace")["Teleport to Party Island"]:Destroy()
     end)
