@@ -62,6 +62,7 @@ function sFLY(vfly)
 		end)
 	end
 	flyKeyDown = IYMouse.KeyDown:Connect(function(KEY)
+	pcall(function()
 		if KEY:lower() == 'w' then
 			CONTROL.F = (vfly and vehicleflyspeed or iyflyspeed)
 		elseif KEY:lower() == 's' then
@@ -75,6 +76,7 @@ function sFLY(vfly)
 		elseif QEfly and KEY:lower() == 'q' then
 			CONTROL.E = -(vfly and vehicleflyspeed or iyflyspeed)*2
 		end
+		end)
 		pcall(function() workspace.CurrentCamera.CameraType = Enum.CameraType.Track end)
 	end)
 	flyKeyUp = IYMouse.KeyUp:Connect(function(KEY)
