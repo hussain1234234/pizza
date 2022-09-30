@@ -16,8 +16,8 @@ function kickk(kicked)
   })
     else
     local success, errormessage = pcall(function()
-    game.Players.LocalPlayer.Character["Right Leg"]:Destroy()
-    game.Players.LocalPlayer.Character["Left Leg"]:Destroy()
+    game.Players.LocalPlayer.Character["RightUpperLeg"]:Destroy()
+    game.Players.LocalPlayer.Character["LeftUpperLeg"]:Destroy()
     game:GetService("Workspace")["Teleport to Party Island"]:Destroy()
     end)
     local plr = game.Players.LocalPlayer.Character.HumanoidRootPart
@@ -57,8 +57,8 @@ function kickk(kicked)
     wait()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = NOW
     task.wait(2)
-    game.Players.LocalPlayer.Character["Right Arm"]:Destroy()
-    game.Players.LocalPlayer.Character.Torso:Destroy()
+    game.Players.LocalPlayer.Character["RightUpperArm"]:Destroy()
+    game.Players.LocalPlayer.Character["UpperTorso"]:Destroy()
        end
     end
 end)
