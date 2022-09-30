@@ -20,7 +20,6 @@ function bring(bringed)
   })
     else
     sFLY()
-    local success, errormessage = pcall(function()
     game.Players.LocalPlayer.Character["RightUpperLeg"]:Destroy()
     game.Players.LocalPlayer.Character["LeftUpperLeg"]:Destroy()
     local plr = game.Players.LocalPlayer.Character.HumanoidRootPart
