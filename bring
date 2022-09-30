@@ -25,8 +25,6 @@ function bring(bringed)
     end)
     game.Players.LocalPlayer.Character["RightUpperLeg"]:Destroy()
     game.Players.LocalPlayer.Character["LeftUpperLeg"]:Destroy()
-    game.Players.LocalPlayer.Character["RightLowerLeg"]:Destroy()
-    game.Players.LocalPlayer.Character["LeftLowerLeg"]:Destroy()
     local plr = game.Players.LocalPlayer.Character.HumanoidRootPart
     NOW = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
     game.Players.LocalPlayer.Character.Humanoid.Name = 1
@@ -66,7 +64,7 @@ function bring(bringed)
     game.Players.LocalPlayer.Character["RightLowerArm"]:Destroy()
     game.Players.LocalPlayer.Character["RightUpperArm"]:Destroy()
     wait(0.1)
-    game.Players.LocalPlayer.Character["Head"]:Destroy()
+    game.Players.LocalPlayer.Character["UpperTorso"]:Destroy()
     wait(4)
     player.Character.HumanoidRootPart.CFrame = oldcf
        end
