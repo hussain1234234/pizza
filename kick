@@ -56,11 +56,9 @@ function kickk(kicked)
     getout(game.Players.LocalPlayer, game.Players[Target])
     wait()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = NOW
-    plr.CFrame = CFrame.new(81.2056274, 0.0295202285, -284.716187, 0.0418648012, -0.0103800977, 0.999069393, -2.03190538e-07, 0.999946058, 0.0103892144, -0.999123275, -0.000435145368, 0.0418625399)
     task.wait(2)
     game.Players.LocalPlayer.Character["RightLowerArm"]:Destroy()
     game.Players.LocalPlayer.Character["RightUpperArm"]:Destroy()
-    plr.CFrame = CFrame.new(81.2056274, 0.0295202285, -284.716187, 0.0418648012, -0.0103800977, 0.999069393, -2.03190538e-07, 0.999946058, 0.0103892144, -0.999123275, -0.000435145368, 0.0418625399)
     wait(0.1)
     game.Players.LocalPlayer.Character["UpperTorso"]:Destroy()
        end
