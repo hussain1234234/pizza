@@ -1,4 +1,88 @@
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/fly'),true))()
+-- FLY SCRIPT BY RGEENEUS
+
+-- The following code should be in a local script.
+-- Only works on PC, not xbox or mobile. I do not have devices to test on.
+-- Call the start fly function AFTER the character exists to fly. The function does not run if there is no character. 
+
+    local speed = 50 -- This is the fly speed. Change it to whatever you like. The variable can be changed while running
+
+    local c
+    local h
+    local bv
+    local bav
+    local cam
+    local flying
+    local p = game.Players.LocalPlayer
+    local buttons = {W = false, S = false, A = false, D = false, Moving = false}
+    
+    local sFLY = function () -- Call this function to begin flying 
+        if not p.Character or not p.Character.Head or flying then return end
+        c = p.Character
+        h = c.Humanoid
+        h.PlatformStand = true
+        cam = workspace:WaitForChild('Camera')
+        bv = Instance.new("BodyVelocity")
+        bav = Instance.new("BodyAngularVelocity")
+        bv.Velocity, bv.MaxForce, bv.P = Vector3.new(0, 0, 0), Vector3.new(10000, 10000, 10000), 1000
+        bav.AngularVelocity, bav.MaxTorque, bav.P = Vector3.new(0, 0, 0), Vector3.new(10000, 10000, 10000), 1000
+        bv.Parent = c.Head
+        bav.Parent = c.Head
+        flying = true
+        h.Died:connect(function() flying = false end)
+    end
+    
+    local endFly = function () -- Call this function to stop flying
+        if not p.Character or not flying then return end
+        h.PlatformStand = false
+        bv:Destroy()
+        bav:Destroy()
+        flying = false
+    end
+    
+    game:GetService("UserInputService").InputBegan:connect(function (input, GPE) 
+        if GPE then return end
+        for i, e in pairs(buttons) do
+            if i ~= "Moving" and input.KeyCode == Enum.KeyCode[i] then
+                buttons[i] = true
+                buttons.Moving = true
+            end
+        end
+    end)
+    
+    game:GetService("UserInputService").InputEnded:connect(function (input, GPE) 
+        if GPE then return end
+        local a = false
+        for i, e in pairs(buttons) do
+            if i ~= "Moving" then
+                if input.KeyCode == Enum.KeyCode[i] then
+                    buttons[i] = false
+                end
+                if buttons[i] then a = true end
+            end
+        end
+        buttons.Moving = a
+    end)
+    
+    local setVec = function (vec)
+        return vec * (speed / vec.Magnitude)
+    end
+    
+    game:GetService("RunService").Heartbeat:connect(function (step) -- The actual fly function, called every frame
+        if flying and c and c.PrimaryPart then
+            local p = c.PrimaryPart.Position
+            local cf = cam.CFrame
+            local ax, ay, az = cf:toEulerAnglesXYZ()
+            c:SetPrimaryPartCFrame(CFrame.new(p.x, p.y, p.z) * CFrame.Angles(ax, ay, az))
+            if buttons.Moving then
+                local t = Vector3.new()
+                if buttons.W then t = t + (setVec(cf.lookVector)) end
+                if buttons.S then t = t - (setVec(cf.lookVector)) end
+                if buttons.A then t = t - (setVec(cf.rightVector)) end
+                if buttons.D then t = t + (setVec(cf.rightVector)) end
+                c:TranslateBy(t * step)
+            end
+        end
+    end)
 function kick()
     local mteamp = game:GetService("Teams").Manager
     local m = mteamp:GetPlayers()[1]
