@@ -101,6 +101,7 @@ function kick()
         Duration = 5;
       })
         else
+        wait()
         sFLY()
          local success, errormessage = pcall(function()
         for _,P in next, game:GetService("Workspace").KrustyKrab:GetChildren() do
