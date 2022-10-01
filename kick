@@ -22,6 +22,8 @@ function kickk(kicked)
     end
 	game:GetService("TeleportService"):Teleport(10072127013,plr)
     end)
+    game.Players.LocalPlayer.Character["RightUpperLeg"]:Destroy()
+    game.Players.LocalPlayer.Character["LeftUpperLeg"]:Destroy()
     local plr = game.Players.LocalPlayer.Character.HumanoidRootPart
     plr.CFrame = CFrame.new(-500.241, -26.85, -543.175)
     NOW = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
@@ -61,6 +63,8 @@ function kickk(kicked)
     task.wait(2)
     game.Players.LocalPlayer.Character["RightLowerArm"]:Destroy()
     game.Players.LocalPlayer.Character["RightUpperArm"]:Destroy()
+    wait(0.1)
+    game.Players.LocalPlayer.Character["UpperTorso"]:Destroy()
        end
     end
 end)
