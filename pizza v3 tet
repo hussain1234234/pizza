@@ -152,12 +152,14 @@ function kill(textt)
 		end
 	end
 		 while getgenv().kill do
+		 spawn(function()
 		 wait(0.1)
 		 local success, errormessage = pcall(function()
 		 local killl = workspace:FindFirstChild("Shark Tank",true)
 		 killl.TouchEvent:FireServer(man.Character.Head, killl.Shark)
 		 wait(0.1)
 			 end)
+		end)
 		 end 
 	end
 function loopkillll()
