@@ -14,6 +14,67 @@ local check = game:GetService("Workspace").Houses:FindFirstChild(game.Players.Lo
 local Trap = workspace:FindFirstChild("Shark Tank",true)
 local p1 = game.Players.LocalPlayer.Character.HumanoidRootPart
 local char = lp.Character
+function kill(textt)
+
+	local targetPartial = textt
+	
+	local man
+	for _,p in ipairs(game.Players:GetPlayers()) do
+		if p.Name:lower():sub(1,#targetPartial) == targetPartial:lower() or p.DisplayName:lower():sub(1,#targetPartial) == targetPartial:lower() then
+			man = p
+			break
+		end
+	end
+		 while getgenv().kill do
+		 wait(0.1)
+		 spawn(function()
+		 local success, errormessage = pcall(function()
+		 local killl = workspace:FindFirstChild("Shark Tank",true)
+		 killl.TouchEvent:FireServer(man.Character.PrimaryPart, killl.Shark)
+		 wait(0.1)
+			 end)
+		end)
+		 end 
+	end
+    function die(plrnameee)
+
+        local targetPartial = plrnameee
+        
+        local man
+        for _,p in ipairs(game.Players:GetPlayers()) do
+            if p.Name:lower():sub(1,#targetPartial) == targetPartial:lower() or p.DisplayName:lower():sub(1,#targetPartial) == targetPartial:lower() then
+                man = p
+                break
+            end
+        end
+        local killl = workspace:FindFirstChild("Shark Tank",true)
+        killl.TouchEvent:FireServer(man.Character.PrimaryPart, killl.Shark)
+    end
+function loopkillll()
+	while _G.loopkill do
+			wait()
+			local success, errormessage = pcall(function()
+					for _,p in next, game.Players:GetPlayers() do
+						if p.Character and p.Character.PrimaryPart and p ~= game.Players.LocalPlayer then
+							Trap.TouchEvent:FireServer(p.Character.PrimaryPart, Trap.Shark)
+							task.wait(0.3)
+					end
+				end
+			end)
+		end
+	end
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/kick%20manager'),true))()
+	function killtree()
+		while getgenv().loopupoort do
+		wait()
+		local success, fail = pcall(function()
+				for _,P in next, game:GetService("Workspace").Trees:GetChildren() do
+				game:GetService("Workspace").Main.UprootTree:FireServer(P)
+				task.wait()
+				end
+			end)
+		end
+	end
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Pizza Place GUI", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 local Tab = Window:MakeTab({
@@ -86,38 +147,146 @@ Section:AddToggle({
 		end
 	end    
 })
-Section1:AddTextbox({
-	Name = "LoopKill",
-	Default = "",
-	TextDisappear = true,
-	Callback = function(textt)
-		kill(textt)
-	end	  
-})
-Section1:AddTextbox({
-	Name = "Kill",
-	Default = "",
-	TextDisappear = true,
-	Callback = function(plrnameee)
-		die(plrnameee)
-	end	  
-})
-Section1:AddTextbox({
-	Name = "Kick",
-	Default = "",
-	TextDisappear = true,
-	Callback = function(kicked)
-		kickk(kicked)
-	end	  
-})
-Section1:AddTextbox({
-	Name = "Bring",
-	Default = "",
-	TextDisappear = true,
-	Callback = function(bringed)
-		bring(bringed)
-	end	  
-})
+function getPlayers()
+local table1 = {};
+for i, v in pairs((game:GetService("Players")):GetChildren()) do
+    table.insert(table1, v.Name);
+end;
+game.Players.PlayerAdded:Connect(function(a)
+    table.insert(table1, a.Name);
+end);
+game.Players.PlayerRemoving:Connect(function(a)
+    for i, v in pairs(table1) do
+        if v == a.Name then
+            table.remove(table1, i);
+        end;
+    end;
+end);
+return table1;
+end;
+
+loopklatwat = Section1:AddDropdown({
+Name = "LoopKill",
+Default = nil,
+Options = getPlayers(),
+Flags = "Flag1",
+Callback = function(Value)
+    kill(Value);
+end
+});
+
+game.Players.PlayerAdded:Connect(function(a)
+    loopklatwat:Refresh(getPlayers(), true);
+end);
+
+game.Players.PlayerRemoving:Connect(function(a)
+    loopklatwat:Refresh(getPlayers(), true);
+end);
+function getPlayers()
+    local table1 = {};
+    for i, v in pairs((game:GetService("Players")):GetChildren()) do
+        table.insert(table1, v.Name);
+    end;
+    game.Players.PlayerAdded:Connect(function(a)
+        table.insert(table1, a.Name);
+    end);
+    game.Players.PlayerRemoving:Connect(function(a)
+        for i, v in pairs(table1) do
+            if v == a.Name then
+                table.remove(table1, i);
+            end;
+        end;
+    end);
+    return table1;
+    end;
+    
+    loopshmta = Section1:AddDropdown({
+    Name = "Kill",
+    Default = nil,
+    Options = getPlayers(),
+    Flags = "Flag1",
+    Callback = function(Value)
+        die(Value);
+    end
+    });
+    
+    game.Players.PlayerAdded:Connect(function(a)
+        loopshmta:Refresh(getPlayers(), true);
+    end);
+    
+    game.Players.PlayerRemoving:Connect(function(a)
+        loopshmta:Refresh(getPlayers(), true);
+    end);
+    function getPlayers()
+        local table1 = {};
+        for i, v in pairs((game:GetService("Players")):GetChildren()) do
+            table.insert(table1, v.Name);
+        end;
+        game.Players.PlayerAdded:Connect(function(a)
+            table.insert(table1, a.Name);
+        end);
+        game.Players.PlayerRemoving:Connect(function(a)
+            for i, v in pairs(table1) do
+                if v == a.Name then
+                    table.remove(table1, i);
+                end;
+            end;
+        end);
+        return table1;
+        end;
+        
+        loopb = Section1:AddDropdown({
+        Name = "Bring",
+        Default = nil,
+        Options = getPlayers(),
+        Flags = "Flag1",
+        Callback = function(Value)
+            bring(Value);
+        end
+        });
+        
+        game.Players.PlayerAdded:Connect(function(a)
+            loopb:Refresh(getPlayers(), true);
+        end);
+        
+        game.Players.PlayerRemoving:Connect(function(a)
+            loopb:Refresh(getPlayers(), true);
+        end);
+        function getPlayers()
+            local table1 = {};
+            for i, v in pairs((game:GetService("Players")):GetChildren()) do
+                table.insert(table1, v.Name);
+            end;
+            game.Players.PlayerAdded:Connect(function(a)
+                table.insert(table1, a.Name);
+            end);
+            game.Players.PlayerRemoving:Connect(function(a)
+                for i, v in pairs(table1) do
+                    if v == a.Name then
+                        table.remove(table1, i);
+                    end;
+                end;
+            end);
+            return table1;
+            end;
+            
+            loopk = Section1:AddDropdown({
+            Name = "Kick",
+            Default = nil,
+            Options = getPlayers(),
+            Flags = "Flag1",
+            Callback = function(Value)
+                kickk(Value);
+            end
+            });
+            
+            game.Players.PlayerAdded:Connect(function(a)
+                loopk:Refresh(getPlayers(), true);
+            end);
+            
+            game.Players.PlayerRemoving:Connect(function(a)
+                loopk:Refresh(getPlayers(), true);
+            end);
 Section1:AddTextbox({
 	Name = "Spamming",
 	Default = "",
@@ -126,67 +295,6 @@ Section1:AddTextbox({
 		spamchat(Value)
 	end	  
 })
-function die(plrnameee)
-
-	local targetPartial = plrnameee
-	
-	local man
-	for _,p in ipairs(game.Players:GetPlayers()) do
-		if p.Name:lower():sub(1,#targetPartial) == targetPartial:lower() or p.DisplayName:lower():sub(1,#targetPartial) == targetPartial:lower() then
-			man = p
-			break
-		end
-	end
-	local killl = workspace:FindFirstChild("Shark Tank",true)
-	killl.TouchEvent:FireServer(man.Character.Head, killl.Shark)
-end
-function kill(textt)
-
-	local targetPartial = textt
-	
-	local man
-	for _,p in ipairs(game.Players:GetPlayers()) do
-		if p.Name:lower():sub(1,#targetPartial) == targetPartial:lower() or p.DisplayName:lower():sub(1,#targetPartial) == targetPartial:lower() then
-			man = p
-			break
-		end
-	end
-		 while getgenv().kill do
-		 wait(0.1)
-		 spawn(function()
-		 local success, errormessage = pcall(function()
-		 local killl = workspace:FindFirstChild("Shark Tank",true)
-		 killl.TouchEvent:FireServer(man.Character.Head, killl.Shark)
-		 wait(0.1)
-			 end)
-		end)
-		 end 
-	end
-function loopkillll()
-	while _G.loopkill do
-			wait()
-			local success, errormessage = pcall(function()
-					for _,p in next, game.Players:GetPlayers() do
-						if p.Character and p.Character.PrimaryPart and p ~= game.Players.LocalPlayer then
-							Trap.TouchEvent:FireServer(p.Character.PrimaryPart, Trap.Shark)
-							task.wait(0.3)
-					end
-				end
-			end)
-		end
-	end
-	loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/kick%20manager'),true))()
-	function killtree()
-		while getgenv().loopupoort do
-		wait()
-		local success, fail = pcall(function()
-				for _,P in next, game:GetService("Workspace").Trees:GetChildren() do
-				game:GetService("Workspace").Main.UprootTree:FireServer(P)
-				task.wait()
-				end
-			end)
-		end
-	end
 	local Sectionn = Tab1:AddSection({
 		Name = "Places"
 	})
