@@ -79,17 +79,17 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 local Window = OrionLib:MakeWindow({Name = "Pizza Place GUI", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 local Tab = Window:MakeTab({
 	Name = "Commands",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-local Tap0 = Window:MakeTab({
-	Name = "Extra Things",
-	Icon = "rbxassetid://4483345998",
+	Icon = "rbxassetid://7734053426",
 	PremiumOnly = false
 })
 local Tab1 = Window:MakeTab({
 	Name = "Teleports",
-	Icon = "rbxassetid://4483345998",
+	Icon = "rbxassetid://7733774602",
+	PremiumOnly = false
+})
+local Tap0 = Window:MakeTab({
+	Name = "Extra Things",
+	Icon = "rbxassetid://7733924046",
 	PremiumOnly = false
 })
 local Section = Tab:AddSection({
