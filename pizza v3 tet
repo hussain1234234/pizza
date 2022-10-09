@@ -459,7 +459,13 @@ Section1:AddTextbox({
 		end
 	})
 	Tap0:AddButton({
-		Name = "Auto Farm",
+		Name = "Auto Farm V1",
+		Callback = function()
+			loadstring(game:HttpGet(('https://pastebin.com/raw/z8iTq4ts'),true))()
+		end
+	})
+		Tap0:AddButton({
+		Name = "Auto Farm V2",
 		Callback = function()
 			loadstring(game:HttpGet("https://pastebin.com/raw/tLqnPLN3",true))()
 		end
