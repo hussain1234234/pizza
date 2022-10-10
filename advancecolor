@@ -1,0 +1,20 @@
+local mat = "Neon"
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/miroeramaa/TurtleLib/main/TurtleUiLib.lua"))()
+local window = library:Window("Car Painter")
+local dropdown = window:Dropdown("Material", {"Neon", "Marble", "Ground", "Fabric","Ice" ,"Mud","Grass","Limestone","LeafyGrass","DiamondPlate","Asphalt","Brick","CorrodedMetal","Pebble","Sand","Salt","Rock","Snow","Wood","WoodPlanks","Pavement","CrackedLava","Foil" }, function(name)
+   f = (name)
+end)
+window:ColorPicker("Color", Color3.fromRGB(false), function(color)
+for _,P in ipairs(game.Workspace.Cars:GetChildren()) do
+                local args = {
+            [1] = "Paint",
+            [2] = P.Paint,
+            [3] = f,
+            [4] = color
+        }
+
+        game:GetService("ReplicatedStorage").VehicleChannel:FireServer(unpack(args))
+
+    end
+end)
+library:Keybind("Tab")
