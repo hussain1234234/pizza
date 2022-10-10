@@ -57,7 +57,7 @@ function loopkillll()
 					for _,p in next, game.Players:GetPlayers() do
 						if p.Character and p.Character.PrimaryPart and p ~= game.Players.LocalPlayer then
 							Trap.TouchEvent:FireServer(p.Character.PrimaryPart, Trap.Shark)
-							task.wait(0.3)
+							task.wait(0.5)
 					end
 				end
 			end)
@@ -669,6 +669,25 @@ Section1:AddTextbox({
 			loadstring(game:HttpGet(('https://pastebin.com/raw/RUr10TJ0'),true))()
 		end
 	})
+spawn(function()
+pcall(function()
+		local Path = game.CoreGui:FindFirstChild("Orion")
+		local open = true
+		Tap0:AddBind({
+		    Name = "Hide Bind",
+		    Default = Enum.KeyCode.Backquote,
+		    Hold = false,
+		    Callback = function()
+		        open = not open
+		        if open then
+		            Path.Enabled = true
+		        else
+		            Path.Enabled = false
+		        end
+		    end  
+		})
+	end)
+end)
 OrionLib:MakeNotification({
 	Name = "Welcome",
 	Content = "Script Made By Husaain",
