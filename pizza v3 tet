@@ -670,23 +670,28 @@ Section1:AddTextbox({
 		end
 	})
 spawn(function()
-pcall(function()
-		local Path = game.CoreGui:FindFirstChild("Orion")
-		local open = true
-		Tap0:AddBind({
-		    Name = "Hide Bind",
-		    Default = Enum.KeyCode.Backquote,
-		    Hold = false,
-		    Callback = function()
-		        open = not open
-		        if open then
-		            Path.Enabled = true
-		        else
-		            Path.Enabled = false
-		        end
-		    end  
-		})
-	end)
+local nig, niga = pcall(function()
+local tttttttt = game.CoreGui.Orion
+end)
+        if nig then
+            local Path = game.CoreGui:FindFirstChild("Orion")
+            local open = true
+            Tap0:AddBind({
+                Name = "Hide Bind",
+                Default = Enum.KeyCode.Backquote,
+                Hold = false,
+                Callback = function()
+                    open = not open
+                    if open then
+                        Path.Enabled = true
+                    else
+                        Path.Enabled = false
+                    end
+                end  
+            })
+else
+warn("Toggle Gui Keybind will Not Show,UnSupported Executer")
+    end
 end)
 OrionLib:MakeNotification({
 	Name = "Welcome",
