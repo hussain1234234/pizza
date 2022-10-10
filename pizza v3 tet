@@ -477,6 +477,12 @@ Section1:AddTextbox({
 		end
 	})
 	Tap0:AddButton({
+		Name = "Advanced Painter",
+		Callback = function()
+			loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/advancecolor'),true))()
+        end
+	})
+	Tap0:AddButton({
 		Name = "Ride-Car",
 		Callback = function()
 			workspace.Cars.Car.LeftDoor.ClickDetector.Detector:FireServer()
