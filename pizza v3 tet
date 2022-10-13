@@ -1,6 +1,8 @@
 getgenv().loopcolor = false
 getgenv().togglefire = false
 getgenv().loopupoort = false
+getgenv().loopwork = false
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/break%20Leaderboard'),true))()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/bring'),true))()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/spamming'),true))()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/kick'),true))()
@@ -124,6 +126,61 @@ Section:AddToggle({
 		getgenv().loopcolor = (Value)
 		if getgenv().loopcolor then
 			spamcolor()
+		end
+	end    
+})
+Section:AddToggle({
+	Name = "Break Jobs",
+	Default = false,
+	Callback = function(Value)
+		getgenv().loopwork = (Value)
+		if getgenv().loopwork then
+			while true do 
+	local mmteam = game:GetService("Teams").Manager
+	local mmm = mmteam:GetPlayers()[1]
+	if game.Players.LocalPlayer.Name == mmm.Name then
+						pcall(function()
+							wait(1)
+							local olddcf = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+							game.Players.LocalPlayer.Character.Humanoid.Jump = true
+							wait(0.1)
+							game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(12.021945, 4.15790749, 20.940649, -0.0561759323, 9.90757343e-09, 0.998420894, -2.43629792e-08, 1, -1.12940217e-08, -0.998420894, -2.49589593e-08, -0.0561759323)
+							wait(0.7)
+							game.Players.LocalPlayer.Character.Humanoid.Jump = true
+							wait(2)
+							game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = olddcf
+						end)
+						job("Cashier")
+						wait()
+						job("Cook")
+						wait(0)
+						job("Pizza Boxer")
+						wait()
+						job("Delivery")
+						wait()
+						job("Supplier")
+						wait(0)
+						job("On Break")
+						if getgenv().loopwork == false then
+							break
+						end	
+					else
+						job("Cashier")
+						wait()
+						job("Cook")
+						wait(0)
+						job("Pizza Boxer")
+						wait()
+						job("Delivery")
+						wait()
+						job("Supplier")
+						wait(0)
+						job("On Break")
+						if getgenv().loopwork == false then
+							break
+						end
+				end
+			end
 		end
 	end    
 })
