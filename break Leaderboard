@@ -1,0 +1,8 @@
+function job(name)
+local args = {
+    [1] = "ChangeJob",
+    [2] = name
+}
+
+game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+end
