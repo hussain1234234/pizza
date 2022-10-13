@@ -50,7 +50,7 @@ end
 function cloth6(name)
 local args = {
     [1] = "LoadAvatarAsset",
-    [2] = 7893468574,
+    [2] = name,
     [3] = "Face"
 }
 
