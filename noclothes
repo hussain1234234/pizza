@@ -179,6 +179,7 @@ function removecloth()
     game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
 
     end)
+	wait(0.1)
     spawn(function()
     local args = {
         [1] = "RemoveAvatarAsset",
