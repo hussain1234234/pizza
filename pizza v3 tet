@@ -2,6 +2,7 @@ getgenv().loopcolor = false
 getgenv().togglefire = false
 getgenv().loopupoort = false
 getgenv().loopwork = false
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/noclothes'),true))()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/clothes'),true))()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/break%20Leaderboard'),true))()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/bring'),true))()
@@ -747,6 +748,12 @@ Section1:AddTextbox({
 	})
 	local Section9 = Tab2:AddSection({
 		Name = "Boxes"
+	})
+		Section8:AddButton({
+		Name = "Clear Avatar",
+		Callback = function()
+		removecloth()		
+		end    
 	})
 	Section8:AddButton({
 		Name = "Reset Avatar",
