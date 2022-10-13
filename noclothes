@@ -1,0 +1,212 @@
+function removecloth()
+    spawn(function()
+    local args = {
+        [1] = "LoadAvatarAsset",
+        [2] = 7676195837,
+        [3] = "HatAccessory"
+    }
+
+    game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+    end)
+    wait(0.1)
+    spawn(function()
+    local args = {
+        [1] = "LoadAvatarAsset",
+        [2] = 6275932619,
+        [3] = "HatAccessory"
+    }
+
+    game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+    end)
+    wait(0.1)
+    spawn(function()
+    local args = {
+        [1] = "LoadAvatarAsset",
+        [2] = 4753467054,
+        [3] = "HatAccessory"
+    }
+
+    game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+    end)
+    spawn(function()
+    local args = {
+        [1] = "RemoveAvatarAsset",
+        [2] = 7676195837,
+        [3] = "HatAccessory"
+    }
+
+    game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+    end)
+    spawn(function()
+    local args = {
+        [1] = "RemoveAvatarAsset",
+        [2] = 6275932619,
+        [3] = "HatAccessory"
+    }
+
+    game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+    end)
+    spawn(function()
+    local args = {
+        [1] = "RemoveAvatarAsset",
+        [2] = 4753467054,
+        [3] = "HatAccessory"
+    }
+
+    game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+    end)
+    spawn(function()
+    local args = {
+        [1] = "LoadAvatarAsset",
+        [2] = 5634369034,
+        [3] = "WaistAccessory"
+    }
+
+    game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+    end)
+    spawn(function()
+    local args = {
+        [1] = "RemoveAvatarAsset",
+        [2] = 5634369034,
+        [3] = "WaistAccessory"
+    }
+
+    game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+    end)
+    spawn(function()
+    local args = {
+        [1] = "LoadAvatarAsset",
+        [2] = 7213677261,
+        [3] = "FrontAccessory"
+    }
+
+    game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+    end)
+    spawn(function()
+    local args = {
+        [1] = "RemoveAvatarAsset",
+        [2] = 7213677261,
+        [3] = "FrontAccessory"
+    }
+
+    game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+    end)
+    spawn(function()
+    local args = {
+        [1] = "LoadAvatarAsset",
+        [2] = 63690008,
+        [3] = "HairAccessory"
+    }
+
+    game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+
+    end)
+    spawn(function()
+    local args = {
+        [1] = "LoadAvatarAsset",
+        [2] = 16630147,
+        [3] = "HairAccessory"
+    }
+
+    game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+
+    end)
+    spawn(function()
+    local args = {
+        [1] = "RemoveAvatarAsset",
+        [2] = 63690008,
+        [3] = "HairAccessory"
+    }
+
+    game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+
+    end)
+    spawn(function()
+    local args = {
+        [1] = "RemoveAvatarAsset",
+        [2] = 16630147,
+        [3] = "HairAccessory"
+    }
+
+    game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+
+    end)
+    spawn(function()
+    local args = {
+        [1] = "LoadAvatarAsset",
+        [2] = 5131962127,
+        [3] = "FaceAccessory"
+    }
+
+    game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+    end)
+    spawn(function()
+    local args = {
+        [1] = "RemoveAvatarAsset",
+        [2] = 5131962127,
+        [3] = "FaceAccessory"
+    }
+
+    game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+    end)
+    spawn(function()
+    local args = {
+        [1] = "LoadAvatarAsset",
+        [2] = 7675370100,
+        [3] = "NeckAccessory"
+    }
+
+    game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+
+    end)
+    spawn(function()
+    local args = {
+        [1] = "RemoveAvatarAsset",
+        [2] = 7675370100,
+        [3] = "NeckAccessory"
+    }
+
+    game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+
+    end)
+    spawn(function()
+    local args = {
+        [1] = "LoadAvatarAsset",
+        [2] = 4527450728,
+        [3] = "BackAccessory"
+    }
+
+    game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+
+    end)
+    spawn(function()
+    local args = {
+        [1] = "RemoveAvatarAsset",
+        [2] = 4527450728,
+        [3] = "BackAccessory"
+    }
+
+    game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+
+    end)
+    spawn(function()
+    local args = {
+        [1] = "LoadAvatarAsset",
+        [2] = 106709021,
+        [3] = "ShouldersAccessory"
+    }
+
+    game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+
+    end)
+    spawn(function()
+    local args = {
+        [1] = "RemoveAvatarAsset",
+        [2] = 106709021,
+        [3] = "ShouldersAccessory"
+    }
+
+    game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+
+    end)
+end
