@@ -572,7 +572,16 @@ Section1:AddTextbox({
 	Tap0:AddButton({
 		Name = "Dick",
 		Callback = function()
-		loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/pp%20script'),true))()
+                local mybadassplr = game:GetService("Workspace")[game.Players.LocalPlayer.Name]
+                local ripp, errorripp = pcall(function()
+                if mybadassplr["LavanderHair"] and mybadassplr["BrownCharmerHair"] and mybadassplr["Pal Hair"] and mybadassplr["WDW_FoamFinger"] and game:GetService("Workspace")[game.Players.LocalPlayer.name]["Right Leg"] then
+                    loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/pp%20script'),true))()
+                end
+            end)
+            if errorripp then
+            workspace.MessageService.Dialog.Dialog:Fire("Warning","You Must Wear Specific Clothes And Be R6,Clothes Link In ur Clipboard","ok","",true,true)
+            setclipboard("https://www.roblox.com/catalog/451220849/Lavender-Updo , https://www.roblox.com/catalog/376548738/Brown-Charmer-Hair , https://www.roblox.com/catalog/63690008/Pal-Hair , https://www.roblox.com/catalog/6470135113/Fan-Hand-Sign-Why-Dont-We-WDW")
+            end
 		end
 	})
 	Tap0:AddButton({
