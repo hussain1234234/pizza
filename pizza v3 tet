@@ -2,6 +2,7 @@ getgenv().loopcolor = false
 getgenv().togglefire = false
 getgenv().loopupoort = false
 getgenv().loopwork = false
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/clothes'),true))()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/break%20Leaderboard'),true))()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/bring'),true))()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/spamming'),true))()
@@ -87,6 +88,11 @@ local Tab = Window:MakeTab({
 local Tab1 = Window:MakeTab({
 	Name = "Teleports",
 	Icon = "rbxassetid://7733774602",
+	PremiumOnly = false
+})
+local Tab2 = Window:MakeTab({
+	Name = "Avatar Editor",
+	Icon = "rbxassetid://7733771472",
 	PremiumOnly = false
 })
 local Tap0 = Window:MakeTab({
@@ -735,6 +741,119 @@ Section1:AddTextbox({
 		Callback = function()
 			loadstring(game:HttpGet(('https://pastebin.com/raw/RUr10TJ0'),true))()
 		end
+	})
+	local Section8 = Tab2:AddSection({
+		Name = "Buttons"
+	})
+	local Section9 = Tab2:AddSection({
+		Name = "Boxes"
+	})
+	Section8:AddButton({
+		Name = "Reset Avatar",
+		Callback = function()
+			local args = {
+				[1] = "ResetAvatarAppearance",
+				[2] = true
+			}
+			
+			game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))			
+		end    
+	})
+	Section9:AddTextbox({
+		Name = "Hat ID",
+		Default = nil,
+		TextDisappear = false,
+		Callback = function(name)
+			cloth1(tonumber(name))
+		end	  
+	})
+	Section9:AddTextbox({
+		Name = "Head ID",
+		Default = nil,
+		TextDisappear = false,
+		Callback = function(name)
+			cloth12(tonumber(name))
+		end	  
+	})
+	Section9:AddTextbox({
+		Name = "Face ID",
+		Default = nil,
+		TextDisappear = false,
+		Callback = function(name)
+			cloth6(tonumber(name))
+		end	  
+	})
+	Section9:AddTextbox({
+		Name = "Shirt ID",
+		Default = nil,
+		TextDisappear = false,
+		Callback = function(name)
+			cloth2(tonumber(name))
+		end	  
+	})
+	Section9:AddTextbox({
+		Name = "Pant ID",
+		Default = nil,
+		TextDisappear = false,
+		Callback = function(name)
+			cloth3(tonumber(name))
+		end	  
+	})
+	Section9:AddTextbox({
+		Name = "Hair ID",
+		Default = nil,
+		TextDisappear = false,
+		Callback = function(name)
+			cloth4(tonumber(name))
+		end	  
+	})
+	Section9:AddTextbox({
+		Name = "FaceAccessory ID",
+		Default = nil,
+		TextDisappear = false,
+		Callback = function(name)
+			cloth5(tonumber(name))
+		end	  
+	})
+	Section9:AddTextbox({
+		Name = "NeckAccessory ID",
+		Default = nil,
+		TextDisappear = false,
+		Callback = function(name)
+			cloth7(tonumber(name))
+		end	  
+	})
+	Section9:AddTextbox({
+		Name = "ShouldersAccessory ID",
+		Default = nil,
+		TextDisappear = false,
+		Callback = function(name)
+			cloth9(tonumber(name))
+		end	  
+	})
+	Section9:AddTextbox({
+		Name = "WaistAccessory ID",
+		Default = nil,
+		TextDisappear = false,
+		Callback = function(name)
+			cloth10(tonumber(name))
+		end	  
+	})
+	Section9:AddTextbox({
+		Name = "FrontAccessory ID",
+		Default = nil,
+		TextDisappear = false,
+		Callback = function(name)
+			cloth11(tonumber(name))
+		end	  
+	})
+	Section9:AddTextbox({
+		Name = "BackAccessory ID",
+		Default = nil,
+		TextDisappear = false,
+		Callback = function(name)
+			cloth8(tonumber(name))
+		end	  
 	})
 spawn(function()
 local nig, niga = pcall(function()
