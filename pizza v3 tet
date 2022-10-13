@@ -138,7 +138,7 @@ Section:AddToggle({
 			while true do 
 	local mmteam = game:GetService("Teams").Manager
 	local mmm = mmteam:GetPlayers()[1]
-	if game.Players.LocalPlayer.Name == mmm.Name then
+	if game.Players.LocalPlayer == mmm then
 						pcall(function()
 							wait(1)
 							local olddcf = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
