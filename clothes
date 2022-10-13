@@ -1,0 +1,118 @@
+function cloth1(name)
+	local args = {
+		[1] = "LoadAvatarAsset",
+		[2] = name,
+		[3] = "HatAccessory"
+	}
+	game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+end
+--
+function cloth2(name)
+local args = {
+    [1] = "LoadAvatarAsset",
+    [2] = name,
+    [3] = "Shirt"
+}
+
+game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+end
+--
+function cloth3(name)
+local args = {
+    [1] = "LoadAvatarAsset",
+    [2] = name,
+    [3] = "Pants"
+}
+
+game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+end
+--
+function cloth4(name)
+local args = {
+    [1] = "LoadAvatarAsset",
+    [2] = name,
+    [3] = "HairAccessory"
+}
+
+game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+end
+--
+function cloth5(name)
+local args = {
+    [1] = "LoadAvatarAsset",
+    [2] = name,
+    [3] = "FaceAccessory"
+}
+
+game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+end
+--
+function cloth6(name)
+local args = {
+    [1] = "LoadAvatarAsset",
+    [2] = 7893468574,
+    [3] = "Face"
+}
+
+game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+end
+--
+function cloth7(name)
+local args = {
+    [1] = "LoadAvatarAsset",
+    [2] = name,
+    [3] = "NeckAccessory"
+}
+
+game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+end
+--
+function cloth8(name)
+local args = {
+    [1] = "LoadAvatarAsset",
+    [2] = name,
+    [3] = "BackAccessory"
+}
+
+game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+end
+--
+function cloth9(name)
+local args = {
+    [1] = "LoadAvatarAsset",
+    [2] = name,
+    [3] = "ShouldersAccessory"
+}
+
+game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+end
+--
+function cloth10(name)
+local args = {
+    [1] = "LoadAvatarAsset",
+    [2] = name,
+    [3] = "WaistAccessory"
+}
+
+game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+end
+--
+function cloth11(name)
+local args = {
+    [1] = "LoadAvatarAsset",
+    [2] = name,
+    [3] = "FrontAccessory"
+}
+
+game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+end
+--
+function cloth12(name)
+local args = {
+    [1] = "LoadAvatarAsset",
+    [2] = name,
+    [3] = "Head"
+}
+
+game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+end
