@@ -542,6 +542,8 @@ Section1:AddTextbox({
 	Tap0:AddButton({
 		Name = "Ride-Car",
 		Callback = function()
+			game.Players.LocalPlayer.Character.Humanoid.Jump = true
+			task.wait(0.1)
 			workspace.Cars.Car.LeftDoor.ClickDetector.Detector:FireServer()
 		end
 	})
