@@ -766,6 +766,64 @@ Section1:AddTextbox({
 			game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))			
 		end    
 	})
+		Section8:AddButton({
+		Name = "Army Bundle",
+		Callback = function()
+		removecloth()
+wait(10)
+    print("start")
+    wait(1)
+    spawn(function()
+    local args = {
+        [1] = "LoadAvatarAsset",
+        [2] = 10788217931,
+        [3] = "HatAccessory"
+    }
+
+    game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+    end)
+wait(0.2)
+    spawn(function()
+    local args = {
+        [1] = "LoadAvatarAsset",
+        [2] = 8928560917,
+        [3] = "FaceAccessory"
+    }
+
+    game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+    end)
+wait(0.1)
+    spawn(function()
+    local args = {
+        [1] = "LoadAvatarAsset",
+        [2] = 9667263311,
+        [3] = "WaistAccessory"
+    }
+
+    game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+    end)
+wait(0.2)
+    spawn(function()
+    local args = {
+        [1] = "LoadAvatarAsset",
+        [2] = 10454287383,
+        [3] = "Shirt"
+    }
+
+    game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+    end)
+wait(0.1)
+    spawn(function()
+    local args = {
+        [1] = "LoadAvatarAsset",
+        [2] = 6951007396,
+        [3] = "Pants"
+    }
+
+    game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+    end)		
+		end    
+	})
 	Section9:AddTextbox({
 		Name = "Hat ID",
 		Default = nil,
