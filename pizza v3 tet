@@ -771,7 +771,6 @@ Section1:AddTextbox({
 		Callback = function()
 		removecloth()
 wait(10)
-    print("start")
     wait(1)
     spawn(function()
     local args = {
