@@ -1,0 +1,12 @@
+function newtap()
+Section101:AddTextbox({
+	Name = "Search Animation",
+	Default = nil,
+	TextDisappear = false,
+	Callback = function(Value)
+		    local ohString111 = (Value)
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+	end	  
+})
+end
