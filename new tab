@@ -1,4 +1,14 @@
-function newtap()
+local Tab100 = Window:MakeTab({
+	Name = "Animations",
+	Icon = "rbxassetid://7743871480",
+	PremiumOnly = false
+})
+local Section101 = Tab100:AddSection({
+	Name = "Boxes"
+})
+local Section100 = Tab100:AddSection({
+	Name = "Animations"
+})
 Section101:AddTextbox({
 	Name = "Search Animation",
 	Default = nil,
@@ -9,4 +19,14 @@ Section101:AddTextbox({
             game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
 	end	  
 })
+for _,P in ipairs(game:GetService("Workspace")[game.Players.LocalPlayer.Name].Animate.R15:GetChildren()) do
+task.wait()
+    Section100:AddButton({
+        Name = P.Name,
+        Callback = function()
+            local ohString111 = P.Name
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+        end    
+    })
 end
