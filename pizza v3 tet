@@ -561,14 +561,6 @@ Section1:AddTextbox({
         end
 	})
 	Tap0:AddButton({
-		Name = "Ride-Car",
-		Callback = function()
-			game.Players.LocalPlayer.Character.Humanoid.Jump = true
-			task.wait(0.1)
-			workspace.Cars.Car.LeftDoor.ClickDetector.Detector:FireServer()
-		end
-	})
-	Tap0:AddButton({
 		Name = "Anti-Afk",
 		Callback = function()
 			wait(0.5)local ba=Instance.new("ScreenGui")
