@@ -757,6 +757,12 @@ Section1:AddTextbox({
 			loadstring(game:HttpGet(('https://pastebin.com/raw/RUr10TJ0'),true))()
 		end
 	})
+	Tap0:AddButton({
+		Name = "Destroy GUi",
+		Callback = function()
+			OrionLib:Destroy()
+		end
+	})
 	local Section8 = Tab2:AddSection({
 		Name = "Buttons"
 	})
