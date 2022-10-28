@@ -110,6 +110,9 @@ local Section101 = Tab100:AddSection({
 	Name = "Boxes"
 })
 local Section100 = Tab100:AddSection({
+	Name = "Emotes"
+})
+local Section102 = Tab100:AddSection({
 	Name = "Animations"
 })
 local Section = Tab:AddSection({
@@ -931,7 +934,7 @@ wait(0.1)
 		end	  
 	})
 Section101:AddTextbox({
-	Name = "Search Animation",
+	Name = "Play Animation",
 	Default = nil,
 	TextDisappear = false,
 	Callback = function(Value)
@@ -940,17 +943,603 @@ Section101:AddTextbox({
             game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
 	end	  
 })
-for _,P in ipairs(game:GetService("Workspace")[game.Players.LocalPlayer.Name].Animate.R15:GetChildren()) do
-task.wait()
-    Section100:AddButton({
-        Name = P.Name,
-        Callback = function()
-            local ohString111 = P.Name
+	Section100:AddButton({
+		Name = "\240\159\145\137-Point",
+		Callback = function()
+            local ohString111 = "Point"
             local ohNumber222 = 0.3
             game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
-        end    
-    })
-end
+local args = {
+    [1] = "\240\159\145\137",
+    [2] = false
+}
+
+workspace.Main.Chatted:FireServer(unpack(args))
+		end    
+	})
+
+	Section100:AddButton({
+		Name = "\240\159\145\139-Hi",
+		Callback = function()
+            local ohString111 = "Hi"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+local args = {
+    [1] = "\240\159\145\139",
+    [2] = false
+}
+
+workspace.Main.Chatted:FireServer(unpack(args))
+		end    
+	})
+
+	Section100:AddButton({
+		Name = "\240\159\145\139-Bye",
+		Callback = function()
+            local ohString111 = "Bye"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+local args = {
+    [1] = "\240\159\145\139",
+    [2] = false
+}
+
+workspace.Main.Chatted:FireServer(unpack(args))
+		end    
+	})
+
+	Section100:AddButton({
+		Name = "\240\159\152\132-Yay",
+		Callback = function()
+            local ohString111 = "Glee"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+local args = {
+    [1] = "\240\159\152\132",
+    [2] = false
+}
+
+workspace.Main.Chatted:FireServer(unpack(args))
+		end    
+	})
+
+	Section100:AddButton({
+		Name = "\240\159\152\173-Sad",
+		Callback = function()
+            local ohString111 = "Sad"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+local args = {
+    [1] = "\240\159\152\173",
+    [2] = false
+}
+
+workspace.Main.Chatted:FireServer(unpack(args))
+
+		end    
+	})
+
+	Section100:AddButton({
+		Name = "\240\159\164\163-Laugh",
+		Callback = function()
+            local ohString111 = "Laugh"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+local args = {
+    [1] = "\240\159\164\163",
+    [2] = false
+}
+
+workspace.Main.Chatted:FireServer(unpack(args))
+		end    
+	})
+	Section100:AddButton({
+		Name = "\240\159\164\148-Thinking",
+		Callback = function()
+            local ohString111 = "Think"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+local args = {
+    [1] = "\240\159\164\148",
+    [2] = false
+}
+
+workspace.Main.Chatted:FireServer(unpack(args))
+		end    
+	})
+	Section100:AddButton({
+		Name = "\240\159\152\177-Scared",
+		Callback = function()
+            local ohString111 = "Scared"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+local args = {
+    [1] = "\240\159\152\177",
+    [2] = false
+}
+
+workspace.Main.Chatted:FireServer(unpack(args))
+		end    
+	})
+
+	Section100:AddButton({
+		Name = "\240\159\152\174-Wow",
+		Callback = function()
+            local ohString111 = "Amazed"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+local args = {
+    [1] = "\240\159\152\174",
+    [2] = false
+}
+
+workspace.Main.Chatted:FireServer(unpack(args))
+		end    
+	})
+
+	Section100:AddButton({
+		Name = "\240\159\152\161-Angry",
+		Callback = function()
+            local ohString111 = "Angry"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+local args = {
+    [1] = "\240\159\152\161",
+    [2] = false
+}
+
+workspace.Main.Chatted:FireServer(unpack(args))
+		end    
+	})
+
+	Section100:AddButton({
+		Name = "\240\159\152\149-Confused",
+		Callback = function()
+            local ohString111 = "Confused"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+local args = {
+    [1] = "\240\159\152\149",
+    [2] = false
+}
+
+workspace.Main.Chatted:FireServer(unpack(args))
+		end    
+	})
+
+	Section100:AddButton({
+		Name = "\240\159\142\181-Whistle",
+		Callback = function()
+            local ohString111 = "Whistle"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+local args = {
+    [1] = "\240\159\142\181",
+    [2] = false
+}
+
+workspace.Main.Chatted:FireServer(unpack(args))
+		end    
+	})
+
+	Section100:AddButton({
+		Name = "\240\159\152\180-Sleep",
+		Callback = function()
+            local ohString111 = "Sleep"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+local args = {
+    [1] = "\240\159\152\180",
+    [2] = false
+}
+
+workspace.Main.Chatted:FireServer(unpack(args))
+
+		end    
+	})
+
+	Section100:AddButton({
+		Name = "\240\159\145\143-Clap",
+		Callback = function()
+            local ohString111 = "Clap"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+local args = {
+    [1] = "\240\159\145\143",
+    [2] = false
+}
+
+workspace.Main.Chatted:FireServer(unpack(args))
+		end    
+	})
+
+	Section100:AddButton({
+		Name = "\240\159\164\162-Disgust",
+		Callback = function()
+            local ohString111 = "Disgust"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+local args = {
+    [1] = "\240\159\164\162",
+    [2] = false
+}
+
+workspace.Main.Chatted:FireServer(unpack(args))
+		end    
+	})
+
+	Section100:AddButton({
+		Name = "\240\159\152\136-Evil",
+		Callback = function()
+            local ohString111 = "Evil"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+local args = {
+    [1] = "\240\159\152\136",
+    [2] = false
+}
+
+workspace.Main.Chatted:FireServer(unpack(args))
+		end    
+	})
+
+	Section100:AddButton({
+		Name = "\240\159\152\178-Shocked",
+		Callback = function()
+            local ohString111 = "Shocked"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+local args = {
+    [1] = "\240\159\152\178",
+    [2] = false
+}
+
+workspace.Main.Chatted:FireServer(unpack(args))
+		end    
+	})
+
+	Section100:AddButton({
+		Name = "\240\159\152\169-Die",
+		Callback = function()
+            local ohString111 = "Die"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+local args = {
+    [1] = "\240\159\152\169",
+    [2] = false
+}
+
+workspace.Main.Chatted:FireServer(unpack(args))
+		end    
+	})
+	Section102:AddButton({
+		Name = "Punch",
+		Callback = function()
+            local ohString111 = "Punch"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Sit",
+		Callback = function()
+            local ohString111 = "Sit"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Dance",
+		Callback = function()
+            local ohString111 = "Dance"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Dance2",
+		Callback = function()
+            local ohString111 = "Dance2"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Dance3",
+		Callback = function()
+            local ohString111 = "Dance3"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Shuffle",
+		Callback = function()
+            local ohString111 = "Shuffle"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Swing",
+		Callback = function()
+            local ohString111 = "Swing"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Easy",
+		Callback = function()
+            local ohString111 = "Easy"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "HipHop",
+		Callback = function()
+            local ohString111 = "HipHop"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "HipHop2",
+		Callback = function()
+            local ohString111 = "HipHop2"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Flair",
+		Callback = function()
+            local ohString111 = "Flair"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Marashin",
+		Callback = function()
+            local ohString111 = "Marashin"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Dolphin",
+		Callback = function()
+            local ohString111 = "Dolphin"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Monkey",
+		Callback = function()
+            local ohString111 = "Monkey"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Happy",
+		Callback = function()
+            local ohString111 = "Happy"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Floss",
+		Callback = function()
+            local ohString111 = "Floss"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Cutesy",
+		Callback = function()
+            local ohString111 = "Cutesy"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Samba",
+		Callback = function()
+            local ohString111 = "Samba"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Twirl",
+		Callback = function()
+            local ohString111 = "Twirl"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Cha Cha",
+		Callback = function()
+            local ohString111 = "Cha Cha"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Slide",
+		Callback = function()
+            local ohString111 = "Slide"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Around Town",
+		Callback = function()
+            local ohString111 = "Around Town"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Shuffler",
+		Callback = function()
+            local ohString111 = "Shuffler"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Rock",
+		Callback = function()
+            local ohString111 = "Rock"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Feet",
+		Callback = function()
+            local ohString111 = "Feet"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Robot",
+		Callback = function()
+            local ohString111 = "Robot"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Jacks",
+		Callback = function()
+            local ohString111 = "Jacks"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Sleepy",
+		Callback = function()
+            local ohString111 = "Sleepy"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Idol",
+		Callback = function()
+            local ohString111 = "Idol"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Cower",
+		Callback = function()
+            local ohString111 = "Cower"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Celebrate",
+		Callback = function()
+            local ohString111 = "Celebrate"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Fashion",
+		Callback = function()
+            local ohString111 = "Fashion"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Jump Wave",
+		Callback = function()
+            local ohString111 = "Jump Wave"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Wave",
+		Callback = function()
+            local ohString111 = "Wave"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Trantrum",
+		Callback = function()
+            local ohString111 = "Trantrum"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "ThrowCoin",
+		Callback = function()
+            local ohString111 = "ThrowCoin"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Bathtub",
+		Callback = function()
+            local ohString111 = "Bathtub"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Coffin",
+		Callback = function()
+            local ohString111 = "Coffin"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "ConfusionOrb",
+		Callback = function()
+            local ohString111 = "ConfusionOrb"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Dead",
+		Callback = function()
+            local ohString111 = "RatDead"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Driving",
+		Callback = function()
+            local ohString111 = "Driving"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
 spawn(function()
 local nig, niga = pcall(function()
 local tttttttt = game.CoreGui.Orion
