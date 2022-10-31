@@ -555,6 +555,22 @@ Section1:AddTextbox({
 		end
 	})
 	Tap0:AddButton({
+		Name = "Get Delivery Bike",
+		Callback = function()
+                        local niggahh, errorgaa  = pcall(function()
+                for _,p in ipairs(game.Players:GetPlayers()) do
+                if p ~= game.Players.LocalPlayer then
+                getgenv().ihi = p:FindFirstChild("DeliveryBike", true)
+                   end
+                end
+            ihi:Clone().Parent = game:GetService("Players").LocalPlayer.Backpack
+            end)
+            if errorgaa then
+            workspace.MessageService.Dialog.Dialog:Fire("Warning","You Need Someone That Have DeliveryBike Inside His Inventory","ok","",true,true)
+            end
+		end
+	})
+	Tap0:AddButton({
 		Name = "Advanced Painter",
 		Callback = function()
 			loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/advancecolor'),true))()
