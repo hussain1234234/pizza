@@ -557,17 +557,18 @@ Section1:AddTextbox({
 	Tap0:AddButton({
 		Name = "Get Delivery Bike",
 		Callback = function()
-                        local niggahh, errorgaa  = pcall(function()
-                for _,p in ipairs(game.Players:GetPlayers()) do
-                if p ~= game.Players.LocalPlayer then
-                getgenv().ihi = p:FindFirstChild("DeliveryBike", true)
-                   end
-                end
-            ihi:Clone().Parent = game:GetService("Players").LocalPlayer.Backpack
-            end)
-            if errorgaa then
-            workspace.MessageService.Dialog.Dialog:Fire("Warning","You Need Someone That Have DeliveryBike Inside His Inventory","ok","",true,true)
-            end
+			pcall(function()
+				game:GetService("Workspace").Buy.DeliveryBike.Name = "DeliveryBike1"
+				end)
+				wait(0.1)
+				local yes = game:FindFirstChild("DeliveryBike", true)
+				if yes:IsA("Tool") then
+				yes:Clone().Parent = game.Players.LocalPlayer.Backpack
+				end
+				wait(0.1)
+				pcall(function()
+					game:GetService("Workspace").Buy.DeliveryBike1.Name = "DeliveryBike"
+				end)
 		end
 	})
 	Tap0:AddButton({
@@ -756,7 +757,13 @@ Section1:AddTextbox({
 	Tap0:AddButton({
 		Name = "Fire Extinguisher",
 		Callback = function()
+			local mybadassplrb = game.Players.LocalPlayer.Backpack
+			local mybadassplr = game.Players.LocalPlayer.Backpack
 			workspace.Extinguisher.Extinguisher.ClickDetector.Detector:FireServer()
+			wait(2)
+			local niiiiiiiiiigg = game:GetService("Workspace"):FindFirstChild("FireExtinguisher", true)
+			niiiiiiiiiigg:Clone().Parent = mybadassplrb
+			print("done")
 		end
 	})
 	Tap0:AddButton({
