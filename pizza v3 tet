@@ -558,13 +558,23 @@ Section1:AddTextbox({
 		Name = "Get Delivery Bike",
 		Callback = function()
 			pcall(function()
-				game:GetService("Workspace").Buy.DeliveryBike.Name = "DeliveryBike1"
+				    game:GetService("Workspace").Buy.DeliveryBike.Name = "DeliveryBike1"
 				end)
 				wait(0.1)
-				local yes = game:FindFirstChild("DeliveryBike", true)
-				if yes:IsA("Tool") then
-				yes:Clone().Parent = game.Players.LocalPlayer.Backpack
-				end
+                    local notwork,workk = pcall(function()
+                    local yes = game:FindFirstChild("DeliveryBike", true)
+                    if yes:IsA("Tool") then
+                    yes:Clone().Parent = game.Players.LocalPlayer.Backpack
+                    end
+                end)
+                if workk then
+                    OrionLib:MakeNotification({
+                        Name = "Error\226\157\140",
+                        Content = "There is no one in the game have the DeliveryBike",
+                        Image = "rbxassetid://4483345998",
+                        Time = 5
+                    })
+                end
 				wait(0.1)
 				pcall(function()
 					game:GetService("Workspace").Buy.DeliveryBike1.Name = "DeliveryBike"
@@ -1588,7 +1598,7 @@ end)
 OrionLib:MakeNotification({
 	Name = "Welcome",
 	Content = "Script Made By Husaain",
-	Image = "rbxassetid://4483345998",
+	Image = "rbxassetid://7733749837",
 	Time = 5
 })
 OrionLib:Init()
