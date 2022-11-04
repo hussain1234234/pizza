@@ -184,6 +184,7 @@ Tab:AddToggle({
 	Callback = function(Value)
 		getgenv().gogo = Value
 		if getgenv().gogo == true then
+local s = getgenv().Flooood
 local player = game:GetService("Players").LocalPlayer
 local ffc = game.FindFirstChild
 local RNG = Random.new()
@@ -233,22 +234,20 @@ player.CharacterAdded:Connect(onCharacterAdded)
 
 			local waiting = false
 			local waitingTick = 0
-			local s = getgenv().Flooood
-			print(s)
 while getgenv().gogo do
 wait(1)
 for _,P in ipairs(game:GetService("Workspace").SupplyButtons:GetChildren()) do
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = P.Ring.CFrame
 wait(0.1)
 end
-					if root.Position.Z > -900 then smoothTP(CFrame.new(8,12.4,-1020)) end
+					if root.Position.Z > -900 or root.Position.Z < -900 then print("ok") end
 					wait(0.1)
 					lastBox=nil
 					local j=0
 					local boxes = workspace.AllSupplyBoxes:GetChildren()
 					for i=1,#boxes do
 						local box = boxes[i]
-						if box.Anchored==false and box.Position.Z < -940 then
+						if box.Anchored==false and box.Position.Z < -940 or root.Position.Z > -900 then
 							box.CFrame = CFrame.new(s.Position)
 							network:FireServer("UpdateProperty", box, "CFrame", box.CFrame)
 							lastBox=box
