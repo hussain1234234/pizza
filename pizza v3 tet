@@ -1,3 +1,5 @@
+getgenv().truee = true
+getgenv().loopfeed = false
 getgenv().loopcolor = false
 getgenv().togglefire = false
 getgenv().loopupoort = false
@@ -18,6 +20,186 @@ local check = game:GetService("Workspace").Houses:FindFirstChild(game.Players.Lo
 local Trap = workspace:FindFirstChild("Shark Tank",true)
 local p1 = game.Players.LocalPlayer.Character.HumanoidRootPart
 local char = lp.Character
+function gogo(sello)
+	if getgenv().loopfeed then
+	function target(s)
+	while getgenv().loopfeed do
+	wait(0.3)
+	local player = game:GetService("Players").LocalPlayer
+	local ffc = game.FindFirstChild
+	local RNG = Random.new()
+	local network
+	local character,root,humanoid
+	do
+	local reg = (getreg or debug.getregistry)()
+	for i=1,#reg do
+	local f = reg[i]
+	if type(f)=="function" then
+		for k,v in next,getupvalues(f) do
+			if typeof(v)=="Instance" then
+				if v.Name=="CashOut" then
+					setupvalue(f,k,{MouseButton1Click={wait=function()end,Wait=function()end}})
+				elseif v.Name=="StickerName" then
+					setupvalue(f,k,nil)
+				end
+			end
+		end
+		if tostring(getfenv(f).script) == "Music" then
+			local consts = getconstants(f)
+			local loc=false
+			for ci,c in next,consts do
+				if c == "location changed" then
+					loc=true
+				elseif loc and c == "SendData" then
+					setconstant(f,ci,"ExplodeString")
+					break
+				end
+			end
+		end
+	elseif type(f)=="table" and rawget(f,"FireServer") and rawget(f,"BindEvents") then
+		network = f
+	end
+	end
+	end
+	assert(network,"failed to find network")
+	local function onCharacterAdded(char)
+	if not char then return end
+	character=char
+	root = character:WaitForChild("HumanoidRootPart")
+	humanoid = character:WaitForChild("Humanoid")
+	humanoid:SetStateEnabled("FallingDown",false)
+	end
+	onCharacterAdded(player.Character or player.CharacterAdded:Wait())
+	player.CharacterAdded:Connect(onCharacterAdded)
+	
+		local waiting = false
+		local waitingTick = 0
+	
+				if root.Position.Z > -900 or root.Position.Z < -900 then  end
+				wait(0.1)
+				lastBox=nil
+				local j=0
+				local boxes = workspace.AllSupplyBoxes:GetChildren()
+				for i=1,#boxes do
+					local box = boxes[i]
+					if box.Anchored==false and box.Position.Z < -940 or root.Position.Z > -900 then
+						box.CFrame = CFrame.new(game:GetService("Workspace")[s].HumanoidRootPart.Position)
+						network:FireServer("UpdateProperty", box, "CFrame", box.CFrame)
+						lastBox=box
+						j=j+1
+						if j>100 then break end
+					end
+				end
+				if lastBox then
+					waiting=true
+					waitingTick=tick()
+				end
+		end
+	end
+else
+	function target(s)
+		wait(0.3)
+		local player = game:GetService("Players").LocalPlayer
+		local ffc = game.FindFirstChild
+		local RNG = Random.new()
+		local network
+		local character,root,humanoid
+		do
+		local reg = (getreg or debug.getregistry)()
+		for i=1,#reg do
+		local f = reg[i]
+		if type(f)=="function" then
+			for k,v in next,getupvalues(f) do
+				if typeof(v)=="Instance" then
+					if v.Name=="CashOut" then
+						setupvalue(f,k,{MouseButton1Click={wait=function()end,Wait=function()end}})
+					elseif v.Name=="StickerName" then
+						setupvalue(f,k,nil)
+					end
+				end
+			end
+			if tostring(getfenv(f).script) == "Music" then
+				local consts = getconstants(f)
+				local loc=false
+				for ci,c in next,consts do
+					if c == "location changed" then
+						loc=true
+					elseif loc and c == "SendData" then
+						setconstant(f,ci,"ExplodeString")
+						break
+					end
+				end
+			end
+		elseif type(f)=="table" and rawget(f,"FireServer") and rawget(f,"BindEvents") then
+			network = f
+		end
+		end
+		end
+		assert(network,"failed to find network")
+		local function onCharacterAdded(char)
+		if not char then return end
+		character=char
+		root = character:WaitForChild("HumanoidRootPart")
+		humanoid = character:WaitForChild("Humanoid")
+		humanoid:SetStateEnabled("FallingDown",false)
+		end
+		onCharacterAdded(player.Character or player.CharacterAdded:Wait())
+		player.CharacterAdded:Connect(onCharacterAdded)
+		
+			local waiting = false
+			local waitingTick = 0
+		
+					if root.Position.Z > -900 or root.Position.Z < -900 then  end
+					wait(0.1)
+					lastBox=nil
+					local j=0
+					local boxes = workspace.AllSupplyBoxes:GetChildren()
+					for i=1,#boxes do
+						local box = boxes[i]
+						if box.Anchored==false and box.Position.Z < -940 or root.Position.Z > -900 then
+							box.CFrame = CFrame.new(game:GetService("Workspace")[s].HumanoidRootPart.Position)
+							network:FireServer("UpdateProperty", box, "CFrame", box.CFrame)
+							lastBox=box
+							j=j+1
+							if j>100 then break end
+						end
+					end
+					if lastBox then
+						waiting=true
+						waitingTick=tick()
+					end
+			end
+		end
+	while getgenv().truee do
+                 print("nigga")
+		wait(0.2)
+		spawn(function()
+			for _,P in ipairs(game:GetService("Workspace").SupplyButtons:GetChildren()) do
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = P.Unpressed.CFrame
+			wait(0.1)
+			end
+		end)
+		spawn(function()
+			for _,P in ipairs(game:GetService("Workspace").AllSupplyBoxes:GetChildren()) do          
+                print(_)    
+                getgenv().Amountttgug = _
+                if _ > 75 then 
+                print("stop")
+                getgenv().truee = false
+                wait(2)
+                getgenv().truee = true
+                end
+			end
+		end)
+	end
+
+	spawn(function()
+	if getgenv().Amountttgug > 74 then
+	wait(1) 
+	target(sello)
+	end
+	end)
+	end
 function kill(textt)
 
 	local targetPartial = textt
@@ -132,12 +314,14 @@ Section1:AddToggle({
 		getgenv().spam = (Value)
 		getgenv().spamchatt = (Value)
 		getgenv().kill = (Value)
+		getgenv().loopfeed = (Value)
+
 	end    
 })
 Section1000:AddDropdown({
 	Name = "Chose-Room",
 	Default = nil,
-	Options = {"Cashier Room", "Cook Room", "Boxer Room", "Delivery Room"},
+	Options = { "Manager Room", "Cashier Room", "Cook Room", "Boxer Room", "Delivery Room"},
 	Callback = function(Value)
 		if Value == "Cashier Room" then
 			local args = {
@@ -175,6 +359,8 @@ Section1000:AddDropdown({
 			game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
 			wait(0.5)
 			getgenv().Flooood = game:GetService("Workspace").JobButtons.Delivery
+		elseif Value == "Manager Room" then
+			getgenv().Flooood = game:GetService("Workspace").ManagerChair.Part
 		end
 	end    
 })
@@ -263,6 +449,43 @@ end
 end
 end    
 })
+
+function getPlayers()
+    local table1 = {};
+    for i, v in pairs((game:GetService("Players")):GetChildren()) do
+        table.insert(table1, v.Name);
+    end;
+    game.Players.PlayerAdded:Connect(function(a)
+        table.insert(table1, a.Name);
+    end);
+    game.Players.PlayerRemoving:Connect(function(a)
+        for i, v in pairs(table1) do
+            if v == a.Name then
+                table.remove(table1, i);
+            end;
+        end;
+    end);
+    return table1;
+end;
+
+nigggggggga = Section1000:AddDropdown({
+    Name = "Flood Player",
+    Default = nil,
+    Options = getPlayers(),
+    Flags = "Flag1",
+    Callback = function(Value)
+        gogo(Value);
+    end
+});
+
+game.Players.PlayerAdded:Connect(function(a)
+    nigggggggga:Refresh(getPlayers(), true);
+end);
+
+game.Players.PlayerRemoving:Connect(function(a)
+    nigggggggga:Refresh(getPlayers(), true);
+end);
+
 Section1000:AddButton({
 	Name = "Clear Flood",
 	Callback = function()
