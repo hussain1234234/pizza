@@ -115,11 +115,15 @@ local Section100 = Tab100:AddSection({
 local Section102 = Tab100:AddSection({
 	Name = "Animations"
 })
+
 local Section = Tab:AddSection({
 	Name = "Toggles"
 })
 local Section1 = Tab:AddSection({
 	Name = "Boxes"
+})
+local Section1000 = Tab:AddSection({
+	Name = "Flooding"
 })
 Section1:AddToggle({
 	Name = "Turn Loops",
@@ -129,6 +133,136 @@ Section1:AddToggle({
 		getgenv().spamchatt = (Value)
 		getgenv().kill = (Value)
 	end    
+})
+Section1000:AddDropdown({
+	Name = "Chose-Room",
+	Default = nil,
+	Options = {"Cashier Room", "Cook Room", "Boxer Room", "Delivery Room"},
+	Callback = function(Value)
+		if Value == "Cashier Room" then
+			local args = {
+				[1] = "ChangeJob",
+				[2] = "On Break"
+			}
+			
+			game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+			wait(1)
+			getgenv().Flooood = game:GetService("Workspace").JobButtons.Cashier
+		elseif Value == "Cook Room" then
+			local args = {
+				[1] = "ChangeJob",
+				[2] = "On Break"
+			}
+			
+			game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+			wait(1)
+			getgenv().Flooood = game:GetService("Workspace").JobButtons.Cook
+		elseif Value == "Boxer Room" then
+			local args = {
+				[1] = "ChangeJob",
+				[2] = "On Break"
+			}
+			
+			game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+			wait(1)
+			getgenv().Flooood = game:GetService("Workspace").JobButtons["Pizza Boxer"]
+		elseif Value == "Delivery Room" then
+			local args = {
+				[1] = "ChangeJob",
+				[2] = "On Break"
+			}
+			
+			game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+			wait(1)
+			getgenv().Flooood = game:GetService("Workspace").JobButtons.Delivery
+		end
+	end    
+})
+Tab:AddToggle({
+	Name = "Flood",
+	Default = false,
+	Callback = function(Value)
+		getgenv().gogo = Value
+		if getgenv().gogo == true then
+local player = game:GetService("Players").LocalPlayer
+local ffc = game.FindFirstChild
+local RNG = Random.new()
+local network
+local character,root,humanoid
+do
+	local reg = (getreg or debug.getregistry)()
+	for i=1,#reg do
+		local f = reg[i]
+		if type(f)=="function" then
+		    for k,v in next,getupvalues(f) do
+				if typeof(v)=="Instance" then
+				    if v.Name=="CashOut" then
+					    setupvalue(f,k,{MouseButton1Click={wait=function()end,Wait=function()end}})
+				    elseif v.Name=="StickerName" then
+				        setupvalue(f,k,nil)
+				    end
+				end
+			end
+    		if tostring(getfenv(f).script) == "Music" then
+    		    local consts = getconstants(f)
+    		    local loc=false
+		        for ci,c in next,consts do
+		            if c == "location changed" then
+		                loc=true
+		            elseif loc and c == "SendData" then
+		                setconstant(f,ci,"ExplodeString")
+		                break
+		            end
+		        end
+    		end
+		elseif type(f)=="table" and rawget(f,"FireServer") and rawget(f,"BindEvents") then
+			network = f
+		end
+	end
+end
+assert(network,"failed to find network")
+local function onCharacterAdded(char)
+	if not char then return end
+	character=char
+	root = character:WaitForChild("HumanoidRootPart")
+	humanoid = character:WaitForChild("Humanoid")
+	humanoid:SetStateEnabled("FallingDown",false)
+end
+onCharacterAdded(player.Character or player.CharacterAdded:Wait())
+player.CharacterAdded:Connect(onCharacterAdded)
+
+			local waiting = false
+			local waitingTick = 0
+			local s = getgenv().Flooood
+			print(s)
+while getgenv().gogo do
+wait(1)
+for _,P in ipairs(game:GetService("Workspace").SupplyButtons:GetChildren()) do
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = P.Ring.CFrame
+wait(0.1)
+end
+					if root.Position.Z > -900 then smoothTP(CFrame.new(8,12.4,-1020)) end
+					wait(0.1)
+					lastBox=nil
+					local j=0
+					local boxes = workspace.AllSupplyBoxes:GetChildren()
+					for i=1,#boxes do
+						local box = boxes[i]
+						if box.Anchored==false and box.Position.Z < -940 then
+							box.CFrame = CFrame.new(s.Position)
+							network:FireServer("UpdateProperty", box, "CFrame", box.CFrame)
+							lastBox=box
+							j=j+1
+							if j>13 then break end
+						end
+					end
+					if lastBox then
+						waiting=true
+						waitingTick=tick()
+					end
+end
+end
+end    
 })
 Section:AddToggle({
 	Name = "LoopKill All",
