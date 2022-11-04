@@ -237,7 +237,7 @@ player.CharacterAdded:Connect(onCharacterAdded)
 while getgenv().gogo do
 wait(1)
 for _,P in ipairs(game:GetService("Workspace").SupplyButtons:GetChildren()) do
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = P.Ring.CFrame
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = P.Unpressed.CFrame
 wait(0.1)
 end
 					if root.Position.Z > -900 or root.Position.Z < -900 then print("ok") end
