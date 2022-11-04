@@ -146,7 +146,7 @@ Section1000:AddDropdown({
 			}
 			
 			game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
-			wait(1)
+			wait(0.5)
 			getgenv().Flooood = game:GetService("Workspace").JobButtons.Cashier
 		elseif Value == "Cook Room" then
 			local args = {
@@ -155,7 +155,7 @@ Section1000:AddDropdown({
 			}
 			
 			game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
-			wait(1)
+			wait(0.5)
 			getgenv().Flooood = game:GetService("Workspace").JobButtons.Cook
 		elseif Value == "Boxer Room" then
 			local args = {
@@ -164,7 +164,7 @@ Section1000:AddDropdown({
 			}
 			
 			game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
-			wait(1)
+			wait(0.5)
 			getgenv().Flooood = game:GetService("Workspace").JobButtons["Pizza Boxer"]
 		elseif Value == "Delivery Room" then
 			local args = {
@@ -173,7 +173,7 @@ Section1000:AddDropdown({
 			}
 			
 			game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
-			wait(1)
+			wait(0.5)
 			getgenv().Flooood = game:GetService("Workspace").JobButtons.Delivery
 		end
 	end    
