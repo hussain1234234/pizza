@@ -321,7 +321,7 @@ player.CharacterAdded:Connect(onCharacterAdded)
 while getgenv().clearflood do
 wait(0.1)
 for _,P in ipairs(game:GetService("Workspace").AllSupplyBoxes:GetChildren()) do
-if P.Position.Z > -9.78697 and P.Position.Z > -1099.78 and P.Position.Z > -1098.78 and P.Position.X > -828.926 and P.Position.X > -827.742 and P.Position.Y > -59.8565 and P.Position.Y > -58.8565 then
+if P.Position.Z > -1099.78 and P.Position.Z > -1098.78 and P.Position.X > -828.926 and P.Position.X > -827.742 and P.Position.Y > -59.8565 and P.Position.Y > -58.8565 then
 print("done")
 wait(0.5)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = P.CFrame
