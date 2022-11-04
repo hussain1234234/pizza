@@ -252,7 +252,7 @@ end
 							network:FireServer("UpdateProperty", box, "CFrame", box.CFrame)
 							lastBox=box
 							j=j+1
-							if j>13 then break end
+							if j>50 then break end
 						end
 					end
 					if lastBox then
@@ -266,82 +266,82 @@ end
 Section1000:AddButton({
 	Name = "Clear Flood",
 	Callback = function()
-		local player = game:GetService("Players").LocalPlayer
-		local ffc = game.FindFirstChild
-		local RNG = Random.new()
-		local network
-		local character,root,humanoid
-		do
-			local reg = (getreg or debug.getregistry)()
-			for i=1,#reg do
-				local f = reg[i]
-				if type(f)=="function" then
-					for k,v in next,getupvalues(f) do
-						if typeof(v)=="Instance" then
-							if v.Name=="CashOut" then
-								setupvalue(f,k,{MouseButton1Click={wait=function()end,Wait=function()end}})
-							elseif v.Name=="StickerName" then
-								setupvalue(f,k,nil)
-							end
-						end
-					end
-					if tostring(getfenv(f).script) == "Music" then
-						local consts = getconstants(f)
-						local loc=false
-						for ci,c in next,consts do
-							if c == "location changed" then
-								loc=true
-							elseif loc and c == "SendData" then
-								setconstant(f,ci,"ExplodeString")
-								break
-							end
-						end
-					end
-				elseif type(f)=="table" and rawget(f,"FireServer") and rawget(f,"BindEvents") then
-					network = f
+local player = game:GetService("Players").LocalPlayer
+local ffc = game.FindFirstChild
+local RNG = Random.new()
+local network
+local character,root,humanoid
+do
+	local reg = (getreg or debug.getregistry)()
+	for i=1,#reg do
+		local f = reg[i]
+		if type(f)=="function" then
+		    for k,v in next,getupvalues(f) do
+				if typeof(v)=="Instance" then
+				    if v.Name=="CashOut" then
+					    setupvalue(f,k,{MouseButton1Click={wait=function()end,Wait=function()end}})
+				    elseif v.Name=="StickerName" then
+				        setupvalue(f,k,nil)
+				    end
 				end
 			end
+    		if tostring(getfenv(f).script) == "Music" then
+    		    local consts = getconstants(f)
+    		    local loc=false
+		        for ci,c in next,consts do
+		            if c == "location changed" then
+		                loc=true
+		            elseif loc and c == "SendData" then
+		                setconstant(f,ci,"ExplodeString")
+		                break
+		            end
+		        end
+    		end
+		elseif type(f)=="table" and rawget(f,"FireServer") and rawget(f,"BindEvents") then
+			network = f
 		end
-		assert(network,"failed to find network")
-		local function onCharacterAdded(char)
-			if not char then return end
-			character=char
-			root = character:WaitForChild("HumanoidRootPart")
-			humanoid = character:WaitForChild("Humanoid")
-			humanoid:SetStateEnabled("FallingDown",false)
-		end
-		onCharacterAdded(player.Character or player.CharacterAdded:Wait())
-		player.CharacterAdded:Connect(onCharacterAdded)
-		
-					local waiting = false
-					local waitingTick = 0
-		wait(0.1)
-		for _,P in ipairs(game:GetService("Workspace").AllSupplyBoxes:GetChildren()) do
-		if P.Position.Z > -1099.78 and P.Position.Z > -1098.78 and P.Position.X > -828.926 and P.Position.X > -827.742 and P.Position.Y > -59.8565 and P.Position.Y > -58.8565 then
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = P.CFrame
-		wait(5)
-							if root.Position.Z > -900 or root.Position.Z < -900 then print("ok") end
-							wait(0.1)
-							lastBox=nil
-							local j=0
-							local boxes = workspace.AllSupplyBoxes:GetChildren()
-							for i=1,#boxes do
-								local box = boxes[i]
-								if box.Anchored==false and box.Position.Z < -940 or root.Position.Z > -900 then
-									box.CFrame = CFrame.new(-828.926, -59.8565, -1099.78)
-									network:FireServer("UpdateProperty", box, "CFrame", box.CFrame)
-									lastBox=box
-									j=j+1
-									if j>13 then break end
-								end
-							end
-							if lastBox then
-								waiting=true
-								waitingTick=tick()
-							end
-		
-		end
-			end		
+	end
+end
+assert(network,"failed to find network")
+local function onCharacterAdded(char)
+	if not char then return end
+	character=char
+	root = character:WaitForChild("HumanoidRootPart")
+	humanoid = character:WaitForChild("Humanoid")
+	humanoid:SetStateEnabled("FallingDown",false)
+end
+onCharacterAdded(player.Character or player.CharacterAdded:Wait())
+player.CharacterAdded:Connect(onCharacterAdded)
+
+			local waiting = false
+			local waitingTick = 0
+wait(0.1)
+for _,P in ipairs(game:GetService("Workspace").AllSupplyBoxes:GetChildren()) do
+if P.Position.Z > -1099.78 and P.Position.Z > -1098.78 and P.Position.X > -828.926 and P.Position.X > -827.742 and P.Position.Y > -59.8565 and P.Position.Y > -58.8565 then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = P.CFrame
+wait(1)
+					if root.Position.Z > -900 or root.Position.Z < -900 then print("ok") end
+					wait(0.1)
+					lastBox=nil
+					local j=0
+					local boxes = game:GetService("Workspace").AllSupplyBoxes:GetChildren()
+					for i=1,#boxes do
+						local box = boxes[i]
+						if box.Anchored==false and box.Position.Z < -940 or root.Position.Z > -900 then
+							box.CFrame = CFrame.new(-828.926, -59.8565, -1099.78)
+							network:FireServer("UpdateProperty", box, "CFrame", box.CFrame)
+							lastBox=box
+							j=j+1
+							if j>100 then break end
+						end
+					end
+					if lastBox then
+						waiting=true
+						waitingTick=tick()
+					end
+
+end
+    end	
 	end    
 })
 Section:AddToggle({
