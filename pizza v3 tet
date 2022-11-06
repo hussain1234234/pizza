@@ -200,7 +200,12 @@ else
 	end
 	end)
 	end
-	function clearflooood()
+	function clearflooood(s)	
+		game.StarterGui:SetCore("SendNotification", {
+			Title = 'Clearing Old Flood';
+			Text = 'Lodaing...';
+			Duration = tonumber(s);
+		  })
 		local player = game:GetService("Players").LocalPlayer
 		local ffc = game.FindFirstChild
 		local RNG = Random.new()
@@ -250,13 +255,11 @@ else
 		
 					local waiting = false
 					local waitingTick = 0
-		wait(0.1)
 		for _,P in ipairs(game:GetService("Workspace").AllSupplyBoxes:GetChildren()) do
-		if P.Position.Z > -2241.66 and P.Position.Z > -2240.66 and P.Position.X > -3361.37 and P.Position.X > -3360.37 and P.Position.Y > -137.384 and P.Position.Y > -136.384 then
+			wait(0.2)
+		if P.Name == "SupplyBox" and P:IsA("Part") and P.Position.Z > -2241.66 and P.Position.Z > -2240.66 and P.Position.Z > -2237.05 and P.Position.X > -3325.26 and P.Position.Y > -137.817 and P.Position.X > -3361.37 and P.Position.X > -3360.37 and P.Position.Y > -137.384 and P.Position.Y > -136.384 then
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = P.CFrame
-		wait(1)
 							if root.Position.Z > -900 or root.Position.Z < -900 then print("ok") end
-							wait(0.1)
 							lastBox=nil
 							local j=0
 							local boxes = game:GetService("Workspace").AllSupplyBoxes:GetChildren()
@@ -446,8 +449,11 @@ Section1000:AddToggle({
 	Name = "Flood",
 	Default = false,
 	Callback = function(Value)
+
 		getgenv().gogo = Value
-		if getgenv().gogo == true then
+		if getgenv().gogo == true then	
+			clearflooood(10)
+			print("start")
 local s = getgenv().Flooood
 local player = game:GetService("Players").LocalPlayer
 local ffc = game.FindFirstChild
@@ -499,7 +505,7 @@ player.CharacterAdded:Connect(onCharacterAdded)
 			local waiting = false
 			local waitingTick = 0
 while getgenv().gogo do
-wait(1)
+wait(0.2)
 for _,P in ipairs(game:GetService("Workspace").SupplyButtons:GetChildren()) do
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = P.Unpressed.CFrame
 wait(0.1)
@@ -552,6 +558,7 @@ nigggggggga = Section1000:AddDropdown({
     Options = getPlayers(),
     Flags = "Flag1",
     Callback = function(Value)
+		clearflooood(10)
         gogo(Value);
     end
 });
@@ -567,7 +574,7 @@ end);
 Section1000:AddButton({
 	Name = "Clear Flood",
 	Callback = function()
-		clearflooood()
+		clearflooood(2)
 	end    
 })
 Section:AddToggle({
@@ -1018,6 +1025,33 @@ Section1:AddTextbox({
 				wait(0.1)
 				pcall(function()
 					game:GetService("Workspace").Buy.DeliveryBike1.Name = "DeliveryBike"
+				end)
+		end
+	})
+	Tap0:AddButton({
+		Name = "Get HangGlider",
+		Callback = function()
+			pcall(function()
+				    game:GetService("Workspace").Buy.HangGlider.Name = "HangGlider1"
+				end)
+				wait(0.1)
+                    local notwork,workk = pcall(function()
+                    local yes = game:FindFirstChild("HangGlider", true)
+                    if yes:IsA("Tool") then
+                    yes:Clone().Parent = game.Players.LocalPlayer.Backpack
+                    end
+                end)
+                if workk then
+                    OrionLib:MakeNotification({
+                        Name = "Error\226\157\140",
+                        Content = "There is no one in the game have the HangGlider",
+                        Image = "rbxassetid://4483345998",
+                        Time = 5
+                    })
+                end
+				wait(0.1)
+				pcall(function()
+					game:GetService("Workspace").Buy.HangGlider1.Name = "HangGlider"
 				end)
 		end
 	})
