@@ -1029,33 +1029,6 @@ Section1:AddTextbox({
 		end
 	})
 	Tap0:AddButton({
-		Name = "Get HangGlider",
-		Callback = function()
-			pcall(function()
-				    game:GetService("Workspace").Buy.HangGlider.Name = "HangGlider1"
-				end)
-				wait(0.1)
-                    local notwork,workk = pcall(function()
-                    local yes = game:FindFirstChild("HangGlider", true)
-                    if yes:IsA("Tool") then
-                    yes:Clone().Parent = game.Players.LocalPlayer.Backpack
-                    end
-                end)
-                if workk then
-                    OrionLib:MakeNotification({
-                        Name = "Error\226\157\140",
-                        Content = "There is no one in the game have the HangGlider",
-                        Image = "rbxassetid://4483345998",
-                        Time = 5
-                    })
-                end
-				wait(0.1)
-				pcall(function()
-					game:GetService("Workspace").Buy.HangGlider1.Name = "HangGlider"
-				end)
-		end
-	})
-	Tap0:AddButton({
 		Name = "Advanced Painter",
 		Callback = function()
 			loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/advancecolor'),true))()
