@@ -1308,100 +1308,33 @@ wait(0.1)
     end)		
 		end    
 	})
-	Section9:AddTextbox({
-		Name = "Hat ID",
+	Section9:AddDropdown({
+		Name = "Accessory",
 		Default = nil,
-		TextDisappear = false,
-		Callback = function(name)
-			cloth1(tonumber(name))
-		end	  
+		Options = {"HatAccessory", "Shirt", "Pants", "HairAccessory", "FaceAccessory", "Face", "NeckAccessory", "BackAccessory", "ShouldersAccessory","WaistAccessory","FrontAccessory","Head"},
+		Callback = function(Value)
+			getgenv().Clothesname = (Value)
+		end    
 	})
 	Section9:AddTextbox({
-		Name = "Head ID",
+		Name = "ID",
 		Default = nil,
-		TextDisappear = false,
-		Callback = function(name)
-			cloth12(tonumber(name))
-		end	  
-	})
-	Section9:AddTextbox({
-		Name = "Face ID",
-		Default = nil,
-		TextDisappear = false,
-		Callback = function(name)
-			cloth6(tonumber(name))
-		end	  
-	})
-	Section9:AddTextbox({
-		Name = "Shirt ID",
-		Default = nil,
-		TextDisappear = false,
-		Callback = function(name)
-			cloth2(tonumber(name))
-		end	  
-	})
-	Section9:AddTextbox({
-		Name = "Pant ID",
-		Default = nil,
-		TextDisappear = false,
-		Callback = function(name)
-			cloth3(tonumber(name))
-		end	  
-	})
-	Section9:AddTextbox({
-		Name = "Hair ID",
-		Default = nil,
-		TextDisappear = false,
-		Callback = function(name)
-			cloth4(tonumber(name))
-		end	  
-	})
-	Section9:AddTextbox({
-		Name = "FaceAccessory ID",
-		Default = nil,
-		TextDisappear = false,
-		Callback = function(name)
-			cloth5(tonumber(name))
-		end	  
-	})
-	Section9:AddTextbox({
-		Name = "NeckAccessory ID",
-		Default = nil,
-		TextDisappear = false,
-		Callback = function(name)
-			cloth7(tonumber(name))
-		end	  
-	})
-	Section9:AddTextbox({
-		Name = "ShouldersAccessory ID",
-		Default = nil,
-		TextDisappear = false,
-		Callback = function(name)
-			cloth9(tonumber(name))
-		end	  
-	})
-	Section9:AddTextbox({
-		Name = "WaistAccessory ID",
-		Default = nil,
-		TextDisappear = false,
-		Callback = function(name)
-			cloth10(tonumber(name))
-		end	  
-	})
-	Section9:AddTextbox({
-		Name = "FrontAccessory ID",
-		Default = nil,
-		TextDisappear = false,
-		Callback = function(name)
-			cloth11(tonumber(name))
-		end	  
-	})
-	Section9:AddTextbox({
-		Name = "BackAccessory ID",
-		Default = nil,
-		TextDisappear = false,
-		Callback = function(name)
-			cloth8(tonumber(name))
+		TextDisappear = true,
+		Callback = function(Value)
+			local args = {
+				[1] = "LoadAvatarAsset",
+				[2] = tonumber(Value),
+				[3] = getgenv().Clothesname
+			}
+		
+			game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+			OrionLib:MakeNotification({
+				Name = "Done",
+				Content = "The Accessory has been successfully Worn",
+				Image = "rbxassetid://7733715400",
+				Time = 4
+			})
+			print("worn", Value)
 		end	  
 	})
 Section101:AddTextbox({
