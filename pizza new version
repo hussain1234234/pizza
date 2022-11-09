@@ -504,32 +504,45 @@ player.CharacterAdded:Connect(onCharacterAdded)
 
 			local waiting = false
 			local waitingTick = 0
-while getgenv().gogo do
 wait(0.2)
-for _,P in ipairs(game:GetService("Workspace").SupplyButtons:GetChildren()) do
+local tt = 0
+repeat 
+wait(1.1)
+for _,P in next,game:GetService("Workspace").SupplyButtons:GetChildren() do
+wait()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = P.Unpressed.CFrame
+tt=tt+1
+if root.Position.Z > -900 or root.Position.Z < -900 then print("ok") end
 wait(0.1)
+lastBox=nil
+local j=0
+local boxes = workspace.AllSupplyBoxes:GetChildren()
+for i=1,#boxes do
+	local box = boxes[i]
+	if box.Anchored==false and box.Position.Z < -940 or root.Position.Z > -900 then
+		box.CFrame = CFrame.new(s.Position)
+		network:FireServer("UpdateProperty", box, "CFrame", box.CFrame)
+		lastBox=box
+		j=j+1
+		if j>100 then break end
+	end
 end
-					if root.Position.Z > -900 or root.Position.Z < -900 then print("ok") end
-					wait(0.1)
-					lastBox=nil
-					local j=0
-					local boxes = workspace.AllSupplyBoxes:GetChildren()
-					for i=1,#boxes do
-						local box = boxes[i]
-						if box.Anchored==false and box.Position.Z < -940 or root.Position.Z > -900 then
-							box.CFrame = CFrame.new(s.Position)
-							network:FireServer("UpdateProperty", box, "CFrame", box.CFrame)
-							lastBox=box
-							j=j+1
-							if j>50 then break end
-						end
-					end
-					if lastBox then
-						waiting=true
-						waitingTick=tick()
-					end
+if lastBox then
+	waiting=true
+	waitingTick=tick()
 end
+print(tt)
+end
+if tt>80 then
+	OrionLib:MakeNotification({
+		Name = "Done",
+		Content = "The Room Flooded successfully" ,
+		Image = "rbxassetid://7733715400",
+		Time = 5
+	})	
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(s.Position)
+end
+until tt>80
 end
 end    
 })
