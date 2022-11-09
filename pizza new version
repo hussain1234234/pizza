@@ -531,7 +531,6 @@ if lastBox then
 	waiting=true
 	waitingTick=tick()
 end
-print(tt)
 end
 if tt>80 then
 	OrionLib:MakeNotification({
@@ -542,7 +541,7 @@ if tt>80 then
 	})	
 	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(s.Position)
 end
-until tt>80
+until tt>80 or not getgenv().gogo
 end
 end    
 })
