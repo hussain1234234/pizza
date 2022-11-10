@@ -436,7 +436,7 @@ Section1000:AddDropdown({
 local Section999 = Tab:AddSection({
 	Name = "Break Game"
 })
-Tab:AddToggle({
+Section999:AddToggle({
 	Name = "Break Boxes/Dough/Dew",
 	Default = false,
 	Callback = function(Value)
@@ -727,7 +727,7 @@ Section:AddToggle({
 		end
 	end    
 })
-Section:AddToggle({
+Section999:AddToggle({
 	Name = "RainbowCars",
 	Default = false,
 	Callback = function(Value)
@@ -737,7 +737,7 @@ Section:AddToggle({
 		end
 	end    
 })
-Section:AddToggle({
+Section999:AddToggle({
 	Name = "Break Jobs",
 	Default = false,
 	Callback = function(Value)
@@ -802,7 +802,7 @@ Section:AddToggle({
 		end
 	end    
 })
-Section:AddToggle({
+Section999:AddToggle({
 	Name = "Unanchored Tress",
 	Default = false,
 	Callback = function(Value)
