@@ -2,7 +2,6 @@ getgenv().truee = true
 getgenv().loopfeed = false
 getgenv().loopcolor = false
 getgenv().togglefire = false
-getgenv().loopupoort = false
 getgenv().loopwork = false
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/noclothes'),true))()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/clothes'),true))()
@@ -331,17 +330,6 @@ function loopkillll()
 		end
 	end
 	loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/kick%20manager'),true))()
-	function killtree()
-		while getgenv().loopupoort do
-		wait()
-		local success, fail = pcall(function()
-				for _,P in next, game:GetService("Workspace").Trees:GetChildren() do
-				game:GetService("Workspace").Main.UprootTree:FireServer(P)
-				task.wait()
-				end
-			end)
-		end
-	end
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Pizza Place GUI", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 local Tab = Window:MakeTab({
@@ -818,9 +806,19 @@ Section:AddToggle({
 	Name = "Unanchored Tress",
 	Default = false,
 	Callback = function(Value)
-		getgenv().loopupoort = (Value)
-		if getgenv().loopupoort then
-			killtree()
+		getgenv().nhekee = (Value)
+		if getgenv().nhekee then
+						while true do 
+						wait(.50)
+						if getgenv().nhekee then 
+						pcall(function()for j,k in pairs(game.Workspace.Trees:GetDescendants()) do
+						if k.Name=="Tree"or k.Name=="DeadTree"then 
+						workspace.Main.UprootTree:FireServer(k)
+						end 
+					end 
+					end)
+				end 
+			end 
 		end
 	end    
 })
