@@ -819,6 +819,13 @@ Section999:AddToggle({
 		end
 	end    
 })
+Section999:AddButton({
+	Name = "Flinger Parts",
+	Callback = function()
+		loadstring(game:HttpGet(('https://pastebin.com/raw/hWVMtmkt'),true))()
+  	end    
+})
+Section999:AddParagraph("Flinger Parts Notes","It's Not Stopable and when you die you will be attracted to the Parts tornado and sometimes it's laggy,Press E to control it's Position")
 function getPlayers()
 local table1 = {};
 for i, v in pairs((game:GetService("Players")):GetChildren()) do
