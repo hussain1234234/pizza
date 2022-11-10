@@ -367,9 +367,6 @@ local Section102 = Tab100:AddSection({
 	Name = "Animations"
 })
 
-local Section = Tab:AddSection({
-	Name = "Toggles"
-})
 local Section1 = Tab:AddSection({
 	Name = "Boxes"
 })
@@ -717,7 +714,7 @@ Section1000:AddButton({
 		clearflooood(2)
 	end    
 })
-Section:AddToggle({
+Section1:AddToggle({
 	Name = "LoopKill All",
 	Default = false,
 	Callback = function(Value)
@@ -792,7 +789,7 @@ Section999:AddToggle({
 		end
 	end    
 })
-Section:AddToggle({
+Section1:AddToggle({
 	Name = "Anti-Oven Fire",
 	Default = false,
 	Callback = function(Value)
