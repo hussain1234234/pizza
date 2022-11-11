@@ -302,6 +302,34 @@ function kill(textt)
 		end)
 		 end 
 	end
+	function bringvc()
+		local j = 0
+		repeat
+		wait()
+		for _,P in ipairs(game:GetService("Workspace").Cars:GetChildren()) do 
+		spawn(function()
+		if P:IsA("VehicleSeat") and P~=P.Driver:WaitForChild("SeatWeld") and P==P.Owner==nil then
+		error("idk")
+		else
+		local car = P
+		getgenv().cars = car
+		end
+		end)
+		end
+		j=j+1
+		until j>3
+		if j>3 then
+		spawn(function()
+		for _,o in ipairs(cars:GetChildren()) do 
+		if o:IsA("VehicleSeat") or o:IsA("Part") then
+		o.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position)
+		local parent = o.Parent
+		parent.LeftDoor.ClickDetector.Detector:FireServer()
+		end
+		end
+		end)
+		end
+	end
     function die(plrnameee)
 
         local targetPartial = plrnameee
@@ -1252,6 +1280,12 @@ Section1:AddTextbox({
 		Callback = function()
 			kick()
 		end
+	})
+	Tap0:AddButton({
+		Name = "Bring Car",
+		Callback = function()
+			bringvc()
+		  end    
 	})
 	Tap0:AddButton({
 		Name = "Get Delivery Bike",
