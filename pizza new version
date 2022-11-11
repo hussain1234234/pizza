@@ -323,8 +323,6 @@ function kill(textt)
 		for _,o in ipairs(cars:GetChildren()) do 
 		if o:IsA("VehicleSeat") or o:IsA("Part") then
 		o.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position)
-		local parent = o.Parent
-		parent.LeftDoor.ClickDetector.Detector:FireServer()
 		end
 		end
 		end)
