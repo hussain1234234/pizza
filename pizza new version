@@ -303,31 +303,25 @@ function kill(textt)
 		 end 
 	end
 	function bringvc()
-		local j = 0
-		repeat
-		wait()
-		for _,P in ipairs(game:GetService("Workspace").Cars:GetChildren()) do 
-		spawn(function()
-		if P:IsA("VehicleSeat") and P~=P.Driver:WaitForChild("SeatWeld") and P~=P.Owner==nil then
-		error("idk")
-		else
-		local car = P
-		getgenv().cars = car
-		end
-		end)
-		end
-		j=j+1
-		until j>3
-		if j>3 then
-		spawn(function()
-        game.Players.LocalPlayer.Character.Humanoid.Jump = true
-		for _,o in ipairs(cars:GetChildren()) do 
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local humanoid = player.Character.Humanoid
+    if not workspace.Cars:IsAncestorOf(humanoid.SeatPart) then
+		humanoid.Sit=false
+		wait(0.1)
+		for _,car in ipairs(workspace.Cars:GetChildren()) do
+			if car:FindFirstChild("Driver") and car.Driver.Occupant==nil and car:FindFirstChild("Owner") and car.Owner.Value==nil then
+        for _,o in ipairs(car:GetChildren()) do 
 		if o:IsA("VehicleSeat") or o:IsA("Part") then
 		o.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position)
 		end
+		end   
+				if true then
+					break
+				end
+			end
 		end
-		end)
-		end
+	end
 	end
     function die(plrnameee)
 
