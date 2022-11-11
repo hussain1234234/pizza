@@ -1347,6 +1347,28 @@ Section1:AddTextbox({
 			end
 		end    
 	})
+	Tab989:AddButton({
+		Name = "Show Speed Counter",
+		Callback = function()
+			if game:GetService("CoreGui").RobloxGui.VehicleHudFrame.Visible == false then 
+			game:GetService("CoreGui").RobloxGui.VehicleHudFrame.Visible = true
+			OrionLib:MakeNotification({
+			Name = "Done",
+			Content = "Speed Counter Enabled,to Disable it Press The Same Button",
+			Image = "rbxassetid://7733715400",
+			Time = 5
+			})
+			elseif game:GetService("CoreGui").RobloxGui.VehicleHudFrame.Visible == true then
+			game:GetService("CoreGui").RobloxGui.VehicleHudFrame.Visible = false
+			OrionLib:MakeNotification({
+			Name = "Done",
+			Content = "Speed Counter Disabled,to Enable it Press The Same Button",
+			Image = "rbxassetid://7733715400",
+			Time = 5
+			})
+			end
+		  end    
+	})
 	Tap0:AddButton({
 		Name = "Anti-Afk",
 		Callback = function()
