@@ -360,6 +360,12 @@ local Tab = Window:MakeTab({
 	Icon = "rbxassetid://7734053426",
 	PremiumOnly = false
 })
+local Tab989 = Window:MakeTab({
+	Name = "Vehicles",
+	Icon = "rbxassetid://7733708835",
+	PremiumOnly = false
+})
+
 local Tab1 = Window:MakeTab({
 	Name = "Teleports",
 	Icon = "rbxassetid://7733774602",
@@ -846,16 +852,6 @@ Section1:AddToggle({
 	end    
 })
 Section999:AddToggle({
-	Name = "RainbowCars",
-	Default = false,
-	Callback = function(Value)
-		getgenv().loopcolor = (Value)
-		if getgenv().loopcolor then
-			spamcolor()
-		end
-	end    
-})
-Section999:AddToggle({
 	Name = "Break Jobs",
 	Default = false,
 	Callback = function(Value)
@@ -1276,10 +1272,36 @@ Section1:AddTextbox({
 			kick()
 		end
 	})
-	Tap0:AddButton({
+	Tab989:AddButton({
 		Name = "Bring Car",
 		Callback = function()
 			bringvc()
+		  end    
+	})
+	Tab989:AddButton({
+		Name = "Bring Truck",
+		Callback = function()
+			local Players = game:GetService("Players")
+			local player = Players.LocalPlayer
+			local humanoid = player.Character.Humanoid
+				if not game:GetService("Workspace").Trucks:IsAncestorOf(humanoid.SeatPart) then
+					humanoid.Sit=false
+					wait(0.1)
+					for _,car in ipairs(game:GetService("Workspace").Trucks:GetChildren()) do
+						if car:FindFirstChild("Driver") and car.Driver.Occupant==nil and car:FindFirstChild("Passenger") and car.Passenger.Occupant==nil then
+					for _,o in ipairs(car:GetChildren()) do 
+					if o:IsA("VehicleSeat") or o:IsA("Part") then
+					o.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position)
+					local parent = o.Parent
+					parent.LeftDoor.ClickDetector.Detector:FireServer()
+					end
+					end   
+							if true then
+								break
+							end
+						end
+					end    
+				end
 		  end    
 	})
 	Tap0:AddButton({
@@ -1297,9 +1319,9 @@ Section1:AddTextbox({
                 end)
                 if workk then
                     OrionLib:MakeNotification({
-                        Name = "Error\226\157\140",
+                        Name = "Error",
                         Content = "There is no one in the game have the DeliveryBike",
-                        Image = "rbxassetid://4483345998",
+                        Image = "rbxassetid://7733765224",
                         Time = 5
                     })
                 end
@@ -1309,11 +1331,21 @@ Section1:AddTextbox({
 				end)
 		end
 	})
-	Tap0:AddButton({
-		Name = "Advanced Painter",
+	Tab989:AddButton({
+		Name = "Advanced Cars Painter",
 		Callback = function()
 			loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/advancecolor'),true))()
         end
+	})
+	Tab989:AddToggle({
+		Name = "RainbowCars",
+		Default = false,
+		Callback = function(Value)
+			getgenv().loopcolor = (Value)
+			if getgenv().loopcolor then
+				spamcolor()
+			end
+		end    
 	})
 	Tap0:AddButton({
 		Name = "Anti-Afk",
