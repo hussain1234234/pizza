@@ -308,7 +308,7 @@ function kill(textt)
 		wait()
 		for _,P in ipairs(game:GetService("Workspace").Cars:GetChildren()) do 
 		spawn(function()
-		if P:IsA("VehicleSeat") and P~=P.Driver:WaitForChild("SeatWeld") and P==P.Owner==nil then
+		if P:IsA("VehicleSeat") and P~=P.Driver:WaitForChild("SeatWeld") and P~=P.Owner==nil then
 		error("idk")
 		else
 		local car = P
