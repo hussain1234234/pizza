@@ -1331,6 +1331,22 @@ Section1:AddTextbox({
 				end)
 		end
 	})
+		Tap0:AddButton({
+		Name = "Clear Inventory",
+		Callback = function()
+			for _,P in ipairs(game:GetService("Players").aesfdsfwsfscxsd.Backpack:GetChildren()) do
+				if P.Name~="Shortcut" then
+					OrionLib:MakeNotification({
+					Name = "Done",
+					Content = 'Successfully Removed ' .. P.Name,
+					Image = "rbxassetid://7733715400",
+					Time = 2
+					})
+					P:Destroy()
+				end
+			end
+		end
+	})
 	Tab989:AddButton({
 		Name = "Advanced Cars Painter",
 		Callback = function()
