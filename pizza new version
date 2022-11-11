@@ -320,6 +320,7 @@ function kill(textt)
 		until j>3
 		if j>3 then
 		spawn(function()
+        game.Players.LocalPlayer.Character.Humanoid.Jump = true
 		for _,o in ipairs(cars:GetChildren()) do 
 		if o:IsA("VehicleSeat") or o:IsA("Part") then
 		o.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position)
