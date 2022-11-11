@@ -314,6 +314,8 @@ local humanoid = player.Character.Humanoid
         for _,o in ipairs(car:GetChildren()) do 
 		if o:IsA("VehicleSeat") or o:IsA("Part") then
 		o.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position)
+		local parent = o.Parent
+		parent.LeftDoor.ClickDetector.Detector:FireServer()
 		end
 		end   
 				if true then
