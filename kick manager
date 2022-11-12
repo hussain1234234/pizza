@@ -138,9 +138,11 @@ function kick()
         wait()
         game.Players.LocalPlayer.Character.Animate.Disabled = false
         game.Players.LocalPlayer.Character.Humanoid.DisplayDistanceType = "None"
-        for i,v in pairs(game:GetService'Players'.LocalPlayer.Backpack:GetChildren())do
-        game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
+            for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren())do
+    if v.Name =="Linked Sword" then
+    game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
         end
+    end
         local function tp(player,player2)
         local char1,char2=player.Character,player2.Character
         if char1 and char2 then
