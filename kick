@@ -97,7 +97,6 @@ function sFLY(vfly)
 	FLY()
 end
 function kickk(kicked)
-	game.Players.LocalPlayer.Character:FindFirstChildOfClass('Humanoid'):UnequipTools()
     --check if player have sword
     local yaa, loo = pcall(function()
         local BackPack = game:GetService("Players").LocalPlayer.Backpack["Linked Sword"]
@@ -113,6 +112,7 @@ function kickk(kicked)
     Duration = 5;
   })
     else
+    game.Players.LocalPlayer.Character:FindFirstChildOfClass('Humanoid'):UnequipTools()
     wait()
     sFLY()
     local success, errormessage = pcall(function()
