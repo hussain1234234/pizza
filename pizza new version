@@ -1576,7 +1576,7 @@ Section1:AddTextbox({
 	Tap0:AddButton({
 		Name = "Infinite Yiled",
 		Callback = function()
-			loadstring(game:HttpGet(('https://pastebin.com/raw/xcjq5Hss'),true))()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 		end
 	})
 	Tap0:AddButton({
