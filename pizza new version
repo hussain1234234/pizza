@@ -505,7 +505,7 @@ end
 		Sectionin:AddButton({
 		Name = "Clear Inventory",
 		Callback = function()
-			for _,P in ipairs(game:GetService("Players").aesfdsfwsfscxsd.Backpack:GetChildren()) do
+			for _,P in ipairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
 				if P.Name~="Shortcut" then
 					OrionLib:MakeNotification({
 					Name = "Done",
