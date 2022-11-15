@@ -127,6 +127,7 @@ function bring(bringed)
     Duration = 5;
   })
     else
+    game.Players.LocalPlayer.Character:FindFirstChildOfClass('Humanoid'):UnequipTools()
     sFLY()
     game.Players.LocalPlayer.Character["RightUpperLeg"]:Destroy()
     game.Players.LocalPlayer.Character["LeftUpperLeg"]:Destroy()
