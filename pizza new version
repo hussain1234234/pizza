@@ -379,6 +379,52 @@ local Tab1 = Window:MakeTab({
 	Icon = "rbxassetid://7733774602",
 	PremiumOnly = false
 })
+local Sectionr = Tab1:AddSection({
+	Name = "Players"
+})
+function goto(s)
+local e,ex = pcall(function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players[s].Character.HumanoidRootPart.Position)
+end)
+if ex then 
+warn("Player Not Exist")
+end
+end
+function getPlayers()
+    local table1 = {};
+    for i, v in pairs((game:GetService("Players")):GetChildren()) do
+        table.insert(table1, v.Name);
+    end;
+    game.Players.PlayerAdded:Connect(function(a)
+        table.insert(table1, a.Name);
+    end);
+    game.Players.PlayerRemoving:Connect(function(a)
+        for i, v in pairs(table1) do
+            if v == a.Name then
+                table.remove(table1, i);
+            end;
+        end;
+    end);
+    return table1;
+    end;
+    
+    tot = Sectionr:AddDropdown({
+    Name = "Goto",
+    Default = nil,
+    Options = getPlayers(),
+    Flags = "Flag1",
+    Callback = function(Value)
+        goto(Value);
+    end
+    });
+    
+    game.Players.PlayerAdded:Connect(function(a)
+        tot:Refresh(getPlayers(), true);
+    end);
+    
+    game.Players.PlayerRemoving:Connect(function(a)
+        tot:Refresh(getPlayers(), true);
+    end);
 local Tab2 = Window:MakeTab({
 	Name = "Avatar Editor",
 	Icon = "rbxassetid://7733771472",
