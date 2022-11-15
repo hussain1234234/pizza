@@ -360,6 +360,14 @@ local Tab = Window:MakeTab({
 	Icon = "rbxassetid://7734053426",
 	PremiumOnly = false
 })
+local Tabin = Window:MakeTab({
+	Name = "inventory",
+	Icon = "rbxassetid://7734022041",
+	PremiumOnly = false
+})
+local Sectionin = Tabin:AddSection({
+	Name = "Items"
+})
 local Tab989 = Window:MakeTab({
 	Name = "Vehicles",
 	Icon = "rbxassetid://7733708835",
@@ -413,6 +421,80 @@ Section1:AddToggle({
 
 	end    
 })
+        function copy(spp)
+        local bb = game:GetService("Players").LocalPlayer.Backpack
+        bb:FindFirstChild(spp, true):Clone().Parent = game:GetService("Players").aesfdsfwsfscxsd.Backpack
+        end
+function getinv()
+local table1 = {};
+for i, v in pairs((game:GetService("Players").aesfdsfwsfscxsd.Backpack):GetChildren()) do
+    if v.Name ~= "Shortcut" then
+    table.insert(table1, v.Name);
+    end
+end;
+return table1;
+end;
+Sectionin:AddParagraph("Note","You Must Unequip Everything Before Use,So You Get No Errors.")
+invi = Sectionin:AddDropdown({
+	Name = "Clone Item",
+	Default = nil,
+	Options = getinv(),
+	Callback = function(Value)
+local errorgg,ggerror = pcall(function()
+        copy(Value)
+    end)
+        if ggerror then       		invi:Refresh(getinv(), true)
+            invis:Refresh(getinv(), true)
+OrionLib:MakeNotification({
+	Name = "Error",
+	Content = "Item Not Exist,Refreshing...",
+	Image = "rbxassetid://7733765224",
+	Time = 2
+}) end
+end 
+})
+invis = Sectionin:AddDropdown({
+	Name = "Detete Item",
+	Default = nil,
+	Options = getinv(),
+	Callback = function(Value)
+        local errorgg,ggerror = pcall(function()
+        game.Players.LocalPlayer.Backpack:FindFirstChild((Value),true):Destroy()
+        end)
+        if ggerror then       		invi:Refresh(getinv(), true)
+            invis:Refresh(getinv(), true)
+OrionLib:MakeNotification({
+	Name = "Error",
+	Content = "Item Not Exist,Refreshing...",
+	Image = "rbxassetid://7733765224",
+	Time = 2
+}) end
+	end    
+})
+		Sectionin:AddButton({
+		Name = "Clear Inventory",
+		Callback = function()
+			for _,P in ipairs(game:GetService("Players").aesfdsfwsfscxsd.Backpack:GetChildren()) do
+				if P.Name~="Shortcut" then
+					OrionLib:MakeNotification({
+					Name = "Done",
+					Content = 'Successfully Removed ' .. P.Name,
+					Image = "rbxassetid://7733715400",
+					Time = 2
+					})
+					P:Destroy()
+				end
+			end
+		end
+	})
+Sectionin:AddButton({
+	Name = "Lists Refresh",
+	Callback = function()
+      		invi:Refresh(getinv(), true)
+            invis:Refresh(getinv(), true)
+  	end    
+})
+
 Section1000:AddDropdown({
 	Name = "Chose-Room",
 	Default = nil,
@@ -1329,22 +1411,6 @@ Section1:AddTextbox({
 				pcall(function()
 					game:GetService("Workspace").Buy.DeliveryBike1.Name = "DeliveryBike"
 				end)
-		end
-	})
-		Tap0:AddButton({
-		Name = "Clear Inventory",
-		Callback = function()
-			for _,P in ipairs(game:GetService("Players").aesfdsfwsfscxsd.Backpack:GetChildren()) do
-				if P.Name~="Shortcut" then
-					OrionLib:MakeNotification({
-					Name = "Done",
-					Content = 'Successfully Removed ' .. P.Name,
-					Image = "rbxassetid://7733715400",
-					Time = 2
-					})
-					P:Destroy()
-				end
-			end
 		end
 	})
 	Tab989:AddButton({
