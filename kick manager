@@ -101,6 +101,7 @@ function kick()
     local m = mteamp:GetPlayers()[1]
     --check if player have sword
         local sword, unsword = pcall(function()
+	game.Players.LocalPlayer.Character:FindFirstChildOfClass('Humanoid'):UnequipTools()
         local BackPack = game:GetService("Players").LocalPlayer.Backpack["Linked Sword"]
         end)
         if sword then
