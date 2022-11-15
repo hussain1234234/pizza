@@ -114,6 +114,7 @@ function bring(bringed)
 	local tt = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
     --check if player have sword
     local yaa, loo = pcall(function()
+    game.Players.LocalPlayer.Character:FindFirstChildOfClass('Humanoid'):UnequipTools()
         local BackPack = game:GetService("Players").LocalPlayer.Backpack["Linked Sword"]
     end)
     if yaa then
@@ -127,7 +128,6 @@ function bring(bringed)
     Duration = 5;
   })
     else
-    game.Players.LocalPlayer.Character:FindFirstChildOfClass('Humanoid'):UnequipTools()
     sFLY()
     game.Players.LocalPlayer.Character["RightUpperLeg"]:Destroy()
     game.Players.LocalPlayer.Character["LeftUpperLeg"]:Destroy()
