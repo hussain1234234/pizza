@@ -487,7 +487,6 @@ Sectionin:AddButton({
                 Time = 5
             })
 	for i,v in pairs(speaker:FindFirstChildOfClass("Backpack"):GetChildren()) do
-        wait()
 		if v:IsA("Tool") or v:IsA("HopperBin") then
 			v.Parent = speaker.Character
             if v.Name~="Shortcut" then
