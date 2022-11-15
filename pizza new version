@@ -471,6 +471,38 @@ OrionLib:MakeNotification({
 }) end
 	end    
 })
+Sectionin:AddButton({
+	Name = "Equip All Items",
+	Callback = function()
+            if getgenv().loopunl then
+            	game.Players.LocalPlayer.Character:FindFirstChildOfClass('Humanoid'):UnequipTools()
+                getgenv().loopunl=false
+            else
+            getgenv().loopunl = true 
+      		local speaker = game.Players.LocalPlayer
+                OrionLib:MakeNotification({
+                Name = "Note",
+                Content = "To Unequip Press The Button Again",
+                Image = "rbxassetid://7733765224",
+                Time = 5
+            })
+	for i,v in pairs(speaker:FindFirstChildOfClass("Backpack"):GetChildren()) do
+        wait()
+		if v:IsA("Tool") or v:IsA("HopperBin") then
+			v.Parent = speaker.Character
+            if v.Name~="Shortcut" then
+                OrionLib:MakeNotification({
+                Name = "Done",
+                Content = "Equipped " .. v.Name,
+                Image = "rbxassetid://7733715400",
+                Time = 2
+            })
+            end
+        end
+	end
+end
+  	end    
+})
 		Sectionin:AddButton({
 		Name = "Clear Inventory",
 		Callback = function()
