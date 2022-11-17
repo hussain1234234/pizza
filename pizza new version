@@ -1325,7 +1325,7 @@ Section1:AddTextbox({
 		Callback = function()
 			if check then
                 local myhome = check.Parent:FindFirstChild("Doors", true)
-                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = myhome.FrontDoorMain.DoorTouch.CFrame
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = myhome.Parent.GivePizza.CFrame
              end 
         end
 	})
@@ -1333,84 +1333,84 @@ Section1:AddTextbox({
 		Name = "C1",
 		Callback = function()
 			local house = game:GetService("Workspace").Houses.House1:FindFirstChild("Doors", true)
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = house.FrontDoorMain.DoorTouch.CFrame        
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = house.Parent.GivePizza.CFrame       
 		end
 	})
 	Sectionn1:AddButton({
 		Name = "C2",
 		Callback = function()
 			local house = game:GetService("Workspace").Houses.House5:FindFirstChild("Doors", true)
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = house.FrontDoorMain.DoorTouch.CFrame        
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = house.Parent.GivePizza.CFrame        
 		end
 	})
 	Sectionn1:AddButton({
 		Name = "C3",
 		Callback = function()
 			local house = game:GetService("Workspace").Houses.House9:FindFirstChild("Doors", true)
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = house.FrontDoorMain.DoorTouch.CFrame        
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = house.Parent.GivePizza.CFrame         
 		end
 	})
 	Sectionn1:AddButton({
 		Name = "B1",
 		Callback = function()
 			local house = game:GetService("Workspace").Houses.House2:FindFirstChild("Doors", true)
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = house.FrontDoorMain.DoorTouch.CFrame        
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = house.Parent.GivePizza.CFrame         
 		end
 	})
 	Sectionn1:AddButton({
 		Name = "B2",
 		Callback = function()
 			local house = game:GetService("Workspace").Houses.House3:FindFirstChild("Doors", true)
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = house.FrontDoorMain.DoorTouch.CFrame        
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = house.Parent.GivePizza.CFrame         
 		end
 	})
 	Sectionn1:AddButton({
 		Name = "B3",
 		Callback = function()
 			local house = game:GetService("Workspace").Houses.House6:FindFirstChild("Doors", true)
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = house.FrontDoorMain.DoorTouch.CFrame        
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = house.Parent.GivePizza.CFrame        
 		end
 	})
 	Sectionn1:AddButton({
 		Name = "B4",
 		Callback = function()
 			local house = game:GetService("Workspace").Houses.House7:FindFirstChild("Doors", true)
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = house.FrontDoorMain.DoorTouch.CFrame        
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = house.Parent.GivePizza.CFrame         
 		end
 	})
 	Sectionn1:AddButton({
 		Name = "B5",
 		Callback = function()
 			local house = game:GetService("Workspace").Houses.House10:FindFirstChild("Doors", true)
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = house.FrontDoorMain.DoorTouch.CFrame        
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = house.Parent.GivePizza.CFrame         
 		end
 	})
 	Sectionn1:AddButton({
 		Name = "B6",
 		Callback = function()
 			local house = game:GetService("Workspace").Houses.House11:FindFirstChild("Doors", true)
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = house.FrontDoorMain.DoorTouch.CFrame        
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = house.Parent.GivePizza.CFrame        
 		end
 	})
 	Sectionn1:AddButton({
 		Name = "A1",
 		Callback = function()
 			local house = game:GetService("Workspace").Houses.House4:FindFirstChild("Doors", true)
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = house.FrontDoorMain.DoorTouch.CFrame        
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = house.Parent.GivePizza.CFrame        
 		end
 	})
 	Sectionn1:AddButton({
 		Name = "A2",
 		Callback = function()
 			local house = game:GetService("Workspace").Houses.House8:FindFirstChild("Doors", true)
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = house.FrontDoorMain.DoorTouch.CFrame        
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = house.Parent.GivePizza.CFrame         
 		end
 	})
 	Sectionn1:AddButton({
 		Name = "A3",
 		Callback = function()
 			local house = game:GetService("Workspace").Houses.House12:FindFirstChild("Doors", true)
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = house.FrontDoorMain.DoorTouch.CFrame        
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = house.Parent.GivePizza.CFrame        
 		end
 	})
 	Tap0:AddButton({
