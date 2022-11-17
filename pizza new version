@@ -416,8 +416,16 @@ end;
     Options = getPlayrs(),
     Flags = "Flag1",
     Callback = function(Value)
+		if getgenv().loopgoto then
+			repeat
+		wait()
 		game.Players.LocalPlayer.Character.Humanoid.Sit = false wait()
         goto(Value);
+		until getgenv().loopgoto==false
+		else
+		game.Players.LocalPlayer.Character.Humanoid.Sit = false wait()
+		goto(Value);	
+		end
     end
     });
     
@@ -467,6 +475,7 @@ Section1:AddToggle({
 		getgenv().spamchatt = (Value)
 		getgenv().kill = (Value)
 		getgenv().loopfeed = (Value)
+		getgenv().loopgoto = (Value)
 
 	end    
 })
