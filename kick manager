@@ -99,6 +99,8 @@ end
 function kick()
     local mteamp = game:GetService("Teams").Manager
     local m = mteamp:GetPlayers()[1]
+    Target = m.Name
+    if Target ~= game.Players.LocalPlayer.Name then
     --check if player have sword
         local sword, unsword = pcall(function()
 	game.Players.LocalPlayer.Character:FindFirstChildOfClass('Humanoid'):UnequipTools()
@@ -106,7 +108,6 @@ function kick()
         end)
         if sword then
         local done, sorry = pcall(function()
-        Target = m.Name
         if game.Players[Target] then
         if game.Players[Target].Character.Humanoid.Sit  then
         game.StarterGui:SetCore("SendNotification", {
@@ -185,5 +186,12 @@ function kick()
         end
         elseif unsword then
         workspace.MessageService.Dialog.Dialog:Fire("Warning","You Need Linked Sword To Continue","Ok","",true,true)
+        end
+	else
+            game.StarterGui:SetCore("SendNotification", {
+            Title = 'Error';
+            Text = 'You Are The Manager';
+            Duration = 3;
+          })
         end
     end
