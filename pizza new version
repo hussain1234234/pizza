@@ -1184,11 +1184,13 @@ function getPlayers()
     game.Players.PlayerRemoving:Connect(function(a)
         loopshmta:Refresh(getPlayers(), true);
     end);
-    function getPlayers()
+    function getPlayersbb()
         local table1 = {};
-        for i, v in pairs((game:GetService("Players")):GetChildren()) do
-            table.insert(table1, v.Name);
-        end;
+		for i, v in pairs((game:GetService("Players")):GetChildren()) do
+			if v.Name ~= game.Players.LocalPlayer.Name then
+			table.insert(table1, v.Name);
+			end;
+		end;
         game.Players.PlayerAdded:Connect(function(a)
             table.insert(table1, a.Name);
         end);
@@ -1205,7 +1207,7 @@ function getPlayers()
         loopb = Section1:AddDropdown({
         Name = "Bring",
         Default = nil,
-        Options = getPlayers(),
+        Options = getPlayersbb(),
         Flags = "Flag1",
         Callback = function(Value)
             bring(Value);
@@ -1213,16 +1215,18 @@ function getPlayers()
         });
         
         game.Players.PlayerAdded:Connect(function(a)
-            loopb:Refresh(getPlayers(), true);
+            loopb:Refresh(getPlayersbb(), true);
         end);
         
         game.Players.PlayerRemoving:Connect(function(a)
-            loopb:Refresh(getPlayers(), true);
+            loopb:Refresh(getPlayersbb(), true);
         end);
-        function getPlayers()
+        function getPlayersk()
             local table1 = {};
             for i, v in pairs((game:GetService("Players")):GetChildren()) do
+				if v.Name ~= game.Players.LocalPlayer.Name then
                 table.insert(table1, v.Name);
+				end;
             end;
             game.Players.PlayerAdded:Connect(function(a)
                 table.insert(table1, a.Name);
@@ -1240,7 +1244,7 @@ function getPlayers()
             loopk = Section1:AddDropdown({
             Name = "Kick",
             Default = nil,
-            Options = getPlayers(),
+            Options = getPlayersk(),
             Flags = "Flag1",
             Callback = function(Value)
                 kickk(Value);
@@ -1248,11 +1252,11 @@ function getPlayers()
             });
             
             game.Players.PlayerAdded:Connect(function(a)
-                loopk:Refresh(getPlayers(), true);
+                loopk:Refresh(getPlayersk(), true);
             end);
             
             game.Players.PlayerRemoving:Connect(function(a)
-                loopk:Refresh(getPlayers(), true);
+                loopk:Refresh(getPlayersk(), true);
             end);
 Section1:AddTextbox({
 	Name = "Spamming",
