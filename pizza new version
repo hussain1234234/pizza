@@ -1165,7 +1165,7 @@ Section1:AddToggle({
 		end)
 	end
 end
-		else
+elseif game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R15 and musicc then
 		OrionLib:MakeNotification({
 			Name = "Erorr",
 			Content = "You Must Be R6",
