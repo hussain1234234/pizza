@@ -1101,7 +1101,7 @@ Section1:AddToggle({
 			})			
 		while loopp do 
 		wait(0)
-			for _,P in pairs(game:GetService("Players").raewsfgdrf.Backpack:GetChildren()) do
+			for _,P in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
 				local args = {
 				[1] = "GiveItem",
 				[2] = 19328185
