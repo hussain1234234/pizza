@@ -4,6 +4,7 @@ getgenv().loopcolor = false
 getgenv().togglefire = false
 getgenv().loopwork = false
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/noclothes'),true))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/void'),true))()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/clothes'),true))()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/break%20Leaderboard'),true))()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/bring'),true))()
@@ -1348,6 +1349,43 @@ function getPlayers()
             game.Players.PlayerRemoving:Connect(function(a)
                 loopk:Refresh(getPlayersk(), true);
             end);
+			function getPlayersvv()
+				local table1 = {};
+				for i, v in pairs((game:GetService("Players")):GetChildren()) do
+					if v.Name ~= game.Players.LocalPlayer.Name then
+					table.insert(table1, v.Name);
+					end;
+				end;
+				game.Players.PlayerAdded:Connect(function(a)
+					table.insert(table1, a.Name);
+				end);
+				game.Players.PlayerRemoving:Connect(function(a)
+					for i, v in pairs(table1) do
+						if v == a.Name then
+							table.remove(table1, i);
+						end;
+					end;
+				end);
+				return table1;
+				end;
+				
+				loopb = Section1:AddDropdown({
+				Name = "Void",
+				Default = nil,
+				Options = getPlayersvv(),
+				Flags = "Flag1",
+				Callback = function(Value)
+					void(Value);
+				end
+				});
+				
+				game.Players.PlayerAdded:Connect(function(a)
+					loopb:Refresh(getPlayersvv(), true);
+				end);
+				
+				game.Players.PlayerRemoving:Connect(function(a)
+					loopb:Refresh(getPlayersvv(), true);
+				end);
 Section1:AddTextbox({
 	Name = "Spamming",
 	Default = "",
