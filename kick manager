@@ -99,7 +99,9 @@ end
 function kick()
     local mteamp = game:GetService("Teams").Manager
     local m = mteamp:GetPlayers()[1]
+    pcall(function()
     Target = m.Name
+    end)
     if Target ~= game.Players.LocalPlayer.Name then
     --check if player have sword
         local sword, unsword = pcall(function()
