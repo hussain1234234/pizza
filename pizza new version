@@ -1091,8 +1091,15 @@ Section1:AddToggle({
 	Name = "Spam SnowBall",
 	Default = false,
 	Callback = function(Value)
-		getgenv().loop = Value
-		while loop do 
+		getgenv().loopp = Value
+		if loopp then 
+			OrionLib:MakeNotification({
+				Name = "Note",
+				Content = "You Need SnowBall",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})			
+		while loopp do 
 		wait(0)
 			for _,P in pairs(game:GetService("Players").raewsfgdrf.Backpack:GetChildren()) do
 				local args = {
@@ -1114,7 +1121,50 @@ Section1:AddToggle({
 				end
 			end
 		end
+	end
 	end    
+})
+Section1:AddToggle({
+	Name = "Spam Guitar Sound",
+	Default = false,
+	Callback = function(Value)
+			getgenv().musicc = Value 
+			local tablee = {'b','c','z','m','v'}
+			if musicc then
+				OrionLib:MakeNotification({
+					Name = "Note",
+					Content = "Rockin' Pink Guitar",
+					Image = "rbxassetid://4483345998",
+					Time = 5
+				})				
+			local yesg ,nog = pcall(function() 
+			local args = {
+				[1] = "GiveItem",
+				[2] = 193771176
+			}
+			game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+			wait(1)
+			local nigggggggggggggggggggggggga = game:GetService("Workspace")[game.Players.LocalPlayer.Name]["Rockin' Pink Guitar"]
+			end)
+			while musicc do
+			wait(0)
+				pcall(function()
+				for _,P in ipairs(tablee) do 
+					if getgenv().musicc and yesg then
+					local args = {
+						[1] = "KeyPress",
+						[2] = {
+							["Key"] = P,
+							["Down"] = true
+						}
+					}
+					game:GetService("Players").LocalPlayer.Character:FindFirstChild("Rockin' Pink Guitar").ServerControl:InvokeServer(unpack(args))
+					end
+				end
+			end)
+		end
+    end
+end   
 })
 Section999:AddToggle({
 	Name = "Unanchored Tress",
