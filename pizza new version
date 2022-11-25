@@ -1136,7 +1136,7 @@ Section1:AddToggle({
 		if musicc then
 			OrionLib:MakeNotification({
 				Name = "Note",
-				Content = "Rockin' Pink Guitar",
+				Content = "You Need Rockin' Pink Guitar",
 				Image = "rbxassetid://4483345998",
 				Time = 5
 			})				
