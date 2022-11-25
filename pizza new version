@@ -1130,40 +1130,49 @@ Section1:AddToggle({
 	Callback = function(Value)
 			getgenv().musicc = Value 
 			local tablee = {'b','c','z','m','v'}
-			if musicc then
-				OrionLib:MakeNotification({
-					Name = "Note",
-					Content = "Rockin' Pink Guitar",
-					Image = "rbxassetid://4483345998",
-					Time = 5
-				})				
-			local yesg ,nog = pcall(function() 
-			local args = {
-				[1] = "GiveItem",
-				[2] = 193771176
-			}
-			game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
-			wait(1)
-			local nigggggggggggggggggggggggga = game:GetService("Workspace")[game.Players.LocalPlayer.Name]["Rockin' Pink Guitar"]
-			end)
-			while musicc do
-			wait(0)
-				pcall(function()
-				for _,P in ipairs(tablee) do 
-					if getgenv().musicc and yesg then
-					local args = {
-						[1] = "KeyPress",
-						[2] = {
-							["Key"] = P,
-							["Down"] = true
-						}
+	if game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R6 then
+		if musicc then
+			OrionLib:MakeNotification({
+				Name = "Note",
+				Content = "Rockin' Pink Guitar",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})				
+		local yesg ,nog = pcall(function() 
+		local args = {
+			[1] = "GiveItem",
+			[2] = 193771176
+		}
+		game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+		wait(1)
+		local nigggggggggggggggggggggggga = game:GetService("Workspace")[game.Players.LocalPlayer.Name]["Rockin' Pink Guitar"]
+		end)
+		while musicc do
+		wait(0)
+			pcall(function()
+			for _,P in ipairs(tablee) do 
+				if getgenv().musicc and yesg then
+				local args = {
+					[1] = "KeyPress",
+					[2] = {
+						["Key"] = P,
+						["Down"] = true
 					}
-					game:GetService("Players").LocalPlayer.Character:FindFirstChild("Rockin' Pink Guitar").ServerControl:InvokeServer(unpack(args))
-					end
+				}
+				game:GetService("Players").LocalPlayer.Character:FindFirstChild("Rockin' Pink Guitar").ServerControl:InvokeServer(unpack(args))
 				end
-			end)
-		end
-    end
+			end
+		end)
+	end
+end
+		else
+		OrionLib:MakeNotification({
+			Name = "Erorr",
+			Content = "You Must Be R6",
+			Image = "rbxassetid://7733765224",
+			Time = 5
+		})
+	end
 end   
 })
 Section999:AddToggle({
