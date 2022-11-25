@@ -1088,40 +1088,42 @@ Section1:AddToggle({
 	end    
 })
 Section1:AddToggle({
-	Name = "Spam SnowBall",
+	Name = "Spam Snowball",
 	Default = false,
 	Callback = function(Value)
 		getgenv().loopp = Value
-		if loopp then 
-			OrionLib:MakeNotification({
-				Name = "Note",
-				Content = "You Need SnowBall",
-				Image = "rbxassetid://4483345998",
-				Time = 5
-			})			
-		while loopp do 
-		wait(0)
-			for _,P in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
-				local args = {
-				[1] = "GiveItem",
-				[2] = 19328185
-				}
-
-				game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
-				if P.Name == "Snowball" then
-					game.Players.LocalPlayer.Character.Humanoid:EquipTool(P)
-					local mouse = game.Players.LocalPlayer:GetMouse()
-					local A_2 = 
-					{
-					[1] = mouse.Hit.p
+			if loopp then 
+				OrionLib:MakeNotification({
+					Name = "Note",
+					Content = "You Need SnowBall",
+					Image = "rbxassetid://4483345998",
+					Time = 5
+				})			
+			while loopp do 
+			wait(0)
+			pcall(function()
+				for _,P in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+					local args = {
+					[1] = "GiveItem",
+					[2] = 19328185
 					}
-					game:GetService("Players").LocalPlayer.Character.Snowball.Clicked:FireServer(unpack(A_2))
-					game.Players.LocalPlayer.Character:FindFirstChildOfClass('Humanoid'):UnequipTools()
-					break 
+
+					game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+					if P.Name == "Snowball" then
+						game.Players.LocalPlayer.Character.Humanoid:EquipTool(P)
+						local mouse = game.Players.LocalPlayer:GetMouse()
+						local A_2 = 
+						{
+						[1] = mouse.Hit.p
+						}
+						game:GetService("Players").LocalPlayer.Character.Snowball.Clicked:FireServer(unpack(A_2))
+						game.Players.LocalPlayer.Character:FindFirstChildOfClass('Humanoid'):UnequipTools()
+						break 
+					end
 				end
+                end)
 			end
 		end
-	end
 	end    
 })
 Section1:AddToggle({
