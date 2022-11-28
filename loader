@@ -1,0 +1,5 @@
+if game.PlaceId == 189707 then
+loadstring(game:HttpGet('https://raw.githubusercontent.com/hussain1234234/pizza/main/Natural%20Disaster'))()
+elseif game.PlaceId == 192800 then
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/pizza%20new%20version'),true))()
+end
