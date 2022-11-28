@@ -58,13 +58,47 @@ Tab:AddButton({
 	Name = "Get Green Ballon",
 	Callback = function()
 		local done,notdone = pcall(function()
-			local ok = game:GetService("Workspace"):FindFirstChild("GreenBalloon", true)
+			local ok = game:FindFirstChild("GreenBalloon", true)
 			ok:Clone().Parent = game.Players.LocalPlayer.Backpack
 		end)
 		if notdone then
 			OrionLib:MakeNotification({
 				Name = "Error",
 				Content = "There Is No One In The Game Have Green Ballon",
+				Image = "rbxassetid://7733765224",
+				Time = 5
+			})
+		end
+  	end    
+})
+Tab:AddButton({
+	Name = "Get RedApple",
+	Callback = function()
+		local donee,notdonee = pcall(function()
+            local okk = game:FindFirstChild("RedApple", true)
+            okk:Clone().Parent = game.Players.LocalPlayer.Backpack
+		end)
+		if notdonee then
+			OrionLib:MakeNotification({
+				Name = "Error",
+				Content = "There Is No One In The Game Have RedApple",
+				Image = "rbxassetid://7733765224",
+				Time = 5
+			})
+		end
+  	end    
+})
+Tab:AddButton({
+	Name = "Get Compass",
+	Callback = function()
+		local doneee,notdoneee = pcall(function()
+            local okkk = game:FindFirstChild("Compass", true)
+            okkk:Clone().Parent = game.Players.LocalPlayer.Backpack
+		end)
+		if notdoneee then
+			OrionLib:MakeNotification({
+				Name = "Error",
+				Content = "There Is No One In The Game Have Compass",
 				Image = "rbxassetid://7733765224",
 				Time = 5
 			})
