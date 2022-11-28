@@ -1,0 +1,97 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Natural Disaster", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Tab = Window:MakeTab({
+	Name = "Commands",
+	Icon = "rbxassetid://7733924046",
+	PremiumOnly = false
+})
+local Tab1 = Window:MakeTab({
+	Name = "Teleports",
+	Icon = "rbxassetid://7733774602",
+	PremiumOnly = false
+})
+pcall(function() 
+CoolParagraph = Tab:AddParagraph("Game Info","Current Disaster: ")
+end)
+Tab:AddToggle({
+	Name = "Vote For Map",
+	Default = false,
+	Callback = function(Value)
+		getgenv().Var = Value
+		if getgenv().Var then
+		game.Players.LocalPlayer.PlayerGui.MainGui.MapVotePage.Visible = true
+		else
+		game.Players.LocalPlayer.PlayerGui.MainGui.MapVotePage.Visible = false
+		end
+	end    
+})
+Tab:AddToggle({
+	Name = "Auto Win",
+	Default = false,
+	Callback = function(Value)
+		getgenv().loopss = Value
+		while getgenv().loopss do
+			wait(0.1)
+			pcall(function()
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-278, 179, 343)
+				game.Players.LocalPlayer.Character.Humanoid.Sit=false
+				game.Players.LocalPlayer.Character.FallDamageScript:Destroy()
+			end)
+		end
+	end    
+})
+Tab:AddButton({
+	Name = "No FallDamage",
+	Callback = function()
+		pcall(function()
+			game.Players.LocalPlayer.Character.FallDamageScript:Destroy()
+		end)
+		OrionLib:MakeNotification({
+			Name = "Note",
+			Content = "If You Died Then FallDamage Will Be Enabled,Press It Again To Disable",
+			Image = "rbxassetid://4483345998",
+			Time = 4
+		})
+  	end    
+})
+Tab:AddButton({
+	Name = "Get Green Ballon",
+	Callback = function()
+		local done,notdone = pcall(function()
+			local ok = game:GetService("Workspace"):FindFirstChild("GreenBalloon", true)
+			ok:Clone().Parent = game.Players.LocalPlayer.Backpack
+		end)
+		if notdone then
+			OrionLib:MakeNotification({
+				Name = "Error",
+				Content = "There Is No One In The Game Have Green Ballon",
+				Image = "rbxassetid://7733765224",
+				Time = 5
+			})
+		end
+  	end    
+})
+Tab:AddButton({
+	Name = "InfiniteYield",
+	Callback = function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+  	end    
+})
+Tab1:AddButton({
+	Name = "Disaster Island",
+	Callback = function()
+      	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-138, 47, 2)
+  	end    
+})
+Tab1:AddButton({
+	Name = "Lobby",
+	Callback = function()
+      	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-278, 179, 343)
+  	end    
+})
+spawn(function()
+while game.Players.LocalPlayer.Character:WaitForChild("SurvivalTag") do 
+CoolParagraph:Set("Current Disaster: " .. game:GetService("Workspace")["515_FM"].SurvivalTag.Value)
+wait(5)
+end
+end)
