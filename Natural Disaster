@@ -125,7 +125,7 @@ Tab1:AddButton({
 })
 spawn(function()
 while game.Players.LocalPlayer.Character:WaitForChild("SurvivalTag") do 
-CoolParagraph:Set("Current Disaster: " .. game:GetService("Workspace")["515_FM"].SurvivalTag.Value)
+CoolParagraph:Set("Current Disaster: " .. game.Players.LocalPlayer.Character.SurvivalTag.Value)
 wait(5)
 end
 end)
