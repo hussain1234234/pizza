@@ -1119,7 +1119,8 @@ Section1:AddToggle({
 						}
 						game:GetService("Players").LocalPlayer.Character.Snowball.Clicked:FireServer(unpack(A_2))
 						game.Players.LocalPlayer.Character:FindFirstChildOfClass('Humanoid'):UnequipTools()
-						break 
+						P:Destroy()
+                        break 
 					end
 				end
                 end)
