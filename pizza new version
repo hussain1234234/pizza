@@ -1119,7 +1119,12 @@ Section1:AddToggle({
 						}
 						game:GetService("Players").LocalPlayer.Character.Snowball.Clicked:FireServer(unpack(A_2))
 						game.Players.LocalPlayer.Character:FindFirstChildOfClass('Humanoid'):UnequipTools()
-						P:Destroy()
+                                                local args = {
+                            [1] = "RemoveGear",
+                            [2] = game:GetService("Players").LocalPlayer.Backpack.Snowball
+                        }
+
+                        game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
                         break 
 					end
 				end
