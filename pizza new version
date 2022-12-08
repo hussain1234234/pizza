@@ -1392,6 +1392,39 @@ function getPlayers()
 				game.Players.PlayerRemoving:Connect(function(a)
 					loopb:Refresh(getPlayersvv(), true);
 				end);
+Section1:AddToggle({
+	Name = "Sword Dick",
+	Default = false,
+	Callback = function(Value)
+		getgenv().loopdick = Value
+		gogogogogo = Value
+		if gogogogogo then
+			local tt,bb = pcall(function()
+			local ttt = game.Players.LocalPlayer.Character["Linked Sword"]
+			end)
+			if tt then
+				while loopdick do
+				wait(1)
+				local speaker = game.Players.LocalPlayer
+					for i,v in pairs(speaker.Character:GetDescendants()) do
+						if v:IsA("Tool") and v.Name == 'Linked Sword' then
+							v.Parent = speaker:FindFirstChildOfClass("Backpack")
+							v.GripPos = Vector3.new(1.3,1.3,0)
+							v.GripUp = Vector3.new(1,0,0)
+							v.Parent = game.Players.LocalPlayer.Character
+						end
+					end
+				end
+			else
+			game.StarterGui:SetCore("SendNotification", {
+			Title = 'Warning';
+			Text = 'You Must Equip Linked Sword';
+			Duration = tonumber(s);
+			})
+			end
+		end
+	end    
+})
 Section1:AddTextbox({
 	Name = "Spamming",
 	Default = "",
