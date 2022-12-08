@@ -2619,6 +2619,20 @@ workspace.Main.Chatted:FireServer(unpack(args))
             game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
 		end    
 	})
+	Tap0:AddButton({
+		Name = "Reset All Dropdowns",
+		Callback = function()
+			        tot:Refresh(getPlayrs(), true);
+					invi:Refresh(getinv(), true);
+					invis:Refresh(getinv(), true);
+					nigggggggga:Refresh(getPlayers(), true);
+					loopklatwat:Refresh(getPlayers(), true);
+					loopshmta:Refresh(getPlayers(), true);
+					loopb:Refresh(getPlayersbb(), true);
+					loopk:Refresh(getPlayersk(), true);
+					loopb:Refresh(getPlayersvv(), true);
+		end    
+	})
 spawn(function()
 local nig, niga = pcall(function()
 local tttttttt = game.CoreGui.Orion
