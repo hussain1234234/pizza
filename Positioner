@@ -1,0 +1,211 @@
+local checkdone ,wrong = pcall(function()
+local tt = game:GetService("CoreGui")["Position "]
+end)
+if wrong then
+game.StarterGui:SetCore("SendNotification", {
+    Title = 'Welcome';
+    Text = 'Script Made By 515_FM';
+    Duration = tonumber(s);
+  })
+local Position = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+local TextButton = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
+local PositionLabel = Instance.new("TextLabel")
+local UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint")
+local PositionPrinter = Instance.new("TextLabel")
+local UITextSizeConstraint_3 = Instance.new("UITextSizeConstraint")
+local TextButton1 = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local UITextSizeConstraint_4 = Instance.new("UITextSizeConstraint")
+local TextButton2 = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local UITextSizeConstraint_5 = Instance.new("UITextSizeConstraint")
+
+--Properties:
+
+Position.Name = "Position "
+Position.Parent = game:WaitForChild("CoreGui")
+Position.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = Position
+Frame.AnchorPoint = Vector2.new(0.5, 0.5)
+Frame.BackgroundColor3 = Color3.fromRGB(0, 85, 255)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.499105275, 0, 0.498499155, 0)
+Frame.Size = UDim2.new(0.277417153, 0, 0.323940486, 0)
+
+UICorner.CornerRadius = UDim.new(0, 10)
+UICorner.Parent = Frame
+
+UIAspectRatioConstraint.Parent = Frame
+UIAspectRatioConstraint.AspectRatio = 1.437
+
+TextButton.Parent = Frame
+TextButton.AnchorPoint = Vector2.new(0.5, 0.5)
+TextButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.985687673, 0, 0.000260595116, 0)
+TextButton.Size = UDim2.new(0.106245205, 0, 0.160023704, 0)
+TextButton.Font = Enum.Font.FredokaOne
+TextButton.Text = "X"
+TextButton.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextButton.TextScaled = true
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
+
+UICorner_2.CornerRadius = UDim.new(0, 10)
+UICorner_2.Parent = TextButton
+
+UITextSizeConstraint.Parent = TextButton
+UITextSizeConstraint.MaxTextSize = 24
+
+PositionLabel.Name = "PositionLabel"
+PositionLabel.Parent = Frame
+PositionLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+PositionLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PositionLabel.BackgroundTransparency = 1.000
+PositionLabel.BorderSizePixel = 0
+PositionLabel.Position = UDim2.new(0.50428164, 0, 0.154282138, 0)
+PositionLabel.Size = UDim2.new(0.855388463, 0, 0.318315774, 0)
+PositionLabel.Font = Enum.Font.FredokaOne
+PositionLabel.Text = "Positon"
+PositionLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+PositionLabel.TextScaled = true
+PositionLabel.TextSize = 31.000
+PositionLabel.TextWrapped = true
+
+UITextSizeConstraint_2.Parent = PositionLabel
+UITextSizeConstraint_2.MaxTextSize = 31
+
+PositionPrinter.Name = "Position Printer"
+PositionPrinter.Parent = Frame
+PositionPrinter.AnchorPoint = Vector2.new(0.5, 0.5)
+PositionPrinter.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PositionPrinter.BackgroundTransparency = 1.000
+PositionPrinter.BorderSizePixel = 0
+PositionPrinter.Position = UDim2.new(0.487798452, 0, 0.411795825, 0)
+PositionPrinter.Size = UDim2.new(0.885077536, 0, 0.325101972, 0)
+PositionPrinter.Font = Enum.Font.FredokaOne
+PositionPrinter.Text = "0,0,0"
+PositionPrinter.TextColor3 = Color3.fromRGB(0, 0, 0)
+PositionPrinter.TextScaled = true
+PositionPrinter.TextSize = 77.000
+PositionPrinter.TextWrapped = true
+
+UITextSizeConstraint_3.Parent = PositionPrinter
+UITextSizeConstraint_3.MaxTextSize = 37
+
+TextButton1.Name = "TextButton1"
+TextButton1.Parent = Frame
+TextButton1.AnchorPoint = Vector2.new(0.5, 0.5)
+TextButton1.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+TextButton1.BorderSizePixel = 0
+TextButton1.Position = UDim2.new(0.125721246, 0, 0.801918209, 0)
+TextButton1.Size = UDim2.new(0.165951952, 0, 0.209510148, 0)
+TextButton1.Font = Enum.Font.Cartoon
+TextButton1.Text = "OFF"
+TextButton1.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton1.TextScaled = true
+TextButton1.TextSize = 14.000
+TextButton1.TextWrapped = true
+
+UICorner_3.CornerRadius = UDim.new(0, 10)
+UICorner_3.Parent = TextButton1
+
+UITextSizeConstraint_4.Parent = TextButton1
+UITextSizeConstraint_4.MaxTextSize = 14
+
+TextButton2.Name = "TextButton2"
+TextButton2.Parent = Frame
+TextButton2.AnchorPoint = Vector2.new(0.5, 0.5)
+TextButton2.BackgroundColor3 = Color3.fromRGB(85, 255, 0)
+TextButton2.BorderSizePixel = 0
+TextButton2.Position = UDim2.new(0.588375449, 0, 0.801918209, 0)
+TextButton2.Size = UDim2.new(0.686438143, 0, 0.209510162, 0)
+TextButton2.Font = Enum.Font.Cartoon
+TextButton2.Text = "Copy Position"
+TextButton2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton2.TextScaled = true
+TextButton2.TextSize = 14.000
+TextButton2.TextWrapped = true
+
+UICorner_4.CornerRadius = UDim.new(0, 10)
+UICorner_4.Parent = TextButton2
+
+UITextSizeConstraint_5.Parent = TextButton2
+UITextSizeConstraint_5.MaxTextSize = 14
+
+-- Scripts:
+
+local function DFPRQ_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	MainButton = script.Parent
+	MainFrame = MainButton.Parent
+	MainUi = MainFrame.Parent
+	MainButton.MouseButton1Up:Connect(function()
+		MainUi:Destroy()
+	end)
+end
+coroutine.wrap(DFPRQ_fake_script)()
+local function HXEJZVH_fake_script() -- PositionPrinter.LocalScript 
+	local script = Instance.new('LocalScript', PositionPrinter)
+
+	MainFrame = script.Parent.Parent
+	localCh = game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart")
+	while true do 
+		wait()
+            pcall(function()
+            if script.Parent.Parent.TextButton1.Text == "ON" then
+            local x = tostring(math.round(localCh.Position.X))
+            local y = tostring(math.round(localCh.Position.Y))
+            local z = tostring(math.round(localCh.Position.Z))
+            wait()
+            script.Parent.Text =  tostring(x) ..",".. tostring(y) ..",".. tostring(z)
+            end
+        end)
+	end
+end
+coroutine.wrap(HXEJZVH_fake_script)()
+local function TDKIP_fake_script() -- TextButton1.LocalScript 
+	local script = Instance.new('LocalScript', TextButton1)
+
+	MainButton = script.Parent
+	MainFrame = MainButton.Parent
+	MainUi = MainFrame.Parent
+	MainButton.MouseButton1Up:Connect(function()
+		if MainButton.Text == "ON" then
+			MainButton.Text = "OFF"
+			MainButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+		elseif MainButton.Text ~= "ON" then
+			MainButton.Text = "ON"
+			MainButton.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+		end
+	end)
+end
+coroutine.wrap(TDKIP_fake_script)()
+local function FFYPR_fake_script() -- TextButton2.LocalScript 
+	local script = Instance.new('LocalScript', TextButton2)
+
+	local MainButton = script.Parent
+	MainButton.MouseButton1Up:Connect(function()
+		setclipboard(script.Parent.Parent["Position Printer"].Text)
+	end)
+end
+coroutine.wrap(FFYPR_fake_script)()
+local function VEYTSQX_fake_script() -- Position.LocalScript 
+	local script = Instance.new('LocalScript', Position)
+
+	frame = script.Parent.Frame
+	frame.Draggable = true
+	frame.Selectable = true
+	frame.Active = true
+	
+end
+coroutine.wrap(VEYTSQX_fake_script)()
+end
