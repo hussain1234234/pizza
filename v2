@@ -48,7 +48,7 @@ end
 
 local Orion = Instance.new("ScreenGui")
 Orion.Name = "Orion"
-if true then
+if syn then
 	syn.protect_gui(Orion)
 	Orion.Parent = game.CoreGui
 else
@@ -1762,4 +1762,5 @@ end
 function OrionLib:Destroy()
 	Orion:Destroy()
 end
+
 return OrionLib
