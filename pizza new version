@@ -1256,7 +1256,9 @@ function shot(s)
 	function getPlayesrs()
 		local table1 = {};
 		for i, v in pairs((game:GetService("Players")):GetChildren()) do
+			if v.Name ~= game.Players.LocalPlayer.Name then
 			table.insert(table1, v.Name);
+			end
 		end;
 		game.Players.PlayerAdded:Connect(function(a)
 			table.insert(table1, a.Name);
@@ -1282,7 +1284,7 @@ function shot(s)
 		});
 		
 		game.Players.PlayerAdded:Connect(function(a)
-			loopshmtaa:Refresh(getPlayesrs(), true);
+			loopshmtaaa:Refresh(getPlayesrs(), true);
 		end);
 		
 		game.Players.PlayerRemoving:Connect(function(a)
