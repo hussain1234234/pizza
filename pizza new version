@@ -466,6 +466,9 @@ local Section102 = Tab100:AddSection({
 local Section1 = Tab:AddSection({
 	Name = "Boxes"
 })
+local Sectionnpc = Tab:AddSection({
+	Name = "NPCS"
+})
 local Section1000 = Tab:AddSection({
 	Name = "Flooding"
 })
@@ -634,6 +637,94 @@ Section1000:AddDropdown({
 })
 local Section999 = Tab:AddSection({
 	Name = "Break Game"
+})
+Sectionnpc:AddToggle({
+	Name = "LoopKill All NPC",
+	Default = false,
+	Callback = function(Value)
+		getgenv().loopkillnpc = Value
+		if getgenv().loopkillnpc then
+			OrionLib:MakeNotification({
+				Name = "Note",
+				Content = "You Need To Be Near From Npcs",
+				Image = "rbxassetid://7734068321",
+				Time = 5
+			})
+		while getgenv().loopkillnpc do
+		wait()
+		pcall(function()
+		local lava = workspace:FindFirstChild("Shark Tank",true)
+		for _,p in ipairs(game:GetService("Workspace").Customers:GetChildren()) do
+		lava.TouchEvent:FireServer(p.Head, lava.Shark)
+		wait(0.2)
+		end
+		end)
+		end
+		end
+	end    
+})
+Sectionnpc:AddToggle({
+	Name = "Be Npc",
+	Default = false,
+	Callback = function(Value)
+		getgenv().takenpc = Value
+		if getgenv().takenpc then
+			OrionLib:MakeNotification({
+				Name = "Note",
+				Content = "Hold Left CTRL And Click On The Npc You Want, Reset To Be Normal If You Was Npc",
+				Image = "rbxassetid://7734068321",
+				Time = 5
+			})
+			local mouse = game.Players.LocalPlayer:GetMouse()
+			local uis = game:GetService("UserInputService")
+
+			-- Connect
+			mouse.Button1Down:Connect(function()
+			-- Check for Target & Left Shift
+			if mouse.Target and uis:IsKeyDown(Enum.KeyCode.LeftControl) and getgenv().takenpc then
+			local npc = mouse.target.Parent
+			local npcRootPart = npc.HumanoidRootPart
+			local PlayerCharacter = game:GetService("Players").LocalPlayer.Character
+			local PlayerRootPart = PlayerCharacter.HumanoidRootPart
+			local A0 = Instance.new("Attachment")
+			local AP = Instance.new("AlignPosition")
+			local AO = Instance.new("AlignOrientation")
+			local A1 = Instance.new("Attachment")
+			for _, v in pairs(npc:GetDescendants()) do
+			if v:IsA("BasePart") then
+			game:GetService("RunService").Stepped:Connect(function()
+			v.CanCollide = false
+			end)
+			end
+			end
+			PlayerRootPart:BreakJoints()
+			for _, v in pairs(PlayerCharacter:GetDescendants()) do
+			if v:IsA("BasePart") then
+			if v.Name == "HumanoidRootPart" or v.Name == "UpperTorso" or v.Name == "Head" then
+			else
+			v:Destroy()
+			end
+			end
+			end
+			PlayerRootPart.Position = PlayerRootPart.Position+Vector3.new(5, 0, 0)
+			PlayerCharacter.Head.Anchored = true
+			PlayerCharacter.UpperTorso.Anchored = true
+			A0.Parent = npcRootPart
+			AP.Parent = npcRootPart
+			AO.Parent = npcRootPart
+			AP.Responsiveness = 200
+			AP.MaxForce = math.huge
+			AO.MaxTorque = math.huge
+			AO.Responsiveness = 200
+			AP.Attachment0 = A0
+			AP.Attachment1 = A1
+			AO.Attachment1 = A1
+			AO.Attachment0 = A0
+			A1.Parent = PlayerRootPart
+			end
+			end)
+		end
+	end    
 })
 Section999:AddToggle({
 	Name = "Break Boxes/Dough/Dew",
