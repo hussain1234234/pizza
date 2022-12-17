@@ -16,11 +16,38 @@ loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza
 getgenv().spam = false
 getgenv().kill = false
 _G.loopkill = false
+getgenv().done = true 
+local myh = game.Players.LocalPlayer.Character.HumanoidRootPart
 local lp = game.Players.LocalPlayer
 local check = game:GetService("Workspace").Houses:FindFirstChild(game.Players.LocalPlayer.Name, true)
 local Trap = workspace:FindFirstChild("Shark Tank",true)
 local p1 = game.Players.LocalPlayer.Character.HumanoidRootPart
 local char = lp.Character
+function view(s)
+	function StopFreecam()
+		if not fcRunning then return end
+		Input.StopCapture()
+		RunService:UnbindFromRenderStep("Freecam")
+		PlayerState.Pop()
+		workspace.Camera.FieldOfView = 70
+		fcRunning = false
+	end
+		StopFreecam()
+		Players = game:GetService("Players")
+		local players = game.Players:GetChildren()
+		for i,v in pairs(players) do
+			if viewDied then
+				viewDied:Disconnect()
+				viewChanged:Disconnect()
+			end
+			viewing = game.Players[s]
+			workspace.CurrentCamera.CameraSubject = viewing.Character
+			local function viewDiedFunc()
+				repeat wait() until Players[v].Character ~= nil and getRoot(Players[v].Character)
+				workspace.CurrentCamera.CameraSubject = viewing.Character
+			end
+		end
+	end
 function gogo(sello)
 	if getgenv().loopfeed then
 	function target(s)
@@ -354,12 +381,18 @@ function loopkillll()
 			end)
 		end
 	end
+	
 	loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/kick%20manager'),true))()
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Pizza Place GUI", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 local Tab = Window:MakeTab({
 	Name = "Commands",
 	Icon = "rbxassetid://7734053426",
+	PremiumOnly = false
+})
+local Tab34 = Window:MakeTab({
+	Name = "Target",
+	Icon = "rbxassetid://7743872758",
 	PremiumOnly = false
 })
 local Tabin = Window:MakeTab({
@@ -375,7 +408,12 @@ local Tab989 = Window:MakeTab({
 	Icon = "rbxassetid://7733708835",
 	PremiumOnly = false
 })
-
+local Section424 = Tab34:AddSection({
+	Name = "Target Selector"
+})
+local Section524 = Tab34:AddSection({
+	Name = "Target Commands"
+})
 local Tab1 = Window:MakeTab({
 	Name = "Teleports",
 	Icon = "rbxassetid://7733774602",
@@ -2026,6 +2064,121 @@ Section1:AddTextbox({
 			end
 		end
 	})
+	function getPlayrs()
+		local table1 = {};
+		for i, v in pairs((game:GetService("Players")):GetChildren()) do
+			if v.Name ~= game.Players.LocalPlayer.Name then
+			table.insert(table1, v.Name);
+		end;
+	end;
+		game.Players.PlayerAdded:Connect(function(a)
+			table.insert(table1, a.Name);
+		end);
+		game.Players.PlayerRemoving:Connect(function(a)
+			for i, v in pairs(table1) do
+				if v == a.Name then
+					table.remove(table1, i);
+				end;
+			end;
+		end);
+		return table1;
+		end;
+		
+		Bommber = Section424:AddDropdown({
+		Name = "Target",
+		Default = nil,
+		Options = getPlayrs(),
+		Flags = "Flag1",
+		Callback = function(Value)
+			getgenv().targetname = Value
+		end
+		});
+		
+		game.Players.PlayerAdded:Connect(function(a)
+			Bommber:Refresh(getPlayrs(), true);
+		end);
+		
+		game.Players.PlayerRemoving:Connect(function(a)
+			Bommber:Refresh(getPlayrs(), true);
+		end);
+		Section424:AddButton({
+		Name = "Refreash Selector",
+		Callback = function()
+				  Bommber:Refresh(getPlayrs(), true);
+		  end    
+	})
+		Section524:AddButton({
+		Name = "Notfiy Target Moneyz",
+		Callback = function()
+				  OrionLib:MakeNotification({
+					Name = "Target Cash Info",
+					Content = getgenv().targetname .. " have " ..  game.Players[getgenv().targetname].Moneyz.Value,
+					Image = "rbxassetid://7734068321",
+					Time = 5
+				})
+		  end    
+		})
+		Section524:AddButton({
+		Name = "Teleport To",
+		Callback = function()
+			goto(getgenv().targetname)
+		  end    
+	})
+		Section524:AddButton({
+		Name = "View",
+		Callback = function()
+			if getgenv().done then
+			view(getgenv().targetname)
+			getgenv().done = false
+			else
+			view(game.Players.LocalPlayer.Name)
+			getgenv().done = true 
+			end 
+		end    
+		})
+		Section524:AddButton({
+		Name = "Kick",
+		Callback = function()
+				  kickk(getgenv().targetname)
+		  end    
+		})
+			Section524:AddButton({
+		Name = "Bring",
+		Callback = function()
+				  bring(getgenv().targetname)
+		  end    
+		})
+			Section524:AddButton({
+		Name = "Void",
+		Callback = function()
+				  void(getgenv().targetname)
+		  end    
+		})
+		Section524:AddButton({
+		Name = "Kill",
+		Callback = function()
+			die(getgenv().targetname)
+		end    
+		})
+		Section524:AddToggle({
+		Name = "LoopKill",
+		Default = false,
+		Callback = function(Value)
+			getgenv().kill = Value
+			if getgenv().kill then
+			kill(getgenv().targetname)
+			end
+		end    
+		})
+		Section524:AddToggle({
+		Name = "LoopShot Snowball",
+		Default = false,
+		Callback = function(Value)
+			getgenv().looppshot = Value
+			shot(getgenv().targetname)
+		end    
+		})
+	
 	Tap0:AddButton({
 		Name = "Infinite Yiled",
 		Callback = function()
