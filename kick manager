@@ -99,6 +99,7 @@ end
 function kick()
     local mteamp = game:GetService("Teams").Manager
     local m = mteamp:GetPlayers()[1]
+	if game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R15 then
     pcall(function()
     Target = m.Name
     end)
@@ -196,4 +197,102 @@ function kick()
             Duration = 3;
           })
         end
+		else
+			pcall(function()
+				Target = m.Name
+				end)
+				if Target ~= game.Players.LocalPlayer.Name then
+				--check if player have sword
+					local sword, unsword = pcall(function()
+				game.Players.LocalPlayer.Character:FindFirstChildOfClass('Humanoid'):UnequipTools()
+					local BackPack = game:GetService("Players").LocalPlayer.Backpack["Linked Sword"]
+					end)
+					if sword then
+					local done, sorry = pcall(function()
+					if game.Players[Target] then
+					if game.Players[Target].Character.Humanoid.Sit  then
+					game.StarterGui:SetCore("SendNotification", {
+					Title = 'Error';
+					Text = 'Manager Is Sitting';
+					Duration = 5;
+				  })
+					else
+					wait()
+					sFLY()
+					 local success, errormessage = pcall(function()
+					for _,P in next, game:GetService("Workspace").KrustyKrab:GetChildren() do
+					P:Destroy()
+					end
+					game:GetService("TeleportService"):Teleport(10072127013,plr)
+					 end)
+					 game.Players.LocalPlayer.Character["Right Leg"]:Destroy()
+					 game.Players.LocalPlayer.Character["Left Leg"]:Destroy()
+					local plr = game.Players.LocalPlayer.Character.HumanoidRootPart
+					plr.CFrame = CFrame.new(-500.241, -26.85, -543.175)
+					NOW = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+					game.Players.LocalPlayer.Character.Humanoid.Name = 1
+					local l = game.Players.LocalPlayer.Character["1"]:Clone()
+					l.Parent = game.Players.LocalPlayer.Character
+					l.Name = "Humanoid"
+					wait()
+					game.Players.LocalPlayer.Character["1"]:Destroy()
+					game.Workspace.CurrentCamera.CameraSubject = game.Players.LocalPlayer.Character
+					game.Players.LocalPlayer.Character.Animate.Disabled = true
+					wait()
+					game.Players.LocalPlayer.Character.Animate.Disabled = false
+					game.Players.LocalPlayer.Character.Humanoid.DisplayDistanceType = "None"
+						for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren())do
+				if v.Name =="Linked Sword" then
+				game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
+					end
+				end
+					local function tp(player,player2)
+					local char1,char2=player.Character,player2.Character
+					if char1 and char2 then
+					char1.HumanoidRootPart.CFrame = char2.HumanoidRootPart.CFrame
+						end
+					end
+					local function getout(player,player2)
+					local char1,char2=player.Character,player2.Character
+					if char1 and char2 then
+					char1:MoveTo(char2.Head.Position)
+						end
+					end
+					tp(game.Players[Target], game.Players.LocalPlayer)
+					wait()
+					tp(game.Players[Target], game.Players.LocalPlayer)
+					wait()
+					getout(game.Players.LocalPlayer, game.Players[Target])
+					wait()
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = NOW
+					task.wait(2)
+					game.Players.LocalPlayer.Character["Right Arm"]:Destroy()
+					wait(0.1)
+					game.Players.LocalPlayer.Character["Torso"]:Destroy()
+					local cf = 23.6224, 3.95791, 6.29556
+					repeat
+					wait(0)
+					pcall(function()
+					if game.Players.LocalPlayer.Character["Right Arm"] then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace").ManagerChair.Seat.Position)
+					end
+					end)
+					until game.Players.LocalPlayer.Character.HumanoidRootPart.Position== game:GetService("Workspace").ManagerChair.Seat.Position
+							end
+						end
+					end)
+					if sorry then
+					 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(23.7000046, 3.99943972, 6.49999714, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+					end
+					elseif unsword then
+					workspace.MessageService.Dialog.Dialog:Fire("Warning","You Need Linked Sword To Continue","Ok","",true,true)
+					end
+				else
+						game.StarterGui:SetCore("SendNotification", {
+						Title = 'Error';
+						Text = 'You Are The Manager';
+						Duration = 3;
+					  })
+					end
+		end
     end
