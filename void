@@ -112,6 +112,7 @@ function void(bringed)
 	local humanoid = player.Character.Humanoid
 	local tt = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
     --check if player have sword
+	if game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R15 then
     local yaa, loo = pcall(function()
     game.Players.LocalPlayer.Character:FindFirstChildOfClass('Humanoid'):UnequipTools()
         local BackPack = game:GetService("Players").LocalPlayer.Backpack["Linked Sword"]
@@ -183,4 +184,76 @@ end)
     elseif loo then
         workspace.MessageService.Dialog.Dialog:Fire("Warning","You Need Linked Sword To Continue","Ok","",true,true)
     end
+	else
+		local yaa, loo = pcall(function()
+			game.Players.LocalPlayer.Character:FindFirstChildOfClass('Humanoid'):UnequipTools()
+				local BackPack = game:GetService("Players").LocalPlayer.Backpack["Linked Sword"]
+			end)
+			if yaa then
+			Target = bringed
+			local done, fall = pcall(function()
+			if game.Players[Target] then
+			if game.Players[Target].Character.Humanoid.Sit  then
+			game.StarterGui:SetCore("SendNotification", {
+			Title = 'Error';
+			Text = 'Player Is Sitting';
+			Duration = 5;
+		  })
+			else
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0,9999999999999999999999999999,0)
+			sFLY()
+			game.Players.LocalPlayer.Character["Right Leg"]:Destroy()
+			game.Players.LocalPlayer.Character["Left Leg"]:Destroy()
+			local plr = game.Players.LocalPlayer.Character.HumanoidRootPart
+			NOW = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+			game.Players.LocalPlayer.Character.Humanoid.Name = 1
+			local l = game.Players.LocalPlayer.Character["1"]:Clone()
+			l.Parent = game.Players.LocalPlayer.Character
+			l.Name = "Humanoid"
+			wait()
+			game.Players.LocalPlayer.Character["1"]:Destroy()
+			game.Workspace.CurrentCamera.CameraSubject = game.Players.LocalPlayer.Character
+			game.Players.LocalPlayer.Character.Animate.Disabled = true
+			wait()
+			game.Players.LocalPlayer.Character.Animate.Disabled = false
+			game.Players.LocalPlayer.Character.Humanoid.DisplayDistanceType = "None"
+			for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren())do
+			if v.Name =="Linked Sword" then
+			game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
+			end
+			end
+			local function tp(player,player2)
+			local char1,char2=player.Character,player2.Character
+			if char1 and char2 then
+			char1.HumanoidRootPart.CFrame = char2.HumanoidRootPart.CFrame
+			end
+			end
+			local function getout(player,player2)
+			local char1,char2=player.Character,player2.Character
+			if char1 and char2 then
+			char1:MoveTo(char2.Head.Position)
+			end
+			end
+			tp(game.Players[Target], game.Players.LocalPlayer)
+			wait()
+			tp(game.Players[Target], game.Players.LocalPlayer)
+			wait()
+			getout(game.Players.LocalPlayer, game.Players[Target])
+			wait()
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = NOW
+			task.wait(2)
+			game.Players.LocalPlayer.Character["Right Arm"]:Destroy()
+			wait(0.1)
+			game.Players.LocalPlayer.Character["Torso"]:Destroy()
+			wait(4)
+			   end
+			end
+		end)
+			if fall then
+			workspace.MessageService.Dialog.Dialog:Fire("Warning","Player Not Exist","Ok","",true,true)
+			end
+			elseif loo then
+				workspace.MessageService.Dialog.Dialog:Fire("Warning","You Need Linked Sword To Continue","Ok","",true,true)
+			end
+	end
 end
