@@ -10,7 +10,7 @@ loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/break%20Leaderboard'),true))()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/bring'),true))()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/spamming'),true))()
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/kick'),true))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/kick%20v2'),true))()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/car%20spam%20color'),true))()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/nofire'),true))()
 getgenv().spam = false
