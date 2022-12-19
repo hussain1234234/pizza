@@ -1,7 +1,7 @@
 if game.PlaceId == 189707 then -- natural...
 loadstring(game:HttpGet('https://raw.githubusercontent.com/hussain1234234/pizza/main/Natural%20Disaster'))()
 elseif game.PlaceId == 192800 then -- pizza place
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/new%20script%20pizza'),true))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/pizza%20v2%20new'),true))()
 elseif game.PlaceId == 2210085102 then -- naval...
 loadstring(game:HttpGet(('https://pastebin.com/raw/J83Jy8yB'),true))()
 end
