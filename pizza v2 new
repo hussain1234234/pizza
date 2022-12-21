@@ -395,6 +395,441 @@ local Tab34 = Window:MakeTab({
 	Icon = "rbxassetid://7743872758",
 	PremiumOnly = false
 })
+local Tab43 = Window:MakeTab({
+	Name = "Presents",
+	Icon = "rbxassetid://7733946818",
+	PremiumOnly = false
+})
+local Section1432 = Tab43:AddSection({
+	Name = "Selector"
+})
+function getPresents()
+    local table1 = {};
+    for i, v in pairs(game:GetService("Workspace").PresentTable.Presents:GetChildren()) do
+        table.insert(table1, v.Name);
+    end;
+    return table1;
+end;
+godofs = Section1432:AddDropdown({
+	Name = "Select Type",
+	Default = nil,
+	Options = getPresents(),
+	Callback = function(Value)
+		getgenv().Presentt = Value
+	end    
+})
+local Section22 = Tab43:AddSection({
+	Name = "Options"
+})
+Section22:AddToggle({
+	Name = "Buy Present",
+	Default = false,
+	Callback = function(Value)
+getgenv().loop = Value
+        getgenv().loopbuy = Value
+        if getgenv().loopbuy and getgenv().Presentt == "Normal" then
+            while wait() and game.Players.LocalPlayer.Moneyz.Value >= 350 do
+            game.Players.LocalPlayer.PlayerGui.MainGui.Prompts.DialogBox.Visible = false
+game.Players.LocalPlayer.PlayerGui.MainGui.Menu.Backpack.Visible = true
+            if not getgenv().loopbuy or game.Players.LocalPlayer.Moneyz.Value < 350 then
+                game.StarterGui:SetCore("SendNotification", {
+                    Title = 'Warning';
+                    Text = 'You Have No More Or Enough Cash';
+                    Duration = 5;
+                  })
+                break
+            end
+            workspace.PresentTable.Presents[getgenv().Presentt].ClickDetector.Detector:FireServer()
+            local args = {
+                [1] = true
+            }
+            workspace.MessageService.DialogButtonPressed:FireServer(unpack(args))
+            end
+        elseif getgenv().Presentt == "Gear" and getgenv().loopbuy then
+            while wait() and game.Players.LocalPlayer.Moneyz.Value >= 200 do
+            game.Players.LocalPlayer.PlayerGui.MainGui.Prompts.DialogBox.Visible = false
+game.Players.LocalPlayer.PlayerGui.MainGui.Menu.Backpack.Visible = true
+            if not getgenv().loopbuy or game.Players.LocalPlayer.Moneyz.Value < 200 then
+                game.StarterGui:SetCore("SendNotification", {
+                    Title = 'Warning';
+                    Text = 'You Have No More Or Enough Cash';
+                    Duration = 5;
+                  })
+                break
+            end
+            workspace.PresentTable.Presents[getgenv().Presentt].ClickDetector.Detector:FireServer()
+            local args = {
+                [1] = true
+            }
+            workspace.MessageService.DialogButtonPressed:FireServer(unpack(args))
+            end
+        elseif getgenv().Presentt == "Movie" and getgenv().loopbuy then
+            while wait() and game.Players.LocalPlayer.Moneyz.Value >= 2800 do
+            game.Players.LocalPlayer.PlayerGui.MainGui.Prompts.DialogBox.Visible = false
+game.Players.LocalPlayer.PlayerGui.MainGui.Menu.Backpack.Visible = true
+            if not getgenv().loopbuy or game.Players.LocalPlayer.Moneyz.Value < 2800 then
+                game.StarterGui:SetCore("SendNotification", {
+                    Title = 'Warning';
+                    Text = 'You Have No More Or Enough Cash';
+                    Duration = 5;
+                  })
+                break
+            end
+            workspace.PresentTable.Presents[getgenv().Presentt].ClickDetector.Detector:FireServer()
+            local args = {
+                [1] = true
+            }
+            workspace.MessageService.DialogButtonPressed:FireServer(unpack(args))
+            end
+        elseif getgenv().Presentt == "Christmas" and getgenv().loopbuy then
+            while wait() and game.Players.LocalPlayer.Moneyz.Value >= 1100 do
+            game.Players.LocalPlayer.PlayerGui.MainGui.Prompts.DialogBox.Visible = false
+game.Players.LocalPlayer.PlayerGui.MainGui.Menu.Backpack.Visible = true
+            if not getgenv().loopbuy or game.Players.LocalPlayer.Moneyz.Value < 1100 then
+                game.StarterGui:SetCore("SendNotification", {
+                    Title = 'Warning';
+                    Text = 'You Have No More Or Enough Cash';
+                    Duration = 5;
+                  })
+                break
+            end
+            workspace.PresentTable.Presents[getgenv().Presentt].ClickDetector.Detector:FireServer()
+            local args = {
+                [1] = true
+            }
+            workspace.MessageService.DialogButtonPressed:FireServer(unpack(args))
+            end
+        end
+	end    
+})
+Section22:AddToggle({
+	Name = "Open Present",
+	Default = false,
+	Callback = function(Value)
+        getgenv().open = Value
+        if getgenv().open then
+            for _,P in ipairs(game.Players.LocalPlayer.Backpack:GetChildren()) do 
+            wait(0)
+                pcall(function()
+                    if P.Name == getgenv().Presentt and getgenv().open then
+                        local args = {
+                            [1] = "PutUnwrappedItemInInventory",
+                            [2] = tonumber(P.RewardAssetId.Value)
+                        }
+
+                        game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+                        P:Destroy()
+                    end
+                end)
+            end
+        end
+	end    
+})
+
+Section1432:AddButton({
+	Name = "ReFreash Selector",
+	Callback = function()
+        godofs:Refresh(getPresents(), true);
+  	end    
+})
+Section22:AddButton({
+	Name = "Buy Present",
+	Callback = function()
+                getgenv().loopbuy = true
+                    game.Players.LocalPlayer.PlayerGui.MainGui.Prompts.DialogBox.Visible = false
+        game.Players.LocalPlayer.PlayerGui.MainGui.Menu.Backpack.Visible = true
+                    if getgenv().loopbuy and getgenv().Presentt == "Normal" then
+            if not getgenv().loopbuy or game.Players.LocalPlayer.Moneyz.Value < 350 then
+                OrionLib:MakeNotification({
+                    Name = "Error",
+                    Content = "No Enough Moneyz",
+                    Image = "rbxassetid://7734068321",
+                    Time = 5
+                })
+            end
+            workspace.PresentTable.Presents[getgenv().Presentt].ClickDetector.Detector:FireServer()
+            local args = {
+                [1] = true
+            }
+            workspace.MessageService.DialogButtonPressed:FireServer(unpack(args))
+        elseif getgenv().Presentt == "Gear" and getgenv().loopbuy then
+            game.Players.LocalPlayer.PlayerGui.MainGui.Prompts.DialogBox.Visible = false
+game.Players.LocalPlayer.PlayerGui.MainGui.Menu.Backpack.Visible = true
+            if not getgenv().loopbuy or game.Players.LocalPlayer.Moneyz.Value < 200 then
+                OrionLib:MakeNotification({
+                    Name = "Error",
+                    Content = "No Enough Moneyz",
+                    Image = "rbxassetid://7734068321",
+                    Time = 5
+                })
+            end
+            workspace.PresentTable.Presents[getgenv().Presentt].ClickDetector.Detector:FireServer()
+            local args = {
+                [1] = true
+            }
+            workspace.MessageService.DialogButtonPressed:FireServer(unpack(args))
+        elseif getgenv().Presentt == "Movie" and getgenv().loopbuy then
+            game.Players.LocalPlayer.PlayerGui.MainGui.Prompts.DialogBox.Visible = false
+game.Players.LocalPlayer.PlayerGui.MainGui.Menu.Backpack.Visible = true
+            if not getgenv().loopbuy or game.Players.LocalPlayer.Moneyz.Value < 2800 then
+                OrionLib:MakeNotification({
+                    Name = "Error",
+                    Content = "No Enough Moneyz",
+                    Image = "rbxassetid://7734068321",
+                    Time = 5
+                })
+            end
+            workspace.PresentTable.Presents[getgenv().Presentt].ClickDetector.Detector:FireServer()
+            local args = {
+                [1] = true
+            }
+            workspace.MessageService.DialogButtonPressed:FireServer(unpack(args))
+        elseif getgenv().Presentt == "Christmas" and getgenv().loopbuy then
+            game.Players.LocalPlayer.PlayerGui.MainGui.Prompts.DialogBox.Visible = false
+game.Players.LocalPlayer.PlayerGui.MainGui.Menu.Backpack.Visible = true
+            if not getgenv().loopbuy or game.Players.LocalPlayer.Moneyz.Value < 1100 then
+                OrionLib:MakeNotification({
+                    Name = "Error",
+                    Content = "No Enough Moneyz",
+                    Image = "rbxassetid://7734068321",
+                    Time = 5
+                })
+            end
+            workspace.PresentTable.Presents[getgenv().Presentt].ClickDetector.Detector:FireServer()
+            local args = {
+                [1] = true
+            }
+            workspace.MessageService.DialogButtonPressed:FireServer(unpack(args))
+        end
+  	end    
+})
+Section22:AddButton({
+	Name = "Open All Present Type",
+	Callback = function()
+        getgenv().open = true
+        for _,P in ipairs(game.Players.LocalPlayer.Backpack:GetChildren()) do 
+        wait(0)
+            pcall(function()
+                if getgenv().open then
+                    local args = {
+                        [1] = "PutUnwrappedItemInInventory",
+                        [2] = tonumber(P.RewardAssetId.Value)
+                    }
+
+                    game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+                    P:Destroy()
+                end
+            end)
+        end
+  	end    
+})
+local Sectionsell = Tab43:AddSection({
+	Name = "Sell Presents"
+})
+Sectionsell:AddDropdown({
+	Name = "Select Present",
+	Default = "1",
+	Options = {"Gear","Christmas","Normal","Movie"},
+	Callback = function(Value)
+		getgenv().Presenttt = Value
+	end    
+})
+Sectionsell:AddButton({
+	Name = "Sell All Normal",
+	Callback = function()
+        getgenv().openthensell = true
+        if getgenv().openthensell then
+            for _,P in ipairs(game.Players.LocalPlayer.Backpack:GetChildren()) do 
+            wait(0)
+                pcall(function()
+                    if P.Name == getgenv().Presenttt and P.Rarity.Value == "Normal" and getgenv().openthensell then
+                        local args = {
+                            [1] = "PutUnwrappedItemInInventory",
+                            [2] = tonumber(P.RewardAssetId.Value)
+                        }
+                        game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+                        wait()
+                        local argss = {
+                            [1] = "SellInventoryItem",
+                            [2] = tonumber(P.RewardAssetId.Value)
+                        }
+                        
+                        game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(argss))                
+                        P:Destroy()
+                    end
+                end)
+            end
+        end
+  	end    
+})
+Sectionsell:AddButton({
+	Name = "Sell All UnCommon",
+	Callback = function()
+        getgenv().openthensell = true
+        if getgenv().openthensell then
+            for _,P in ipairs(game.Players.LocalPlayer.Backpack:GetChildren()) do 
+            wait(0)
+                pcall(function()
+                    if P.Name == getgenv().Presenttt and P.Rarity.Value == "UnCommon" and getgenv().openthensell then
+                        local args = {
+                            [1] = "PutUnwrappedItemInInventory",
+                            [2] = tonumber(P.RewardAssetId.Value)
+                        }
+                        game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+                        wait()
+                        local argss = {
+                            [1] = "SellInventoryItem",
+                            [2] = tonumber(P.RewardAssetId.Value)
+                        }
+                        
+                        game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(argss))                
+                        P:Destroy()
+                    end
+                end)
+            end
+        end
+  	end    
+})
+Sectionsell:AddButton({
+	Name = "Sell All Common",
+	Callback = function()
+        getgenv().openthensell = true
+        if getgenv().openthensell then
+            for _,P in ipairs(game.Players.LocalPlayer.Backpack:GetChildren()) do 
+            wait(0)
+                pcall(function()
+                    if P.Name == getgenv().Presenttt and P.Rarity.Value == "Common" and getgenv().openthensell then
+                        local args = {
+                            [1] = "PutUnwrappedItemInInventory",
+                            [2] = tonumber(P.RewardAssetId.Value)
+                        }
+                        game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+                        wait()
+                        local argss = {
+                            [1] = "SellInventoryItem",
+                            [2] = tonumber(P.RewardAssetId.Value)
+                        }
+                        
+                        game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(argss))                
+                        P:Destroy()
+                    end
+                end)
+            end
+        end
+  	end    
+})
+Sectionsell:AddButton({
+	Name = "Sell All Rare",
+	Callback = function()
+        getgenv().openthensell = true
+        if getgenv().openthensell then
+            for _,P in ipairs(game.Players.LocalPlayer.Backpack:GetChildren()) do 
+            wait(0)
+                pcall(function()
+                    if P.Name == getgenv().Presenttt and P.Rarity.Value == "Rare" and getgenv().openthensell then
+                        local args = {
+                            [1] = "PutUnwrappedItemInInventory",
+                            [2] = tonumber(P.RewardAssetId.Value)
+                        }
+                        game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+                        wait()
+                        local argss = {
+                            [1] = "SellInventoryItem",
+                            [2] = tonumber(P.RewardAssetId.Value)
+                        }
+                        
+                        game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(argss))                
+                        P:Destroy()
+                    end
+                end)
+            end
+        end
+  	end    
+})
+Sectionsell:AddButton({
+	Name = "Sell All Legendry",
+	Callback = function()
+        getgenv().openthensell = true
+        if getgenv().openthensell then
+            for _,P in ipairs(game.Players.LocalPlayer.Backpack:GetChildren()) do 
+            wait(0)
+                pcall(function()
+                    if P.Name == getgenv().Presenttt and P.Rarity.Value == "Legendry" and getgenv().openthensell then
+                        local args = {
+                            [1] = "PutUnwrappedItemInInventory",
+                            [2] = tonumber(P.RewardAssetId.Value)
+                        }
+                        game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+                        wait()
+                        local argss = {
+                            [1] = "SellInventoryItem",
+                            [2] = tonumber(P.RewardAssetId.Value)
+                        }
+                        
+                        game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(argss))                
+                        P:Destroy()
+                    end
+                end)
+            end
+        end
+  	end    
+})
+Sectionsell:AddButton({
+	Name = "Sell All Rarity Type",
+	Callback = function()
+        getgenv().openthensell = true
+        if getgenv().openthensell then
+            for _,P in ipairs(game.Players.LocalPlayer.Backpack:GetChildren()) do 
+            wait(0)
+                pcall(function()
+                    if P.Name == getgenv().Presenttt and getgenv().openthensell then
+                        local args = {
+                            [1] = "PutUnwrappedItemInInventory",
+                            [2] = tonumber(P.RewardAssetId.Value)
+                        }
+                        game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+                        wait()
+                        local argss = {
+                            [1] = "SellInventoryItem",
+                            [2] = tonumber(P.RewardAssetId.Value)
+                        }
+                        
+                        game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(argss))                
+                        P:Destroy()
+                    end
+                end)
+            end
+        end
+  	end    
+})
+Sectionsell:AddButton({
+	Name = "Sell All Presents",
+	Callback = function()
+        getgenv().openthensell = true
+        if getgenv().openthensell then
+            for _,P in ipairs(game.Players.LocalPlayer.Backpack:GetChildren()) do 
+            wait(0)
+                pcall(function()
+                    if getgenv().openthensell then
+                        local args = {
+                            [1] = "PutUnwrappedItemInInventory",
+                            [2] = tonumber(P.RewardAssetId.Value)
+                        }
+                        game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+                        wait()
+                        local argss = {
+                            [1] = "SellInventoryItem",
+                            [2] = tonumber(P.RewardAssetId.Value)
+                        }
+                        
+                        game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(argss))                
+                        P:Destroy()
+                    end
+                end)
+            end
+        end
+  	end    
+})
 local Tabin = Window:MakeTab({
 	Name = "inventory",
 	Icon = "rbxassetid://7734022041",
