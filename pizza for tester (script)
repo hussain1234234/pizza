@@ -1,0 +1,3457 @@
+getgenv().truee = true
+getgenv().loopfeed = false
+getgenv().loopcolor = false
+getgenv().togglefire = false
+getgenv().loopwork = false
+getgenv().looppshot = false
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/noclothes'),true))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/void'),true))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/clothes'),true))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/break%20Leaderboard'),true))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/bring'),true))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/spamming'),true))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/kick%20v2'),true))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/car%20spam%20color'),true))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/nofire'),true))()
+getgenv().spam = false
+getgenv().kill = false
+_G.loopkill = false
+getgenv().done = true 
+local myh = game.Players.LocalPlayer.Character.HumanoidRootPart
+local lp = game.Players.LocalPlayer
+local check = game:GetService("Workspace").Houses:FindFirstChild(game.Players.LocalPlayer.Name, true)
+local Trap = workspace:FindFirstChild("Shark Tank",true)
+local p1 = game.Players.LocalPlayer.Character.HumanoidRootPart
+local char = lp.Character
+function view(s)
+	function StopFreecam()
+		if not fcRunning then return end
+		Input.StopCapture()
+		RunService:UnbindFromRenderStep("Freecam")
+		PlayerState.Pop()
+		workspace.Camera.FieldOfView = 70
+		fcRunning = false
+	end
+		StopFreecam()
+		Players = game:GetService("Players")
+		local players = game.Players:GetChildren()
+		for i,v in pairs(players) do
+			if viewDied then
+				viewDied:Disconnect()
+				viewChanged:Disconnect()
+			end
+			viewing = game.Players[s]
+			workspace.CurrentCamera.CameraSubject = viewing.Character
+			local function viewDiedFunc()
+				repeat wait() until Players[v].Character ~= nil and getRoot(Players[v].Character)
+				workspace.CurrentCamera.CameraSubject = viewing.Character
+			end
+		end
+	end
+function gogo(sello)
+	if getgenv().loopfeed then
+	function target(s)
+	while getgenv().loopfeed do
+	wait(0.3)
+	local player = game:GetService("Players").LocalPlayer
+	local ffc = game.FindFirstChild
+	local RNG = Random.new()
+	local network
+	local character,root,humanoid
+	do
+	local reg = (getreg or debug.getregistry)()
+	for i=1,#reg do
+	local f = reg[i]
+	if type(f)=="function" then
+		for k,v in next,getupvalues(f) do
+			if typeof(v)=="Instance" then
+				if v.Name=="CashOut" then
+					setupvalue(f,k,{MouseButton1Click={wait=function()end,Wait=function()end}})
+				elseif v.Name=="StickerName" then
+					setupvalue(f,k,nil)
+				end
+			end
+		end
+		if tostring(getfenv(f).script) == "Music" then
+			local consts = getconstants(f)
+			local loc=false
+			for ci,c in next,consts do
+				if c == "location changed" then
+					loc=true
+				elseif loc and c == "SendData" then
+					setconstant(f,ci,"ExplodeString")
+					break
+				end
+			end
+		end
+	elseif type(f)=="table" and rawget(f,"FireServer") and rawget(f,"BindEvents") then
+		network = f
+	end
+	end
+	end
+	assert(network,"failed to find network")
+	local function onCharacterAdded(char)
+	if not char then return end
+	character=char
+	root = character:WaitForChild("HumanoidRootPart")
+	humanoid = character:WaitForChild("Humanoid")
+	humanoid:SetStateEnabled("FallingDown",false)
+	end
+	onCharacterAdded(player.Character or player.CharacterAdded:Wait())
+	player.CharacterAdded:Connect(onCharacterAdded)
+	
+		local waiting = false
+		local waitingTick = 0
+	
+				if root.Position.Z > -900 or root.Position.Z < -900 then  end
+				wait(0.1)
+				lastBox=nil
+				local j=0
+				local boxes = workspace.AllSupplyBoxes:GetChildren()
+				for i=1,#boxes do
+					local box = boxes[i]
+					if box.Anchored==false and box.Position.Z < -940 or root.Position.Z > -900 then
+						box.CFrame = CFrame.new(game:GetService("Workspace")[s].HumanoidRootPart.Position)
+						network:FireServer("UpdateProperty", box, "CFrame", box.CFrame)
+						lastBox=box
+						j=j+1
+						if j>100 then break end
+					end
+				end
+				if lastBox then
+					waiting=true
+					waitingTick=tick()
+				end
+		end
+	end
+else
+	function target(s)
+		wait(0.3)
+		local player = game:GetService("Players").LocalPlayer
+		local ffc = game.FindFirstChild
+		local RNG = Random.new()
+		local network
+		local character,root,humanoid
+		do
+		local reg = (getreg or debug.getregistry)()
+		for i=1,#reg do
+		local f = reg[i]
+		if type(f)=="function" then
+			for k,v in next,getupvalues(f) do
+				if typeof(v)=="Instance" then
+					if v.Name=="CashOut" then
+						setupvalue(f,k,{MouseButton1Click={wait=function()end,Wait=function()end}})
+					elseif v.Name=="StickerName" then
+						setupvalue(f,k,nil)
+					end
+				end
+			end
+			if tostring(getfenv(f).script) == "Music" then
+				local consts = getconstants(f)
+				local loc=false
+				for ci,c in next,consts do
+					if c == "location changed" then
+						loc=true
+					elseif loc and c == "SendData" then
+						setconstant(f,ci,"ExplodeString")
+						break
+					end
+				end
+			end
+		elseif type(f)=="table" and rawget(f,"FireServer") and rawget(f,"BindEvents") then
+			network = f
+		end
+		end
+		end
+		assert(network,"failed to find network")
+		local function onCharacterAdded(char)
+		if not char then return end
+		character=char
+		root = character:WaitForChild("HumanoidRootPart")
+		humanoid = character:WaitForChild("Humanoid")
+		humanoid:SetStateEnabled("FallingDown",false)
+		end
+		onCharacterAdded(player.Character or player.CharacterAdded:Wait())
+		player.CharacterAdded:Connect(onCharacterAdded)
+		
+			local waiting = false
+			local waitingTick = 0
+		
+					if root.Position.Z > -900 or root.Position.Z < -900 then  end
+					wait(0.1)
+					lastBox=nil
+					local j=0
+					local boxes = workspace.AllSupplyBoxes:GetChildren()
+					for i=1,#boxes do
+						local box = boxes[i]
+						if box.Anchored==false and box.Position.Z < -940 or root.Position.Z > -900 then
+							box.CFrame = CFrame.new(game:GetService("Workspace")[s].HumanoidRootPart.Position)
+							network:FireServer("UpdateProperty", box, "CFrame", box.CFrame)
+							lastBox=box
+							j=j+1
+							if j>100 then break end
+						end
+					end
+					if lastBox then
+						waiting=true
+						waitingTick=tick()
+					end
+			end
+		end
+	while getgenv().truee do
+                 print("nigga")
+		wait(0.2)
+		spawn(function()
+			for _,P in ipairs(game:GetService("Workspace").SupplyButtons:GetChildren()) do
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = P.Unpressed.CFrame
+			wait(0.1)
+			end
+		end)
+		spawn(function()
+			for _,P in ipairs(game:GetService("Workspace").AllSupplyBoxes:GetChildren()) do          
+                print(_)    
+                getgenv().Amountttgug = _
+                if _ > 75 then 
+                print("stop")
+                getgenv().truee = false
+                wait(2)
+                getgenv().truee = true
+                end
+			end
+		end)
+	end
+
+	spawn(function()
+	if getgenv().Amountttgug > 74 then
+	wait(1) 
+	target(sello)
+	end
+	end)
+	end
+	function clearflooood(s)	
+		game.StarterGui:SetCore("SendNotification", {
+			Title = 'Clearing Old Flood';
+			Text = 'Lodaing...';
+			Duration = tonumber(s);
+		  })
+		local player = game:GetService("Players").LocalPlayer
+		local ffc = game.FindFirstChild
+		local RNG = Random.new()
+		local network
+		local character,root,humanoid
+		do
+			local reg = (getreg or debug.getregistry)()
+			for i=1,#reg do
+				local f = reg[i]
+				if type(f)=="function" then
+					for k,v in next,getupvalues(f) do
+						if typeof(v)=="Instance" then
+							if v.Name=="CashOut" then
+								setupvalue(f,k,{MouseButton1Click={wait=function()end,Wait=function()end}})
+							elseif v.Name=="StickerName" then
+								setupvalue(f,k,nil)
+							end
+						end
+					end
+					if tostring(getfenv(f).script) == "Music" then
+						local consts = getconstants(f)
+						local loc=false
+						for ci,c in next,consts do
+							if c == "location changed" then
+								loc=true
+							elseif loc and c == "SendData" then
+								setconstant(f,ci,"ExplodeString")
+								break
+							end
+						end
+					end
+				elseif type(f)=="table" and rawget(f,"FireServer") and rawget(f,"BindEvents") then
+					network = f
+				end
+			end
+		end
+		assert(network,"failed to find network")
+		local function onCharacterAdded(char)
+			if not char then return end
+			character=char
+			root = character:WaitForChild("HumanoidRootPart")
+			humanoid = character:WaitForChild("Humanoid")
+			humanoid:SetStateEnabled("FallingDown",false)
+		end
+		onCharacterAdded(player.Character or player.CharacterAdded:Wait())
+		player.CharacterAdded:Connect(onCharacterAdded)
+		
+					local waiting = false
+					local waitingTick = 0
+		for _,P in ipairs(game:GetService("Workspace").AllSupplyBoxes:GetChildren()) do
+			wait(0.2)
+		if P.Name == "SupplyBox" and P:IsA("Part") and P.Position.Z > -2241.66 and P.Position.Z > -2240.66 and P.Position.Z > -2237.05 and P.Position.X > -3325.26 and P.Position.Y > -137.817 and P.Position.X > -3361.37 and P.Position.X > -3360.37 and P.Position.Y > -137.384 and P.Position.Y > -136.384 then
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = P.CFrame
+							if root.Position.Z > -900 or root.Position.Z < -900 then print("ok") end
+							lastBox=nil
+							local j=0
+							local boxes = game:GetService("Workspace").AllSupplyBoxes:GetChildren()
+							for i=1,#boxes do
+								local box = boxes[i]
+								if box.Anchored==false and box.Position.Z < -940 or root.Position.Z > -900 then
+									box.CFrame = CFrame.new(-3361.37, -137.384, -2241.66)
+									network:FireServer("UpdateProperty", box, "CFrame", box.CFrame)
+									lastBox=box
+									j=j+1
+									if j>100 then break end
+								end
+							end
+							if lastBox then
+								waiting=true
+								waitingTick=tick()
+							end
+		
+		end
+			end	
+		end	
+function kill(textt)
+
+	local targetPartial = textt
+	
+	local man
+	for _,p in ipairs(game.Players:GetPlayers()) do
+		if p.Name:lower():sub(1,#targetPartial) == targetPartial:lower() or p.DisplayName:lower():sub(1,#targetPartial) == targetPartial:lower() then
+			man = p
+			break
+		end
+	end
+		 while getgenv().kill do
+		 wait(0.1)
+		 spawn(function()
+		 local success, errormessage = pcall(function()
+		 local killl = workspace:FindFirstChild("Shark Tank",true)
+		 killl.TouchEvent:FireServer(man.Character.PrimaryPart, killl.Shark)
+		 wait(0.1)
+			 end)
+		end)
+		 end 
+	end
+	function bringvc()
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local humanoid = player.Character.Humanoid
+    if not workspace.Cars:IsAncestorOf(humanoid.SeatPart) then
+		humanoid.Sit=false
+		wait(0.1)
+		for _,car in ipairs(workspace.Cars:GetChildren()) do
+			if car:FindFirstChild("Driver") and car.Driver.Occupant==nil and car:FindFirstChild("Owner") and car.Owner.Value==nil then
+        for _,o in ipairs(car:GetChildren()) do 
+		if o:IsA("VehicleSeat") or o:IsA("Part") then
+		o.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position)
+		local parent = o.Parent
+		parent.LeftDoor.ClickDetector.Detector:FireServer()
+		end
+		end   
+				if true then
+					break
+				end
+			end
+		end
+	end
+	end
+    function die(plrnameee)
+
+        local targetPartial = plrnameee
+        
+        local man
+        for _,p in ipairs(game.Players:GetPlayers()) do
+            if p.Name:lower():sub(1,#targetPartial) == targetPartial:lower() or p.DisplayName:lower():sub(1,#targetPartial) == targetPartial:lower() then
+                man = p
+                break
+            end
+        end
+        local killl = workspace:FindFirstChild("Shark Tank",true)
+        killl.TouchEvent:FireServer(man.Character.PrimaryPart, killl.Shark)
+    end
+function loopkillll()
+	while _G.loopkill do
+			wait()
+			local success, errormessage = pcall(function()
+					for _,p in next, game.Players:GetPlayers() do
+						if p.Character and p.Character.PrimaryPart and p ~= game.Players.LocalPlayer then
+							Trap.TouchEvent:FireServer(p.Character.PrimaryPart, Trap.Shark)
+							task.wait(0.5)
+					end
+				end
+			end)
+		end
+	end
+	
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/kick%20manager'),true))()
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Pizza Place GUI", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Tab = Window:MakeTab({
+	Name = "Commands",
+	Icon = "rbxassetid://7734053426",
+	PremiumOnly = false
+})
+local Tab34 = Window:MakeTab({
+	Name = "Target",
+	Icon = "rbxassetid://7743872758",
+	PremiumOnly = false
+})
+local Tab43 = Window:MakeTab({
+	Name = "Presents",
+	Icon = "rbxassetid://7733946818",
+	PremiumOnly = false
+})
+local Section1432 = Tab43:AddSection({
+	Name = "Selector"
+})
+function getPresents()
+    local table1 = {};
+    for i, v in pairs(game:GetService("Workspace").PresentTable.Presents:GetChildren()) do
+        table.insert(table1, v.Name);
+    end;
+    return table1;
+end;
+godofs = Section1432:AddDropdown({
+	Name = "Select Type",
+	Default = nil,
+	Options = getPresents(),
+	Callback = function(Value)
+		getgenv().Presentt = Value
+	end    
+})
+local Section22 = Tab43:AddSection({
+	Name = "Options"
+})
+Section22:AddToggle({
+	Name = "Buy Present",
+	Default = false,
+	Callback = function(Value)
+getgenv().loop = Value
+        getgenv().loopbuy = Value
+        if getgenv().loopbuy and getgenv().Presentt == "Normal" then
+            while wait() and game.Players.LocalPlayer.Moneyz.Value >= 350 do
+            game.Players.LocalPlayer.PlayerGui.MainGui.Prompts.DialogBox.Visible = false
+game.Players.LocalPlayer.PlayerGui.MainGui.Menu.Backpack.Visible = true
+            if not getgenv().loopbuy or game.Players.LocalPlayer.Moneyz.Value < 350 then
+                game.StarterGui:SetCore("SendNotification", {
+                    Title = 'Warning';
+                    Text = 'You Have No More Or Enough Cash';
+                    Duration = 5;
+                  })
+                break
+            end
+            workspace.PresentTable.Presents[getgenv().Presentt].ClickDetector.Detector:FireServer()
+            local args = {
+                [1] = true
+            }
+            workspace.MessageService.DialogButtonPressed:FireServer(unpack(args))
+            end
+        elseif getgenv().Presentt == "Gear" and getgenv().loopbuy then
+            while wait() and game.Players.LocalPlayer.Moneyz.Value >= 200 do
+            game.Players.LocalPlayer.PlayerGui.MainGui.Prompts.DialogBox.Visible = false
+game.Players.LocalPlayer.PlayerGui.MainGui.Menu.Backpack.Visible = true
+            if not getgenv().loopbuy or game.Players.LocalPlayer.Moneyz.Value < 200 then
+                game.StarterGui:SetCore("SendNotification", {
+                    Title = 'Warning';
+                    Text = 'You Have No More Or Enough Cash';
+                    Duration = 5;
+                  })
+                break
+            end
+            workspace.PresentTable.Presents[getgenv().Presentt].ClickDetector.Detector:FireServer()
+            local args = {
+                [1] = true
+            }
+            workspace.MessageService.DialogButtonPressed:FireServer(unpack(args))
+            end
+        elseif getgenv().Presentt == "Movie" and getgenv().loopbuy then
+            while wait() and game.Players.LocalPlayer.Moneyz.Value >= 2800 do
+            game.Players.LocalPlayer.PlayerGui.MainGui.Prompts.DialogBox.Visible = false
+game.Players.LocalPlayer.PlayerGui.MainGui.Menu.Backpack.Visible = true
+            if not getgenv().loopbuy or game.Players.LocalPlayer.Moneyz.Value < 2800 then
+                game.StarterGui:SetCore("SendNotification", {
+                    Title = 'Warning';
+                    Text = 'You Have No More Or Enough Cash';
+                    Duration = 5;
+                  })
+                break
+            end
+            workspace.PresentTable.Presents[getgenv().Presentt].ClickDetector.Detector:FireServer()
+            local args = {
+                [1] = true
+            }
+            workspace.MessageService.DialogButtonPressed:FireServer(unpack(args))
+            end
+        elseif getgenv().Presentt == "Christmas" and getgenv().loopbuy then
+            while wait() and game.Players.LocalPlayer.Moneyz.Value >= 1100 do
+            game.Players.LocalPlayer.PlayerGui.MainGui.Prompts.DialogBox.Visible = false
+game.Players.LocalPlayer.PlayerGui.MainGui.Menu.Backpack.Visible = true
+            if not getgenv().loopbuy or game.Players.LocalPlayer.Moneyz.Value < 1100 then
+                game.StarterGui:SetCore("SendNotification", {
+                    Title = 'Warning';
+                    Text = 'You Have No More Or Enough Cash';
+                    Duration = 5;
+                  })
+                break
+            end
+            workspace.PresentTable.Presents[getgenv().Presentt].ClickDetector.Detector:FireServer()
+            local args = {
+                [1] = true
+            }
+            workspace.MessageService.DialogButtonPressed:FireServer(unpack(args))
+            end
+        end
+	end    
+})
+Section22:AddToggle({
+	Name = "Open Present",
+	Default = false,
+	Callback = function(Value)
+        getgenv().open = Value
+        if getgenv().open then
+            for _,P in ipairs(game.Players.LocalPlayer.Backpack:GetChildren()) do 
+            wait(0)
+                pcall(function()
+                    if P.Name == getgenv().Presentt and getgenv().open then
+                        local args = {
+                            [1] = "PutUnwrappedItemInInventory",
+                            [2] = tonumber(P.RewardAssetId.Value)
+                        }
+
+                        game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+                        P:Destroy()
+                    end
+                end)
+            end
+        end
+	end    
+})
+
+Section1432:AddButton({
+	Name = "ReFreash Selector",
+	Callback = function()
+        godofs:Refresh(getPresents(), true);
+  	end    
+})
+Section22:AddButton({
+	Name = "Buy Present",
+	Callback = function()
+                getgenv().loopbuy = true
+                    game.Players.LocalPlayer.PlayerGui.MainGui.Prompts.DialogBox.Visible = false
+        game.Players.LocalPlayer.PlayerGui.MainGui.Menu.Backpack.Visible = true
+                    if getgenv().loopbuy and getgenv().Presentt == "Normal" then
+            if not getgenv().loopbuy or game.Players.LocalPlayer.Moneyz.Value < 350 then
+                OrionLib:MakeNotification({
+                    Name = "Error",
+                    Content = "No Enough Moneyz",
+                    Image = "rbxassetid://7734068321",
+                    Time = 5
+                })
+            end
+            workspace.PresentTable.Presents[getgenv().Presentt].ClickDetector.Detector:FireServer()
+            local args = {
+                [1] = true
+            }
+            workspace.MessageService.DialogButtonPressed:FireServer(unpack(args))
+        elseif getgenv().Presentt == "Gear" and getgenv().loopbuy then
+            game.Players.LocalPlayer.PlayerGui.MainGui.Prompts.DialogBox.Visible = false
+game.Players.LocalPlayer.PlayerGui.MainGui.Menu.Backpack.Visible = true
+            if not getgenv().loopbuy or game.Players.LocalPlayer.Moneyz.Value < 200 then
+                OrionLib:MakeNotification({
+                    Name = "Error",
+                    Content = "No Enough Moneyz",
+                    Image = "rbxassetid://7734068321",
+                    Time = 5
+                })
+            end
+            workspace.PresentTable.Presents[getgenv().Presentt].ClickDetector.Detector:FireServer()
+            local args = {
+                [1] = true
+            }
+            workspace.MessageService.DialogButtonPressed:FireServer(unpack(args))
+        elseif getgenv().Presentt == "Movie" and getgenv().loopbuy then
+            game.Players.LocalPlayer.PlayerGui.MainGui.Prompts.DialogBox.Visible = false
+game.Players.LocalPlayer.PlayerGui.MainGui.Menu.Backpack.Visible = true
+            if not getgenv().loopbuy or game.Players.LocalPlayer.Moneyz.Value < 2800 then
+                OrionLib:MakeNotification({
+                    Name = "Error",
+                    Content = "No Enough Moneyz",
+                    Image = "rbxassetid://7734068321",
+                    Time = 5
+                })
+            end
+            workspace.PresentTable.Presents[getgenv().Presentt].ClickDetector.Detector:FireServer()
+            local args = {
+                [1] = true
+            }
+            workspace.MessageService.DialogButtonPressed:FireServer(unpack(args))
+        elseif getgenv().Presentt == "Christmas" and getgenv().loopbuy then
+            game.Players.LocalPlayer.PlayerGui.MainGui.Prompts.DialogBox.Visible = false
+game.Players.LocalPlayer.PlayerGui.MainGui.Menu.Backpack.Visible = true
+            if not getgenv().loopbuy or game.Players.LocalPlayer.Moneyz.Value < 1100 then
+                OrionLib:MakeNotification({
+                    Name = "Error",
+                    Content = "No Enough Moneyz",
+                    Image = "rbxassetid://7734068321",
+                    Time = 5
+                })
+            end
+            workspace.PresentTable.Presents[getgenv().Presentt].ClickDetector.Detector:FireServer()
+            local args = {
+                [1] = true
+            }
+            workspace.MessageService.DialogButtonPressed:FireServer(unpack(args))
+        end
+  	end    
+})
+Section22:AddButton({
+	Name = "Open All Present Type",
+	Callback = function()
+        getgenv().open = true
+        for _,P in ipairs(game.Players.LocalPlayer.Backpack:GetChildren()) do 
+        wait(0)
+            pcall(function()
+                if getgenv().open then
+                    local args = {
+                        [1] = "PutUnwrappedItemInInventory",
+                        [2] = tonumber(P.RewardAssetId.Value)
+                    }
+
+                    game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+                    P:Destroy()
+                end
+            end)
+        end
+  	end    
+})
+local Sectionsell = Tab43:AddSection({
+	Name = "Sell Presents"
+})
+Sectionsell:AddDropdown({
+	Name = "Select Present",
+	Default = "1",
+	Options = {"Gear","Christmas","Normal","Movie"},
+	Callback = function(Value)
+		getgenv().Presenttt = Value
+	end    
+})
+Sectionsell:AddButton({
+	Name = "Sell All Normal",
+	Callback = function()
+        getgenv().openthensell = true
+        if getgenv().openthensell then
+            for _,P in ipairs(game.Players.LocalPlayer.Backpack:GetChildren()) do 
+            wait(0)
+                pcall(function()
+                    if P.Name == getgenv().Presenttt and P.Rarity.Value == "Normal" and getgenv().openthensell then
+                        local args = {
+                            [1] = "PutUnwrappedItemInInventory",
+                            [2] = tonumber(P.RewardAssetId.Value)
+                        }
+                        game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+                        wait()
+                        local argss = {
+                            [1] = "SellInventoryItem",
+                            [2] = tonumber(P.RewardAssetId.Value)
+                        }
+                        
+                        game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(argss))                
+                        P:Destroy()
+                    end
+                end)
+            end
+        end
+  	end    
+})
+Sectionsell:AddButton({
+	Name = "Sell All UnCommon",
+	Callback = function()
+        getgenv().openthensell = true
+        if getgenv().openthensell then
+            for _,P in ipairs(game.Players.LocalPlayer.Backpack:GetChildren()) do 
+            wait(0)
+                pcall(function()
+                    if P.Name == getgenv().Presenttt and P.Rarity.Value == "UnCommon" and getgenv().openthensell then
+                        local args = {
+                            [1] = "PutUnwrappedItemInInventory",
+                            [2] = tonumber(P.RewardAssetId.Value)
+                        }
+                        game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+                        wait()
+                        local argss = {
+                            [1] = "SellInventoryItem",
+                            [2] = tonumber(P.RewardAssetId.Value)
+                        }
+                        
+                        game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(argss))                
+                        P:Destroy()
+                    end
+                end)
+            end
+        end
+  	end    
+})
+Sectionsell:AddButton({
+	Name = "Sell All Common",
+	Callback = function()
+        getgenv().openthensell = true
+        if getgenv().openthensell then
+            for _,P in ipairs(game.Players.LocalPlayer.Backpack:GetChildren()) do 
+            wait(0)
+                pcall(function()
+                    if P.Name == getgenv().Presenttt and P.Rarity.Value == "Common" and getgenv().openthensell then
+                        local args = {
+                            [1] = "PutUnwrappedItemInInventory",
+                            [2] = tonumber(P.RewardAssetId.Value)
+                        }
+                        game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+                        wait()
+                        local argss = {
+                            [1] = "SellInventoryItem",
+                            [2] = tonumber(P.RewardAssetId.Value)
+                        }
+                        
+                        game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(argss))                
+                        P:Destroy()
+                    end
+                end)
+            end
+        end
+  	end    
+})
+Sectionsell:AddButton({
+	Name = "Sell All Rare",
+	Callback = function()
+        getgenv().openthensell = true
+        if getgenv().openthensell then
+            for _,P in ipairs(game.Players.LocalPlayer.Backpack:GetChildren()) do 
+            wait(0)
+                pcall(function()
+                    if P.Name == getgenv().Presenttt and P.Rarity.Value == "Rare" and getgenv().openthensell then
+                        local args = {
+                            [1] = "PutUnwrappedItemInInventory",
+                            [2] = tonumber(P.RewardAssetId.Value)
+                        }
+                        game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+                        wait()
+                        local argss = {
+                            [1] = "SellInventoryItem",
+                            [2] = tonumber(P.RewardAssetId.Value)
+                        }
+                        
+                        game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(argss))                
+                        P:Destroy()
+                    end
+                end)
+            end
+        end
+  	end    
+})
+Sectionsell:AddButton({
+	Name = "Sell All Legendry",
+	Callback = function()
+        getgenv().openthensell = true
+        if getgenv().openthensell then
+            for _,P in ipairs(game.Players.LocalPlayer.Backpack:GetChildren()) do 
+            wait(0)
+                pcall(function()
+                    if P.Name == getgenv().Presenttt and P.Rarity.Value == "Legendry" and getgenv().openthensell then
+                        local args = {
+                            [1] = "PutUnwrappedItemInInventory",
+                            [2] = tonumber(P.RewardAssetId.Value)
+                        }
+                        game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+                        wait()
+                        local argss = {
+                            [1] = "SellInventoryItem",
+                            [2] = tonumber(P.RewardAssetId.Value)
+                        }
+                        
+                        game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(argss))                
+                        P:Destroy()
+                    end
+                end)
+            end
+        end
+  	end    
+})
+Sectionsell:AddButton({
+	Name = "Sell All Rarity Type",
+	Callback = function()
+        getgenv().openthensell = true
+        if getgenv().openthensell then
+            for _,P in ipairs(game.Players.LocalPlayer.Backpack:GetChildren()) do 
+            wait(0)
+                pcall(function()
+                    if P.Name == getgenv().Presenttt and getgenv().openthensell then
+                        local args = {
+                            [1] = "PutUnwrappedItemInInventory",
+                            [2] = tonumber(P.RewardAssetId.Value)
+                        }
+                        game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+                        wait()
+                        local argss = {
+                            [1] = "SellInventoryItem",
+                            [2] = tonumber(P.RewardAssetId.Value)
+                        }
+                        
+                        game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(argss))                
+                        P:Destroy()
+                    end
+                end)
+            end
+        end
+  	end    
+})
+Sectionsell:AddButton({
+	Name = "Sell All Presents",
+	Callback = function()
+        getgenv().openthensell = true
+        if getgenv().openthensell then
+            for _,P in ipairs(game.Players.LocalPlayer.Backpack:GetChildren()) do 
+            wait(0)
+                pcall(function()
+                    if getgenv().openthensell then
+                        local args = {
+                            [1] = "PutUnwrappedItemInInventory",
+                            [2] = tonumber(P.RewardAssetId.Value)
+                        }
+                        game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+                        wait()
+                        local argss = {
+                            [1] = "SellInventoryItem",
+                            [2] = tonumber(P.RewardAssetId.Value)
+                        }
+                        
+                        game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(argss))                
+                        P:Destroy()
+                    end
+                end)
+            end
+        end
+  	end    
+})
+local Tabin = Window:MakeTab({
+	Name = "inventory",
+	Icon = "rbxassetid://7734022041",
+	PremiumOnly = false
+})
+local Sectionin = Tabin:AddSection({
+	Name = "Items"
+})
+local Tab989 = Window:MakeTab({
+	Name = "Vehicles",
+	Icon = "rbxassetid://7733708835",
+	PremiumOnly = false
+})
+local Section424 = Tab34:AddSection({
+	Name = "Target Selector"
+})
+local Section524 = Tab34:AddSection({
+	Name = "Target Commands"
+})
+local Tab1 = Window:MakeTab({
+	Name = "Teleports",
+	Icon = "rbxassetid://7733774602",
+	PremiumOnly = false
+})
+local Sectionr = Tab1:AddSection({
+	Name = "Players"
+})
+function goto(s)
+local e,ex = pcall(function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players[s].Character.HumanoidRootPart.Position)
+end)
+if ex then 
+warn("Player Not Exist")
+end
+end
+function getPlayrs()
+    local table1 = {};
+    for i, v in pairs((game:GetService("Players")):GetChildren()) do
+        if v.Name ~= game.Players.LocalPlayer.Name then
+        table.insert(table1, v.Name);
+    end;
+end;
+    game.Players.PlayerAdded:Connect(function(a)
+        table.insert(table1, a.Name);
+    end);
+    game.Players.PlayerRemoving:Connect(function(a)
+        for i, v in pairs(table1) do
+            if v == a.Name then
+                table.remove(table1, i);
+            end;
+        end;
+    end);
+    return table1;
+    end;
+    
+    tot = Sectionr:AddDropdown({
+    Name = "Goto",
+    Default = nil,
+    Options = getPlayrs(),
+    Flags = "Flag1",
+    Callback = function(Value)
+		if getgenv().loopgoto then
+			repeat
+		wait()
+		game.Players.LocalPlayer.Character.Humanoid.Sit = false wait()
+        goto(Value);
+		until getgenv().loopgoto==false
+		else
+		game.Players.LocalPlayer.Character.Humanoid.Sit = false wait()
+		goto(Value);	
+		end
+    end
+    });
+    
+    game.Players.PlayerAdded:Connect(function(a)
+        tot:Refresh(getPlayrs(), true);
+    end);
+    
+    game.Players.PlayerRemoving:Connect(function(a)
+        tot:Refresh(getPlayrs(), true);
+    end);
+local Tab2 = Window:MakeTab({
+	Name = "Avatar Editor",
+	Icon = "rbxassetid://7733771472",
+	PremiumOnly = false
+})
+local Tab100 = Window:MakeTab({
+	Name = "Animations",
+	Icon = "rbxassetid://7743871480",
+	PremiumOnly = false
+})
+local Tap0 = Window:MakeTab({
+	Name = "Extra Things",
+	Icon = "rbxassetid://7733924046",
+	PremiumOnly = false
+})
+local Section101 = Tab100:AddSection({
+	Name = "Boxes"
+})
+local Section100 = Tab100:AddSection({
+	Name = "Emotes"
+})
+local Section102 = Tab100:AddSection({
+	Name = "Animations"
+})
+
+local Section1 = Tab:AddSection({
+	Name = "Boxes"
+})
+local Sectionnpc = Tab:AddSection({
+	Name = "NPCS"
+})
+local Section1000 = Tab:AddSection({
+	Name = "Flooding"
+})
+Section1:AddToggle({
+	Name = "Turn Loops",
+	Default = false,
+	Callback = function(Value)
+		getgenv().spam = (Value)
+		getgenv().spamchatt = (Value)
+		getgenv().kill = (Value)
+		getgenv().loopfeed = (Value)
+		getgenv().loopgoto = (Value)
+		getgenv().looppshot = (Value)
+	end    
+})
+        function copy(spp)
+        local bb = game:GetService("Players").LocalPlayer.Backpack
+        bb:FindFirstChild(spp, true):Clone().Parent = game:GetService("Players").LocalPlayer.Backpack
+        end
+function getinv()
+local table1 = {};
+for i, v in pairs((game:GetService("Players").LocalPlayer.Backpack):GetChildren()) do
+    if v.Name ~= "Shortcut" then
+    table.insert(table1, v.Name);
+    end
+end;
+return table1;
+end;
+Sectionin:AddParagraph("Note","You Must Unequip Everything Before Use,So You Get No Errors.")
+invi = Sectionin:AddDropdown({
+	Name = "Clone Item",
+	Default = nil,
+	Options = getinv(),
+	Callback = function(Value)
+local errorgg,ggerror = pcall(function()
+        copy(Value)
+    end)
+        if ggerror then       		invi:Refresh(getinv(), true)
+            invis:Refresh(getinv(), true)
+OrionLib:MakeNotification({
+	Name = "Error",
+	Content = "Item Not Exist,Refreshing...",
+	Image = "rbxassetid://7733765224",
+	Time = 2
+}) end
+end 
+})
+invis = Sectionin:AddDropdown({
+	Name = "Detete Item",
+	Default = nil,
+	Options = getinv(),
+	Callback = function(Value)
+        local errorgg,ggerror = pcall(function()
+        game.Players.LocalPlayer.Backpack:FindFirstChild((Value),true):Destroy()
+        end)
+        if ggerror then       		invi:Refresh(getinv(), true)
+            invis:Refresh(getinv(), true)
+OrionLib:MakeNotification({
+	Name = "Error",
+	Content = "Item Not Exist,Refreshing...",
+	Image = "rbxassetid://7733765224",
+	Time = 2
+}) end
+	end    
+})
+Sectionin:AddButton({
+	Name = "Equip All Items",
+	Callback = function()
+            if getgenv().loopunl then
+            	game.Players.LocalPlayer.Character:FindFirstChildOfClass('Humanoid'):UnequipTools()
+                getgenv().loopunl=false
+            else
+            getgenv().loopunl = true 
+      		local speaker = game.Players.LocalPlayer
+                OrionLib:MakeNotification({
+                Name = "Note",
+                Content = "To Unequip Press The Button Again",
+                Image = "rbxassetid://7733765224",
+                Time = 5
+            })
+	for i,v in pairs(speaker:FindFirstChildOfClass("Backpack"):GetChildren()) do
+		if v:IsA("Tool") or v:IsA("HopperBin") then
+			v.Parent = speaker.Character
+            if v.Name~="Shortcut" then
+                OrionLib:MakeNotification({
+                Name = "Done",
+                Content = "Equipped " .. v.Name,
+                Image = "rbxassetid://7733715400",
+                Time = 2
+            })
+            end
+        end
+	end
+end
+  	end    
+})
+		Sectionin:AddButton({
+		Name = "Clear Inventory",
+		Callback = function()
+			for _,P in ipairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+				if P.Name~="Shortcut" then
+					OrionLib:MakeNotification({
+					Name = "Done",
+					Content = 'Successfully Removed ' .. P.Name,
+					Image = "rbxassetid://7733715400",
+					Time = 2
+					})
+					P:Destroy()
+				end
+			end
+		end
+	})
+Sectionin:AddButton({
+	Name = "Lists Refresh",
+	Callback = function()
+      		invi:Refresh(getinv(), true)
+            invis:Refresh(getinv(), true)
+  	end    
+})
+
+Section1000:AddDropdown({
+	Name = "Chose-Room",
+	Default = nil,
+	Options = { "Manager Room", "Cashier Room", "Cook Room", "Boxer Room", "Delivery Room"},
+	Callback = function(Value)
+		if Value == "Cashier Room" then
+			local args = {
+				[1] = "ChangeJob",
+				[2] = "On Break"
+			}
+			
+			game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+			wait(0.5)
+			getgenv().Flooood = game:GetService("Workspace").JobButtons.Cashier
+		elseif Value == "Cook Room" then
+			local args = {
+				[1] = "ChangeJob",
+				[2] = "On Break"
+			}
+			
+			game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+			wait(0.5)
+			getgenv().Flooood = game:GetService("Workspace").JobButtons.Cook
+		elseif Value == "Boxer Room" then
+			local args = {
+				[1] = "ChangeJob",
+				[2] = "On Break"
+			}
+			
+			game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+			wait(0.5)
+			getgenv().Flooood = game:GetService("Workspace").JobButtons["Pizza Boxer"]
+		elseif Value == "Delivery Room" then
+			local args = {
+				[1] = "ChangeJob",
+				[2] = "On Break"
+			}
+			
+			game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+			wait(0.5)
+			getgenv().Flooood = game:GetService("Workspace").JobButtons.Delivery
+		elseif Value == "Manager Room" then
+			getgenv().Flooood = game:GetService("Workspace").ManagerChair.Part
+		end
+	end    
+})
+local Section999 = Tab:AddSection({
+	Name = "Break Game"
+})
+Sectionnpc:AddToggle({
+	Name = "LoopKill All NPC",
+	Default = false,
+	Callback = function(Value)
+		getgenv().loopkillnpc = Value
+		if getgenv().loopkillnpc then
+			OrionLib:MakeNotification({
+				Name = "Note",
+				Content = "You Need To Be Near From Npcs",
+				Image = "rbxassetid://7734068321",
+				Time = 5
+			})
+		while getgenv().loopkillnpc do
+		wait()
+		pcall(function()
+		local lava = workspace:FindFirstChild("Shark Tank",true)
+		for _,p in ipairs(game:GetService("Workspace").Customers:GetChildren()) do
+		lava.TouchEvent:FireServer(p.Head, lava.Shark)
+		wait(0.2)
+		end
+		end)
+		end
+		end
+	end    
+})
+Sectionnpc:AddToggle({
+	Name = "Be Npc",
+	Default = false,
+	Callback = function(Value)
+		getgenv().takenpc = Value
+		if getgenv().takenpc then
+			OrionLib:MakeNotification({
+				Name = "Note",
+				Content = "Hold Left CTRL And Click On The Npc You Want, Reset To Be Normal If You Was Npc",
+				Image = "rbxassetid://7734068321",
+				Time = 5
+			})
+			local mouse = game.Players.LocalPlayer:GetMouse()
+			local uis = game:GetService("UserInputService")
+
+			-- Connect
+			mouse.Button1Down:Connect(function()
+			-- Check for Target & Left Shift
+			if mouse.Target and uis:IsKeyDown(Enum.KeyCode.LeftControl) and getgenv().takenpc then
+			local npc = mouse.target.Parent
+			local npcRootPart = npc.HumanoidRootPart
+			local PlayerCharacter = game:GetService("Players").LocalPlayer.Character
+			local PlayerRootPart = PlayerCharacter.HumanoidRootPart
+			local A0 = Instance.new("Attachment")
+			local AP = Instance.new("AlignPosition")
+			local AO = Instance.new("AlignOrientation")
+			local A1 = Instance.new("Attachment")
+			for _, v in pairs(npc:GetDescendants()) do
+			if v:IsA("BasePart") then
+			game:GetService("RunService").Stepped:Connect(function()
+			v.CanCollide = false
+			end)
+			end
+			end
+			PlayerRootPart:BreakJoints()
+			for _, v in pairs(PlayerCharacter:GetDescendants()) do
+			if v:IsA("BasePart") then
+			if v.Name == "HumanoidRootPart" or v.Name == "UpperTorso" or v.Name == "Head" then
+			else
+			v:Destroy()
+			end
+			end
+			end
+			PlayerRootPart.Position = PlayerRootPart.Position+Vector3.new(5, 0, 0)
+			PlayerCharacter.Head.Anchored = true
+			PlayerCharacter.UpperTorso.Anchored = true
+			A0.Parent = npcRootPart
+			AP.Parent = npcRootPart
+			AO.Parent = npcRootPart
+			AP.Responsiveness = 200
+			AP.MaxForce = math.huge
+			AO.MaxTorque = math.huge
+			AO.Responsiveness = 200
+			AP.Attachment0 = A0
+			AP.Attachment1 = A1
+			AO.Attachment1 = A1
+			AO.Attachment0 = A0
+			A1.Parent = PlayerRootPart
+			end
+			end)
+		end
+	end    
+})
+Section999:AddToggle({
+	Name = "Break Boxes/Dough/Dew",
+	Default = false,
+	Callback = function(Value)
+		getgenv().loopbreak = (Value)
+		if getgenv().loopbreak then 
+			local x = 46.36625671386719 
+			local y = 3.9579074382781982
+			local z = 17.591693878173828
+			local plrcaf = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+			while getgenv().loopbreak do 
+			wait(0.2)
+			spawn(function()
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(x,y,z)
+			end)
+				local player = game:GetService("Players").LocalPlayer
+				local ffc = game.FindFirstChild
+				local RNG = Random.new()
+				local network
+				local character,root,humanoid
+				do
+					local reg = (getreg or debug.getregistry)()
+					for i=1,#reg do
+						local f = reg[i]
+						if type(f)=="function" then
+							for k,v in next,getupvalues(f) do
+								if typeof(v)=="Instance" then
+									if v.Name=="CashOut" then
+										setupvalue(f,k,{MouseButton1Click={wait=function()end,Wait=function()end}})
+									elseif v.Name=="StickerName" then
+										setupvalue(f,k,nil)
+									end
+								end
+							end
+							if tostring(getfenv(f).script) == "Music" then
+								local consts = getconstants(f)
+								local loc=false
+								for ci,c in next,consts do
+									if c == "location changed" then
+										loc=true
+									elseif loc and c == "SendData" then
+										setconstant(f,ci,"ExplodeString")
+										break
+									end
+								end
+							end
+						elseif type(f)=="table" and rawget(f,"FireServer") and rawget(f,"BindEvents") then
+							network = f
+						end
+					end
+				end
+				assert(network,"failed to find network")
+				local function onCharacterAdded(char)
+					if not char then return end
+					character=char
+					root = character:WaitForChild("HumanoidRootPart")
+					humanoid = character:WaitForChild("Humanoid")
+					humanoid:SetStateEnabled("FallingDown",false)
+				end
+				onCharacterAdded(player.Character or player.CharacterAdded:Wait())
+				player.CharacterAdded:Connect(onCharacterAdded)
+			
+							local waiting = false
+							local waitingTick = 0
+				wait(0.2)
+				lastBox=nil
+				local j=0
+				local boxess = game:GetService("Workspace").AllBox:GetChildren()
+				for i=1,#boxess do
+					local box = boxess[i]
+					if box.Anchored==false and box.Position.Z < -940 or root.Position.Z > -900 then
+						box.CFrame = CFrame.new(-3361.37, -137.384, -2241.66)
+						network:FireServer("UpdateProperty", box, "CFrame", box.CFrame)
+						lastBox=box
+						j=j+1
+						if j>100 then break end
+					end
+				end
+				if lastBox then
+					waiting=true
+					waitingTick=tick()
+				end
+			
+				local j=0
+				local boxesss = game:GetService("Workspace").AllMountainDew:GetChildren()
+				for i=1,#boxesss do
+					local box = boxesss[i]
+					if box.Anchored==false and box.Position.Z < -940 or root.Position.Z > -900 then
+						box.CFrame = CFrame.new(-3361.37, -137.384, -2241.66)
+						network:FireServer("UpdateProperty", box, "CFrame", box.CFrame)
+						lastBox=box
+						j=j+1
+						if j>100 then break end
+					end
+				end
+				if lastBox then
+					waiting=true
+					waitingTick=tick()
+				end
+			
+				local j=0
+				local boxesssss = game:GetService("Workspace").BoxingRoom:GetChildren()
+				for i=1,#boxesssss do
+					local box = boxesssss[i]
+					if box.Anchored==false and box.Position.Z < -940 or root.Position.Z > -900 then
+						box.CFrame = CFrame.new(-3361.37, -137.384, -2241.66)
+						network:FireServer("UpdateProperty", box, "CFrame", box.CFrame)
+						lastBox=box
+						j=j+1
+						if j>100 then break end
+					end
+				end
+				if lastBox then
+					waiting=true
+					waitingTick=tick()
+				end
+
+				local j=0
+				local boxessss = game:GetService("Workspace").AllDough:GetChildren()
+				for i=1,#boxessss do
+					local box = boxessss[i]
+					if box.Anchored==false and box.Position.Z < -940 or root.Position.Z > -900 then
+						box.CFrame = CFrame.new(-3361.37, -137.384, -2241.66)
+						network:FireServer("UpdateProperty", box, "CFrame", box.CFrame)
+						lastBox=box
+						j=j+1
+						if j>100 then break end
+					end
+				end
+				if lastBox then
+					waiting=true
+					waitingTick=tick()
+				end
+			end
+		end
+	end    
+})
+Section1000:AddToggle({
+	Name = "Flood",
+	Default = false,
+	Callback = function(Value)
+
+		getgenv().gogo = Value
+		if getgenv().gogo == true then	
+			clearflooood(10)
+			print("start")
+local s = getgenv().Flooood
+local player = game:GetService("Players").LocalPlayer
+local ffc = game.FindFirstChild
+local RNG = Random.new()
+local network
+local character,root,humanoid
+do
+	local reg = (getreg or debug.getregistry)()
+	for i=1,#reg do
+		local f = reg[i]
+		if type(f)=="function" then
+		    for k,v in next,getupvalues(f) do
+				if typeof(v)=="Instance" then
+				    if v.Name=="CashOut" then
+					    setupvalue(f,k,{MouseButton1Click={wait=function()end,Wait=function()end}})
+				    elseif v.Name=="StickerName" then
+				        setupvalue(f,k,nil)
+				    end
+				end
+			end
+    		if tostring(getfenv(f).script) == "Music" then
+    		    local consts = getconstants(f)
+    		    local loc=false
+		        for ci,c in next,consts do
+		            if c == "location changed" then
+		                loc=true
+		            elseif loc and c == "SendData" then
+		                setconstant(f,ci,"ExplodeString")
+		                break
+		            end
+		        end
+    		end
+		elseif type(f)=="table" and rawget(f,"FireServer") and rawget(f,"BindEvents") then
+			network = f
+		end
+	end
+end
+assert(network,"failed to find network")
+local function onCharacterAdded(char)
+	if not char then return end
+	character=char
+	root = character:WaitForChild("HumanoidRootPart")
+	humanoid = character:WaitForChild("Humanoid")
+	humanoid:SetStateEnabled("FallingDown",false)
+end
+onCharacterAdded(player.Character or player.CharacterAdded:Wait())
+player.CharacterAdded:Connect(onCharacterAdded)
+
+			local waiting = false
+			local waitingTick = 0
+wait(0.2)
+local tt = 0
+repeat 
+wait(1.1)
+for _,P in next,game:GetService("Workspace").SupplyButtons:GetChildren() do
+wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = P.Unpressed.CFrame
+tt=tt+1
+if root.Position.Z > -900 or root.Position.Z < -900 then print("ok") end
+wait(0.1)
+lastBox=nil
+local j=0
+local boxes = workspace.AllSupplyBoxes:GetChildren()
+for i=1,#boxes do
+	local box = boxes[i]
+	if box.Anchored==false and box.Position.Z < -940 or root.Position.Z > -900 then
+		box.CFrame = CFrame.new(s.Position)
+		network:FireServer("UpdateProperty", box, "CFrame", box.CFrame)
+		lastBox=box
+		j=j+1
+		if j>100 then break end
+	end
+end
+if lastBox then
+	waiting=true
+	waitingTick=tick()
+end
+end
+if tt>80 then
+	OrionLib:MakeNotification({
+		Name = "Done",
+		Content = "The Room Flooded successfully" ,
+		Image = "rbxassetid://7733715400",
+		Time = 5
+	})	
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(s.Position)
+end
+until tt>80 or not getgenv().gogo
+end
+end    
+})
+
+function getPlayers()
+    local table1 = {};
+    for i, v in pairs((game:GetService("Players")):GetChildren()) do
+        table.insert(table1, v.Name);
+    end;
+    game.Players.PlayerAdded:Connect(function(a)
+        table.insert(table1, a.Name);
+    end);
+    game.Players.PlayerRemoving:Connect(function(a)
+        for i, v in pairs(table1) do
+            if v == a.Name then
+                table.remove(table1, i);
+            end;
+        end;
+    end);
+    return table1;
+end;
+
+nigggggggga = Section1000:AddDropdown({
+    Name = "Flood Player",
+    Default = nil,
+    Options = getPlayers(),
+    Flags = "Flag1",
+    Callback = function(Value)
+		clearflooood(10)
+        gogo(Value);
+    end
+});
+
+game.Players.PlayerAdded:Connect(function(a)
+    nigggggggga:Refresh(getPlayers(), true);
+end);
+
+game.Players.PlayerRemoving:Connect(function(a)
+    nigggggggga:Refresh(getPlayers(), true);
+end);
+
+Section1000:AddButton({
+	Name = "Flood Current Position",
+	Callback = function()
+		local myplar = game.Players.LocalPlayer.Character.HumanoidRootPart
+		local myplarcf = myplar.Position 
+		clearflooood(8)
+		print("start")
+local player = game:GetService("Players").LocalPlayer
+local ffc = game.FindFirstChild
+local RNG = Random.new()
+local network
+local character,root,humanoid
+do
+	local reg = (getreg or debug.getregistry)()
+	for i=1,#reg do
+		local f = reg[i]
+		if type(f)=="function" then
+		    for k,v in next,getupvalues(f) do
+				if typeof(v)=="Instance" then
+				    if v.Name=="CashOut" then
+					    setupvalue(f,k,{MouseButton1Click={wait=function()end,Wait=function()end}})
+				    elseif v.Name=="StickerName" then
+				        setupvalue(f,k,nil)
+				    end
+				end
+			end
+    		if tostring(getfenv(f).script) == "Music" then
+    		    local consts = getconstants(f)
+    		    local loc=false
+		        for ci,c in next,consts do
+		            if c == "location changed" then
+		                loc=true
+		            elseif loc and c == "SendData" then
+		                setconstant(f,ci,"ExplodeString")
+		                break
+		            end
+		        end
+    		end
+		elseif type(f)=="table" and rawget(f,"FireServer") and rawget(f,"BindEvents") then
+			network = f
+		end
+	end
+end
+assert(network,"failed to find network")
+local function onCharacterAdded(char)
+	if not char then return end
+	character=char
+	root = character:WaitForChild("HumanoidRootPart")
+	humanoid = character:WaitForChild("Humanoid")
+	humanoid:SetStateEnabled("FallingDown",false)
+end
+onCharacterAdded(player.Character or player.CharacterAdded:Wait())
+player.CharacterAdded:Connect(onCharacterAdded)
+
+			local waiting = false
+			local waitingTick = 0
+wait(0.2)
+local tt = 0
+repeat 
+wait(1.1)
+for _,P in next,game:GetService("Workspace").SupplyButtons:GetChildren() do
+wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = P.Unpressed.CFrame
+tt=tt+1
+if root.Position.Z > -900 or root.Position.Z < -900 then print("ok") end
+wait(0.1)
+lastBox=nil
+local j=0
+local boxes = workspace.AllSupplyBoxes:GetChildren()
+for i=1,#boxes do
+	local box = boxes[i]
+	if box.Anchored==false and box.Position.Z < -940 or root.Position.Z > -900 then
+		box.CFrame = CFrame.new(myplarcf)
+		network:FireServer("UpdateProperty", box, "CFrame", box.CFrame)
+		lastBox=box
+		j=j+1
+		if j>100 then break end
+	end
+end
+if lastBox then
+	waiting=true
+	waitingTick=tick()
+end
+end
+if tt>80 then
+	OrionLib:MakeNotification({
+		Name = "Done",
+		Content = "The Position Flooded successfully" ,
+		Image = "rbxassetid://7733715400",
+		Time = 5
+	})	
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(myplarcf)
+end
+until tt>80
+	end    
+})
+
+Section1000:AddButton({
+	Name = "Clear Flood",
+	Callback = function()
+		clearflooood(2)
+	end    
+})
+Section1:AddToggle({
+	Name = "LoopKill All",
+	Default = false,
+	Callback = function(Value)
+		_G.loopkill = (Value)
+		if _G.loopkill then
+			loopkillll()
+		end
+	end    
+})
+Section999:AddToggle({
+	Name = "Break Jobs",
+	Default = false,
+	Callback = function(Value)
+		getgenv().loopwork = (Value)
+		if getgenv().loopwork then
+			while true do 
+	local mmteam = game:GetService("Teams").Manager
+	local mmm = mmteam:GetPlayers()[1]
+	if game.Players.LocalPlayer == mmm then
+						pcall(function()
+							wait(1)
+							local olddcf = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+							game.Players.LocalPlayer.Character.Humanoid.Jump = true
+							wait(0.1)
+							game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(12.021945, 4.15790749, 20.940649, -0.0561759323, 9.90757343e-09, 0.998420894, -2.43629792e-08, 1, -1.12940217e-08, -0.998420894, -2.49589593e-08, -0.0561759323)
+							wait(0.7)
+							game.Players.LocalPlayer.Character.Humanoid.Jump = true
+							wait(2)
+							game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = olddcf
+						end)
+						job("Cashier")
+						wait()
+						job("Cook")
+						wait(0)
+						job("Pizza Boxer")
+						wait()
+						job("Delivery")
+						wait()
+						job("Supplier")
+						wait(0)
+						job("On Break")
+						if getgenv().loopwork == false then
+							break
+						end	
+					else
+						job("Cashier")
+						wait()
+						job("Cook")
+						wait(0)
+						job("Pizza Boxer")
+						wait()
+						job("Delivery")
+						wait()
+						job("Supplier")
+						wait(0)
+						job("On Break")
+						if getgenv().loopwork == false then
+							break
+						end
+				end
+			end
+		end
+	end    
+})
+Section1:AddToggle({
+	Name = "Anti-Oven Fire",
+	Default = false,
+	Callback = function(Value)
+		getgenv().togglefire = (Value)
+		if getgenv().togglefire then
+			nofire()
+		end
+	end    
+})
+Section1:AddToggle({
+	Name = "Spam Snowball",
+	Default = false,
+	Callback = function(Value)
+		getgenv().loopp = Value
+			if loopp then 
+				OrionLib:MakeNotification({
+					Name = "Note",
+					Content = "You Need SnowBall",
+					Image = "rbxassetid://4483345998",
+					Time = 5
+				})			
+			while loopp do 
+			wait(0)
+			pcall(function()
+				for _,P in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+					local args = {
+					[1] = "GiveItem",
+					[2] = 19328185
+					}
+
+					game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+					if P.Name == "Snowball" then
+						game.Players.LocalPlayer.Character.Humanoid:EquipTool(P)
+						local mouse = game.Players.LocalPlayer:GetMouse()
+						local A_2 = 
+						{
+						[1] = mouse.Hit.p
+						}
+						game:GetService("Players").LocalPlayer.Character.Snowball.Clicked:FireServer(unpack(A_2))
+						game.Players.LocalPlayer.Character:FindFirstChildOfClass('Humanoid'):UnequipTools()
+                                                local args = {
+                            [1] = "RemoveGear",
+                            [2] = game:GetService("Players").LocalPlayer.Backpack.Snowball
+                        }
+
+                        game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+                        break 
+					end
+				end
+                end)
+			end
+		end
+	end    
+})
+Section1:AddToggle({
+	Name = "Spam Guitar Sound",
+	Default = false,
+	Callback = function(Value)
+			getgenv().musicc = Value 
+			local tablee = {'b','c','z','m','v','x'}
+	if game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R6 then
+		if musicc then
+			OrionLib:MakeNotification({
+				Name = "Note",
+				Content = "You Need Rockin' Pink Guitar",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})				
+		local yesg ,nog = pcall(function() 
+		local args = {
+			[1] = "GiveItem",
+			[2] = 193771176
+		}
+		game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+		wait(1)
+		local nigggggggggggggggggggggggga = game:GetService("Workspace")[game.Players.LocalPlayer.Name]["Rockin' Pink Guitar"]
+		end)
+		while musicc do
+		wait(0)
+			pcall(function()
+			for _,P in ipairs(tablee) do 
+				if getgenv().musicc and yesg then
+				local args = {
+					[1] = "KeyPress",
+					[2] = {
+						["Key"] = P,
+						["Down"] = true
+					}
+				}
+				game:GetService("Players").LocalPlayer.Character:FindFirstChild("Rockin' Pink Guitar").ServerControl:InvokeServer(unpack(args))
+				end
+			end
+		end)
+	end
+end
+elseif game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R15 and musicc then
+		OrionLib:MakeNotification({
+			Name = "Erorr",
+			Content = "You Must Be R6",
+			Image = "rbxassetid://7733765224",
+			Time = 5
+		})
+	end
+end   
+})
+Section999:AddToggle({
+	Name = "Unanchored Tress",
+	Default = false,
+	Callback = function(Value)
+		getgenv().nhekee = (Value)
+		if getgenv().nhekee then
+						while true do 
+						wait(.50)
+						if getgenv().nhekee then 
+						pcall(function()for j,k in pairs(game.Workspace.Trees:GetDescendants()) do
+						if k.Name=="Tree"or k.Name=="DeadTree"then 
+						workspace.Main.UprootTree:FireServer(k)
+						end 
+					end 
+					end)
+				end 
+			end 
+		end
+	end    
+})
+Section999:AddButton({
+	Name = "Flinger Parts",
+	Callback = function()
+		loadstring(game:HttpGet(('https://pastebin.com/raw/hWVMtmkt'),true))()
+  	end    
+})
+Section999:AddParagraph("Flinger Parts Notes","It's Not Stopable and when you die you will be attracted to the Parts tornado and sometimes it's laggy,Press E to control it's Position")
+function shot(s)
+	if getgenv().looppshot then 
+	OrionLib:MakeNotification({
+	Name = "Note",
+	Content = "You Need SnowBall",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+	})			
+	while getgenv().looppshot do 
+	wait(0)
+	pcall(function()
+	for _,P in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+	local args = {
+	[1] = "GiveItem",
+	[2] = 19328185
+	}
+	
+	game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+	if P.Name == "Snowball" then
+	game.Players.LocalPlayer.Character.Humanoid:EquipTool(P)
+	local x = game.Players[s].Character.HumanoidRootPart.Position.X
+	local y = game.Players[s].Character.HumanoidRootPart.Position.Y
+	local z = game.Players[s].Character.HumanoidRootPart.Position.Z
+	local args = {
+		[1] = Vector3.new(x,y,z)
+	}
+	
+	game:GetService("Players").LocalPlayer.Character.Snowball.Clicked:FireServer(unpack(args))
+	game.Players.LocalPlayer.Character:FindFirstChildOfClass('Humanoid'):UnequipTools()
+						local args = {
+	[1] = "RemoveGear",
+	[2] = game:GetService("Players").LocalPlayer.Backpack.Snowball
+	}
+	
+	game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+	break 
+	end
+	end
+	end)
+	end
+	end
+	end
+	function getPlayesrs()
+		local table1 = {};
+		for i, v in pairs((game:GetService("Players")):GetChildren()) do
+			if v.Name ~= game.Players.LocalPlayer.Name then
+			table.insert(table1, v.Name);
+			end
+		end;
+		game.Players.PlayerAdded:Connect(function(a)
+			table.insert(table1, a.Name);
+		end);
+		game.Players.PlayerRemoving:Connect(function(a)
+			for i, v in pairs(table1) do
+				if v == a.Name then
+					table.remove(table1, i);
+				end;
+			end;
+		end);
+		return table1;
+		end;
+		
+		loopshmtaaa = Section1:AddDropdown({
+		Name = "Loop Shoot",
+		Default = nil,
+		Options = getPlayesrs(),
+		Flags = "Flag1",
+		Callback = function(Value)
+			shot(Value);
+		end
+		});
+		
+		game.Players.PlayerAdded:Connect(function(a)
+			loopshmtaaa:Refresh(getPlayesrs(), true);
+		end);
+		
+		game.Players.PlayerRemoving:Connect(function(a)
+			loopshmtaaa:Refresh(getPlayesrs(), true);
+		end);
+function getPlayers()
+local table1 = {};
+for i, v in pairs((game:GetService("Players")):GetChildren()) do
+    table.insert(table1, v.Name);
+end;
+game.Players.PlayerAdded:Connect(function(a)
+    table.insert(table1, a.Name);
+end);
+game.Players.PlayerRemoving:Connect(function(a)
+    for i, v in pairs(table1) do
+        if v == a.Name then
+            table.remove(table1, i);
+        end;
+    end;
+end);
+return table1;
+end;
+
+loopklatwat = Section1:AddDropdown({
+Name = "LoopKill",
+Default = nil,
+Options = getPlayers(),
+Flags = "Flag1",
+Callback = function(Value)
+    kill(Value);
+end
+});
+
+game.Players.PlayerAdded:Connect(function(a)
+    loopklatwat:Refresh(getPlayers(), true);
+end);
+
+game.Players.PlayerRemoving:Connect(function(a)
+    loopklatwat:Refresh(getPlayers(), true);
+end);
+function getPlayers()
+    local table1 = {};
+    for i, v in pairs((game:GetService("Players")):GetChildren()) do
+        table.insert(table1, v.Name);
+    end;
+    game.Players.PlayerAdded:Connect(function(a)
+        table.insert(table1, a.Name);
+    end);
+    game.Players.PlayerRemoving:Connect(function(a)
+        for i, v in pairs(table1) do
+            if v == a.Name then
+                table.remove(table1, i);
+            end;
+        end;
+    end);
+    return table1;
+    end;
+    
+    loopshmta = Section1:AddDropdown({
+    Name = "Kill",
+    Default = nil,
+    Options = getPlayers(),
+    Flags = "Flag1",
+    Callback = function(Value)
+        die(Value);
+    end
+    });
+    
+    game.Players.PlayerAdded:Connect(function(a)
+        loopshmta:Refresh(getPlayers(), true);
+    end);
+    
+    game.Players.PlayerRemoving:Connect(function(a)
+        loopshmta:Refresh(getPlayers(), true);
+    end);
+    function getPlayersbb()
+        local table1 = {};
+		for i, v in pairs((game:GetService("Players")):GetChildren()) do
+			if v.Name ~= game.Players.LocalPlayer.Name then
+			table.insert(table1, v.Name);
+			end;
+		end;
+        game.Players.PlayerAdded:Connect(function(a)
+            table.insert(table1, a.Name);
+        end);
+        game.Players.PlayerRemoving:Connect(function(a)
+            for i, v in pairs(table1) do
+                if v == a.Name then
+                    table.remove(table1, i);
+                end;
+            end;
+        end);
+        return table1;
+        end;
+        
+        loopb = Section1:AddDropdown({
+        Name = "Bring",
+        Default = nil,
+        Options = getPlayersbb(),
+        Flags = "Flag1",
+        Callback = function(Value)
+            bring(Value);
+        end
+        });
+        
+        game.Players.PlayerAdded:Connect(function(a)
+            loopb:Refresh(getPlayersbb(), true);
+        end);
+        
+        game.Players.PlayerRemoving:Connect(function(a)
+            loopb:Refresh(getPlayersbb(), true);
+        end);
+        function getPlayersk()
+            local table1 = {};
+            for i, v in pairs((game:GetService("Players")):GetChildren()) do
+				if v.Name ~= game.Players.LocalPlayer.Name then
+                table.insert(table1, v.Name);
+				end;
+            end;
+            game.Players.PlayerAdded:Connect(function(a)
+                table.insert(table1, a.Name);
+            end);
+            game.Players.PlayerRemoving:Connect(function(a)
+                for i, v in pairs(table1) do
+                    if v == a.Name then
+                        table.remove(table1, i);
+                    end;
+                end;
+            end);
+            return table1;
+            end;
+            
+            loopk = Section1:AddDropdown({
+            Name = "Kick",
+            Default = nil,
+            Options = getPlayersk(),
+            Flags = "Flag1",
+            Callback = function(Value)
+                kickk(Value);
+            end
+            });
+            
+            game.Players.PlayerAdded:Connect(function(a)
+                loopk:Refresh(getPlayersk(), true);
+            end);
+            
+            game.Players.PlayerRemoving:Connect(function(a)
+                loopk:Refresh(getPlayersk(), true);
+            end);
+			function getPlayersvv()
+				local table1 = {};
+				for i, v in pairs((game:GetService("Players")):GetChildren()) do
+					if v.Name ~= game.Players.LocalPlayer.Name then
+					table.insert(table1, v.Name);
+					end;
+				end;
+				game.Players.PlayerAdded:Connect(function(a)
+					table.insert(table1, a.Name);
+				end);
+				game.Players.PlayerRemoving:Connect(function(a)
+					for i, v in pairs(table1) do
+						if v == a.Name then
+							table.remove(table1, i);
+						end;
+					end;
+				end);
+				return table1;
+				end;
+				
+				loopb = Section1:AddDropdown({
+				Name = "Void",
+				Default = nil,
+				Options = getPlayersvv(),
+				Flags = "Flag1",
+				Callback = function(Value)
+					void(Value);
+				end
+				});
+				game.Players.PlayerAdded:Connect(function(a)
+					loopb:Refresh(getPlayersvv(), true);
+				end);
+				
+				game.Players.PlayerRemoving:Connect(function(a)
+					loopb:Refresh(getPlayersvv(), true);
+				end);
+Section1:AddToggle({
+	Name = "Sword Dick",
+	Default = false,
+	Callback = function(Value)
+		getgenv().loopdick = Value
+		gogogogogo = Value
+		if gogogogogo then
+			local tt,bb = pcall(function()
+			local ttt = game.Players.LocalPlayer.Character["Linked Sword"]
+			end)
+			if tt then
+				while loopdick do
+				wait(1)
+				local speaker = game.Players.LocalPlayer
+					for i,v in pairs(speaker.Character:GetDescendants()) do
+						if v:IsA("Tool") and v.Name == 'Linked Sword' then
+							v.Parent = speaker:FindFirstChildOfClass("Backpack")
+							v.GripPos = Vector3.new(1.3,1.3,0)
+							v.GripUp = Vector3.new(1,0,0)
+							v.Parent = game.Players.LocalPlayer.Character
+						end
+					end
+				end
+			else
+			game.StarterGui:SetCore("SendNotification", {
+			Title = 'Warning';
+			Text = 'You Must Equip Linked Sword';
+			Duration = tonumber(s);
+			})
+			end
+		end
+	end    
+})
+Section1:AddTextbox({
+	Name = "Spamming",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+		spamchat(Value)
+	end	  
+})
+	local Sectionn = Tab1:AddSection({
+		Name = "Places"
+	})
+	local Sectionn1 = Tab1:AddSection({
+		Name = "Houses"
+	})
+	Sectionn:AddButton({
+		Name = "Pizza Place",
+		Callback = function()
+				game.Players.LocalPlayer.Character.Humanoid.Sit = false wait(0)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(47.5156822, 3.39999986, 180.521423, -0.999902606, -6.71110456e-08, -0.013957737, -6.75492018e-08, 1, 3.09202299e-08, 0.013957737, 3.18600542e-08, -0.999902606)
+		  end    
+	})
+	Sectionn:AddButton({
+		Name = "Manager",
+		Callback = function()
+				game.Players.LocalPlayer.Character.Humanoid.Sit = false wait(0)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(23.7000046, 3.99943972, 6.49999714, 0, 0, -1, 0, 1, 0, 1, 0, 0)		  end    
+	})
+	Sectionn:AddButton({
+		Name = "Cashier",
+		Callback = function()
+			game.Players.LocalPlayer.Character.Humanoid.Sit = false wait(0)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(48.7688637, 3.80013275, 83.4540176, -0.999629438, 7.68796315e-09, -0.0272203144, 6.77972389e-09, 1, 3.34585231e-08, 0.0272203144, 3.32615784e-08, -0.999629438)		  end    
+	})
+	Sectionn:AddButton({
+		Name = "Cook",
+		Callback = function()
+				game.Players.LocalPlayer.Character.Humanoid.Sit = false wait(0)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(37.2986145, 3.80013251, 53.9788589, 0.999795139, 1.93232736e-08, 0.0202401802, -2.13961346e-08, 1, 1.02196637e-07, -0.0202401802, -1.02608759e-07, 0.999795139)
+        end
+	})
+	Sectionn:AddButton({
+		Name = "Pizza Boxer",
+		Callback = function()
+				game.Players.LocalPlayer.Character.Humanoid.Sit = false wait(0)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(59.6407433, 3.79999876, 12.6022568, 0.0205270033, 4.7221782e-10, -0.999789298, 2.75663012e-08, 1, 1.03829012e-09, 0.999789298, -2.75818053e-08, 0.0205270033)
+        end
+	})
+	Sectionn:AddButton({
+		Name = "Delivery",
+		Callback = function()
+				game.Players.LocalPlayer.Character.Humanoid.Sit = false wait(0)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(65.0779724, 3.79999971, -15.9317455, -0.999912083, -5.61362725e-08, -0.013261714, -5.70507872e-08, 1, 6.85807038e-08, 0.013261714, 6.93312643e-08, -0.999912083)
+        end
+	})
+	Sectionn:AddButton({
+		Name = "Supplier",
+		Callback = function()
+				game.Players.LocalPlayer.Character.Humanoid.Sit = false wait(0)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(6.899405, 12.9999971, -1021.67218, 0.999892592, 3.05600145e-09, -0.0146541819, -4.21559943e-09, 1, -7.9099955e-08, 0.0146541819, 7.91532386e-08, 0.999892592)
+        end
+	})
+	Sectionn:AddButton({
+		Name = "The Dump",
+		Callback = function()
+				game.Players.LocalPlayer.Character.Humanoid.Sit = false wait(0)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(18.8001709, 3.3999989, -182.028351, -0.000691619702, -7.08453243e-08, -0.999999762, -1.13600249e-08, 1, -7.08374799e-08, 0.999999762, 1.13110294e-08, -0.000691619702)
+        end
+	})
+	Sectionn:AddButton({
+		Name = "Treasure Island",
+		Callback = function()
+				game.Players.LocalPlayer.Character.Humanoid.Sit = false wait(0)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1752.65332, 120.382248, -1315.87292, -0.770880282, -5.39456213e-09, -0.636979997, -5.5675704e-09, 1, -1.73103032e-09, 0.636979997, 2.21201391e-09, -0.770880282)
+        end
+	})
+	Sectionn:AddButton({
+		Name = "Sand Island",
+		Callback = function()
+				game.Players.LocalPlayer.Character.Humanoid.Sit = false wait(0)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1522.68555, 0.391000211, 1344.08472, -0.0632253736, 1.06312807e-08, -0.997999251, 3.52120857e-08, 1, 8.4218339e-09, 0.997999251, -3.46091618e-08, -0.0632253736)
+        end
+	})
+	Sectionn:AddButton({
+		Name = "Pirates Island",
+		Callback = function()
+				game.Players.LocalPlayer.Character.Humanoid.Sit = false wait(0)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1068.78552, 41.3198051, 707.481812, 0.187428862, -5.13435232e-08, -0.982278168, -5.59526896e-08, 1, -6.29461923e-08, 0.982278168, 6.67590427e-08, 0.187428862)
+        end
+	})
+	Sectionn1:AddButton({
+		Name = "My House",
+		Callback = function()
+			if check then
+						game.Players.LocalPlayer.Character.Humanoid.Sit = false wait(0)
+                local myhome = check.Parent:FindFirstChild("Doors", true)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = myhome.Parent.GivePizza.CFrame
+             end 
+        end
+	})
+	Sectionn1:AddButton({
+		Name = "C1",
+		Callback = function()
+				game.Players.LocalPlayer.Character.Humanoid.Sit = false wait(0)
+			local house = game:GetService("Workspace").Houses.House1:FindFirstChild("Doors", true)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = house.Parent.GivePizza.CFrame       
+		end
+	})
+	Sectionn1:AddButton({
+		Name = "C2",
+		Callback = function()
+				game.Players.LocalPlayer.Character.Humanoid.Sit = false wait(0)
+			local house = game:GetService("Workspace").Houses.House5:FindFirstChild("Doors", true)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = house.Parent.GivePizza.CFrame        
+		end
+	})
+	Sectionn1:AddButton({
+		Name = "C3",
+		Callback = function()
+				game.Players.LocalPlayer.Character.Humanoid.Sit = false wait(0)
+			local house = game:GetService("Workspace").Houses.House9:FindFirstChild("Doors", true)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = house.Parent.GivePizza.CFrame         
+		end
+	})
+	Sectionn1:AddButton({
+		Name = "B1",
+		Callback = function()
+				game.Players.LocalPlayer.Character.Humanoid.Sit = false wait(0)
+			local house = game:GetService("Workspace").Houses.House2:FindFirstChild("Doors", true)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = house.Parent.GivePizza.CFrame         
+		end
+	})
+	Sectionn1:AddButton({
+		Name = "B2",
+		Callback = function()
+				game.Players.LocalPlayer.Character.Humanoid.Sit = false wait(0)
+			local house = game:GetService("Workspace").Houses.House3:FindFirstChild("Doors", true)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = house.Parent.GivePizza.CFrame         
+		end
+	})
+	Sectionn1:AddButton({
+		Name = "B3",
+		Callback = function()
+				game.Players.LocalPlayer.Character.Humanoid.Sit = false wait(0)
+			local house = game:GetService("Workspace").Houses.House6:FindFirstChild("Doors", true)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = house.Parent.GivePizza.CFrame        
+		end
+	})
+	Sectionn1:AddButton({
+		Name = "B4",
+		Callback = function()
+				game.Players.LocalPlayer.Character.Humanoid.Sit = false wait(0)
+			local house = game:GetService("Workspace").Houses.House7:FindFirstChild("Doors", true)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = house.Parent.GivePizza.CFrame         
+		end
+	})
+	Sectionn1:AddButton({
+		Name = "B5",
+		Callback = function()
+				game.Players.LocalPlayer.Character.Humanoid.Sit = false wait(0)
+			local house = game:GetService("Workspace").Houses.House10:FindFirstChild("Doors", true)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = house.Parent.GivePizza.CFrame         
+		end
+	})
+	Sectionn1:AddButton({
+		Name = "B6",
+		Callback = function()
+				game.Players.LocalPlayer.Character.Humanoid.Sit = false wait(0)
+			local house = game:GetService("Workspace").Houses.House11:FindFirstChild("Doors", true)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = house.Parent.GivePizza.CFrame        
+		end
+	})
+	Sectionn1:AddButton({
+		Name = "A1",
+		Callback = function()
+				game.Players.LocalPlayer.Character.Humanoid.Sit = false wait(0)
+			local house = game:GetService("Workspace").Houses.House4:FindFirstChild("Doors", true)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = house.Parent.GivePizza.CFrame        
+		end
+	})
+	Sectionn1:AddButton({
+		Name = "A2",
+		Callback = function()
+				game.Players.LocalPlayer.Character.Humanoid.Sit = false wait(0)
+			local house = game:GetService("Workspace").Houses.House8:FindFirstChild("Doors", true)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = house.Parent.GivePizza.CFrame         
+		end
+	})
+	Sectionn1:AddButton({
+		Name = "A3",
+		Callback = function()
+				game.Players.LocalPlayer.Character.Humanoid.Sit = false wait(0)
+			local house = game:GetService("Workspace").Houses.House12:FindFirstChild("Doors", true)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = house.Parent.GivePizza.CFrame        
+		end
+	})
+	Tap0:AddButton({
+		Name = "Auto Farm V1",
+		Callback = function()
+			loadstring(game:HttpGet(('https://pastebin.com/raw/z8iTq4ts'),true))()
+		end
+	})
+		Tap0:AddButton({
+		Name = "Auto Farm V2",
+		Callback = function()
+			loadstring(game:HttpGet("https://pastebin.com/raw/tLqnPLN3",true))()
+		end
+	})
+	Tap0:AddButton({
+		Name = "Be Manager",
+		Callback = function()
+			kick()
+		end
+	})
+	Tab989:AddButton({
+		Name = "Bring Car",
+		Callback = function()
+			bringvc()
+		  end    
+	})
+	Tab989:AddButton({
+		Name = "Bring Truck",
+		Callback = function()
+			local Players = game:GetService("Players")
+			local player = Players.LocalPlayer
+			local humanoid = player.Character.Humanoid
+				if not game:GetService("Workspace").Trucks:IsAncestorOf(humanoid.SeatPart) then
+					humanoid.Sit=false
+					wait(0.1)
+					for _,car in ipairs(game:GetService("Workspace").Trucks:GetChildren()) do
+						if car:FindFirstChild("Driver") and car.Driver.Occupant==nil and car:FindFirstChild("Passenger") and car.Passenger.Occupant==nil then
+					for _,o in ipairs(car:GetChildren()) do 
+					if o:IsA("VehicleSeat") or o:IsA("Part") then
+					o.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position)
+					local parent = o.Parent
+					parent.LeftDoor.ClickDetector.Detector:FireServer()
+					end
+					end   
+							if true then
+								break
+							end
+						end
+					end    
+				end
+		  end    
+	})
+	Tap0:AddButton({
+		Name = "Get Delivery Bike",
+		Callback = function()
+			pcall(function()
+				    game:GetService("Workspace").Buy.DeliveryBike.Name = "DeliveryBike1"
+				end)
+				wait(0.1)
+                    local notwork,workk = pcall(function()
+                    local yes = game:FindFirstChild("DeliveryBike", true)
+                    if yes:IsA("Tool") then
+                    yes:Clone().Parent = game.Players.LocalPlayer.Backpack
+                    end
+                end)
+                if workk then
+                    OrionLib:MakeNotification({
+                        Name = "Error",
+                        Content = "There is no one in the game have the DeliveryBike",
+                        Image = "rbxassetid://7733765224",
+                        Time = 5
+                    })
+                end
+				wait(0.1)
+				pcall(function()
+					game:GetService("Workspace").Buy.DeliveryBike1.Name = "DeliveryBike"
+				end)
+		end
+	})
+	Tab989:AddButton({
+		Name = "Advanced Cars Painter",
+		Callback = function()
+			loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/advancecolor'),true))()
+        end
+	})
+	Tab989:AddToggle({
+		Name = "RainbowCars",
+		Default = false,
+		Callback = function(Value)
+			getgenv().loopcolor = (Value)
+			if getgenv().loopcolor then
+				spamcolor()
+			end
+		end    
+	})
+	Tab989:AddButton({
+		Name = "Show Speed Counter",
+		Callback = function()
+			if game:GetService("CoreGui").RobloxGui.VehicleHudFrame.Visible == false then 
+			game:GetService("CoreGui").RobloxGui.VehicleHudFrame.Visible = true
+			OrionLib:MakeNotification({
+			Name = "Done",
+			Content = "Speed Counter Enabled,to Disable it Press The Same Button",
+			Image = "rbxassetid://7733715400",
+			Time = 5
+			})
+			elseif game:GetService("CoreGui").RobloxGui.VehicleHudFrame.Visible == true then
+			game:GetService("CoreGui").RobloxGui.VehicleHudFrame.Visible = false
+			OrionLib:MakeNotification({
+			Name = "Done",
+			Content = "Speed Counter Disabled,to Enable it Press The Same Button",
+			Image = "rbxassetid://7733715400",
+			Time = 5
+			})
+			end
+		  end    
+	})
+	Tap0:AddButton({
+		Name = "Anti-Afk",
+		Callback = function()
+			wait(0.5)local ba=Instance.new("ScreenGui")
+            local ca=Instance.new("TextLabel")local da=Instance.new("Frame")
+            local _b=Instance.new("TextLabel")local ab=Instance.new("TextLabel")ba.Parent=game.CoreGui
+            ba.ZIndexBehavior=Enum.ZIndexBehavior.Sibling;ca.Parent=ba;ca.Active=true
+            ca.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)ca.Draggable=true
+            ca.Position=UDim2.new(0.698610067,0,0.098096624,0)ca.Size=UDim2.new(0,304,0,52)
+            ca.Font=Enum.Font.SourceSansSemibold;ca.Text="Anti Afk Script"ca.TextColor3=Color3.new(0,1,1)
+            ca.TextSize=22;da.Parent=ca
+            da.BackgroundColor3=Color3.new(0.196078,0.196078,0.196078)da.Position=UDim2.new(0,0,1.0192306,0)
+            da.Size=UDim2.new(0,304,0,107)_b.Parent=da
+            _b.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)_b.Position=UDim2.new(0,0,0.800455689,0)
+            _b.Size=UDim2.new(0,304,0,21)_b.Font=Enum.Font.Arial;_b.Text="Made by 515_FM"
+            _b.TextColor3=Color3.new(1,1,1)_b.TextSize=20;ab.Parent=da
+            ab.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)ab.Position=UDim2.new(0,0,0.158377379,0)
+            ab.Size=UDim2.new(0,304,0,44)ab.Font=Enum.Font.ArialBold;ab.Text="Status: Script Started"
+            ab.TextColor3=Color3.new(1,1,1)ab.TextSize=20;local bb=game:service'VirtualUser'
+            game:service'Players'.LocalPlayer.Idled:connect(function()
+            bb:CaptureController()bb:ClickButton2(Vector2.new())
+            ab.Text="You went idle and ROBLOX tried to kick you but we reflected it!"wait(2)ab.Text="Script Re-Enabled"end)
+		end
+	})
+	Tap0:AddButton({
+		Name = "Dick",
+		Callback = function()
+                local mybadassplr = game:GetService("Workspace")[game.Players.LocalPlayer.Name]
+                local ripp, errorripp = pcall(function()
+                if mybadassplr["LavanderHair"] and mybadassplr["BrownCharmerHair"] and mybadassplr["Pal Hair"] and mybadassplr["WDW_FoamFinger"] and game:GetService("Workspace")[game.Players.LocalPlayer.name]["Right Leg"] then
+                    loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/pp%20script'),true))()
+                end
+            end)
+            if errorripp then
+            workspace.MessageService.Dialog.Dialog:Fire("Warning","You Must Wear Specific Clothes And Be R6,Clothes Link In ur Clipboard","ok","",true,true)
+            setclipboard("https://www.roblox.com/catalog/451220849/Lavender-Updo , https://www.roblox.com/catalog/376548738/Brown-Charmer-Hair , https://www.roblox.com/catalog/63690008/Pal-Hair , https://www.roblox.com/catalog/6470135113/Fan-Hand-Sign-Why-Dont-We-WDW")
+            end
+		end
+	})
+	Tap0:AddButton({
+		Name = "Eat Hats",
+		Callback = function()
+			for i, v in pairs(char:GetChildren()) do
+				if v:IsA("BallSocketConstraint") then
+					v:Destroy()
+				end
+			end
+			
+			for i, v in pairs(char:GetChildren()) do
+				if v:IsA("HingeConstraint") then
+					v:Destroy()
+				end
+			end
+			
+			for i, v in pairs(char.Humanoid:GetAccessories()) do
+			local hat = v.Name
+			
+			char[hat].Archivable = true
+			local fake = char[hat]:Clone()
+			fake.Parent = char
+			fake.Handle.Transparency = 1
+			
+			local hold = false
+			local enabled = false
+			
+			char[hat].Handle.AccessoryWeld:Destroy()
+			
+			local tool = Instance.new("Tool", lp.Backpack)
+			tool.RequiresHandle = true
+			tool.CanBeDropped = false
+			tool.Name = hat
+			
+			local handle = Instance.new("Part", tool)
+			handle.Name = "Handle"
+			handle.Size = Vector3.new(1, 1, 1)
+			handle.Massless = true
+			handle.Transparency = 1
+			
+			local positions = {
+				forward = tool.GripForward,
+				pos = tool.GripPos,
+				right = tool.GripRight,
+				up = tool.GripUp
+			}
+			
+			tool.Equipped:connect(function()
+			 hold = true
+			end)
+			
+			tool.Unequipped:connect(function()
+			   hold = false
+			end)
+			
+			tool.Activated:connect(function()
+				if enabled == false then
+					enabled = true
+					tool.GripForward = Vector3.new(-0.976,0,-0.217)
+				tool.GripPos = Vector3.new(.95,-0.76,1.4)
+				tool.GripRight = Vector3.new(0.217,0, 0.976)
+				tool.GripUp = Vector3.new(0,1,0)
+				wait(.8)
+				tool.GripForward = positions.forward
+				tool.GripPos = positions.pos
+				tool.GripRight = positions.right
+				tool.GripUp = positions.up
+				enabled = false
+				end
+			end)
+			
+			game:GetService("RunService").Heartbeat:connect(function()
+				pcall(function()
+				   char[hat].Handle.Velocity = Vector3.new(30, 0, 0)
+			if hold == false then
+				char[hat].Handle.CFrame = fake.Handle.CFrame
+			elseif hold == true then
+				char[hat].Handle.CFrame = handle.CFrame
+				end
+			end)
+			end)
+			end
+		end
+	})
+	function getPlayrs()
+		local table1 = {};
+		for i, v in pairs((game:GetService("Players")):GetChildren()) do
+			if v.Name ~= game.Players.LocalPlayer.Name then
+			table.insert(table1, v.Name);
+		end;
+	end;
+		game.Players.PlayerAdded:Connect(function(a)
+			table.insert(table1, a.Name);
+		end);
+		game.Players.PlayerRemoving:Connect(function(a)
+			for i, v in pairs(table1) do
+				if v == a.Name then
+					table.remove(table1, i);
+				end;
+			end;
+		end);
+		return table1;
+		end;
+		
+		Bommber = Section424:AddDropdown({
+		Name = "Target",
+		Default = nil,
+		Options = getPlayrs(),
+		Flags = "Flag1",
+		Callback = function(Value)
+			getgenv().targetname = Value
+		end
+		});
+		
+		game.Players.PlayerAdded:Connect(function(a)
+			Bommber:Refresh(getPlayrs(), true);
+		end);
+		
+		game.Players.PlayerRemoving:Connect(function(a)
+			Bommber:Refresh(getPlayrs(), true);
+		end);
+		Section424:AddButton({
+		Name = "Refreash Selector",
+		Callback = function()
+				  Bommber:Refresh(getPlayrs(), true);
+		  end    
+	})
+		Section524:AddButton({
+		Name = "Notfiy Target Moneyz",
+		Callback = function()
+				  OrionLib:MakeNotification({
+					Name = "Target Cash Info",
+					Content = getgenv().targetname .. " have " ..  game.Players[getgenv().targetname].Moneyz.Value,
+					Image = "rbxassetid://7734068321",
+					Time = 5
+				})
+		  end    
+		})
+		Section524:AddButton({
+		Name = "Teleport To",
+		Callback = function()
+			goto(getgenv().targetname)
+		  end    
+	})
+		Section524:AddButton({
+		Name = "View",
+		Callback = function()
+			if getgenv().done then
+			view(getgenv().targetname)
+			getgenv().done = false
+			else
+			view(game.Players.LocalPlayer.Name)
+			getgenv().done = true 
+			end 
+		end    
+		})
+		Section524:AddButton({
+		Name = "Kick",
+		Callback = function()
+				  kickk(getgenv().targetname)
+		  end    
+		})
+			Section524:AddButton({
+		Name = "Bring",
+		Callback = function()
+				  bring(getgenv().targetname)
+		  end    
+		})
+			Section524:AddButton({
+		Name = "Void",
+		Callback = function()
+				  void(getgenv().targetname)
+		  end    
+		})
+		Section524:AddButton({
+		Name = "Kill",
+		Callback = function()
+			die(getgenv().targetname)
+		end    
+		})
+		Section524:AddToggle({
+		Name = "LoopKill",
+		Default = false,
+		Callback = function(Value)
+			getgenv().kill = Value
+			if getgenv().kill then
+			kill(getgenv().targetname)
+			end
+		end    
+		})
+		Section524:AddToggle({
+		Name = "LoopShot Snowball",
+		Default = false,
+		Callback = function(Value)
+			getgenv().looppshot = Value
+			shot(getgenv().targetname)
+		end    
+		})
+	
+	Tap0:AddButton({
+		Name = "Infinite Yiled",
+		Callback = function()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+		end
+	})
+	Tap0:AddButton({
+		Name = "No Right Arm",
+		Callback = function()
+			local success, errormessage = pcall(function()
+
+				game.Players.LocalPlayer.Character["Right Arm"]:Destroy()
+				
+				end)
+				
+				local done, nice = pcall(function()
+				
+				game.Players.LocalPlayer.Character.RightUpperArm:Destroy()
+				
+				end)
+				
+				if done or success then
+				
+				print('done')
+				
+				elseif nice or errormessage then
+				
+				workspace.MessageService.Dialog.Dialog:Fire("Warning","You Have Already Deleted Your Arm","Sorry","",true,true)
+				
+				
+				end
+		end
+	})
+	Tap0:AddButton({
+		Name = "NoKrustyKrab",
+		Callback = function()
+			local success, errormessage = pcall(function()
+				game:GetService("Workspace").KrustyKrab:Destroy()
+				end)
+				if errormessage then 
+					workspace.MessageService.Dialog.Dialog:Fire("Warning","You Have Already Delete It","Sorry","",true,true)
+				end 
+		end
+	})
+	Tap0:AddButton({
+		Name = "NoPizzaParty",
+		Callback = function()
+			local success, errormessage = pcall(function()
+				game:GetService("Workspace")["Teleport to Party Island"]:Destroy()
+				end)
+				if errormessage then 
+					workspace.MessageService.Dialog.Dialog:Fire("Warning","You Have Already Delete It","Sorry","",true,true)
+				end 
+		end
+	})
+	Tap0:AddButton({
+		Name = "Fire Extinguisher",
+		Callback = function()
+			local mybadassplrb = game.Players.LocalPlayer.Backpack
+			local mybadassplr = game.Players.LocalPlayer.Backpack
+			workspace.Extinguisher.Extinguisher.ClickDetector.Detector:FireServer()
+			wait(2)
+			local niiiiiiiiiigg = game:GetService("Workspace"):FindFirstChild("FireExtinguisher", true)
+			niiiiiiiiiigg:Clone().Parent = mybadassplrb
+			print("done")
+		end
+	})
+	Tap0:AddButton({
+		Name = "FpsBooster",
+		Callback = function()
+			loadstring(game:HttpGet(('https://pastebin.com/raw/RUr10TJ0'),true))()
+		end
+	})
+	Tap0:AddButton({
+		Name = "Destroy GUi",
+		Callback = function()
+			OrionLib:Destroy()
+		end
+	})
+	local Section8 = Tab2:AddSection({
+		Name = "Buttons"
+	})
+	local Section9 = Tab2:AddSection({
+		Name = "Boxes"
+	})
+		Section8:AddButton({
+		Name = "Clear Avatar",
+		Callback = function()
+		removecloth()		
+		end    
+	})
+	Section8:AddButton({
+		Name = "Reset Avatar",
+		Callback = function()
+			local args = {
+				[1] = "ResetAvatarAppearance",
+				[2] = true
+			}
+			
+			game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))			
+		end    
+	})
+		Section8:AddButton({
+		Name = "Army Bundle",
+		Callback = function()
+		removecloth()
+wait(10)
+    wait(1)
+    spawn(function()
+    local args = {
+        [1] = "LoadAvatarAsset",
+        [2] = 10788217931,
+        [3] = "HatAccessory"
+    }
+
+    game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+    end)
+wait(0.2)
+    spawn(function()
+    local args = {
+        [1] = "LoadAvatarAsset",
+        [2] = 8928560917,
+        [3] = "FaceAccessory"
+    }
+
+    game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+    end)
+wait(0.1)
+    spawn(function()
+    local args = {
+        [1] = "LoadAvatarAsset",
+        [2] = 9667263311,
+        [3] = "WaistAccessory"
+    }
+
+    game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+    end)
+wait(0.2)
+    spawn(function()
+    local args = {
+        [1] = "LoadAvatarAsset",
+        [2] = 10454287383,
+        [3] = "Shirt"
+    }
+
+    game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+    end)
+wait(0.1)
+    spawn(function()
+    local args = {
+        [1] = "LoadAvatarAsset",
+        [2] = 6951007396,
+        [3] = "Pants"
+    }
+
+    game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+    end)		
+		end    
+	})
+	Section9:AddDropdown({
+		Name = "Accessory",
+		Default = nil,
+		Options = {"HatAccessory", "Shirt", "Pants", "HairAccessory", "FaceAccessory", "Face", "NeckAccessory", "BackAccessory", "ShouldersAccessory","WaistAccessory","FrontAccessory","Head"},
+		Callback = function(Value)
+			getgenv().Clothesname = (Value)
+		end    
+	})
+	Section9:AddTextbox({
+		Name = "ID",
+		Default = nil,
+		TextDisappear = true,
+		Callback = function(Value)
+			local args = {
+				[1] = "LoadAvatarAsset",
+				[2] = tonumber(Value),
+				[3] = getgenv().Clothesname
+			}
+		
+			game:GetService("ReplicatedStorage").PlayerChannel:FireServer(unpack(args))
+			OrionLib:MakeNotification({
+				Name = "Done",
+				Content = "The Accessory has been successfully Worn",
+				Image = "rbxassetid://7733715400",
+				Time = 4
+			})
+			print("worn", Value)
+		end	  
+	})
+Section101:AddTextbox({
+	Name = "Play Animation",
+	Default = nil,
+	TextDisappear = false,
+	Callback = function(Value)
+		    local ohString111 = (Value)
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+	end	  
+})
+	Section100:AddButton({
+		Name = "\240\159\145\137-Point",
+		Callback = function()
+            local ohString111 = "Point"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+local args = {
+    [1] = "\240\159\145\137",
+    [2] = false
+}
+
+workspace.Main.Chatted:FireServer(unpack(args))
+		end    
+	})
+
+	Section100:AddButton({
+		Name = "\240\159\145\139-Hi",
+		Callback = function()
+            local ohString111 = "Hi"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+local args = {
+    [1] = "\240\159\145\139",
+    [2] = false
+}
+
+workspace.Main.Chatted:FireServer(unpack(args))
+		end    
+	})
+
+	Section100:AddButton({
+		Name = "\240\159\145\139-Bye",
+		Callback = function()
+            local ohString111 = "Bye"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+local args = {
+    [1] = "\240\159\145\139",
+    [2] = false
+}
+
+workspace.Main.Chatted:FireServer(unpack(args))
+		end    
+	})
+
+	Section100:AddButton({
+		Name = "\240\159\152\132-Yay",
+		Callback = function()
+            local ohString111 = "Glee"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+local args = {
+    [1] = "\240\159\152\132",
+    [2] = false
+}
+
+workspace.Main.Chatted:FireServer(unpack(args))
+		end    
+	})
+
+	Section100:AddButton({
+		Name = "\240\159\152\173-Sad",
+		Callback = function()
+            local ohString111 = "Sad"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+local args = {
+    [1] = "\240\159\152\173",
+    [2] = false
+}
+
+workspace.Main.Chatted:FireServer(unpack(args))
+
+		end    
+	})
+
+	Section100:AddButton({
+		Name = "\240\159\164\163-Laugh",
+		Callback = function()
+            local ohString111 = "Laugh"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+local args = {
+    [1] = "\240\159\164\163",
+    [2] = false
+}
+
+workspace.Main.Chatted:FireServer(unpack(args))
+		end    
+	})
+	Section100:AddButton({
+		Name = "\240\159\164\148-Thinking",
+		Callback = function()
+            local ohString111 = "Think"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+local args = {
+    [1] = "\240\159\164\148",
+    [2] = false
+}
+
+workspace.Main.Chatted:FireServer(unpack(args))
+		end    
+	})
+	Section100:AddButton({
+		Name = "\240\159\152\177-Scared",
+		Callback = function()
+            local ohString111 = "Scared"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+local args = {
+    [1] = "\240\159\152\177",
+    [2] = false
+}
+
+workspace.Main.Chatted:FireServer(unpack(args))
+		end    
+	})
+
+	Section100:AddButton({
+		Name = "\240\159\152\174-Wow",
+		Callback = function()
+            local ohString111 = "Amazed"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+local args = {
+    [1] = "\240\159\152\174",
+    [2] = false
+}
+
+workspace.Main.Chatted:FireServer(unpack(args))
+		end    
+	})
+
+	Section100:AddButton({
+		Name = "\240\159\152\161-Angry",
+		Callback = function()
+            local ohString111 = "Angry"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+local args = {
+    [1] = "\240\159\152\161",
+    [2] = false
+}
+
+workspace.Main.Chatted:FireServer(unpack(args))
+		end    
+	})
+
+	Section100:AddButton({
+		Name = "\240\159\152\149-Confused",
+		Callback = function()
+            local ohString111 = "Confused"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+local args = {
+    [1] = "\240\159\152\149",
+    [2] = false
+}
+
+workspace.Main.Chatted:FireServer(unpack(args))
+		end    
+	})
+
+	Section100:AddButton({
+		Name = "\240\159\142\181-Whistle",
+		Callback = function()
+            local ohString111 = "Whistle"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+local args = {
+    [1] = "\240\159\142\181",
+    [2] = false
+}
+
+workspace.Main.Chatted:FireServer(unpack(args))
+		end    
+	})
+
+	Section100:AddButton({
+		Name = "\240\159\152\180-Sleep",
+		Callback = function()
+            local ohString111 = "Sleep"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+local args = {
+    [1] = "\240\159\152\180",
+    [2] = false
+}
+
+workspace.Main.Chatted:FireServer(unpack(args))
+
+		end    
+	})
+
+	Section100:AddButton({
+		Name = "\240\159\145\143-Clap",
+		Callback = function()
+            local ohString111 = "Clap"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+local args = {
+    [1] = "\240\159\145\143",
+    [2] = false
+}
+
+workspace.Main.Chatted:FireServer(unpack(args))
+		end    
+	})
+
+	Section100:AddButton({
+		Name = "\240\159\164\162-Disgust",
+		Callback = function()
+            local ohString111 = "Disgust"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+local args = {
+    [1] = "\240\159\164\162",
+    [2] = false
+}
+
+workspace.Main.Chatted:FireServer(unpack(args))
+		end    
+	})
+
+	Section100:AddButton({
+		Name = "\240\159\152\136-Evil",
+		Callback = function()
+            local ohString111 = "Evil"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+local args = {
+    [1] = "\240\159\152\136",
+    [2] = false
+}
+
+workspace.Main.Chatted:FireServer(unpack(args))
+		end    
+	})
+
+	Section100:AddButton({
+		Name = "\240\159\152\178-Shocked",
+		Callback = function()
+            local ohString111 = "Shocked"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+local args = {
+    [1] = "\240\159\152\178",
+    [2] = false
+}
+
+workspace.Main.Chatted:FireServer(unpack(args))
+		end    
+	})
+
+	Section100:AddButton({
+		Name = "\240\159\152\169-Die",
+		Callback = function()
+            local ohString111 = "Die"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+local args = {
+    [1] = "\240\159\152\169",
+    [2] = false
+}
+
+workspace.Main.Chatted:FireServer(unpack(args))
+		end    
+	})
+	Section102:AddButton({
+		Name = "Punch",
+		Callback = function()
+            local ohString111 = "Punch"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Sit",
+		Callback = function()
+            local ohString111 = "Sit"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Dance",
+		Callback = function()
+            local ohString111 = "Dance"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Dance2",
+		Callback = function()
+            local ohString111 = "Dance2"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Dance3",
+		Callback = function()
+            local ohString111 = "Dance3"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Shuffle",
+		Callback = function()
+            local ohString111 = "Shuffle"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Swing",
+		Callback = function()
+            local ohString111 = "Swing"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Easy",
+		Callback = function()
+            local ohString111 = "Easy"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "HipHop",
+		Callback = function()
+            local ohString111 = "HipHop"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "HipHop2",
+		Callback = function()
+            local ohString111 = "HipHop2"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Flair",
+		Callback = function()
+            local ohString111 = "Flair"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Marashin",
+		Callback = function()
+            local ohString111 = "Marashin"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Dolphin",
+		Callback = function()
+            local ohString111 = "Dolphin"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Monkey",
+		Callback = function()
+            local ohString111 = "Monkey"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Happy",
+		Callback = function()
+            local ohString111 = "Happy"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Floss",
+		Callback = function()
+            local ohString111 = "Floss"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Cutesy",
+		Callback = function()
+            local ohString111 = "Cutesy"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Samba",
+		Callback = function()
+            local ohString111 = "Samba"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Twirl",
+		Callback = function()
+            local ohString111 = "Twirl"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Cha Cha",
+		Callback = function()
+            local ohString111 = "Cha Cha"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Slide",
+		Callback = function()
+            local ohString111 = "Slide"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Around Town",
+		Callback = function()
+            local ohString111 = "Around Town"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Shuffler",
+		Callback = function()
+            local ohString111 = "Shuffler"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Rock",
+		Callback = function()
+            local ohString111 = "Rock"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Feet",
+		Callback = function()
+            local ohString111 = "Feet"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Robot",
+		Callback = function()
+            local ohString111 = "Robot"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Jacks",
+		Callback = function()
+            local ohString111 = "Jacks"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Sleepy",
+		Callback = function()
+            local ohString111 = "Sleepy"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Idol",
+		Callback = function()
+            local ohString111 = "Idol"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Cower",
+		Callback = function()
+            local ohString111 = "Cower"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Celebrate",
+		Callback = function()
+            local ohString111 = "Celebrate"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Fashion",
+		Callback = function()
+            local ohString111 = "Fashion"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Jump Wave",
+		Callback = function()
+            local ohString111 = "Jump Wave"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Wave",
+		Callback = function()
+            local ohString111 = "Wave"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Trantrum",
+		Callback = function()
+            local ohString111 = "Trantrum"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "ThrowCoin",
+		Callback = function()
+            local ohString111 = "ThrowCoin"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Bathtub",
+		Callback = function()
+            local ohString111 = "Bathtub"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Coffin",
+		Callback = function()
+            local ohString111 = "Coffin"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "ConfusionOrb",
+		Callback = function()
+            local ohString111 = "ConfusionOrb"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Dead",
+		Callback = function()
+            local ohString111 = "RatDead"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Section102:AddButton({
+		Name = "Driving",
+		Callback = function()
+            local ohString111 = "Driving"
+            local ohNumber222 = 0.3
+            game.workspace.Animation.PlayAnimation.PlayAnimation:Fire(ohString111, ohNumber222);
+		end    
+	})
+	Tap0:AddButton({
+		Name = "Reset All Dropdowns",
+		Callback = function()
+			        tot:Refresh(getPlayrs(), true);
+					invi:Refresh(getinv(), true);
+					invis:Refresh(getinv(), true);
+					nigggggggga:Refresh(getPlayers(), true);
+					loopklatwat:Refresh(getPlayers(), true);
+					loopshmta:Refresh(getPlayers(), true);
+					loopb:Refresh(getPlayersbb(), true);
+					loopk:Refresh(getPlayersk(), true);
+					loopb:Refresh(getPlayersvv(), true);
+					loopshmtaaa:Refresh(getPlayesrs(), true);
+		end    
+	})
+spawn(function()
+local nig, niga = pcall(function()
+local tttttttt = game.CoreGui.Orion
+end)
+        if nig then
+            local Path = game.CoreGui:FindFirstChild("Orion")
+            local open = true
+            Tap0:AddBind({
+                Name = "Hide Bind",
+                Default = Enum.KeyCode.Backquote,
+                Hold = false,
+                Callback = function()
+                    open = not open
+                    if open then
+                        Path.Enabled = true
+                    else
+                        Path.Enabled = false
+                    end
+                end  
+            })
+else
+warn("Toggle Gui Keybind will Not Show,UnSupported Executer")
+    end
+end)
+OrionLib:MakeNotification({
+	Name = "Welcome",
+	Content = "Script Made By Husaain",
+	Image = "rbxassetid://7733749837",
+	Time = 5
+})
+OrionLib:Init()
