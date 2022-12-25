@@ -222,10 +222,10 @@ Section4:AddSlider({
 	Increment = 0.1,
 	ValueName = "",
 	Callback = function(Value)
-        getgenv().tpwalking = false
-        wait(0.1)
-        getgenv().tpwalking = true
 		function tpwalk(args)
+			getgenv().tpwalking = false
+			wait(0.2)
+			getgenv().tpwalking = true
             while getgenv().tpwalking do
             pcall(function()
 			local RunService = game:GetService("RunService")
