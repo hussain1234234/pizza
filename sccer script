@@ -947,20 +947,3 @@ Tab4:AddButton({
 			end
   	end    
 })
-Section5:AddBind({
-	Name = "Super Gorund Kick",
-	Default = Enum.KeyCode.E,
-	Hold = false,
-	Callback = function()
-		pcall(function()
-            local args = {
-                [1] = workspace.TPSSystem.TPS,
-                [2] = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart,
-                [3] = 70,
-                [4] = Vector3.new(math.huge, 1, math.huge)
-            }
-
-            workspace.FE.Actions.KickG1:FireServer(unpack(args))
-		end)
-	end    
-})
