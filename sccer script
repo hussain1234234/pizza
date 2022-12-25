@@ -15,6 +15,11 @@ local Tab3 = Window:MakeTab({
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
+local Tab4 = Window:MakeTab({
+	Name = "Celebrations",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
 local Section1 = Tab1:AddSection({
 	Name = "Loops"
 })
@@ -142,7 +147,11 @@ pcall(function()
         break
         end
 if getgenv().checkk then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-8, 13, -128)
+wait()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0, 13, -128)
+wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(8, 13, -128)
     local args = {
     [1] = workspace.TPSSystem.TPS,
     [2] = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart,
@@ -152,7 +161,11 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0, 13, -
 
     workspace.FE.Actions.KickG1:FireServer(unpack(args))
 elseif getgenv().check then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(8, 13, 131)
+wait()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-0, 13, 131)
+wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-8, 13, 131)
     local args = {
     [1] = workspace.TPSSystem.TPS,
     [2] = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart,
@@ -170,6 +183,33 @@ Section4:AddButton({
 	Name = "Infinite Yield",
 	Callback = function()
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+  	end    
+})
+Section4:AddButton({
+	Name = "Kill All",
+	Callback = function()
+		if tonumber(game.Players.LocalPlayer.PlayerGui.Start.Powers.Burn.T.Text) >= tonumber(1) then
+			local cf = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+			local ch = game.Players.LocalPlayer.Character.HumanoidRootPart
+			game.Players.LocalPlayer.PlayerGui.Start.Powers.Burn.T.Text=game.Players.LocalPlayer.PlayerGui.Start.Powers.Burn.T.Text-1
+			workspace.FE.Powers.Burn:FireServer()
+			wait(0.2)
+			for _,P in ipairs(game.Players:GetPlayers()) do
+			wait(0.1)
+			local cfps = P.Character.HumanoidRootPart.Position
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(cfps)
+			print(P)
+			end
+			wait(1)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(cf)
+		else
+			OrionLib:MakeNotification({
+				Name = "Error",
+				Content = "You Do Not Have Enough Burn Power",
+				Image = "rbxassetid://7734068321",
+				Time = 5
+			})
+		end
   	end    
 })
 spawn(function()
@@ -347,12 +387,21 @@ Section5:AddToggle({
         while getgenv().loop1 do
         wait()
 		pcall(function()
+        if game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R6 then
         local args = {
             [1] = workspace.TPSSystem.TPS,
             [2] = game:GetService("Players").LocalPlayer.Character:FindFirstChild("Right Leg")
         }
 
         game:GetService("Workspace").FE.Actions.Header:FireServer(unpack(args))
+        else 
+                local args = {
+            [1] = workspace.TPSSystem.TPS,
+            [2] = game:GetService("Players").LocalPlayer.Character:FindFirstChild("RightLowerLeg")
+        }
+
+        game:GetService("Workspace").FE.Actions.Header:FireServer(unpack(args))
+        end
         end)
 	end
 	end    
@@ -365,12 +414,21 @@ Section5:AddToggle({
         while getgenv().loop2 do
         wait()
 		pcall(function()
+        if game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R6 then
         local args = {
             [1] = workspace.TPSSystem.TPS,
             [2] = game:GetService("Players").LocalPlayer.Character:FindFirstChild("Right Leg")
         }
 
         game:GetService("Workspace").FE.Actions.Tackle:FireServer(unpack(args))
+        else
+        local args = {
+            [1] = workspace.TPSSystem.TPS,
+            [2] = game:GetService("Players").LocalPlayer.Character:FindFirstChild("RightLowerLeg")
+        }
+
+        game:GetService("Workspace").FE.Actions.Tackle:FireServer(unpack(args))
+        end
         end)
 	end
 	end    
@@ -383,12 +441,21 @@ Section5:AddToggle({
         while getgenv().loop3 do
         wait()
 		pcall(function()
+        if game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R6 then
         local args = {
             [1] = workspace.TPSSystem.TPS,
             [2] = game:GetService("Players").LocalPlayer.Character:FindFirstChild("Right Leg")
         }
 
         game:GetService("Workspace").FE.Actions.SaveRA:FireServer(unpack(args))
+        else    
+        local args = {
+            [1] = workspace.TPSSystem.TPS,
+            [2] = game:GetService("Players").LocalPlayer.Character:FindFirstChild("RightLowerLeg")
+        }
+
+        game:GetService("Workspace").FE.Actions.SaveRA:FireServer(unpack(args))
+        end
         end)
 	end
 	end    
@@ -401,12 +468,21 @@ Section5:AddToggle({
         while getgenv().loop4 do
         wait()
 		pcall(function()
+                if game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R6 then
         local args = {
             [1] = workspace.TPSSystem.TPS,
             [2] = game:GetService("Players").LocalPlayer.Character:FindFirstChild("Right Leg")
         }
 
         game:GetService("Workspace").FE.Actions.SaveLA:FireServer(unpack(args))
+        else    
+        local args = {
+            [1] = workspace.TPSSystem.TPS,
+            [2] = game:GetService("Players").LocalPlayer.Character:FindFirstChild("RightLowerLeg")
+        }
+
+        game:GetService("Workspace").FE.Actions.SaveLA:FireServer(unpack(args))
+        end
         end)
 	end
 	end    
@@ -419,12 +495,21 @@ Section5:AddToggle({
         while getgenv().loop5 do
         wait()
 		pcall(function()
+                        if game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R6 then
         local args = {
             [1] = workspace.TPSSystem.TPS,
             [2] = game:GetService("Players").LocalPlayer.Character:FindFirstChild("Right Leg")
         }
 
         game:GetService("Workspace").FE.Actions.SaveRL:FireServer(unpack(args))
+        else    
+        local args = {
+            [1] = workspace.TPSSystem.TPS,
+            [2] = game:GetService("Players").LocalPlayer.Character:FindFirstChild("RightLowerLeg")
+        }
+
+        game:GetService("Workspace").FE.Actions.SaveRL:FireServer(unpack(args))
+        end
         end)
 	end
 	end    
@@ -437,12 +522,21 @@ Section5:AddToggle({
         while getgenv().loop6 do
         wait()
 		pcall(function()
+                                if game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R6 then
         local args = {
             [1] = workspace.TPSSystem.TPS,
             [2] = game:GetService("Players").LocalPlayer.Character:FindFirstChild("Right Leg")
         }
 
         game:GetService("Workspace").FE.Actions.SaveLL:FireServer(unpack(args))
+        else    
+        local args = {
+            [1] = workspace.TPSSystem.TPS,
+            [2] = game:GetService("Players").LocalPlayer.Character:FindFirstChild("RightLowerLeg")
+        }
+
+        game:GetService("Workspace").FE.Actions.SaveLL:FireServer(unpack(args))
+        end
         end)
 	end
 	end    
@@ -455,13 +549,382 @@ Section5:AddToggle({
         while getgenv().loop7 do
         wait()
 		pcall(function()
+        if game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R6 then
         local args = {
             [1] = workspace.TPSSystem.TPS,
             [2] = game:GetService("Players").LocalPlayer.Character:FindFirstChild("Right Leg")
         }
 
         game:GetService("Workspace").FE.Actions.SaveT:FireServer(unpack(args))
+        else    
+        local args = {
+            [1] = workspace.TPSSystem.TPS,
+            [2] = game:GetService("Players").LocalPlayer.Character:FindFirstChild("RightLowerLeg")
+        }
+
+        game:GetService("Workspace").FE.Actions.SaveT:FireServer(unpack(args))
+        end
         end)
 	end
 	end    
+})
+Tab4:AddButton({
+	Name = "CelebrationB",
+	Callback = function()
+      		if game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R15 then
+				local player = game.Players.LocalPlayer
+				local char = player.Character
+				local hum = char.Humanoid
+				local tt = game.Players.LocalPlayer.PlayerGui.Animations.NewCelebrationB
+				local BirdAnimationTrack = hum:LoadAnimation(tt)
+				BirdAnimationTrack:Play()
+			else
+				local player = game.Players.LocalPlayer
+				local char = player.Character
+				local hum = char.Humanoid
+				local tt = game.Players.LocalPlayer.PlayerGui.Animations.CelebrationB
+				local BirdAnimationTrack = hum:LoadAnimation(tt)
+				BirdAnimationTrack:Play()
+			end
+  	end    
+})
+Tab4:AddButton({
+	Name = "CelebrationBHold",
+	Callback = function()
+      		if game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R15 then
+				local player = game.Players.LocalPlayer
+				local char = player.Character
+				local hum = char.Humanoid
+				local tt = game.Players.LocalPlayer.PlayerGui.Animations.NewCelebrationBHold
+				local BirdAnimationTrack = hum:LoadAnimation(tt)
+				BirdAnimationTrack:Play()
+			else
+				local player = game.Players.LocalPlayer
+				local char = player.Character
+				local hum = char.Humanoid
+				local tt = game.Players.LocalPlayer.PlayerGui.Animations.CelebrationBHold
+				local BirdAnimationTrack = hum:LoadAnimation(tt)
+				BirdAnimationTrack:Play()
+			end
+  	end    
+})
+Tab4:AddButton({
+	Name = "CelebrationG",
+	Callback = function()
+      		if game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R15 then
+				local player = game.Players.LocalPlayer
+				local char = player.Character
+				local hum = char.Humanoid
+				local tt = game.Players.LocalPlayer.PlayerGui.Animations.NewCelebrationG
+				local BirdAnimationTrack = hum:LoadAnimation(tt)
+				BirdAnimationTrack:Play()
+			else
+				local player = game.Players.LocalPlayer
+				local char = player.Character
+				local hum = char.Humanoid
+				local tt = game.Players.LocalPlayer.PlayerGui.Animations.CelebrationG
+				local BirdAnimationTrack = hum:LoadAnimation(tt)
+				BirdAnimationTrack:Play()
+			end
+  	end    
+})
+Tab4:AddButton({
+	Name = "CelebrationGHold",
+	Callback = function()
+      		if game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R15 then
+				local player = game.Players.LocalPlayer
+				local char = player.Character
+				local hum = char.Humanoid
+				local tt = game.Players.LocalPlayer.PlayerGui.Animations.NewCelebrationGHold
+				local BirdAnimationTrack = hum:LoadAnimation(tt)
+				BirdAnimationTrack:Play()
+			else
+				local player = game.Players.LocalPlayer
+				local char = player.Character
+				local hum = char.Humanoid
+				local tt = game.Players.LocalPlayer.PlayerGui.Animations.CelebrationGHold
+				local BirdAnimationTrack = hum:LoadAnimation(tt)
+				BirdAnimationTrack:Play()
+			end
+  	end    
+})
+Tab4:AddButton({
+	Name = "CelebrationH",
+	Callback = function()
+      		if game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R15 then
+				local player = game.Players.LocalPlayer
+				local char = player.Character
+				local hum = char.Humanoid
+				local tt = game.Players.LocalPlayer.PlayerGui.Animations.NewCelebrationH
+				local BirdAnimationTrack = hum:LoadAnimation(tt)
+				BirdAnimationTrack:Play()
+			else
+				local player = game.Players.LocalPlayer
+				local char = player.Character
+				local hum = char.Humanoid
+				local tt = game.Players.LocalPlayer.PlayerGui.Animations.CelebrationH
+				local BirdAnimationTrack = hum:LoadAnimation(tt)
+				BirdAnimationTrack:Play()
+			end
+  	end    
+})
+Tab4:AddButton({
+	Name = "CelebrationHHold",
+	Callback = function()
+      		if game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R15 then
+				local player = game.Players.LocalPlayer
+				local char = player.Character
+				local hum = char.Humanoid
+				local tt = game.Players.LocalPlayer.PlayerGui.Animations.NewCelebrationHHold
+				local BirdAnimationTrack = hum:LoadAnimation(tt)
+				BirdAnimationTrack:Play()
+			else
+				local player = game.Players.LocalPlayer
+				local char = player.Character
+				local hum = char.Humanoid
+				local tt = game.Players.LocalPlayer.PlayerGui.Animations.CelebrationHHold
+				local BirdAnimationTrack = hum:LoadAnimation(tt)
+				BirdAnimationTrack:Play()
+			end
+  	end    
+})
+Tab4:AddButton({
+	Name = "CelebrationJ",
+	Callback = function()
+      		if game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R15 then
+				local player = game.Players.LocalPlayer
+				local char = player.Character
+				local hum = char.Humanoid
+				local tt = game.Players.LocalPlayer.PlayerGui.Animations.NewCelebrationJ
+				local BirdAnimationTrack = hum:LoadAnimation(tt)
+				BirdAnimationTrack:Play()
+			else
+				local player = game.Players.LocalPlayer
+				local char = player.Character
+				local hum = char.Humanoid
+				local tt = game.Players.LocalPlayer.PlayerGui.Animations.CelebrationJ
+				local BirdAnimationTrack = hum:LoadAnimation(tt)
+				BirdAnimationTrack:Play()
+			end
+  	end    
+})
+Tab4:AddButton({
+	Name = "CelebrationJHold",
+	Callback = function()
+      		if game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R15 then
+				local player = game.Players.LocalPlayer
+				local char = player.Character
+				local hum = char.Humanoid
+				local tt = game.Players.LocalPlayer.PlayerGui.Animations.NewCelebrationJHold
+				local BirdAnimationTrack = hum:LoadAnimation(tt)
+				BirdAnimationTrack:Play()
+			else
+				local player = game.Players.LocalPlayer
+				local char = player.Character
+				local hum = char.Humanoid
+				local tt = game.Players.LocalPlayer.PlayerGui.Animations.CelebrationJHold
+				local BirdAnimationTrack = hum:LoadAnimation(tt)
+				BirdAnimationTrack:Play()
+			end
+  	end    
+})
+Tab4:AddButton({
+	Name = "CelebrationM",
+	Callback = function()
+      		if game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R15 then
+				local player = game.Players.LocalPlayer
+				local char = player.Character
+				local hum = char.Humanoid
+				local tt = game.Players.LocalPlayer.PlayerGui.Animations.NewCelebrationM
+				local BirdAnimationTrack = hum:LoadAnimation(tt)
+				BirdAnimationTrack:Play()
+			else
+				local player = game.Players.LocalPlayer
+				local char = player.Character
+				local hum = char.Humanoid
+				local tt = game.Players.LocalPlayer.PlayerGui.Animations.CelebrationM
+				local BirdAnimationTrack = hum:LoadAnimation(tt)
+				BirdAnimationTrack:Play()
+			end
+  	end    
+})
+Tab4:AddButton({
+	Name = "CelebrationMHold",
+	Callback = function()
+      		if game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R15 then
+				local player = game.Players.LocalPlayer
+				local char = player.Character
+				local hum = char.Humanoid
+				local tt = game.Players.LocalPlayer.PlayerGui.Animations.NewCelebrationMHold
+				local BirdAnimationTrack = hum:LoadAnimation(tt)
+				BirdAnimationTrack:Play()
+			else
+				local player = game.Players.LocalPlayer
+				local char = player.Character
+				local hum = char.Humanoid
+				local tt = game.Players.LocalPlayer.PlayerGui.Animations.CelebrationMHold
+				local BirdAnimationTrack = hum:LoadAnimation(tt)
+				BirdAnimationTrack:Play()
+			end
+  	end    
+})
+Tab4:AddButton({
+	Name = "CelebrationN",
+	Callback = function()
+      		if game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R15 then
+				local player = game.Players.LocalPlayer
+				local char = player.Character
+				local hum = char.Humanoid
+				local tt = game.Players.LocalPlayer.PlayerGui.Animations.NewCelebrationN
+				local BirdAnimationTrack = hum:LoadAnimation(tt)
+				BirdAnimationTrack:Play()
+			else
+				local player = game.Players.LocalPlayer
+				local char = player.Character
+				local hum = char.Humanoid
+				local tt = game.Players.LocalPlayer.PlayerGui.Animations.CelebrationN
+				local BirdAnimationTrack = hum:LoadAnimation(tt)
+				BirdAnimationTrack:Play()
+			end
+  	end    
+})
+Tab4:AddButton({
+	Name = "CelebrationNHold",
+	Callback = function()
+      		if game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R15 then
+				local player = game.Players.LocalPlayer
+				local char = player.Character
+				local hum = char.Humanoid
+				local tt = game.Players.LocalPlayer.PlayerGui.Animations.NewCelebrationNHold
+				local BirdAnimationTrack = hum:LoadAnimation(tt)
+				BirdAnimationTrack:Play()
+			else
+				local player = game.Players.LocalPlayer
+				local char = player.Character
+				local hum = char.Humanoid
+				local tt = game.Players.LocalPlayer.PlayerGui.Animations.CelebrationNHold
+				local BirdAnimationTrack = hum:LoadAnimation(tt)
+				BirdAnimationTrack:Play()
+			end
+  	end    
+})
+Tab4:AddButton({
+	Name = "CelebrationT",
+	Callback = function()
+      		if game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R15 then
+				local player = game.Players.LocalPlayer
+				local char = player.Character
+				local hum = char.Humanoid
+				local tt = game.Players.LocalPlayer.PlayerGui.Animations.NewCelebrationT
+				local BirdAnimationTrack = hum:LoadAnimation(tt)
+				BirdAnimationTrack:Play()
+			else
+				local player = game.Players.LocalPlayer
+				local char = player.Character
+				local hum = char.Humanoid
+				local tt = game.Players.LocalPlayer.PlayerGui.Animations.CelebrationT
+				local BirdAnimationTrack = hum:LoadAnimation(tt)
+				BirdAnimationTrack:Play()
+			end
+  	end    
+})
+Tab4:AddButton({
+	Name = "CelebrationTHold",
+	Callback = function()
+      		if game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R15 then
+				local player = game.Players.LocalPlayer
+				local char = player.Character
+				local hum = char.Humanoid
+				local tt = game.Players.LocalPlayer.PlayerGui.Animations.NewCelebrationTHold
+				local BirdAnimationTrack = hum:LoadAnimation(tt)
+				BirdAnimationTrack:Play()
+			else
+				local player = game.Players.LocalPlayer
+				local char = player.Character
+				local hum = char.Humanoid
+				local tt = game.Players.LocalPlayer.PlayerGui.Animations.CelebrationTHold
+				local BirdAnimationTrack = hum:LoadAnimation(tt)
+				BirdAnimationTrack:Play()
+			end
+  	end    
+})
+Tab4:AddButton({
+	Name = "CelebrationU",
+	Callback = function()
+      		if game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R15 then
+				local player = game.Players.LocalPlayer
+				local char = player.Character
+				local hum = char.Humanoid
+				local tt = game.Players.LocalPlayer.PlayerGui.Animations.NewCelebrationU
+				local BirdAnimationTrack = hum:LoadAnimation(tt)
+				BirdAnimationTrack:Play()
+			else
+				local player = game.Players.LocalPlayer
+				local char = player.Character
+				local hum = char.Humanoid
+				local tt = game.Players.LocalPlayer.PlayerGui.Animations.CelebrationU
+				local BirdAnimationTrack = hum:LoadAnimation(tt)
+				BirdAnimationTrack:Play()
+			end
+  	end    
+})
+Tab4:AddButton({
+	Name = "CelebrationUHold",
+	Callback = function()
+      		if game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R15 then
+				local player = game.Players.LocalPlayer
+				local char = player.Character
+				local hum = char.Humanoid
+				local tt = game.Players.LocalPlayer.PlayerGui.Animations.NewCelebrationUHold
+				local BirdAnimationTrack = hum:LoadAnimation(tt)
+				BirdAnimationTrack:Play()
+			else
+				local player = game.Players.LocalPlayer
+				local char = player.Character
+				local hum = char.Humanoid
+				local tt = game.Players.LocalPlayer.PlayerGui.Animations.CelebrationUHold
+				local BirdAnimationTrack = hum:LoadAnimation(tt)
+				BirdAnimationTrack:Play()
+			end
+  	end    
+})
+Tab4:AddButton({
+	Name = "CelebrationY",
+	Callback = function()
+      		if game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R15 then
+				local player = game.Players.LocalPlayer
+				local char = player.Character
+				local hum = char.Humanoid
+				local tt = game.Players.LocalPlayer.PlayerGui.Animations.NewCelebrationY
+				local BirdAnimationTrack = hum:LoadAnimation(tt)
+				BirdAnimationTrack:Play()
+			else
+				local player = game.Players.LocalPlayer
+				local char = player.Character
+				local hum = char.Humanoid
+				local tt = game.Players.LocalPlayer.PlayerGui.Animations.CelebrationY
+				local BirdAnimationTrack = hum:LoadAnimation(tt)
+				BirdAnimationTrack:Play()
+			end
+  	end    
+})
+Tab4:AddButton({
+	Name = "CelebrationYHold",
+	Callback = function()
+      		if game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R15 then
+				local player = game.Players.LocalPlayer
+				local char = player.Character
+				local hum = char.Humanoid
+				local tt = game.Players.LocalPlayer.PlayerGui.Animations.NewCelebrationYHold
+				local BirdAnimationTrack = hum:LoadAnimation(tt)
+				BirdAnimationTrack:Play()
+			else
+				local player = game.Players.LocalPlayer
+				local char = player.Character
+				local hum = char.Humanoid
+				local tt = game.Players.LocalPlayer.PlayerGui.Animations.CelebrationYHold
+				local BirdAnimationTrack = hum:LoadAnimation(tt)
+				BirdAnimationTrack:Play()
+			end
+  	end    
 })
