@@ -179,6 +179,25 @@ end)
 end
 	end    
 })
+Section1:AddToggle({
+	Name = "Spam Saying Ez",
+	Default = false,
+	Callback = function(Value)
+		getgenv().spamez = Value 
+        while getgenv().spamez do 
+            wait()
+            pcall(function()
+            local args = {
+                [1] = "ez",
+                [2] = "All"
+            }
+
+            game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+            end)
+        end
+	end    
+})
+
 Section4:AddButton({
 	Name = "Infinite Yield",
 	Callback = function()
