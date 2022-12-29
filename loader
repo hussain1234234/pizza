@@ -4,6 +4,6 @@ elseif game.PlaceId == 192800 then -- pizza place
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/pizza%20v2%20new'),true))()
 elseif game.PlaceId == 2210085102 then -- naval...
 loadstring(game:HttpGet(('https://pastebin.com/raw/J83Jy8yB'),true))()
-elseof game.PlaceId == 335760407 then -- soccer
+elseif game.PlaceId == 335760407 then -- soccer
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/hussain1234234/pizza/main/sccer%20script'),true))()
 end
