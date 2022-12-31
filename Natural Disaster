@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Natural Disaster", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "Natural Disaster Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 local Tab = Window:MakeTab({
 	Name = "Commands",
 	Icon = "rbxassetid://7733924046",
@@ -49,7 +49,7 @@ Tab:AddButton({
 		OrionLib:MakeNotification({
 			Name = "Note",
 			Content = "If You Died Then FallDamage Will Be Enabled,Press It Again To Disable",
-			Image = "rbxassetid://4483345998",
+			Image = "rbxassetid://7733765224",
 			Time = 4
 		})
   	end    
@@ -124,8 +124,13 @@ Tab1:AddButton({
   	end    
 })
 spawn(function()
-while game.Players.LocalPlayer.Character:WaitForChild("SurvivalTag") do 
-CoolParagraph:Set("Current Disaster: " .. game.Players.LocalPlayer.Character.SurvivalTag.Value)
+while true do 
+pcall(function()
+if game.Workspace:FindFirstChild('SurvivalTag',true) then
+print("Must Work")
+CoolParagraph:Set("Current Disaster: " .. game.Workspace:FindFirstChild('SurvivalTag',true).Value)
+end
+end)
 wait(5)
 end
 end)
