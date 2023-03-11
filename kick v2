@@ -10,6 +10,14 @@ function isNumber(str)
 		return true
 	end
 end
+function NOFLY()
+	FLYING = false
+	if flyKeyDown or flyKeyUp then flyKeyDown:Disconnect() flyKeyUp:Disconnect() end
+	if Players.LocalPlayer.Character:FindFirstChildOfClass('Humanoid') then
+		Players.LocalPlayer.Character:FindFirstChildOfClass('Humanoid').PlatformStand = false
+	end
+	pcall(function() workspace.CurrentCamera.CameraType = Enum.CameraType.Custom end)
+end
 function sFLY(vfly)
 	repeat wait() until Players.LocalPlayer and getRoot(Players.LocalPlayer.Character) and Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid")
 	repeat wait() until IYMouse
@@ -165,6 +173,7 @@ function kickk(kicked)
     task.wait(2)
     game.Players.LocalPlayer.Character["RightLowerArm"]:Destroy()
     game.Players.LocalPlayer.Character["RightUpperArm"]:Destroy()
+	NOFLY()
     wait(0.1)
     game.Players.LocalPlayer.Character["UpperTorso"]:Destroy()
        end
@@ -244,6 +253,7 @@ end)
 			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = NOW
 			task.wait(2)
 			game.Players.LocalPlayer.Character["Right Arm"]:Destroy()
+			NOFLY()
 			wait(0.1)
 			game.Players.LocalPlayer.Character["Torso"]:Destroy()
 			   end
